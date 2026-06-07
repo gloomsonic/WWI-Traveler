@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_audio_events",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_audio_events",
+  "parent":{
+    "name":"Audio",
+    "path":"folders/Scripts/Audio.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
