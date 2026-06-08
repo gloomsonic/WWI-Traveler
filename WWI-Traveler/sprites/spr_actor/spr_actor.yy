@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"WWI-Traveler",
-    "path":"WWI-Traveler.yyp",
+    "name":"Combat",
+    "path":"folders/Combat.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

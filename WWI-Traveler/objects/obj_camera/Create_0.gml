@@ -9,6 +9,8 @@ call_next_frame(function() {
 on_room_start = function() {
 	camera_set_view_size(VIEW, view_w, view_h);
 	window_set_size(win_w, win_h);
+	surface_resize(application_surface, win_w, win_h);
+	
 	view_visible[0] = true;
 	view_enabled = true;
 }
