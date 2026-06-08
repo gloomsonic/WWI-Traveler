@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Audio",
-    "path":"folders/Objects/Audio.yy",
+    "path":"folders/Audio/Objects/Audio.yy",
   },
   "parentObjectId":null,
   "persistent":false,

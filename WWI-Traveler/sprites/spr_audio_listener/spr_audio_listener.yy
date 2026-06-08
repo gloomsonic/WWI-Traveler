@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Audio",
-    "path":"folders/Sprites/Audio.yy",
+    "path":"folders/Audio/Sprites/Audio.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

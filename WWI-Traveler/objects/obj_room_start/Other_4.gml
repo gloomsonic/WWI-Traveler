@@ -1,0 +1,1 @@
+obj_camera.on_room_start();
