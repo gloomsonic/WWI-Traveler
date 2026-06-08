@@ -8,8 +8,6 @@ if (instance_number(object_index) > 1)
     exit;
 }
 
-persistent = true;
-
 // Sets max amount of audio sounds that can be played
 var max_channels = 1024;
 var fmod_flag = FMOD_STUDIO_INIT.NORMAL; 

@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Debug Tools",
-    "path":"folders/Sprites/Debug Tools.yy",
+    "path":"folders/Audio/Sprites/Debug Tools.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

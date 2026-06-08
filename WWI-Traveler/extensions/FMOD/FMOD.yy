@@ -607,7 +607,7 @@
   "packageId":"",
   "parent":{
     "name":"Extensions",
-    "path":"folders/Fmod/Extensions.yy",
+    "path":"folders/Audio/Fmod/Extensions.yy",
   },
   "productId":"",
   "resourceType":"GMExtension",

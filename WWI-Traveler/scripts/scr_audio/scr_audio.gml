@@ -1,11 +1,11 @@
 // Checks if FMOD is ready
 function audio_ready() {
-      return instance_exists(Audio_Manager) && Audio_Manager.fmod_ready;
+      return instance_exists(obj_audio_manager) && obj_audio_manager.fmod_ready;
   }
 
 // Reads FMOD event decription - needed to create an event instance
 function audio_desc(_path) {
-    var _cache = Audio_Manager.event_desc_cache;
+    var _cache = obj_audio_manager.event_desc_cache;
     if (!variable_struct_exists(_cache, _path)) {
         _cache[$ _path] = fmod_studio_system_get_event(_path);
     }
@@ -24,7 +24,7 @@ function audio_attributes(_x, _y) {
 
 // Sets the audio position on an object
 function audio_set_position(_name, _x, _y) {
-	var _act = Audio_Manager.active;
+	var _act = obj_audio_manager.active;
 	if (variable_struct_exists(_act, _name)) {
 		fmod_studio_event_instance_set_3d_attributes(_act[$ _name].inst, audio_attributes(_x, _y));
 	}
@@ -57,7 +57,7 @@ function audio_play_tracked(_name, _path) {
     audio_stop_tracked(_name);   // replace if already playing
     var _inst = fmod_studio_event_description_create_instance(audio_desc(_path));
     fmod_studio_event_instance_start(_inst);
-    Audio_Manager.active[$ _name] = { inst: _inst, path: _path };
+    obj_audio_manager.active[$ _name] = { inst: _inst, path: _path };
     return _inst;
 }
 
@@ -68,13 +68,13 @@ function audio_play_tracked_3d(_name, _path, _x, _y) {
     var _inst = fmod_studio_event_description_create_instance(audio_desc(_path));
     fmod_studio_event_instance_set_3d_attributes(_inst, audio_attributes(_x, _y));
     fmod_studio_event_instance_start(_inst);
-    Audio_Manager.active[$ _name] = { inst: _inst, path: _path };
+    obj_audio_manager.active[$ _name] = { inst: _inst, path: _path };
     return _inst;
 }
 
 // Handles stopping looping or persistent tracks like music and ambience
 function audio_stop_tracked(_name, _fadeout = true) {
-	var _act = Audio_Manager.active;
+	var _act = obj_audio_manager.active;
 	if (variable_struct_exists(_act, _name)) {
 	    var _mode = _fadeout ? FMOD_STUDIO_STOP_MODE.ALLOWFADEOUT : FMOD_STUDIO_STOP_MODE.IMMEDIATE;
 	    var _t = _act[$ _name];
@@ -87,7 +87,7 @@ function audio_stop_tracked(_name, _fadeout = true) {
 // --- FMOD PARAMETER SUPPORT ---
 
 function audio_param_id(_path, _param) {
-    var _cache = Audio_Manager.param_id_cache;
+    var _cache = obj_audio_manager.param_id_cache;
     var _key = _path + "::" + _param;
     if (!variable_struct_exists(_cache, _key)) {
         var _desc = fmod_studio_event_description_get_parameter_description_by_name(audio_desc(_path), _param);
@@ -97,7 +97,7 @@ function audio_param_id(_path, _param) {
 }
 
 function audio_param(_track, _param, _value, _ignore = false) {
-    var _act = Audio_Manager.active;
+    var _act = obj_audio_manager.active;
     if (!variable_struct_exists(_act, _track)) return;
     var _t = _act[$ _track];
     audio_inst_param(_t.inst, _t.path, _param, _value, _ignore);
@@ -120,7 +120,7 @@ function audio_apply_params(_inst, _path, _params) {
 
 // Read a local parameter's current value (number, or undefined if not playing)
 function audio_param_get(_track, _param) {
-    var _act = Audio_Manager.active;
+    var _act = obj_audio_manager.active;
     if (!variable_struct_exists(_act, _track)) return undefined;
     return fmod_studio_event_instance_get_parameter_by_name(_act[$ _track].inst, _param).value;
 }
