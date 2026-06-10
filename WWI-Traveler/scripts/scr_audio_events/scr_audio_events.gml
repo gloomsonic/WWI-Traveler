@@ -7,8 +7,9 @@
 #macro PITCH_TEST_PARAMETER "PITCH_TEST_PARAMETER"
 
 // AMBIENCE
-#macro EV_AMBIENCE   "event:/Test Ambience"
+#macro EV_DEBUG_AMBIENCE   "event:/Test Ambience"
 
 // MUSIC
 
 // SFX
+#macro EV_DEBUG_SFX   "event:/Test Gunshot"

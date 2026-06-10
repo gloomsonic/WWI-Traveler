@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{671ae7c7-2b5b-4ef6-bb82-d401da8c4dc2}">
+		<property name="assetPath">
+			<value>Guns, Rifle, Sniper Rifle, Fire, Shoot, Singular Shots, Reverberant 01 SND99656 S02 1.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>4.0553541666666666</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{29797969-63b7-4dc9-b797-f6935470f7dd}</destination>
+		</relationship>
+	</object>
+</objects>
