@@ -1,0 +1,1 @@
+touch_object(par_touchable);

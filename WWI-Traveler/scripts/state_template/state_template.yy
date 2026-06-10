@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"state_template",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"state_template",
+  "parent":{
+    "name":"use_states",
+    "path":"folders/_Core/Hooks/use_states.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

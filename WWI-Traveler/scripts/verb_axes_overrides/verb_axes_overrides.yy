@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"verb_axes_overrides",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"verb_axes_overrides",
+  "parent":{
+    "name":"neo_use_controls",
+    "path":"folders/_Core/Hooks/neo_use_controls.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

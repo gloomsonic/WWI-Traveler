@@ -1,4 +1,4 @@
-// Make accessible as teams
+// Create combatant structs in teams
 team_player = [
 	new combatant(false, Combatant_Team.player, 0), 
 	new combatant(false, Combatant_Team.player, 1), 
