@@ -1,1 +1,1 @@
-touch_object(par_touchable);
+touch_object(touch_these);

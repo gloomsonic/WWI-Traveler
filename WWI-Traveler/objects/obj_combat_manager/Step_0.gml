@@ -10,5 +10,6 @@ if (turn_done) {
 	} else {
 		log("player turn");
 		instance_create_layer(0, ROOM_H - 512, "menu", obj_combat_action_menu);
+		obj_mouse_cursor.set_touchable(obj_combat_action_menu);
 	}
 }

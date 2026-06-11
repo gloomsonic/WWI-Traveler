@@ -5,6 +5,9 @@ event_inherited();
 on_pressed = function() {
 }
 on_released = function() {
+	obj_mouse_cursor.set_touchable(obj_combat_manager.get_enemies()); //(obj_combatant_visual);
+	//obj_combat_manager.end_turn();
+	//instance_destroy();
 }
 
 // State functions

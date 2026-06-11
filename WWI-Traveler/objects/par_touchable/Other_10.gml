@@ -12,7 +12,7 @@ on_released = function() {
 state_idle = function(_event) {
 	switch(_event) {
 		case Event.step: 
-			log("idle"); 
+			//log("idle"); 
 			break;
 		case Event.draw: 
 			draw_self_ext(); 
@@ -23,7 +23,7 @@ state_idle = function(_event) {
 state_hovered = function(_event) {
 	switch(_event) {
 		case Event.step: 
-			log("hovered"); 
+			//log("hovered"); 
 			break;
 		case Event.draw: 
 			draw_self_ext(); 
@@ -34,7 +34,7 @@ state_hovered = function(_event) {
 state_held = function(_event) {
 	switch(_event) {
 		case Event.step: 
-			log("held"); 
+			//log("held"); 
 			break;
 		case Event.draw: 
 			draw_self_ext(); 
