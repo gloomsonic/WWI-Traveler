@@ -33,43 +33,6 @@ turn_queue = [
 	team_enemy[1],
 ];
 
-
-//// Create combatant structs in teams
-//data_player = [
-//	new combatant(false, Combatant_Team.player, 0), 
-//	new combatant(false, Combatant_Team.player, 1), 
-//];
-//data_enemy = [
-//	new combatant(true, Combatant_Team.enemy, 0), 
-//	new combatant(true, Combatant_Team.enemy, 1), 
-//];
-
-
-//// Create combatant objects
-//team_player = [];
-//var _x = ROOM_W * 0.4;
-//var _y = ROOM_H * 0.75;
-//for (var i = 0; i < array_length(data_player); i++) {
-//	//var _combatant = team_player[i];
-//	var _data = data_player[i];
-//	var _combatant = instance_create_layer(_x, _y, "combatant_animation", obj_combatant_visual, _data);
-//	array_push(team_player, _combatant);
-//	_x += 1024;
-//}
-
-//team_enemy = [];
-//var _x = ROOM_W * 0.25;
-//var _y = ROOM_H_H;
-//for (var i = 0; i < array_length(data_enemy); i++) {
-//	//var _combatant = team_enemy[i];
-//	var _data = data_enemy[i];
-//	var _combatant = instance_create_layer(_x, _y, "combatant_animation", obj_combatant_visual, _data);
-//	array_push(team_enemy, _combatant);
-//	_x += 1024;
-//}
-
-
-
 // Methods
 end_turn = function() {
 	turn_done = true;
