@@ -1,3 +1,5 @@
+event_user_all();
+
 combatant_data = [
 	new combatant(false, Combatant_Team.player, 0), 
 	new combatant(false, Combatant_Team.player, 1), 
@@ -10,7 +12,7 @@ team_player = [];
 team_enemy = [];
 for (var i = 0; i < array_length(combatant_data); i++) {
 	var _data = combatant_data[i];
-	var _combatant = instance_create_layer(0, 0, "combatant_animation", obj_combatant_visual, _data);
+	var _combatant = instance_create_layer(0, 0, "combatant_animation", obj_combatant, _data);
 	
 	if (_data.team == Combatant_Team.player) {
 		array_push(team_player, _combatant);
@@ -33,10 +35,3 @@ turn_queue = [
 	team_enemy[1],
 ];
 
-// Methods
-end_turn = function() {
-	turn_done = true;
-}
-get_enemies = function() {
-	return team_enemy;
-}

@@ -52,5 +52,6 @@ function use_states(_owner = other.id) constructor {
 
 enum State { 
 	idle, hovered, held,
-	select_combatant,
+	flash,
+	select_action, select_target,
 }
