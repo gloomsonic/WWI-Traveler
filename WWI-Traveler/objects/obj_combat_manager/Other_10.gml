@@ -6,7 +6,7 @@ get_enemies = function() {
 	return team_enemy;
 }
 
-// 
+// Start attack animations
 init_attack = function(_attacker, _target) {
 	_attacker.start_attack();
 	_target.start_flash(5);
