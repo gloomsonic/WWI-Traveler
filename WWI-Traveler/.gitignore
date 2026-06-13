@@ -61,5 +61,5 @@ Temporary Items
 # GMRT build directory
 Build
 
-# FMOD Extension
-WWI-Traveler/options/extensions/FMOD.json
+# FMOD Extension (per-machine SDK path — keep local, don't track)
+options/extensions/FMOD.json
