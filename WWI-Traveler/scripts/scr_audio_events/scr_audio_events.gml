@@ -1,7 +1,7 @@
 // A list of all FMOD Event References and Parameters
 
 // Helps match GM Pixels to units that FMOD uses
-#macro AUDIO_PIXELS_PER_METER 100
+#macro AUDIO_WORLD_METERS 20
 
 // Parameter Tester
 #macro PITCH_TEST_PARAMETER "PITCH_TEST_PARAMETER"

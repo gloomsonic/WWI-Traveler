@@ -15,8 +15,8 @@ function audio_desc(_path) {
 // Sets an the audio attributes
 function audio_attributes(_x, _y) {
     var _a = new Fmod3DAttributes();
-    _a.position.x = _x / AUDIO_PIXELS_PER_METER;
-    _a.position.y = _y / AUDIO_PIXELS_PER_METER;
+    _a.position.x = _x / global.audio_ppm;
+    _a.position.y = _y / global.audio_ppm;
     _a.forward.z  = 1;
     _a.up.y       = 1;
     return _a;

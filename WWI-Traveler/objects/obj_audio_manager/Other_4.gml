@@ -1,0 +1,1 @@
+global.audio_ppm = room_width / AUDIO_WORLD_METERS;
