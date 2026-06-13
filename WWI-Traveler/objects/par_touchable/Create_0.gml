@@ -7,19 +7,18 @@ states.define(State.hovered, state_hovered);
 states.define(State.held, state_held);
 states.queue(State.idle);
 
+// Cursor queue state callbacks
 ignore_cursor = false;
 try_cursor_queue = function(_state) {
 	if (ignore_cursor) return false;
 	states.queue(_state);
 	return true;
 }
-
 try_cursor_pressed = function() {
 	if (ignore_cursor) return false;
 	on_pressed();
 	return true;
 }
-
 try_cursor_released = function() {
 	if (ignore_cursor) return false;
 	on_released();

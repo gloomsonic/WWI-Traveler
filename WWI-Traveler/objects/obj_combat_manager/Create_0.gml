@@ -1,17 +1,17 @@
 event_user_all();
 
-combatant_data = [
-	new combatant(false, Combatant_Team.player, 0), 
-	new combatant(false, Combatant_Team.player, 1), 
-	new combatant(true, Combatant_Team.enemy, 0), 
-	new combatant(true, Combatant_Team.enemy, 1), 
+combatant_datas = [
+	new combatant_data(false, Combatant_Team.player, 0), 
+	new combatant_data(false, Combatant_Team.player, 1), 
+	new combatant_data(true, Combatant_Team.enemy, 0), 
+	new combatant_data(true, Combatant_Team.enemy, 1), 
 ];
 
 // Spawn combatants
 team_player = [];
 team_enemy = [];
-for (var i = 0; i < array_length(combatant_data); i++) {
-	var _data = combatant_data[i];
+for (var i = 0; i < array_length(combatant_datas); i++) {
+	var _data = combatant_datas[i];
 	var _combatant = instance_create_layer(0, 0, "combatant_animation", obj_combatant, _data);
 	
 	if (_data.team == Combatant_Team.player) {

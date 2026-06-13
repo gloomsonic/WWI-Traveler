@@ -26,7 +26,6 @@ touch_object = function(_obj) {
 	// New object, idle prior
 	if (instance_exists(hovered)) and (_data.inst != hovered) {
 		hovered.try_cursor_queue(State.idle);
-		//hovered.states.queue(State.idle);
 	}
 	hovered = _data.inst;
 
@@ -34,34 +33,18 @@ touch_object = function(_obj) {
 	if (mouse_check_button(mb_left)) {
 		if (hovered.try_cursor_queue(State.held))
 			_data.held = true;
-		//_data.inst.states.queue(State.held);
-		//_data.held = true;
 	} else {
 		if (hovered.try_cursor_queue(State.hovered))
-		_data.hovered = true;
-		//_data.inst.states.queue(State.hovered);
-		//_data.hovered = true;
+			_data.hovered = true;
 	}
 	
 	// Pressed and Released callbacks
 	if (mouse_check_button_pressed(mb_left)) {
 		if (hovered.try_cursor_pressed())
 			_data.pressed = true;
-		//_data.inst.on_pressed();
-		//_data.pressed = true;
-	}
-	if (mouse_check_button_released(mb_left)) {
+	} else if (mouse_check_button_released(mb_left)) {
 		if (hovered.try_cursor_released())
 			_data.released = true;
-		//_data.inst.on_released();
-		//_data.released = true;
 	}
 	return _data;
 }
-
-//// Reset hovered instance
-//unhover = function() {
-//	if (!instance_exists(hovered)) exit;
-//	hovered.states.queue(State.idle);
-//	hovered = noone;
-//}

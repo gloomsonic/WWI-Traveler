@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"combatant_data",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"combatant_data",
+  "parent":{
+    "name":"Combat",
+    "path":"folders/Combat.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
