@@ -1,3 +1,6 @@
+// Persist volume settings before shutting down
+if (variable_global_exists("audio_volumes")) audio_settings_save();
+
 if (fmod_ready)
 {
     fmod_ready = false;

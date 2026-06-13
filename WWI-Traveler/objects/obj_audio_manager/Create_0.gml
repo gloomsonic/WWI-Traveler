@@ -29,4 +29,9 @@ fmod_ready = master_strings_ok && master_bank_ok;
 
 event_desc_cache = {};
 param_id_cache	 = {};
+bus_cache        = {};
 active           = {};
+
+// Load saved volume settings and push them to the buses
+audio_settings_init();
+if (fmod_ready) audio_volumes_apply();
