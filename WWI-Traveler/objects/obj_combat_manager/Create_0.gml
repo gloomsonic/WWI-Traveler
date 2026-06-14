@@ -8,8 +8,6 @@ combatant_datas = [
 ];
 
 // Spawn combatants
-//team_player = [];
-//team_enemy = [];
 combatants = [];
 for (var i = 0; i < array_length(combatant_datas); i++) {
 	var _data = combatant_datas[i];
@@ -17,11 +15,9 @@ for (var i = 0; i < array_length(combatant_datas); i++) {
 	array_push(combatants, _combatant);
 	
 	if (_data.team == Combatant_Team.player) {
-		//array_push(team_player, _combatant);
 		_combatant.x = (ROOM_W * 0.4) + (1024 * _data.pos);
 		_combatant.y = ROOM_H * 0.75;
 	} else {
-		//array_push(team_enemy, _combatant);
 		_combatant.x = (ROOM_W * 0.25) + (1024 * _data.pos);
 		_combatant.y = ROOM_H_H;
 	}
@@ -35,10 +31,5 @@ turn_queue = [
 	combatants[0],
 	combatants[1],
 	combatants[3],
-	//team_player[0], 
-	//team_enemy[0], 
-	//team_player[0],
-	//team_player[1],
-	//team_enemy[1],
 ];
 
