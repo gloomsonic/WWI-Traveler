@@ -12,8 +12,8 @@
   "name":"obj_mouse_cursor",
   "overriddenProperties":[],
   "parent":{
-    "name":"WWI-Traveler",
-    "path":"WWI-Traveler.yyp",
+    "name":"Menus",
+    "path":"folders/Menus.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -8,18 +8,20 @@ combatant_datas = [
 ];
 
 // Spawn combatants
-team_player = [];
-team_enemy = [];
+//team_player = [];
+//team_enemy = [];
+combatants = [];
 for (var i = 0; i < array_length(combatant_datas); i++) {
 	var _data = combatant_datas[i];
 	var _combatant = instance_create_layer(0, 0, "combatant_animation", obj_combatant, _data);
+	array_push(combatants, _combatant);
 	
 	if (_data.team == Combatant_Team.player) {
-		array_push(team_player, _combatant);
+		//array_push(team_player, _combatant);
 		_combatant.x = (ROOM_W * 0.4) + (1024 * _data.pos);
 		_combatant.y = ROOM_H * 0.75;
 	} else {
-		array_push(team_enemy, _combatant);
+		//array_push(team_enemy, _combatant);
 		_combatant.x = (ROOM_W * 0.25) + (1024 * _data.pos);
 		_combatant.y = ROOM_H_H;
 	}
@@ -28,10 +30,15 @@ for (var i = 0; i < array_length(combatant_datas); i++) {
 // Placeholder default turn queue, will be determined by speed
 turn_done = true;
 turn_queue = [
-	team_player[0], 
-	team_enemy[0], 
-	team_player[0],
-	team_player[1],
-	team_enemy[1],
+	combatants[0],
+	combatants[2],
+	combatants[0],
+	combatants[1],
+	combatants[3],
+	//team_player[0], 
+	//team_enemy[0], 
+	//team_player[0],
+	//team_player[1],
+	//team_enemy[1],
 ];
 

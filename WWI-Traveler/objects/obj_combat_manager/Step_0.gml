@@ -6,8 +6,12 @@ if (turn_done) {
 	
 	if (_combatant.cpu) { // CPU turn
 		log("cpu turn");
-		turn_done = true;
 		obj_mouse_cursor.set_combatant(noone);
+		
+		// choose a player combatant
+		
+		//obj_combat_manager.init_attack(_combatant, _data.inst);
+		turn_done = true;
 	} else { // Player turn
 		log("player turn");
 		instance_create_layer(0, ROOM_H - 512, "menu", obj_combat_action_menu);
