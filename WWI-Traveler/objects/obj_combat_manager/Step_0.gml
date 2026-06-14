@@ -5,15 +5,11 @@ if (turn_done) {
 	turn_done = false;
 	
 	if (_combatant.cpu) { // CPU turn
-		log("cpu turn");
 		obj_mouse_cursor.set_combatant(noone);
-		
-		// choose a player combatant
-		
-		//obj_combat_manager.init_attack(_combatant, _data.inst);
-		turn_done = true;
+		var _team_player = get_team(Combatant_Team.player);
+		var _target = array_shuffle(_team_player)[0];
+		obj_combat_manager.init_attack(_combatant, _target);
 	} else { // Player turn
-		log("player turn");
 		instance_create_layer(0, ROOM_H - 512, "menu", obj_combat_action_menu);
 		obj_mouse_cursor.set_combatant(_combatant); // TODO: this should maybe become a 'signal' and this code runs inside cursor
 		obj_mouse_cursor.states.queue(State.select_action);

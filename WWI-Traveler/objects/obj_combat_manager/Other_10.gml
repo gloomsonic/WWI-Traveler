@@ -9,23 +9,8 @@ get_team = function(_team_index) {
 		if (_combatant.team != _team_index) continue;
 		array_push(_team, _combatant);
 	}
-	//var _team = array_filter(combatants, function(_combatant) {
-	//	return _combatant.team == _team_index;
-	//});
 	return _team;
 }
-//get_team_enemy = function() {
-//	var _team = array_filter(combatants, function(_combatant) {
-//		return _combatant.team == Combatant_Team.enemy;
-//	});
-//	return _enemies;
-//}
-//get_team_player = function() {
-//	var _team = array_filter(combatants, function(_combatant) {
-//		return _combatant.team == Combatant_Team.player;
-//	});
-//	return _team;
-//}
 
 // Start attack animations
 init_attack = function(_attacker, _target) {
