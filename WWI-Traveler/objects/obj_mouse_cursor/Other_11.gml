@@ -3,7 +3,7 @@
 state_cursor_select_action = function(_event) {
 	switch(_event) {
 		case Event.step: 
-			touch_object(obj_combat_action_menu);
+			touch_object(par_combat_menu);
 			break;
 	}
 }

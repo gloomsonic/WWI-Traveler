@@ -1,21 +1,21 @@
 {
   "$GMObject":"",
-  "%Name":"obj_mouse_cursor",
+  "%Name":"obj_combat_menu_pass",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":11,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":1,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_mouse_cursor",
+  "name":"obj_combat_menu_pass",
   "overriddenProperties":[],
   "parent":{
-    "name":"WWI-Traveler",
-    "path":"WWI-Traveler.yyp",
+    "name":"combat menu",
+    "path":"folders/Combat/combat menu.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"par_combat_menu",
+    "path":"objects/par_combat_menu/par_combat_menu.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -33,7 +33,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_combat_menu_pass",
+    "path":"sprites/spr_combat_menu_pass/spr_combat_menu_pass.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

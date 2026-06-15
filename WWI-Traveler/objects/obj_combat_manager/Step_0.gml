@@ -10,7 +10,10 @@ if (turn_done) {
 		var _target = array_shuffle(_team_player)[0];
 		obj_combat_manager.init_attack(_combatant, _target);
 	} else { // Player turn
-		instance_create_layer(0, ROOM_H - 512, "menu", obj_combat_action_menu);
+		var _y = ROOM_H - 500;
+		instance_create_layer(0, _y, "menu", obj_combat_menu_attack);
+		_y += 95;
+		instance_create_layer(0, _y, "menu", obj_combat_menu_pass);
 		obj_mouse_cursor.set_combatant(_combatant); // TODO: this should maybe become a 'signal' and this code runs inside cursor
 		obj_mouse_cursor.states.queue(State.select_action);
 	}

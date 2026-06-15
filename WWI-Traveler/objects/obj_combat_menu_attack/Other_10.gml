@@ -6,7 +6,7 @@ on_pressed = function() {
 }
 on_released = function() {
 	obj_mouse_cursor.states.queue(State.select_target);
-	instance_destroy();
+	instance_destroy(par_combat_menu);
 }
 
 // State functions
