@@ -1,6 +1,7 @@
 global.library = {} // A struct comprised of arrays whose keys are the names of signal types, as created in signal_add
 enum Signal_Type {
 	on_combatant_ready,
+	on_combatant_killed,
 }
 
 function signal_add(_listener) {

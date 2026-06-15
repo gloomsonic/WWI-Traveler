@@ -1,10 +1,10 @@
 event_user_all();
 
 combatant_datas = [
-	new combatant_data(false, Combatant_Team.player, 0), 
-	new combatant_data(false, Combatant_Team.player, 1), 
-	new combatant_data(true, Combatant_Team.enemy, 0), 
-	new combatant_data(true, Combatant_Team.enemy, 1), 
+	new combatant_data(false, Combatant_Team.player, 0, 10, 3), 
+	new combatant_data(false, Combatant_Team.player, 1, 9, 2), 
+	new combatant_data(true, Combatant_Team.enemy, 0, 6, 3), 
+	new combatant_data(true, Combatant_Team.enemy, 1, 7, 2), 
 ];
 
 // Spawn combatants

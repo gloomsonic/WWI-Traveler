@@ -33,7 +33,7 @@ state_held = function(_event) {
 }
 
 // Non-standard state
-state_flash = function(_event) {
+state_hit = function(_event) {
 	switch(_event) {
 		case Event.enter:
 			ignore_cursor = true;
@@ -58,6 +58,8 @@ state_flash = function(_event) {
 			image_alpha = 1;
 			ignore_cursor = false;
 			signal_ready();
+			if (hp <= 0)
+				signal_raise(Signal_Type.on_combatant_killed, id);
 			break;
 	}
 }
