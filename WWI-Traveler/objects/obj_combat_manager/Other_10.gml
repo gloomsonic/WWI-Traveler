@@ -16,9 +16,6 @@ get_team = function(_team_index) {
 init_attack = function(_attacker, _target) {
 	_attacker.start_attack();
 	_target.start_hit(_attacker.damage);
-	//_target.start_flash(5);
-	
-	// Method to take damage
 	
 	_attacker.ready = false;
 	_target.ready = false;

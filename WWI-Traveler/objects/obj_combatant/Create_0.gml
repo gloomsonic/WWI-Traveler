@@ -8,6 +8,7 @@ states.define(State.attack, state_attack);
 
 start_hit = function(_damage) {
 	flash_remaining = flash_duration * 5 * 2; // 5 flashes * 2 parts per flash
+	//_damage -= block;
 	hp -= _damage;
 	states.queue(State.hit);
 }
