@@ -1,15 +1,20 @@
 {
   "$GMObject":"",
   "%Name":"obj_combatant_space",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"obj_combatant_space",
   "overriddenProperties":[],
   "parent":{
-    "name":"Combat",
-    "path":"folders/Combat.yy",
+    "name":"combatants",
+    "path":"folders/Combat/combatants.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"par_touchable",
+    "path":"objects/par_touchable/par_touchable.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

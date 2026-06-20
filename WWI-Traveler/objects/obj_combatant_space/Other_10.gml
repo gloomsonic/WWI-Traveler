@@ -3,39 +3,33 @@ event_inherited();
 
 // One-frame callbacks
 on_pressed = function() {
+	log("pressed");
 }
 on_released = function() {
-	obj_combat_manager.end_turn();
-	instance_destroy(par_combat_menu);
+	log("released");
 }
 
 // State functions
 state_idle = function(_event) {
 	switch(_event) {
-		case Event.step: 
-			break;
 		case Event.draw: 
-			draw_self_ext(); 
+			draw_self_ext(, 0); 
 			break;
 	}
 }
 
 state_hovered = function(_event) {
 	switch(_event) {
-		case Event.step: 
-			break;
 		case Event.draw: 
-			draw_self_ext(,,,,,,, c_blue); 
+			draw_self_ext(, 1); 
 			break;
 	}
 }
 
 state_held = function(_event) {
 	switch(_event) {
-		case Event.step: 
-			break;
 		case Event.draw: 
-			draw_self_ext(,,,,,,, c_red); 
+			draw_self_ext(, 2); 
 			break;
 	}
 }

@@ -24,10 +24,10 @@ state_cursor_select_target = function(_event) {
 state_cursor_select_reposition = function(_event) {
 	switch(_event) {
 		case Event.step: 
-			var _spaces = obj_combat_manager.get_team(Combatant_Team.enemy);
+			var _spaces = obj_combat_manager.get_spaces(Combatant_Team.player);
 			var _data = touch_object(_spaces);
 			if (_data.released) {
-				obj_combat_manager.init_attack(my_combatant, _data.inst);
+				obj_combat_manager.init_reposition(my_combatant, _data.inst);
 				states.queue(State.select_action);
 			}
 			break;

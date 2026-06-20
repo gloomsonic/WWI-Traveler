@@ -3,6 +3,7 @@ event_user_all();
 states = new use_states();
 states.define(State.select_action, state_cursor_select_action);
 states.define(State.select_target, state_cursor_select_target);
+states.define(State.select_reposition, state_cursor_select_reposition);
 
 touch_these = noone;
 hovered = noone;

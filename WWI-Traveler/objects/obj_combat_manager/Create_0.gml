@@ -11,7 +11,7 @@ combatant_datas = [
 ];
 
 // Combatant spaces
-var _y = [0.65*ROOM_H, 0.80*ROOM_H, 0.35*ROOM_H, 0.20*ROOM_H];
+var _y = [0.77*ROOM_H, 0.92*ROOM_H, 0.47*ROOM_H, 0.32*ROOM_H];
 team_player_rows = [];
 team_player_rows[0] = [
 	instance_create_layer(ROOM_W *  1/15, _y[0], "spaces", obj_combatant_space),

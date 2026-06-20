@@ -23,7 +23,7 @@
   ],
   "name":"spr_combatant_idle",
   "nineSlice":null,
-  "origin":4,
+  "origin":9,
   "parent":{
     "name":"combatants",
     "path":"folders/Combat/combatants.yy",
@@ -76,7 +76,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":384,
-    "yorigin":384,
+    "yorigin":635,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

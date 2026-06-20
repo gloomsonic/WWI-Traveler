@@ -5,7 +5,7 @@ event_inherited();
 on_pressed = function() {
 }
 on_released = function() {
-	obj_combat_manager.end_turn();
+	obj_mouse_cursor.states.queue(State.select_reposition);
 	instance_destroy(par_combat_menu);
 }
 

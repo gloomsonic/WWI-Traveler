@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_combat_menu_pass",
-    "path":"sprites/spr_combat_menu_pass/spr_combat_menu_pass.yy",
+    "name":"spr_combat_menu_reposition",
+    "path":"sprites/spr_combat_menu_reposition/spr_combat_menu_reposition.yy",
   },
   "spriteMaskId":null,
   "visible":true,
