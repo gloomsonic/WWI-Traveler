@@ -11,30 +11,30 @@ combatant_datas = [
 ];
 
 // Combatant spaces
-var _y = [0.65, 0.80, 0.35, 0.20];
+var _y = [0.65*ROOM_H, 0.80*ROOM_H, 0.35*ROOM_H, 0.20*ROOM_H];
 team_player_rows = [];
 team_player_rows[0] = [
-	new combatant_space( 1/15, _y[0]),
-	new combatant_space( 5/15, _y[0]),
-	new combatant_space( 9/15, _y[0]),
-	new combatant_space(13/15, _y[0]),
+	instance_create_layer(ROOM_W *  1/15, _y[0], "spaces", obj_combatant_space),
+	instance_create_layer(ROOM_W *  5/15, _y[0], "spaces", obj_combatant_space),
+	instance_create_layer(ROOM_W *  9/15, _y[0], "spaces", obj_combatant_space),
+	instance_create_layer(ROOM_W * 13/15, _y[0], "spaces", obj_combatant_space),
 ];
 team_player_rows[1] = [
-	new combatant_space( 3/15, _y[1]),
-	new combatant_space( 7/15, _y[1]),
-	new combatant_space(11/15, _y[1]),	
+	instance_create_layer(ROOM_W *  3/15, _y[1], "spaces", obj_combatant_space),
+	instance_create_layer(ROOM_W *  7/15, _y[1], "spaces", obj_combatant_space),
+	instance_create_layer(ROOM_W * 11/15, _y[1], "spaces", obj_combatant_space),	
 ];
 team_enemy_rows = [];
 team_enemy_rows[0] = [
-	new combatant_space( 2/15, _y[2]),
-	new combatant_space( 6/15, _y[2]),
-	new combatant_space(10/15, _y[2]),
-	new combatant_space(14/15, _y[2]),
+	instance_create_layer(ROOM_W *  2/15, _y[2], "spaces", obj_combatant_space),
+	instance_create_layer(ROOM_W *  6/15, _y[2], "spaces", obj_combatant_space),
+	instance_create_layer(ROOM_W * 10/15, _y[2], "spaces", obj_combatant_space),
+	instance_create_layer(ROOM_W * 14/15, _y[2], "spaces", obj_combatant_space),
 ];
 team_enemy_rows[1] = [
-	new combatant_space( 4/15, _y[3]),
-	new combatant_space( 8/15, _y[3]),
-	new combatant_space(12/15, _y[3]),	
+	instance_create_layer(ROOM_W *  4/15, _y[3], "spaces", obj_combatant_space),
+	instance_create_layer(ROOM_W *  8/15, _y[3], "spaces", obj_combatant_space),
+	instance_create_layer(ROOM_W * 12/15, _y[3], "spaces", obj_combatant_space),	
 ];
 
 // Spawn combatants
@@ -44,7 +44,7 @@ for (var i = 0; i < array_length(combatant_datas); i++) {
 	var _rows = _data.team == Combatant_Team.player ? team_player_rows : team_enemy_rows;
 	var _space = _rows[_data.row][_data.pos];
 	
-	var _combatant = instance_create_layer(_space.x, _space.y, "combatant_animation", obj_combatant, _data);
+	var _combatant = instance_create_layer(_space.x, _space.y, "combatants", obj_combatant, _data);
 	array_push(combatants, _combatant);
 }
 
