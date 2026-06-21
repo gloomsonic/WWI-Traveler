@@ -6,6 +6,8 @@ call_next_frame(function() {
 	window_center()
 });
 
+scene_lerp_spd = 0.12;
+
 on_room_start = function() {
 	camera_set_view_size(VIEW, view_w, view_h);
 	window_set_size(win_w, win_h);

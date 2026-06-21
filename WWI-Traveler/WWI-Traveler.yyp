@@ -30,9 +30,9 @@
     {"$GMFolder":"","%Name":"Combat","folderPath":"folders/Combat.yy","name":"Combat","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"combat menu","folderPath":"folders/Combat/combat menu.yy","name":"combat menu","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"combatants","folderPath":"folders/Combat/combatants.yy","name":"combatants","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"Scenes","folderPath":"folders/Scenes.yy","name":"Scenes","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Managers","folderPath":"folders/Managers.yy","name":"Managers","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Menus","folderPath":"folders/Menus.yy","name":"Menus","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Scenes","folderPath":"folders/Scenes.yy","name":"Scenes","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "ForcedPrefabProjectReferences":[
     {"link":"io.gamemaker.sdfshaders-1.0.0","name":"io.gamemaker.sdfshaders-1.0.0","path":"io.gamemaker.sdfshaders-1.0.0.yyp",},
