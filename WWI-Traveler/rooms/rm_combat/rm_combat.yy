@@ -1,16 +1,16 @@
 {
   "$GMRoom":"v1",
-  "%Name":"rm_1",
+  "%Name":"rm_combat",
   "creationCodeFile":"",
   "inheritCode":false,
   "inheritCreationOrder":false,
   "inheritLayers":false,
   "instanceCreationOrder":[
-    {"name":"inst_3F9BF43E","path":"rooms/rm_1/rm_1.yy",},
-    {"name":"inst_6E086A73","path":"rooms/rm_1/rm_1.yy",},
-    {"name":"inst_38096F0B","path":"rooms/rm_1/rm_1.yy",},
-    {"name":"inst_4E94FFA","path":"rooms/rm_1/rm_1.yy",},
-    {"name":"inst_4C5B4190","path":"rooms/rm_1/rm_1.yy",},
+    {"name":"inst_3F9BF43E","path":"rooms/rm_combat/rm_combat.yy",},
+    {"name":"inst_6E086A73","path":"rooms/rm_combat/rm_combat.yy",},
+    {"name":"inst_38096F0B","path":"rooms/rm_combat/rm_combat.yy",},
+    {"name":"inst_4E94FFA","path":"rooms/rm_combat/rm_combat.yy",},
+    {"name":"inst_4C5B4190","path":"rooms/rm_combat/rm_combat.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -26,7 +26,7 @@
     {"$GMRInstanceLayer":"","%Name":"spaces","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"spaces","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4278190080,"depth":400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
-  "name":"rm_1",
+  "name":"rm_combat",
   "parent":{
     "name":"WWI-Traveler",
     "path":"WWI-Traveler.yyp",

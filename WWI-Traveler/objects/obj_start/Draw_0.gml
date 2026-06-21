@@ -1,2 +1,5 @@
 draw_set();
-draw_text(32, 32, "Press Space to Start...");
+var _y = 32;
+draw_text(32, _y, "Press Space... Combat");
+_y += font_height();
+draw_text(32, _y, "Press Shift... Scene");
