@@ -42,9 +42,11 @@ combatants = [];
 for (var i = 0; i < array_length(combatant_datas); i++) {
 	var _data = combatant_datas[i];
 	var _rows = _data.team == Combatant_Team.player ? team_player_rows : team_enemy_rows;
-	var _space = _rows[_data.row][_data.pos];
 	
-	var _combatant = instance_create_layer(_space.x, _space.y, "combatants", obj_combatant, _data);
+	var _combatant = instance_create_layer(0, 0, "combatants", obj_combatant, _data);
+	var _space = _rows[_data.row][_data.pos];
+	_combatant.set_space(_space);
+	_space.set_combatant(_combatant);
 	array_push(combatants, _combatant);
 }
 
