@@ -14,19 +14,24 @@ for (var l = 0; l < array_length(SCENES.ambulance); l++) {
 	for (var c = 1; c <= _line_length; c++) {
 		
 		// Stop at onscreen count
-		if (_char_count >= characters_onscreen)
+		if (_char_count >= characters_onscreen_count)
 			break;
-			
-		//// Fade last 10 characters
-		//var _char_dif = characters_onscreen - _char_count;
-		//var _char_alpha = lerp(0.1, 1.0, _char_dif / 10);
-		//draw_set(,,,, _char_alpha);
+		
+		// Fade in latest characters
+		draw_set();
+		var _char_dif = abs(characters_onscreen_count - _char_count);
+		var _fades_count = array_length(fades);
+		if (_char_dif <= _fades_count) {
+			var _index = _fades_count - _char_dif; // If array_length == 10, 7th from the newest character = 3rd value on the fades array
+			var _alpha = fades[_index];
+			draw_set(,,,, _alpha);
+		}
 		
 		// Draw next character
 		var _char = string_char_at(_line, c);
 		draw_text(_x, _y, _char);
 		_x += string_width(_char);
-		_char_count += 1;
+		_char_count += 1; // Won't index correctly if above _char_dif
 	}
 	
 	// Carriage return
