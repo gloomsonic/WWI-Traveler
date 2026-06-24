@@ -15,4 +15,7 @@ switch(room) {
 			
 		camera_set_view_pos(VIEW, obj_scene_text.x, _y);
 		break;
+	case rm_map:
+		camera_set_view_pos(VIEW, 0, 0);
+		break;
 }
