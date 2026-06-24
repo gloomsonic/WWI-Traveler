@@ -40,6 +40,7 @@
   "IncludedFiles":[
     {"$GMIncludedFile":"","%Name":"Master.bank","CopyToMask":-1,"filePath":"datafiles/FMOD Banks/Desktop","name":"Master.bank","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"Master.strings.bank","CopyToMask":-1,"filePath":"datafiles/FMOD Banks/Desktop","name":"Master.strings.bank","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
+    {"$GMIncludedFile":"","%Name":"scenes_english_string.txt","CopyToMask":-1,"filePath":"datafiles","name":"scenes_english_string.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
     {"$GMIncludedFile":"","%Name":"scenes_english.txt","CopyToMask":-1,"filePath":"datafiles","name":"scenes_english.txt","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
   ],
   "isEcma":false,
