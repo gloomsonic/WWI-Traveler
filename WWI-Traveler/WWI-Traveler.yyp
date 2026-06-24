@@ -73,6 +73,7 @@
     {"id":{"name":"par_touchable","path":"objects/par_touchable/par_touchable.yy",},},
     {"id":{"name":"rm_combat","path":"rooms/rm_combat/rm_combat.yy",},},
     {"id":{"name":"rm_init","path":"rooms/rm_init/rm_init.yy",},},
+    {"id":{"name":"rm_map","path":"rooms/rm_map/rm_map.yy",},},
     {"id":{"name":"rm_scene","path":"rooms/rm_scene/rm_scene.yy",},},
     {"id":{"name":"rm_start","path":"rooms/rm_start/rm_start.yy",},},
     {"id":{"name":"_negate_warnings","path":"scripts/_negate_warnings/_negate_warnings.yy",},},
@@ -129,6 +130,7 @@
     {"roomId":{"name":"rm_start","path":"rooms/rm_start/rm_start.yy",},},
     {"roomId":{"name":"rm_combat","path":"rooms/rm_combat/rm_combat.yy",},},
     {"roomId":{"name":"rm_scene","path":"rooms/rm_scene/rm_scene.yy",},},
+    {"roomId":{"name":"rm_map","path":"rooms/rm_map/rm_map.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

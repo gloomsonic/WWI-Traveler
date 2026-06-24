@@ -3,3 +3,5 @@ var _y = 32;
 draw_text(32, _y, "Press Space... Combat");
 _y += font_height();
 draw_text(32, _y, "Press Shift... Scene");
+_y += font_height();
+draw_text(32, _y, "Press M... Map");
