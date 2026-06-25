@@ -18,6 +18,7 @@ for (var p = 0; p < array_length(SCENES.ambulance); p++) {
 	
 	// Await input
 	if (_phrase == "<w>") {
+		truncate_fades(_char_count, _char_count_end)
 		awaiting_input = true;
 		break;
 	}
