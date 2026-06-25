@@ -1,26 +1,30 @@
+// Scroll page
 var _ud = mouse_wheel_down() - mouse_wheel_up();
 y += scroll_spd * _ud;
 
-characters_onscreen_count += char_spd;
+// Await input or advance text by initiating fades
+if (awaiting_input) {
+	if (mouse_check_button_pressed(mb_left)) {
+		var _wait = next_wait_phrase();
+		array_delete(SCENES.ambulance, _wait, 1);
+		characters_opaque_count--;
+		awaiting_input = false;
+	}
+} else { 
+	for (var i = char_spd-1; i >= 0; i--) {
+		var _off = i * (fade_spd / char_spd);
+		array_push(fade_values, _off);
+	}
+}
 
-//// Progress or await input
-//var _break = break_counts[0];
-//if (characters_onscreen_count < _break) {
-//	characters_onscreen_count = approach(characters_onscreen_count, _break, char_spd);
+// Increment fades
+for (var f = 0; f < array_length(fade_values); f++) {
+	fade_values[f] += fade_spd;
+	if (fade_values[f] < 1.0) 
+		continue;
 	
-//	// Add an approrpiately offset fade for each new character
-//	for (var i = char_spd-1; i >= 0; i--) {
-//		var _off_mult = i / char_spd;
-//		array_push(fades, fade_spd*_off_mult);
-//	}
-//} else {
-//	if (mouse_check_button_pressed(mb_left))
-//		array_shift(break_counts);
-//}
-
-//// Increment and complete fades
-//for (var f = 0; f < array_length(fades); f++) {
-//	fades[f] += fade_spd;
-//	if (fades[f] < 1.0) continue;
-//	array_delete(fades, f, 1);
-//}
+	// Finished a fade
+	array_delete(fade_values, f, 1);
+	characters_opaque_count++;
+	f--;
+}

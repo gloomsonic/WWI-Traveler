@@ -56,7 +56,9 @@ for (var w = 0; w < array_length(_words); w++) {
 	
 	// Special character, end phrase
 	if (string_char_at(_word, 1) == "<") {
-		array_push(_phrases, string_trim(_phrase));
+		if (_phrase != "")
+			array_push(_phrases, string_trim(_phrase));
+			
 		array_push(_phrases, _word);
 		_phrase = "";
 		continue;
