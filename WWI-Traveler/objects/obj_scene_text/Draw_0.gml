@@ -13,6 +13,7 @@ for (var p = 0; p < array_length(SCENES.ambulance); p++) {
 	// Paragraph break
 	if (_phrase == "<p>") {
 		_y += font_height() * line_spacing;
+		_y += font_height() * line_spacing;
 		continue;
 	}
 	
@@ -21,6 +22,12 @@ for (var p = 0; p < array_length(SCENES.ambulance); p++) {
 		truncate_fades(_char_count, _char_count_end)
 		awaiting_input = true;
 		break;
+	}
+	
+	// line break
+	if (_phrase == "<n>") {
+		_y += font_height() * line_spacing;
+		continue;
 	}
 	
 	// Draw last phrase(s) character-by-character
@@ -41,7 +48,7 @@ for (var p = 0; p < array_length(SCENES.ambulance); p++) {
 		
 		// Carriage return
 		_x = l_margin;
-		_y += font_height() * line_spacing;
+		//_y += font_height() * line_spacing;
 		continue;	
 	}
 	
@@ -52,7 +59,7 @@ for (var p = 0; p < array_length(SCENES.ambulance); p++) {
 
 	// Carriage return
 	_x = l_margin;
-	_y += font_height() * line_spacing;
+	//_y += font_height() * line_spacing;
 }
 
 // Scroll indicator

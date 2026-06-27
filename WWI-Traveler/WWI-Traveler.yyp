@@ -104,6 +104,7 @@
     {"id":{"name":"parse_lines","path":"scripts/parse_lines/parse_lines.yy",},},
     {"id":{"name":"parse_words","path":"scripts/parse_words/parse_words.yy",},},
     {"id":{"name":"round_n","path":"scripts/round_n/round_n.yy",},},
+    {"id":{"name":"scenes_functions","path":"scripts/scenes_functions/scenes_functions.yy",},},
     {"id":{"name":"scenes","path":"scripts/scenes/scenes.yy",},},
     {"id":{"name":"scr_audio_events","path":"scripts/scr_audio_events/scr_audio_events.yy",},},
     {"id":{"name":"scr_audio","path":"scripts/scr_audio/scr_audio.yy",},},

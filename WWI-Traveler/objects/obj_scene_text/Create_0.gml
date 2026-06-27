@@ -19,22 +19,14 @@ char_get_fade = function(_count, _end) {
 	return _alpha;
 }
 
-// Returns the index of the next 'wait' phrase
-next_wait_phrase = function() {
-	for (var p = 0; p < array_length(SCENES.ambulance); p++) {
-		var _phrase = SCENES.ambulance[p];
-		if (_phrase != "<w>") continue;
-		return p;
-	}
-	return noone;
-}
-
 // Automatically jump to next 'wait'
 next_wait_jump_to = function() {
-	var _next = next_wait_phrase();
+	var _next = scene_get_next_wait(SCENES.ambulance);
 	if (_next == noone) return;
+	
 	draw_set();
-	var _text_bot = _next * font_height() * line_spacing;
+	var _line_count = scene_get_line_count(SCENES.ambulance, _next);
+	var _text_bot = _line_count * font_height() * line_spacing;
 	y = _text_bot - ROOM_H_H; // TODO: Try out offseting this? Messes with scroll 'wheel' visual a touch
 }
 

@@ -68,6 +68,7 @@ for (var w = 0; w < array_length(_words); w++) {
 	var _phrase_w_plus = string_width(_phrase) + string_width(_word);
 	if (_phrase_w_plus >= LINE_W) {
 		array_push(_phrases, string_trim(_phrase));
+		array_push(_phrases, "<n>");
 		_phrase = "";
 	}
 	
