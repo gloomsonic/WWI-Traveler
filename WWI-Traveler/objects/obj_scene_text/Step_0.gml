@@ -7,8 +7,8 @@ if (awaiting_input) {
 	if (mouse_check_button_pressed(mb_left)) {
 		var _wait = next_wait_phrase();
 		array_delete(SCENES.ambulance, _wait, 1);
-		characters_opaque_count--;
 		awaiting_input = false;
+		next_wait_jump_to();
 	}
 } else { 
 	for (var i = char_spd-1; i >= 0; i--) {
