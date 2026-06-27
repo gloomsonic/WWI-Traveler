@@ -3,21 +3,21 @@ show_debug_message("Map Controller created");
 selected_node = noone;
 next_node_id = 0;
 
-edges = []; // Each entry will be two nodes { a , b } : this represents a connection between two node ids.
+connecting_line = []; // Each entry will be two nodes { a , b } : this represents a connection between two node ids.
 
 link_first_node = noone;
 
-toggle_edge = function(_a, _b){
-	for (var i = 0; i < array_length(edges); i++)
+toggle_connection = function(_a, _b){
+	for (var i = 0; i < array_length(connecting_line); i++)
 	{
-		if (edges[i].a == _a && edges[i].b == _b) || (edges[i].a == _b && edges[i].b == _a)
+		if (connecting_line[i].a == _a && connecting_line[i].b == _b) || (connecting_line[i].a == _b && connecting_line[i].b == _a)
 		{
-			array_delete(edges, i, 1); // If already linked, remove the edge.
+			array_delete(connecting_line, i, 1); // If already linked, remove the edge.
 			return;
 		}
 	}
 	
-	array_push(edges, { a: _a , b: _b }); // If not linked, add a new edge.
+	array_push(connecting_line, { a: _a , b: _b }); // If not linked, add a new edge.
 }
 
 // Returns a node instance

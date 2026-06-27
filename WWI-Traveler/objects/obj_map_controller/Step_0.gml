@@ -13,7 +13,7 @@ if (mouse_check_button_released(mb_left)){
 	if (link_first_node != noone && link_second_node != noone && link_second_node != link_first_node)
 	{
 		// dragged from one node to a different node -> connect / disconnect
-		toggle_edge(link_first_node.node_id, link_second_node.node_id);
+		toggle_connection(link_first_node.node_id, link_second_node.node_id);
 	}
 	else if (link_first_node != noone && link_second_node == link_first_node)
 	{
