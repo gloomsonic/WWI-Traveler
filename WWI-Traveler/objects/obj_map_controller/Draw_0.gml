@@ -1,9 +1,11 @@
 draw_set_color(c_white);
-for(var i = 0; i < array_length(connecting_line); i++){
-	var _a = get_node_by_id(connecting_line[i].a);
-	var _b = get_node_by_id(connecting_line[i].b);
+
+for(var i = 0; i < array_length(path_line); i++){
+	var _a = get_node(path_line[i].a);
+	var _b = get_node(path_line[i].b);
 	
-	if (_a != noone && _b != noone){
+	if (_a != noone && _b != noone)
+	{
 		draw_line_width(_a.x, _a.y, _b.x, _b.y, 3);
 	}
 }
