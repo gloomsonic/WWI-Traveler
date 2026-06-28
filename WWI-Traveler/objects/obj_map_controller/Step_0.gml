@@ -6,7 +6,7 @@ if (mouse_check_button_pressed(mb_left)){
 }
 
 
-// Handles the mouse gestures when working with nodes. Differentiates between clicking and dragging, basically.
+// Handles the mouse gestures when working with nodes and paths. Differentiates between clicking and dragging, basically.
 if (mouse_check_button_released(mb_left)){
 	var link_second_node = _touch.inst;
 
