@@ -12,7 +12,7 @@ switch(room) {
 		if (abs(_ydif) >= 0.5)
 			var _y = lerp(VIEW_Y, _ygoal, scene_lerp_spd);
 		else var _y = _ygoal;
-			
+		
 		camera_set_view_pos(VIEW, obj_scene_text.x, _y);
 		break;
 	case rm_map:

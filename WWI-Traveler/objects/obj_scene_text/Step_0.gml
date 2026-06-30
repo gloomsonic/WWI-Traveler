@@ -1,11 +1,12 @@
 // Scroll page
 var _ud = mouse_wheel_down() - mouse_wheel_up();
 y += scroll_spd * _ud;
+y = clamp(y, ystart, 16000);
 
 // Await input or advance text by initiating fades
 if (awaiting_input) {
 	if (mouse_check_button_pressed(mb_left)) {
-		var _wait = scene_get_next_wait(SCENES.ambulance) //next_wait_phrase();
+		var _wait = scene_get_next_wait(SCENES.ambulance);
 		array_delete(SCENES.ambulance, _wait, 1);
 		awaiting_input = false;
 		next_wait_jump_to();
