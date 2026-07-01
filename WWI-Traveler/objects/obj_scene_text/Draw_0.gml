@@ -21,7 +21,6 @@ for (var p = 0; p < array_length(SCENES.ambulance.story); p++) {
 	if (_phrase == "<w>") {
 		truncate_fades(_char_count, _char_count_end)
 		states.queue(State.waiting);
-		//awaiting_input = true;
 		break;
 	}
 	

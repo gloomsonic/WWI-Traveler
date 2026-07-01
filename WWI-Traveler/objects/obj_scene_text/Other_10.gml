@@ -47,3 +47,10 @@ truncate_fades = function(_count, _end) {
 	var _fades_count = array_length(fade_values);
 	array_delete(fade_values, _fades_count - _dif, _dif);
 }
+
+// When we've reached the end of the story, queue choosing state
+check_choosing = function() {
+	var _story_length = story_get_char_count(SCENES.ambulance.story);
+	if (characters_opaque_count < _story_length) return;
+	states.queue(State.choosing);
+}

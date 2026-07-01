@@ -6,10 +6,14 @@ state_scene_reading = function(_event) {
 		case Event.step: 
 			scroll_page();
 			increment_char_fades();
+			
 			for (var i = char_spd-1; i >= 0; i--) {
 				var _off = i * (fade_spd / char_spd);
 				array_push(fade_values, _off);
 			}
+			
+			// Exit state
+			check_choosing();
 			break;
 		case Event.final:
 			break;
@@ -42,6 +46,7 @@ state_scene_choosing = function(_event) {
 		case Event.enter:
 			break;
 		case Event.step: 
+			scroll_page();
 			break;
 		case Event.final:
 			break;
