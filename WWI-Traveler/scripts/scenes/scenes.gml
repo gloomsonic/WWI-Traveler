@@ -11,8 +11,8 @@ draw_set();
 // Parse into words and special characters
 var _words = [];
 var _word = "";
-for (var c = 1; c <= string_length(JSON_SCENES.ambulance); c++) {
-	var _char = string_char_at(JSON_SCENES.ambulance, c);
+for (var c = 1; c <= string_length(JSON_SCENES.ambulance.story); c++) {
+	var _char = string_char_at(JSON_SCENES.ambulance.story, c);
 	switch (_char) {
 		
 		// Space
@@ -26,9 +26,9 @@ for (var c = 1; c <= string_length(JSON_SCENES.ambulance); c++) {
 			if (_word != "")
 				array_push(_words, _word);
 			
-			var _spec_end = string_pos_ext(">", JSON_SCENES.ambulance, c);
+			var _spec_end = string_pos_ext(">", JSON_SCENES.ambulance.story, c);
 			var _spec_dif = _spec_end - c;
-			var _spec_char = string_copy(JSON_SCENES.ambulance, c, _spec_dif+1);
+			var _spec_char = string_copy(JSON_SCENES.ambulance.story, c, _spec_dif+1);
 			array_push(_words, _spec_char);
 			
 			// Next word
@@ -80,8 +80,9 @@ for (var w = 0; w < array_length(_words); w++) {
 if (_phrase != "")
 	array_push(_phrases, string_trim(_phrase));
 
-	
-SCENES.ambulance = _phrases;
+SCENES.ambulance = {};
+SCENES.ambulance.story = _phrases;
+SCENES.ambulance.choices = JSON_SCENES.ambulance.choices;
 
 
 //JSON_SCENES = json_load("scenes_english.txt");

@@ -5,8 +5,8 @@ var _char_count = 0;
 var _char_count_end = characters_opaque_count + array_length(fade_values);
 
 // Draw phrases
-for (var p = 0; p < array_length(SCENES.ambulance); p++) {
-	var _phrase = SCENES.ambulance[p];
+for (var p = 0; p < array_length(SCENES.ambulance.story); p++) {
+	var _phrase = SCENES.ambulance.story[p];
 	var _phrase_len = string_length(_phrase);
 	var _char_count_plus = _char_count + _phrase_len;
 	
@@ -20,7 +20,8 @@ for (var p = 0; p < array_length(SCENES.ambulance); p++) {
 	// Await input
 	if (_phrase == "<w>") {
 		truncate_fades(_char_count, _char_count_end)
-		awaiting_input = true;
+		states.queue(State.waiting);
+		//awaiting_input = true;
 		break;
 	}
 	
@@ -33,6 +34,7 @@ for (var p = 0; p < array_length(SCENES.ambulance); p++) {
 	// Draw last phrase(s) character-by-character
 	if (_char_count_plus >= characters_opaque_count) {
 		
+		// NOTE: will crash if nothing on fade_values array
 		// Draw each character with fade
 		for (var c = 1; c <= _phrase_len; c++) {
 			var _char = string_char_at(_phrase, c);
@@ -48,7 +50,6 @@ for (var p = 0; p < array_length(SCENES.ambulance); p++) {
 		
 		// Carriage return
 		_x = l_margin;
-		//_y += font_height() * line_spacing;
 		continue;	
 	}
 	
@@ -59,7 +60,6 @@ for (var p = 0; p < array_length(SCENES.ambulance); p++) {
 
 	// Carriage return
 	_x = l_margin;
-	//_y += font_height() * line_spacing;
 }
 
 // Scroll indicator

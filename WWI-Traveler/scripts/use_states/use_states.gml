@@ -54,4 +54,6 @@ enum State {
 	idle, hovered, held,
 	attack, hit,
 	select_action, select_target, select_reposition,
+	
+	reading, waiting, choosing, // obj_scene_text
 }
