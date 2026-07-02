@@ -44,6 +44,7 @@ state_scene_waiting = function(_event) {
 state_scene_choosing = function(_event) {
 	switch(_event) {
 		case Event.enter:
+			truncate_fades(characters_opaque_count, story_get_char_count(SCENES.ambulance.story) + array_length(fade_values));
 			break;
 		case Event.step: 
 			scroll_page();

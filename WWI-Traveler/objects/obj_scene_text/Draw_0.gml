@@ -19,7 +19,7 @@ for (var p = 0; p < array_length(SCENES.ambulance.story); p++) {
 	
 	// Await input
 	if (_phrase == "<w>") {
-		truncate_fades(_char_count, _char_count_end)
+		truncate_fades(_char_count, _char_count_end);
 		states.queue(State.waiting);
 		break;
 	}
