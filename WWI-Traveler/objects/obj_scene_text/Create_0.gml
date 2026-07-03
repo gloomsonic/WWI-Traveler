@@ -11,6 +11,8 @@ states.queue(State.reading);
 draw_set();
 line_spacing = 1.4;
 l_margin = ROOM_W_H - LINE_W_H;
+choice_spacing = 2.0;
+choice_break = font_height() * 4.0
 
 char_spd = 6;
 scroll_spd = font_height() * line_spacing;

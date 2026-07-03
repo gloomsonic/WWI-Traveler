@@ -1,4 +1,4 @@
-///@desc methods
+///@desc methods Step
 
 // What actually 'moves' the scroll along the y axis
 scroll_y = function(_y) {
@@ -38,7 +38,8 @@ char_get_fade = function(_count, _end) {
 // Automatically jump to next 'wait'
 next_wait_jump_to = function() {
 	var _next = scene_get_next_wait(SCENES.ambulance);
-	if (_next == noone) return;
+	//if (_next == noone) 
+	//	_next = 
 	
 	draw_set();
 	var _line_count = scene_get_line_count(SCENES.ambulance, _next);

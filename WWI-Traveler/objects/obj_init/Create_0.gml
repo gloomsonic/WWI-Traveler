@@ -1,4 +1,5 @@
 randomize();
+display_reset(8, true);
 
 instance_create_depth(0, 0, 0, obj_room_start);
 instance_create_depth(0, 0, 0, obj_camera);
