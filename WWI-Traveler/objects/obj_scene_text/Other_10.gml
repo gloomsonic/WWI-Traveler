@@ -1,10 +1,16 @@
 ///@desc methods
 
+// What actually 'moves' the scroll along the y axis
+scroll_y = function(_y) {
+	y = _y;
+	y = clamp(y, 0, 16000);
+}
+
 // Scroll up and down the story with mouse wheel input
 scroll_page = function() {
 	var _ud = mouse_wheel_down() - mouse_wheel_up();
-	y += scroll_spd * _ud;
-	y = clamp(y, ystart, 16000);
+	var _yto = y + (scroll_spd * _ud);
+	scroll_y(_yto);
 }
 
 //
@@ -37,7 +43,7 @@ next_wait_jump_to = function() {
 	draw_set();
 	var _line_count = scene_get_line_count(SCENES.ambulance, _next);
 	var _text_bot = _line_count * font_height() * line_spacing;
-	y = _text_bot - ROOM_H_H; // TODO: Try out offseting this? Messes with scroll 'wheel' visual a touch
+	scroll_y(_text_bot - ROOM_H_H); //TODO: Try out offseting this? Messes with scroll 'wheel' visual a touch
 }
 
 //

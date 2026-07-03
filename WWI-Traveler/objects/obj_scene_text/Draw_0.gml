@@ -63,5 +63,8 @@ for (var p = 0; p < array_length(SCENES.ambulance.story); p++) {
 
 // Scroll indicator
 draw_set();
-var _ydif = y - 0;
-draw_circle(x, ROOM_H_H + _ydif, 32, false);
+draw_circle(x, y + ROOM_H_H, 32, false);
+
+// TEST
+draw_text(0, 0, SCENES.ambulance.choices[0]);
+draw_text(0, 48, SCENES.ambulance.choices[1]);
