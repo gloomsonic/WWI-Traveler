@@ -51,7 +51,11 @@ state_scene_choosing = function(_event) {
 	switch(_event) {
 		case Event.enter:
 			scroll_y(y + choice_break);
-			truncate_fades(characters_opaque_count, story_get_char_count(SCENES.ambulance.story) + array_length(fade_values));
+			var _story_len = story_get_char_count(SCENES.ambulance.story);
+			truncate_fades(characters_opaque_count, _story_len + array_length(fade_values));
+			
+			// Create par_touchables for choices, using 'y' from end of story
+			//instance_create_depth()
 			break;
 		case Event.step: 
 			scroll_page();
