@@ -7,7 +7,8 @@ get_combatant = function() {
 }
 set_combatant = function(_combatant) {
 	my_combatant = _combatant;
-	my_combatant.set_space(id);
+	if (my_combatant != noone)
+		my_combatant.set_space(id);
 }
 free = function() {
 	my_combatant = noone;
