@@ -6,9 +6,17 @@ for(var i = 0; i < array_length(path_line); i++){
 	
 	if (_a != noone && _b != noone)
 	{
-		draw_line_width(_a.x, _a.y, _b.x, _b.y, 3);
+		if (path_line[i] == selected_path){
+			draw_set_color(c_yellow);
+			draw_line_width(_a.x, _a.y, _b.x, _b.y, 8);
+		}
+		
+		draw_set_color(path_obstacle_color(path_line[i].obstacle));
+        draw_line_width(_a.x, _a.y, _b.x, _b.y, 4);
 	}
 }
+
+draw_set_color(c_white);
 
 if (link_first_node != noone && mouse_check_button(mb_left)){
 	draw_line_width(link_first_node.x, link_first_node.y, mouse_x, mouse_y, 2);

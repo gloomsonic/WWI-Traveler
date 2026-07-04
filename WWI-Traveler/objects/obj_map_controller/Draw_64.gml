@@ -7,3 +7,6 @@ draw_text_transformed(20, _y, "Node ID: " + string(selected_node != noone ? sele
 
 _y += font_height();
 draw_text_transformed(20, _y, "Feature: " + (selected_node != noone ? MAP_NODE_FEATURES[selected_node.feature] : "-"), 0.5, 0.5, 0);
+
+_y += font_height();
+draw_text_transformed(20, _y, "Path Feature: " + (selected_path != noone ? MAP_PATH_OBSTACLES[selected_path.obstacle] : "-"), 0.5, 0.5, 0);
