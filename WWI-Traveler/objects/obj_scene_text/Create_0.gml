@@ -11,6 +11,8 @@ states.queue(State.reading);
 draw_set();
 line_spacing = 1.4;
 l_margin = ROOM_W_H - LINE_W_H;
+story_bot_y = 0;
+story_character_count = story_get_char_count(SCENES.ambulance.story);
 choice_spacing = 2.0;
 choice_break = font_height() * 4.0
 

@@ -55,5 +55,6 @@ enum State {
 	attack, hit,
 	select_action, select_target, select_reposition,
 	
+	story_choose,
 	reading, waiting, choosing, // obj_scene_text
 }

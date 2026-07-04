@@ -1,22 +1,22 @@
 {
   "$GMObject":"",
-  "%Name":"obj_mouse_cursor",
+  "%Name":"obj_story_choice",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":11,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":1,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_mouse_cursor",
+  "name":"obj_story_choice",
   "overriddenProperties":[],
   "parent":{
-    "name":"WWI-Traveler",
-    "path":"WWI-Traveler.yyp",
+    "name":"Scenes",
+    "path":"folders/Scenes.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"par_touchable",
+    "path":"objects/par_touchable/par_touchable.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -34,10 +34,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_mouse_cursor",
-    "path":"sprites/spr_mouse_cursor/spr_mouse_cursor.yy",
+  "spriteId":null,
+  "spriteMaskId":{
+    "name":"msk_story_choice",
+    "path":"sprites/msk_story_choice/msk_story_choice.yy",
   },
-  "spriteMaskId":null,
   "visible":true,
 }

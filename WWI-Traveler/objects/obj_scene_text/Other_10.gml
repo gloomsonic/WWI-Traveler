@@ -38,13 +38,11 @@ char_get_fade = function(_count, _end) {
 // Automatically jump to next 'wait'
 next_wait_jump_to = function() {
 	var _next = scene_get_next_wait(SCENES.ambulance);
-	//if (_next == noone) 
-	//	_next = 
 	
 	draw_set();
-	var _line_count = scene_get_line_count(SCENES.ambulance, _next);
+	var _line_count = scene_get_line_count(SCENES.ambulance, _next); // NOTE: it's ok if '_next' is 'noone'
 	var _text_bot = _line_count * font_height() * line_spacing;
-	scroll_y(_text_bot - ROOM_H_H); //TODO: Try out offseting this? Messes with scroll 'wheel' visual a touch
+	scroll_y(_text_bot - ROOM_H_H);
 }
 
 //
@@ -57,7 +55,19 @@ truncate_fades = function(_count, _end) {
 
 // When we've reached the end of the story, queue choosing state
 check_choosing = function() {
-	var _story_length = story_get_char_count(SCENES.ambulance.story);
-	if (characters_opaque_count < _story_length) return;
+	if (characters_opaque_count < story_character_count) return;
 	states.queue(State.choosing);
+}
+
+//
+spawn_choices = function() {
+	var _x = l_margin;
+	var _y = story_bot_y + choice_break;
+	
+	for (var c = 0; c < array_length(SCENES.ambulance.choices); c++) {
+		instance_create_depth(_x, _y, depth, obj_story_choice, {
+			my_text: SCENES.ambulance.choices[c],
+		});
+		_y += font_height() * choice_spacing;
+	}
 }

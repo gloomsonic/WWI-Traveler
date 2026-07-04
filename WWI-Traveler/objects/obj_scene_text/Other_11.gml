@@ -64,18 +64,5 @@ draw_phrases = function() {
 		// Carriage return
 		_x = l_margin;
 	}
-	return _y;
-}
-
-//
-draw_choices = function(_y) {
-	draw_set(,,, fa_middle);
-	_y += choice_break;
-	
-	for (var c = 0; c < array_length(SCENES.ambulance.choices); c++) {
-		//draw_rectangle(540, _y, ROOM_W-540, _y + font_height(), true);
-		draw_circle(l_margin - 128, _y, 16, true);
-		draw_text(l_margin, _y, SCENES.ambulance.choices[c]);
-		_y += font_height() * choice_spacing;
-	}
+	story_bot_y = _y;
 }
