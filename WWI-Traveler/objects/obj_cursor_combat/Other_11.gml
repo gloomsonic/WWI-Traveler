@@ -1,6 +1,6 @@
 ///@desc states
+event_inherited();
 
-// Combat states
 state_cursor_select_action = function(_event) {
 	switch(_event) {
 		case Event.step: 
@@ -31,15 +31,6 @@ state_cursor_select_reposition = function(_event) {
 				obj_combat_manager.init_reposition(my_combatant, my_combatant.get_space(), _data.inst);
 				states.queue(State.select_action);
 			}
-			break;
-	}
-}
-
-// Story states
-state_cursor_story_choose = function(_event) {
-	switch(_event) {
-		case Event.step: 
-			touch_object(obj_story_choice);
 			break;
 	}
 }

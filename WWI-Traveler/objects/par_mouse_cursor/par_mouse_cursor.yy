@@ -1,6 +1,6 @@
 {
   "$GMObject":"",
-  "%Name":"obj_mouse_cursor",
+  "%Name":"par_mouse_cursor",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
@@ -10,7 +10,7 @@
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_mouse_cursor",
+  "name":"par_mouse_cursor",
   "overriddenProperties":[],
   "parent":{
     "name":"WWI-Traveler",

@@ -53,8 +53,11 @@ function use_states(_owner = other.id) constructor {
 enum State { 
 	idle, hovered, held,
 	attack, hit,
-	select_action, select_target, select_reposition,
 	
+	// Cursor states
+	select_action, select_target, select_reposition,
 	story_choose,
-	reading, waiting, choosing, // obj_scene_text
+	
+	// obj_scene_text
+	reading, waiting, choosing, 
 }

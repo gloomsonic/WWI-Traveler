@@ -1,1 +1,0 @@
-states.queue(State.story_choose);
