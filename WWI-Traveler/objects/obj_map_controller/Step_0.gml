@@ -23,23 +23,29 @@ if (mouse_check_button_released(mb_left)){
 	}
 	else if (link_first_node == noone && link_second_node == noone)
 	{
-		var _clicked_path = get_path_at(mouse_x, mouse_y);
-		
-		if (_clicked_path != noone)
-		{
-			// clicked near a line -> select that path
-			selected_path = _clicked_path;
-			selected_node = noone;
-		}
-		else
-		{
-			// pressed and released on empty space -> create a new node here
-			var _new_node = instance_create_layer(mouse_x, mouse_y, layer, obj_map_node);
-			_new_node.node_id = next_node_id;
-			next_node_id += 1;
-			selected_node = _new_node;
-			selected_path = noone;
-		}
+      var _clicked_path = get_path_at(mouse_x, mouse_y);
+
+      if (_clicked_path != noone)
+      {
+        // clicked near a line -> select that path
+        selected_path = _clicked_path;
+        selected_node = noone;
+      }
+      else if (selected_node != noone || selected_path != noone)
+      {
+        // something was selected and we clicked empty space -> just deselect
+        selected_node = noone;
+        selected_path = noone;
+      }
+      else
+      {
+        // nothing selected + empty space -> create a new node here
+        var _new_node = instance_create_layer(mouse_x, mouse_y, layer, obj_map_node);
+        _new_node.node_id = next_node_id;
+        next_node_id += 1;
+        selected_node = _new_node;
+        selected_path = noone;
+      }
 	}
 	else if (link_first_node == noone && link_second_node != noone)
 	{
