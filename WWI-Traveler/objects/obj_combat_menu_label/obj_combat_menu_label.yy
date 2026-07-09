@@ -1,21 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"obj_combatant_space",
+  "%Name":"obj_combat_menu_label",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_combatant_space",
+  "name":"obj_combat_menu_label",
   "overriddenProperties":[],
   "parent":{
-    "name":"Combatants",
-    "path":"folders/Combat/Combatants.yy",
+    "name":"Combat Menu",
+    "path":"folders/Combat/Combat Menu.yy",
   },
-  "parentObjectId":{
-    "name":"par_touchable",
-    "path":"objects/par_touchable/par_touchable.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -33,10 +30,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_combatant_space",
-    "path":"sprites/spr_combatant_space/spr_combatant_space.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

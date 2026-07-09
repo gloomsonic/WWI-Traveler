@@ -9,8 +9,8 @@
   "name":"obj_combat_menu_pass",
   "overriddenProperties":[],
   "parent":{
-    "name":"combat menu",
-    "path":"folders/Combat/combat menu.yy",
+    "name":"Combat Menu",
+    "path":"folders/Combat/Combat Menu.yy",
   },
   "parentObjectId":{
     "name":"par_combat_menu",

@@ -10,8 +10,12 @@ if (turn_done) {
 		var _target = array_shuffle(_team_player)[0];
 		obj_combat_manager.init_attack(_combatant, _target);
 	} else { // Player turn
-		spawn_combat_menu();
+		spawn_combat_menu(_combatant);
 		obj_cursor_combat.set_combatant(_combatant); // TODO: this should maybe become a 'signal' and this code runs inside cursor
 		obj_cursor_combat.states.queue(State.select_action);
 	}
 }
+
+//
+if (get_team(Combatant_Team.enemy) == noone) 
+	room_goto(rm_scene);

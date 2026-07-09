@@ -26,8 +26,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"combat menu",
-    "path":"folders/Combat/combat menu.yy",
+    "name":"Sprites",
+    "path":"folders/Combat/Combat Menu/Sprites.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

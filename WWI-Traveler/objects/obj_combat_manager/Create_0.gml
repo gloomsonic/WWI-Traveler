@@ -2,12 +2,12 @@ event_user_all();
 
 // Placeholder combatant array
 combatant_datas = [
-	new combatant_data(false,	Combatant_Team.player,	0, 1,	10, 3), 
-	new combatant_data(false,	Combatant_Team.player,	0, 2,	9, 2), 
-	new combatant_data(false,	Combatant_Team.player,	1, 1,	9, 2), 
-	new combatant_data(true,	Combatant_Team.enemy,	0, 1,	6, 3), 
-	new combatant_data(true,	Combatant_Team.enemy,	0, 2,	7, 2), 
-	new combatant_data(true,	Combatant_Team.enemy,	1, 1,	7, 2), 
+	new combatant_data(false,	Combatant_Team.player,	0, 1,	10, 3,	"William Hardy"), 
+	new combatant_data(false,	Combatant_Team.player,	0, 2,	9, 2,	"John-o Reardon"), 
+	new combatant_data(false,	Combatant_Team.player,	1, 1,	9, 2,	"Vikram Mamar"), 
+	new combatant_data(true,	Combatant_Team.enemy,	0, 1,	6, 3,	"George Perdy"), 
+	new combatant_data(true,	Combatant_Team.enemy,	0, 2,	7, 2,	"Greene Lewell"), 
+	new combatant_data(true,	Combatant_Team.enemy,	1, 1,	7, 2,	"Jean-Charles Deniau"), 
 ];
 
 // Combatant spaces
@@ -36,19 +36,7 @@ team_enemy_rows[1] = [
 	instance_create_layer(ROOM_W *  8/15, _y[3], "spaces", obj_combatant_space),
 	instance_create_layer(ROOM_W * 12/15, _y[3], "spaces", obj_combatant_space),	
 ];
-
-// Spawn combatants
-combatants = [];
-for (var i = 0; i < array_length(combatant_datas); i++) {
-	var _data = combatant_datas[i];
-	var _rows = _data.team == Combatant_Team.player ? team_player_rows : team_enemy_rows;
-	
-	var _combatant = instance_create_layer(0, 0, "combatants", obj_combatant, _data);
-	var _space = _rows[_data.row][_data.pos];
-	_combatant.set_space(_space);
-	_space.set_combatant(_combatant);
-	array_push(combatants, _combatant);
-}
+combatants = spawn_combatants();
 
 // Placeholder default turn queue, will be determined by speed
 turn_done = true;
@@ -60,5 +48,7 @@ turn_queue = [
 	_player[0],
 	_player[1],
 	_enemy[1],
+	_player[2],
+	_enemy[2],
 ];
 

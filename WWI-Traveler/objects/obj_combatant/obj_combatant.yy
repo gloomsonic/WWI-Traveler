@@ -10,8 +10,8 @@
   "name":"obj_combatant",
   "overriddenProperties":[],
   "parent":{
-    "name":"combatants",
-    "path":"folders/Combat/combatants.yy",
+    "name":"Combatants",
+    "path":"folders/Combat/Combatants.yy",
   },
   "parentObjectId":{
     "name":"par_touchable",

@@ -27,8 +27,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"combatants",
-    "path":"folders/Combat/combatants.yy",
+    "name":"Combatants",
+    "path":"folders/Combat/Combatants.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
