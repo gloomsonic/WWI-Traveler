@@ -12,8 +12,10 @@ function map_to_struct(_path_line, _next_node_id){
 	return { nodes: _nodes, paths: _paths, next_node_id: _next_node_id };
 }
 
+// Slot filename, namespaced by the current room so each map room keeps its own 10 slots.
+// e.g. in rm_map -> "rm_map_0.json"; in rm_map_forest -> "rm_map_forest_0.json".
 function map_file(_slot){
-        return "map_" + string(_slot) + ".json";
+        return room_get_name(room) + "_" + string(_slot) + ".json";
 }
 
 function save_map(_filename, _path_line, _next_node_id){
