@@ -1,5 +1,7 @@
 show_debug_message("Map Controller created");
 
+map_slot = 0;
+
 selected_node = noone;
 selected_path = noone;
 
@@ -51,4 +53,77 @@ get_path_at = function(_point_x, _point_y){
 	}
 	
 	return _closest_path;
+}
+
+edit_mode = true;
+pointer = noone;
+
+start_node = function(){
+	if (selected_node != noone && instance_exists(selected_node)){
+		return selected_node;
+	}
+	
+	var _valid_node = noone;
+	with (obj_map_node){
+		 if (_valid_node == noone || node_id < _valid_node.node_id) _valid_node = id;	
+	}
+	
+	return _valid_node;
+}
+
+enter_play_mode = function(){
+	var _start = start_node();
+	if (_start == noone){ edit_mode = true; return; }
+	selected_node = noone;
+	selected_path = noone;
+	
+	if (!instance_exists(pointer)){
+		pointer = instance_create_layer(_start.x, _start.y, layer, obj_map_pointer);
+	}
+	pointer.set_node(_start);
+}
+
+exit_play_mode = function(){
+        if (instance_exists(pointer)) instance_destroy(pointer);
+        pointer = noone;
+  }
+
+// Return the path struct that directly connects two node ids, or noone if they aren't linked.
+// (Returns the struct, not just true/false, so obstacle logic can read .obstacle later.)
+get_path_between = function(_a, _b){
+	for (var i = 0; i < array_length(path_line); i++)
+	{
+		if (path_line[i].a == _a && path_line[i].b == _b) || (path_line[i].a == _b && path_line[i].b == _a)
+			return path_line[i];
+	}
+	return noone;
+}
+
+// Wipe the map back to a blank canvas (no nodes, no paths, ids reset).
+clear_map = function(){
+	with (obj_map_node) instance_destroy();
+	path_line = [];
+	next_node_id = 0;
+	selected_node = noone;
+	selected_path = noone;
+	if (instance_exists(pointer)){ instance_destroy(pointer); pointer = noone; }
+	edit_mode = true;
+}
+
+// Load a slot's file, or clear to a blank map if that slot has never been saved.
+load_slot = function(_slot){
+	var _data = load_map(map_file(_slot));
+	if (_data == undefined){
+		clear_map();      // empty slot -> fresh blank map
+		return;
+	}
+
+	var _result  = apply_map(_data, layer);
+	path_line    = _result.path_line;
+	next_node_id = _result.next_node_id;
+
+	selected_node = noone;
+	selected_path = noone;
+	if (instance_exists(pointer)){ instance_destroy(pointer); pointer = noone; }
+	edit_mode = true;
 }

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_map_editor_save_and_load",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_map_editor_save_and_load",
+  "parent":{
+    "name":"Map",
+    "path":"folders/Map.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

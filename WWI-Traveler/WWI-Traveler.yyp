@@ -109,6 +109,7 @@
     {"id":{"name":"scenes","path":"scripts/scenes/scenes.yy",},},
     {"id":{"name":"scr_audio_events","path":"scripts/scr_audio_events/scr_audio_events.yy",},},
     {"id":{"name":"scr_audio","path":"scripts/scr_audio/scr_audio.yy",},},
+    {"id":{"name":"scr_map_editor_save_and_load","path":"scripts/scr_map_editor_save_and_load/scr_map_editor_save_and_load.yy",},},
     {"id":{"name":"scr_map","path":"scripts/scr_map/scr_map.yy",},},
     {"id":{"name":"signals","path":"scripts/signals/signals.yy",},},
     {"id":{"name":"sprite_is_on_frame","path":"scripts/sprite_is_on_frame/sprite_is_on_frame.yy",},},
