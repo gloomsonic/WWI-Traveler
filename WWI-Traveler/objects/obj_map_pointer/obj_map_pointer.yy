@@ -9,8 +9,8 @@
   "name":"obj_map_pointer",
   "overriddenProperties":[],
   "parent":{
-    "name":"Map",
-    "path":"folders/Map.yy",
+    "name":"Objects",
+    "path":"folders/Map/Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

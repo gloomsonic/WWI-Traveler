@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_map",
   "parent":{
-    "name":"Map",
-    "path":"folders/Map.yy",
+    "name":"Scripts",
+    "path":"folders/Map/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

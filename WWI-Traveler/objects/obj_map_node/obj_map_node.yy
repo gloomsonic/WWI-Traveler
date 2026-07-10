@@ -9,8 +9,8 @@
   "name":"obj_map_node",
   "overriddenProperties":[],
   "parent":{
-    "name":"Map",
-    "path":"folders/Map.yy",
+    "name":"Objects",
+    "path":"folders/Map/Objects.yy",
   },
   "parentObjectId":{
     "name":"par_touchable",

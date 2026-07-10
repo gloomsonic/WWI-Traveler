@@ -6,3 +6,12 @@
 *.yy text eol=lf
 *.yyp text eol=lf
 *.json text eol=lf
+
+# Binary assets — NEVER apply text/EOL conversion (it corrupts them).
+# FMOD banks were mangled once already because they weren't marked binary.
+*.bank binary
+*.dylib binary
+*.dll binary
+*.ogg binary
+*.wav binary
+*.png binary

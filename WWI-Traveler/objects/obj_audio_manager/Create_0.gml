@@ -27,6 +27,12 @@ var master_bank_ok = (fmod_last_result() == FMOD_RESULT.OK);
 	
 fmod_ready = master_strings_ok && master_bank_ok;
 
+// TEMP DIAG — remove once audio is fixed
+show_debug_message("[AUDIO DIAG] fmod_ready=" + string(fmod_ready)
+	+ " strings_ok=" + string(master_strings_ok)
+	+ " bank_ok=" + string(master_bank_ok)
+	+ " last_result=" + string(fmod_last_result()));
+
 event_desc_cache = {};
 param_id_cache	 = {};
 bus_cache        = {};
