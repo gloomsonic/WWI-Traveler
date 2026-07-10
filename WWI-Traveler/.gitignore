@@ -63,3 +63,10 @@ Build
 
 # FMOD Extension (per-machine SDK path — keep local, don't track)
 options/extensions/FMOD.json
+# FMOD build artifact (macOS sed -i backup, regenerated every build)
+extensions/FMOD/*.sh-e
+
+# FMOD Studio project: build cache & per-user workspace state (not source)
+FMOD Studio/**/.cache/
+FMOD Studio/**/.user/
+FMOD Studio/**/.unsaved/

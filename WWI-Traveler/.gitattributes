@@ -15,3 +15,7 @@
 *.ogg binary
 *.wav binary
 *.png binary
+
+# Shell scripts must be LF so the FMOD build's `sed 's/\r$//'` has nothing to strip
+# (otherwise the .sh files show as modified after every build).
+*.sh text eol=lf
