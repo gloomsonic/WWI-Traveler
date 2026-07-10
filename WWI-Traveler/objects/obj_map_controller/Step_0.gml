@@ -20,7 +20,7 @@ if (keyboard_check_pressed(vk_f8)){
     }
 }
 
-var _touch = obj_mouse_cursor.touch_object(obj_map_node);
+var _touch = par_mouse_cursor.touch_object(obj_map_node);
 
 if (edit_mode){
 
