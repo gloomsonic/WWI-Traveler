@@ -22,7 +22,8 @@
 // ----------------- AUDIO EVENTS -----------------
 
 // SFX
-#macro EV_DEBUG_SFX   "event:/Test Gunshot"
+#macro EV_GUNSHOT_1   "event:/Test Gunshot"
+#macro EV_PUNCH_1   "event:/Test Punch"
 #macro EV_DEBUG_AMBIENCE   "event:/Test Ambience"
 
 // MUSIC
