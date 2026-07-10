@@ -26,19 +26,17 @@ if (edit_mode){
 
 	// --- authoring: save / load only while editing ---
 
-	// pick a save slot 0-9 with the number keys
+	// open a slot 0-9 with the number keys: loads that slot's map, or a blank canvas if it's empty
 	for (var _k = 0; _k <= 9; _k++){
-		if (keyboard_check_pressed(ord(string(_k)))) map_slot = _k;
+		if (keyboard_check_pressed(ord(string(_k))) && _k != map_slot){
+			map_slot = _k;
+			load_slot(_k);
+		}
 	}
 
-	// save the current map to the active slot
-	if (keyboard_check_pressed(vk_f5)){
+	// save the current map to the active slot (needs an open slot AND at least one node)
+	if (keyboard_check_pressed(vk_f5) && map_slot != -1 && instance_number(obj_map_node) > 0){
 		save_map(map_file(map_slot), path_line, next_node_id);
-	}
-
-	// load the active slot (blank canvas if the slot has never been saved)
-	if (keyboard_check_pressed(vk_f9)){
-		load_slot(map_slot);
 	}
 
 	// Remember the node that was pressed (or noone if pressed on empty space)
@@ -124,6 +122,27 @@ if (edit_mode){
 		if (keyboard_check_pressed(ord("Q")))
 		{
 			selected_path.obstacle = (selected_path.obstacle - 1 + _count) % _count;
+		}
+	}
+
+	// Delete the selected node (and its paths) or the selected path
+	if (keyboard_check_pressed(vk_delete) || keyboard_check_pressed(vk_backspace)){
+		if (selected_node != noone && instance_exists(selected_node)){
+			delete_node(selected_node);
+		}
+		else if (selected_path != noone){
+			delete_path(selected_path);
+		}
+	}
+
+	// Right-click directly on a node (or path) to delete it
+	if (mouse_check_button_pressed(mb_right)){
+		if (_touch.inst != noone){
+			delete_node(_touch.inst);
+		}
+		else {
+			var _path = get_path_at(mouse_x, mouse_y);
+			if (_path != noone) delete_path(_path);
 		}
 	}
 

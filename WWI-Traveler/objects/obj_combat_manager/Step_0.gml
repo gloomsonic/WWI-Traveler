@@ -18,4 +18,4 @@ if (turn_done) {
 
 //
 if (get_team(Combatant_Team.enemy) == noone) 
-	room_goto(rm_scene);
+	room_goto(rm_map);

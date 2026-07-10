@@ -1,6 +1,6 @@
 show_debug_message("Map Controller created");
 
-map_slot = 0;
+map_slot = -1;   // -1 = no slot open yet (blank canvas); press 0-9 to open a slot
 
 selected_node = noone;
 selected_path = noone;
@@ -59,15 +59,12 @@ edit_mode = true;
 pointer = noone;
 
 start_node = function(){
-	if (selected_node != noone && instance_exists(selected_node)){
-		return selected_node;
-	}
-	
+	// always start play on the first node (lowest node_id), regardless of selection
 	var _valid_node = noone;
 	with (obj_map_node){
-		 if (_valid_node == noone || node_id < _valid_node.node_id) _valid_node = id;	
+		 if (_valid_node == noone || node_id < _valid_node.node_id) _valid_node = id;
 	}
-	
+
 	return _valid_node;
 }
 
@@ -81,6 +78,10 @@ enter_play_mode = function(){
 		pointer = instance_create_layer(_start.x, _start.y, layer, obj_map_pointer);
 	}
 	pointer.set_node(_start);
+
+	// remember this playthrough for the map -> combat/scene -> map return trip
+	global.map_play_slot    = map_slot;
+	global.map_current_node = _start.node_id;
 }
 
 exit_play_mode = function(){
@@ -126,4 +127,40 @@ load_slot = function(_slot){
 	selected_path = noone;
 	if (instance_exists(pointer)){ instance_destroy(pointer); pointer = noone; }
 	edit_mode = true;
+}
+
+// Remove a node and every path that touches it (no dangling edges left in path_line).
+delete_node = function(_node){
+	var _id = _node.node_id;
+	for (var i = array_length(path_line) - 1; i >= 0; i--){   // backwards: array_delete shifts indices
+		if (path_line[i].a == _id || path_line[i].b == _id){
+			if (path_line[i] == selected_path) selected_path = noone;
+			array_delete(path_line, i, 1);
+		}
+	}
+	if (_node == selected_node) selected_node = noone;
+	instance_destroy(_node);
+}
+
+// Remove a single path.
+delete_path = function(_path){
+	for (var i = 0; i < array_length(path_line); i++){
+		if (path_line[i] == _path){ array_delete(path_line, i, 1); break; }
+	}
+	if (_path == selected_path) selected_path = noone;
+}
+
+// Coming back from combat/scene? Rebuild the played map and resume play on the last node.
+if (global.map_resume){
+	global.map_resume = false;
+
+	map_slot = global.map_play_slot;
+	if (map_slot != -1) load_slot(map_slot);          // rebuild the map that was in play
+
+	var _resume_node = get_node(global.map_current_node);
+	if (_resume_node != noone){
+		edit_mode = false;                            // resume in Play, not Edit
+		pointer = instance_create_layer(_resume_node.x, _resume_node.y, layer, obj_map_pointer);
+		pointer.set_node(_resume_node);               // Resume from the last node you were at
+	}
 }

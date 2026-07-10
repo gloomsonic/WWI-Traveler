@@ -15,4 +15,4 @@ _y += font_height();
 draw_text_transformed(20, _y, "Mode: " + (edit_mode ? "Edit" : "Play") + "  [Tab]", 0.5, 0.5, 0);
 
 _y += font_height();
-draw_text_transformed(20, _y, "Slot: " + string(map_slot), 0.5, 0.5, 0);
+draw_text_transformed(20, _y, "Slot: " + (map_slot == -1 ? "-" : string(map_slot)), 0.5, 0.5, 0);

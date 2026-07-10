@@ -7,7 +7,9 @@ if (target_node != noone && instance_exists(target_node)){
 		target_node = noone;
 		travel_path = noone;
 
-		// reached a node -> drop into combat (placeholder landing on a node)
+		// reached a node -> remember where we are, then drop into combat
+		global.map_current_node = current_node_id;   // for the return trip
+		global.map_resume = true;                    // re-entering rm_map should resume play
 		room_goto(rm_combat);
 	}
 	else {
