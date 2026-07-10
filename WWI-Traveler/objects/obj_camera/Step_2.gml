@@ -16,6 +16,13 @@ switch(room) {
 		camera_set_view_pos(VIEW, obj_scene_text.x, _y);
 		break;
 	case rm_map:
-		camera_set_view_pos(VIEW, 0, 0);
+		// Pan the editor camera with the arrow keys or WASD, clamped inside the room.
+		var _pan_x = (keyboard_check(vk_right) || keyboard_check(ord("D"))) - (keyboard_check(vk_left) || keyboard_check(ord("A")));
+		var _pan_y = (keyboard_check(vk_down)  || keyboard_check(ord("S"))) - (keyboard_check(vk_up)   || keyboard_check(ord("W")));
+
+		var _move_x = clamp(VIEW_X + _pan_x * map_pan_speed, 0, max(0, room_width  - VIEW_W));
+		var _move_y = clamp(VIEW_Y + _pan_y * map_pan_speed, 0, max(0, room_height - VIEW_H));
+
+		camera_set_view_pos(VIEW, _move_x, _move_y);
 		break;
 }

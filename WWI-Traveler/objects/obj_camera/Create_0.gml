@@ -8,6 +8,8 @@ call_next_frame(function() {
 
 scene_lerp_spd = 0.12;
 
+map_pan_speed = 24; // rm_map editor: camera pan pixels per frame (arrow keys / WASD)
+
 on_room_start = function() {
 	camera_set_view_size(VIEW, view_w, view_h);
 	window_set_size(win_w, win_h);
