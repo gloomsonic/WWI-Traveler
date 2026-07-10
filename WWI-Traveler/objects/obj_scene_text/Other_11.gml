@@ -9,8 +9,8 @@ draw_phrases = function() {
 	var _char_count_end = characters_opaque_count + array_length(fade_values);
 
 	// Draw phrases
-	for (var p = 0; p < array_length(SCENES.ambulance.story); p++) {
-		var _phrase = SCENES.ambulance.story[p];
+	for (var p = 0; p < array_length(my_scene.story); p++) {
+		var _phrase = my_scene.story[p];
 		var _phrase_len = string_length(_phrase);
 		var _char_count_plus = _char_count + _phrase_len;
 	

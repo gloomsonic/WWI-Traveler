@@ -37,10 +37,10 @@ char_get_fade = function(_count, _end) {
 
 // Automatically jump to next 'wait'
 next_wait_jump_to = function() {
-	var _next = scene_get_next_wait(SCENES.ambulance);
+	var _next = scene_get_next_wait(my_scene);
 	
 	draw_set();
-	var _line_count = scene_get_line_count(SCENES.ambulance, _next); // NOTE: it's ok if '_next' is 'noone'
+	var _line_count = scene_get_line_count(my_scene, _next); // NOTE: it's ok if '_next' is 'noone'
 	var _text_bot = _line_count * font_height() * line_spacing;
 	scroll_y(_text_bot - ROOM_H_H);
 }
@@ -64,9 +64,9 @@ spawn_choices = function() {
 	var _x = l_margin;
 	var _y = story_bot_y + choice_break;
 	
-	for (var c = 0; c < array_length(SCENES.ambulance.choices); c++) {
+	for (var c = 0; c < array_length(my_scene.choices); c++) {
 		instance_create_depth(_x, _y, depth, obj_story_choice, {
-			my_text: SCENES.ambulance.choices[c],
+			my_text: my_scene.choices[c],
 		});
 		_y += font_height() * choice_spacing;
 	}

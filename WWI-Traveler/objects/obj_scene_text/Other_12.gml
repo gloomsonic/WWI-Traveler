@@ -33,8 +33,8 @@ state_scene_waiting = function(_event) {
 		
 			// Exit state
 			if (mouse_check_button_pressed(mb_left)) {
-				var _wait = scene_get_next_wait(SCENES.ambulance);
-				array_delete(SCENES.ambulance.story, _wait, 1);
+				var _wait = scene_get_next_wait(my_scene);
+				array_delete(my_scene.story, _wait, 1);
 				next_wait_jump_to();
 				states.queue(State.reading);
 			}
@@ -51,7 +51,7 @@ state_scene_choosing = function(_event) {
 	switch(_event) {
 		case Event.enter:
 			scroll_y(y + choice_break);
-			var _story_len = story_character_count + array_length(fade_values); //story_get_char_count(SCENES.ambulance.story);
+			var _story_len = story_character_count + array_length(fade_values);
 			truncate_fades(characters_opaque_count, _story_len);
 			spawn_choices();
 			break;

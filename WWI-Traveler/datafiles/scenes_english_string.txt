@@ -7,7 +7,9 @@
 		[
 			"hello I am choice one!",
 			"yooooo this is choice two, babyyyyyyy",
-		]
+		],
+		
+		"name": "ambulance",
 	},
 	
 	"keening": 
@@ -18,7 +20,8 @@
 		[
 			"Choice 1!",
 			"Choice 2!",
-		]
-
+		],
+		
+		"name": "keening",
 	}
 }

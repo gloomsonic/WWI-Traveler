@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"parse_words",
+  "%Name":"scene_constructor",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"parse_words",
+  "name":"scene_constructor",
   "parent":{
-    "name":"Helpful Functions",
-    "path":"folders/_Core/Helpful Functions.yy",
+    "name":"Scenes",
+    "path":"folders/Scenes.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
