@@ -13,7 +13,7 @@
   "androidsourcedir":"",
   "author":"",
   "classname":"Fmod_iOS",
-  "copyToTargets":64,
+  "copyToTargets":66,
   "description":"",
   "exportToGame":true,
   "extensionVersion":"1.1.2",
