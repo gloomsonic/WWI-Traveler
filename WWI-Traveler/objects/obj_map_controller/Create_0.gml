@@ -74,6 +74,8 @@ enter_play_mode = function(){
 	
 	global.completed_nodes = {};
 	
+	mark_node_complete(_start.node_id);
+	
 	selected_node = noone;
 	selected_path = noone;
 	

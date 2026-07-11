@@ -12,8 +12,8 @@ if (target_node != noone && instance_exists(target_node)){
         global.map_current_node = current_node_id;   // for the return trip
                 
         if (!node_is_complete(current_node_id)){
-                node_mark_complete(current_node_id);
-                global.pending_scene = scene_pick(biome_feature(_feature));
+                mark_node_complete(current_node_id);
+                global.pending_scene = pick_scene(biome_feature(_feature));
                 global.map_resume = true;                // re-entering rm_map should res
                 room_goto(rm_scene);
         }
