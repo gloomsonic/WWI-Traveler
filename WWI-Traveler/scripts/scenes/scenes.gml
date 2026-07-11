@@ -21,12 +21,3 @@ BIOMES = {
       forest:   [],
       river:    [],
 }
-
-#macro PATH_BIOMES global.path_biomes                                                       
- PATH_BIOMES = {                                                                             
-      none:          [_ambulance],                         
-      river:         [],                                                                    
-      mountain_pass: [],                                                                    
-      ravine:        [],                                                                    
-      forest:        [],
-}

@@ -6,7 +6,7 @@ if (target_node != noone && instance_exists(target_node)){
 		current_node_id = target_node.node_id;
 		
 		// Queue this node's arrival scene, chosen from its geographical-feature biome.
-        global.pending_scene = scene_pick(biome_feature(target_node.feature));
+        global.pending_scene = pick_scene(biome_feature(target_node.feature));
 				
 		target_node = noone;
 		travel_path = noone;
