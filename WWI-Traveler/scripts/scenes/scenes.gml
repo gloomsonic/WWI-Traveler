@@ -14,6 +14,19 @@ var _keening = scene_add(JSON_SCENES.keening);
 // Separate scenes into biomes
 #macro BIOMES global.scene_biomes
 BIOMES = {
-	road: [_ambulance],
-	town: [_keening],
+      plain:    [_ambulance],
+      city:     [_keening],
+      mountain: [],
+      swamp:    [],
+      forest:   [],
+      river:    [],
+}
+
+#macro PATH_BIOMES global.path_biomes                                                       
+ PATH_BIOMES = {                                                                             
+      none:          [_ambulance],                         
+      river:         [],                                                                    
+      mountain_pass: [],                                                                    
+      ravine:        [],                                                                    
+      forest:        [],
 }

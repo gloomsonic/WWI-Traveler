@@ -8,7 +8,7 @@ states.define(State.choosing, state_scene_choosing);
 states.queue(State.reading);
 
 // Scene to play
-my_scene = BIOMES.road[0]; //SCENES.ambulance;
+my_scene = (global.pending_scene != noone) ? global.pending_scene : PATH_BIOMES.none[0];
 
 // Prep text formatting
 draw_set();

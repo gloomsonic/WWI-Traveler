@@ -4,13 +4,16 @@ if (target_node != noone && instance_exists(target_node)){
 		x = target_node.x;
 		y = target_node.y;
 		current_node_id = target_node.node_id;
+		
+		// Queue this node's arrival scene, chosen from its geographical-feature biome.
+        global.pending_scene = scene_pick(biome_feature(target_node.feature));
+				
 		target_node = noone;
 		travel_path = noone;
 
-		// reached a node -> remember where we are, then drop into combat
 		global.map_current_node = current_node_id;   // for the return trip
 		global.map_resume = true;                    // re-entering rm_map should resume play
-		room_goto(rm_combat);
+		room_goto(rm_scene);
 	}
 	else {
 		var _dir = point_direction(x, y, target_node.x, target_node.y);
