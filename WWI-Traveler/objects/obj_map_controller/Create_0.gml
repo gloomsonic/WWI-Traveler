@@ -71,6 +71,9 @@ start_node = function(){
 enter_play_mode = function(){
 	var _start = start_node();
 	if (_start == noone){ edit_mode = true; return; }
+	
+	global.completed_nodes = {};
+	
 	selected_node = noone;
 	selected_path = noone;
 	

@@ -43,3 +43,11 @@ function distance_point_to_segment(_point_x, _point_y, _node_A_x, _node_A_y, _no
 	
 	return point_distance(_point_x, _point_y, _clamped_x, _clamped_y);
 }
+
+function mark_node_complete(_id){
+        global.completed_nodes[$ string(_id)] = true;
+}
+
+function node_is_complete(_id){
+        return variable_struct_exists(global.completed_nodes, string(_id));
+}
