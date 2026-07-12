@@ -10,14 +10,17 @@ SCENES = {};
 // Add scenes to array
 var _ambulance = scene_add(JSON_SCENES.ambulance);
 var _keening = scene_add(JSON_SCENES.keening);
+var _crater = scene_add(JSON_SCENES.crater);
+var _grove = scene_add(JSON_SCENES.grove);
+var _egg = scene_add(JSON_SCENES.egg);
 
 // Separate scenes into biomes
 #macro BIOMES global.scene_biomes
 BIOMES = {
-      plain:    [_ambulance],
-      city:     [_keening],
-      mountain: [],
-      swamp:    [],
-      forest:   [],
-      river:    [],
+	plain:    [_ambulance],
+    city:     [_keening, _egg],
+    mountain: [],
+    swamp:    [],
+    forest:   [_grove],
+    river:    [_crater],
 }
