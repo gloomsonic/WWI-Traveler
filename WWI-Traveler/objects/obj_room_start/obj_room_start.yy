@@ -8,8 +8,8 @@
   "name":"obj_room_start",
   "overriddenProperties":[],
   "parent":{
-    "name":"Managers",
-    "path":"folders/Managers.yy",
+    "name":"_Managers",
+    "path":"folders/_Managers.yy",
   },
   "parentObjectId":null,
   "persistent":true,

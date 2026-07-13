@@ -5,3 +5,6 @@ states.define(State.select_reposition, state_cursor_select_reposition);
 // NOTE: Combat manager queues state
 
 my_combatant = noone;
+set_combatant = function(_combatant) {
+	my_combatant = _combatant;
+}

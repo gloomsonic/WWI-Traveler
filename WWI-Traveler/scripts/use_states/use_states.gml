@@ -60,4 +60,7 @@ enum State {
 	
 	// obj_scene_text
 	reading, waiting, choosing, 
+	
+	// map
+	travel,
 }

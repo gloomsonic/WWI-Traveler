@@ -5,7 +5,8 @@ event_inherited();
 state_idle = function(_event){
 	switch(_event){
 		case Event.draw:
-			draw_self();
+			draw_set();
+			draw_circle(x, y, MAP_NODE_DIAMETER/2, false);
 			break;
 	}
 }
@@ -13,10 +14,11 @@ state_idle = function(_event){
 state_hovered = function(_event){
 	switch(_event){
 		case Event.draw:
-			draw_self();
-			draw_set_color(c_yellow);
+			draw_set();
+			draw_circle(x, y, MAP_NODE_DIAMETER/2, false);
+			draw_set(c_yellow);
 			draw_circle(x, y, sprite_width * 0.7, true);
-			draw_set_color(c_white);
+			draw_set(c_white);
 			break;
 	}
 
@@ -25,10 +27,11 @@ state_hovered = function(_event){
 state_held = function(_event){
 	switch(_event){
 		case Event.draw:
-			draw_self();
-			draw_set_color(c_aqua);
+			draw_set();
+			draw_circle(x, y, MAP_NODE_DIAMETER/2, false);
+			draw_set(c_aqua);
 			draw_circle(x, y, sprite_width * 0.7, true);
-			draw_set_color(c_white);
+			draw_set(c_white);
 			break;
 	}
 }

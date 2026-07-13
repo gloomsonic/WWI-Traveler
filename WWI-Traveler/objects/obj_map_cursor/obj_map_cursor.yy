@@ -1,19 +1,19 @@
 {
   "$GMObject":"",
-  "%Name":"obj_camera",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":2,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_map_cursor",
+  "eventList":[],
   "managed":true,
-  "name":"obj_camera",
+  "name":"obj_map_cursor",
   "overriddenProperties":[],
   "parent":{
-    "name":"_Managers",
-    "path":"folders/_Managers.yy",
+    "name":"Objects",
+    "path":"folders/Map/Objects.yy",
   },
-  "parentObjectId":null,
-  "persistent":true,
+  "parentObjectId":{
+    "name":"par_mouse_cursor",
+    "path":"objects/par_mouse_cursor/par_mouse_cursor.yy",
+  },
+  "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,
@@ -30,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_mouse_cursor",
+    "path":"sprites/spr_mouse_cursor/spr_mouse_cursor.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

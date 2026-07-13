@@ -1,7 +1,13 @@
+event_user_all();
+
+states = new use_states();
+states.define(State.idle, state_map_pointer_idle);
+states.define(State.travel, state_map_pointer_travel);
+states.queue(State.idle);
+
 image_xscale = MAP_NODE_DIAMETER / sprite_get_width(sprite_index);
 image_yscale = image_xscale;
 depth = -100;
-
 
 current_node_id = -1;
 target_node  = noone;
@@ -14,7 +20,6 @@ set_node = function(_node) {
 	current_node_id = _node.node_id;
 	target_node = noone;
 	travel_path = noone;
-	
 }
 
 travel_to = function(_node, _path){
@@ -23,7 +28,7 @@ travel_to = function(_node, _path){
 }
 
 is_idle = function(){
-        return target_node == noone;
+	return target_node == noone;
 }
 
 

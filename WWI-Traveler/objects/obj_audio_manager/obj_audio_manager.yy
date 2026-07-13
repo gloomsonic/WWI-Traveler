@@ -11,8 +11,8 @@
   "name":"obj_audio_manager",
   "overriddenProperties":[],
   "parent":{
-    "name":"Managers",
-    "path":"folders/Managers.yy",
+    "name":"_Managers",
+    "path":"folders/_Managers.yy",
   },
   "parentObjectId":null,
   "persistent":true,
