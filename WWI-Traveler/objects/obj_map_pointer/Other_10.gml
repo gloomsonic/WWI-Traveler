@@ -23,10 +23,10 @@ state_map_pointer_travel = function(_event) {
 			var _len = point_distance(x, y, target_node.x, target_node.y);
 			var _dir = point_direction(x, y, target_node.x, target_node.y);
 			
-			if (_len > move_speed) {
+			if (_len > move_speed) { // Travel
 		        x += lengthdir_x(move_speed, _dir);
 		        y += lengthdir_y(move_speed, _dir);	
-			} else {
+			} else { // Exit state
 				current_node_id = target_node.node_id;
 		        global.map_current_node = current_node_id; // for the return trip
 				
