@@ -20,6 +20,7 @@ if (keyboard_check_pressed(vk_f8)){
     }
 }
 
+// TODO: I don't think we should use 'touch_object' this way. It's intended to be called within a cursor object's states
 var _touch = obj_map_cursor.touch_object(obj_map_node);
 
 if (edit_mode){

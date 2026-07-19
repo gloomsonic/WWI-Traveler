@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Debug Tools",
-    "path":"folders/Audio/Objects/Debug Tools.yy",
+    "path":"folders/_Audio/Objects/Debug Tools.yy",
   },
   "parentObjectId":null,
   "persistent":false,

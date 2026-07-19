@@ -5,3 +5,5 @@ _y += font_height();
 draw_text(32, _y, "Press Shift... Scene");
 _y += font_height();
 draw_text(32, _y, "Press M... Map");
+_y += font_height();
+draw_text(32, _y, "Press C... Camp");

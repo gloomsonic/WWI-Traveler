@@ -6,7 +6,7 @@
   "name":"macros_view",
   "parent":{
     "name":"Macros",
-    "path":"folders/_Core/Macros.yy",
+    "path":"folders/__Core/Macros.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

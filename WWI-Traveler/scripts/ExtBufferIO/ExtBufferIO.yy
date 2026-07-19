@@ -6,7 +6,7 @@
   "name":"ExtBufferIO",
   "parent":{
     "name":"Extensions",
-    "path":"folders/Audio/Fmod/Extensions.yy",
+    "path":"folders/_Audio/Fmod/Extensions.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

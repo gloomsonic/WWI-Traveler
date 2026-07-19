@@ -8,8 +8,8 @@
   "name":"obj_init",
   "overriddenProperties":[],
   "parent":{
-    "name":"Menus",
-    "path":"folders/Menus.yy",
+    "name":"_Menus",
+    "path":"folders/_Menus.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -1,7 +1,4 @@
 ///@desc methods Touch
-set_touchable = function(_obj) {
-	touch_these = _obj;
-}
 
 // Use the mouse to change object states
 touch_object = function(_obj) {

@@ -120,7 +120,7 @@
   "name":"fnt_droid_serif_36",
   "parent":{
     "name":"Fonts",
-    "path":"folders/_Core/Fonts.yy",
+    "path":"folders/__Core/Fonts.yy",
   },
   "pointRounding":0,
   "ranges":[

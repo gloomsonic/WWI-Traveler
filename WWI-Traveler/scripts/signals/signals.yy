@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"signals",
   "parent":{
-    "name":"_Core",
-    "path":"folders/_Core.yy",
+    "name":"__Core",
+    "path":"folders/__Core.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

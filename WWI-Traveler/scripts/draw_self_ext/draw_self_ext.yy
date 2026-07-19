@@ -6,7 +6,7 @@
   "name":"draw_self_ext",
   "parent":{
     "name":"Helpful Functions",
-    "path":"folders/_Core/Helpful Functions.yy",
+    "path":"folders/__Core/Helpful Functions.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

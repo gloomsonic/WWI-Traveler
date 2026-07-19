@@ -6,7 +6,7 @@
   "name":"scr_audio_events",
   "parent":{
     "name":"Scripts",
-    "path":"folders/Audio/Scripts.yy",
+    "path":"folders/_Audio/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

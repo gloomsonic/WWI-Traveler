@@ -6,7 +6,7 @@
   "name":"verb_axes_overrides",
   "parent":{
     "name":"neo_use_controls",
-    "path":"folders/_Core/Hooks/neo_use_controls.yy",
+    "path":"folders/__Core/Hooks/neo_use_controls.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

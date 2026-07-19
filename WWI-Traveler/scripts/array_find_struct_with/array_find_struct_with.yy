@@ -6,7 +6,7 @@
   "name":"array_find_struct_with",
   "parent":{
     "name":"Helpful Functions",
-    "path":"folders/_Core/Helpful Functions.yy",
+    "path":"folders/__Core/Helpful Functions.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
