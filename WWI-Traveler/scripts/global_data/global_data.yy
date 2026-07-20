@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"global_data",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"global_data",
+  "parent":{
+    "name":"_Managers",
+    "path":"folders/_Managers.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

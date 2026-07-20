@@ -3,15 +3,12 @@ global.library = {};
 
 event_user_all();
 
-// Placeholder combatant array
-combatant_datas = [
-	new combatant_data(false,	Combatant_Team.player,	0, 1,	10, 3,	"William Hardy"), 
-	new combatant_data(false,	Combatant_Team.player,	0, 2,	9, 2,	"John-o Reardon"), 
-	new combatant_data(false,	Combatant_Team.player,	1, 1,	9, 2,	"Vikram Mamar"), 
-	new combatant_data(true,	Combatant_Team.enemy,	0, 1,	6, 3,	"George Perdy"), 
-	new combatant_data(true,	Combatant_Team.enemy,	0, 2,	7, 2,	"Greene Lewell"), 
-	new combatant_data(true,	Combatant_Team.enemy,	1, 1,	7, 2,	"Jean-Charles Deniau"), 
-];
+// Combatants
+combatant_datas = array_concat(global.data.party, [
+	new combatant_data(true, Combatant_Team.enemy, 0, 1, 6, 3, "George Perdy"), 
+	new combatant_data(true, Combatant_Team.enemy, 0, 2, 7, 2, "Greene Lewell"), 
+	new combatant_data(true, Combatant_Team.enemy, 1, 1, 7, 2, "Jean-Charles Deniau"), 
+]);
 
 // Combatant spaces
 var _y = [0.77*ROOM_H, 0.92*ROOM_H, 0.47*ROOM_H, 0.32*ROOM_H];
