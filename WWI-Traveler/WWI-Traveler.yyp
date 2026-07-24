@@ -111,6 +111,7 @@
     {"id":{"name":"destroy_combat_menu","path":"scripts/destroy_combat_menu/destroy_combat_menu.yy",},},
     {"id":{"name":"draw_self_ext","path":"scripts/draw_self_ext/draw_self_ext.yy",},},
     {"id":{"name":"draw_set","path":"scripts/draw_set/draw_set.yy",},},
+    {"id":{"name":"draw_text_solid_color","path":"scripts/draw_text_solid_color/draw_text_solid_color.yy",},},
     {"id":{"name":"event_user_all","path":"scripts/event_user_all/event_user_all.yy",},},
     {"id":{"name":"ExtBufferIO","path":"scripts/ExtBufferIO/ExtBufferIO.yy",},},
     {"id":{"name":"Fmod_Definitions","path":"scripts/Fmod_Definitions/Fmod_Definitions.yy",},},
