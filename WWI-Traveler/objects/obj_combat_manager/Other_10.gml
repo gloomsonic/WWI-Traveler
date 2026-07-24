@@ -26,16 +26,39 @@ get_spaces = function(_team_index) {
 // Spawn the combatant objects, must be after spaces are spawned
 spawn_combatants = function() {
 	var _combatants = [];
-	for (var i = 0; i < array_length(combatant_datas); i++) {
-		var _data = combatant_datas[i];
-		var _rows = _data.team == Combatant_Team.player ? team_player_rows : team_enemy_rows;
 	
-		var _combatant = instance_create_layer(0, 0, "combatants", obj_combatant, _data);
-		var _space = _rows[_data.row][_data.pos];
-		_combatant.set_space(_space);
-		_space.set_combatant(_combatant);
-		array_push(_combatants, _combatant);
+	// Spawn enemy combatants
+	for (var r = 0; r < array_length(enemy_datas); r++) {
+		var _row = enemy_datas[r];
+
+		for (var p = 0; p < array_length(_row); p++) {
+			var _data = _row[p];
+			if (_data == noone) continue;
+			
+			var _combatant = instance_create_layer(0, 0, "combatants", obj_combatant, _data);
+			var _space = team_enemy_rows[r][p];
+			_combatant.set_space(_space);
+			_space.set_combatant(_combatant);
+			array_push(_combatants, _combatant);
+		}
 	}
+
+	// Spawn player combatants
+	for (var r = 0; r < array_length(global.data.party); r++) {
+		var _row = global.data.party[r];
+		
+		for (var p = 0; p < array_length(_row); p++) {
+			var _data = _row[p];
+			if (_data == noone) continue;
+			
+			var _combatant = instance_create_layer(0, 0, "combatants", obj_combatant, _data);
+			var _space = team_player_rows[r][p];
+			_combatant.set_space(_space);
+			_space.set_combatant(_combatant);
+			array_push(_combatants, _combatant);
+		}
+	}
+	
 	return _combatants;
 }
 

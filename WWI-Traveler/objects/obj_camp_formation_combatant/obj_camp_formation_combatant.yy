@@ -1,11 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_planner",
+  "%Name":"obj_camp_formation_combatant",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_planner",
+  "name":"obj_camp_formation_combatant",
   "overriddenProperties":[],
   "parent":{
     "name":"Camp",
@@ -33,9 +35,12 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_planner",
-    "path":"sprites/spr_planner/spr_planner.yy",
+    "name":"spr_camp_formation_combatant",
+    "path":"sprites/spr_camp_formation_combatant/spr_camp_formation_combatant.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_camp_formation_combatant",
+    "path":"sprites/spr_camp_formation_combatant/spr_camp_formation_combatant.yy",
+  },
   "visible":true,
 }

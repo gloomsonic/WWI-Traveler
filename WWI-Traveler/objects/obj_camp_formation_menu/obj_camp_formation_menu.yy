@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"obj_camp_menu_formation",
+  "%Name":"obj_camp_formation_menu",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_camp_menu_formation",
+  "name":"obj_camp_formation_menu",
   "overriddenProperties":[],
   "parent":{
     "name":"Camp",
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_camp_menu_formation",
-    "path":"sprites/spr_camp_menu_formation/spr_camp_menu_formation.yy",
+    "name":"spr_camp_formation_menu",
+    "path":"sprites/spr_camp_formation_menu/spr_camp_formation_menu.yy",
   },
   "spriteMaskId":null,
   "visible":true,

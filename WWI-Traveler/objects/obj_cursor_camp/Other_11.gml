@@ -11,7 +11,7 @@ state_cursor_camp_free = function(_event) {
 state_cursor_camp_formation = function(_event) {
 	switch(_event) {
 		case Event.step: 
-			touch_object(obj_combat_menu_attack); // TODO: make object that this will actually touch
+			touch_object(obj_camp_formation_space); // TODO: make object that this will actually touch
 			break;
 	}
 }
