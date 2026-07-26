@@ -6,14 +6,28 @@ on_pressed = function() {
 	log("pressed");
 }
 on_released = function() {
-	//signal_raise(Signal_Type.on_formation_space_selected);
-	if (obj_cursor_camp.get_formation_space() == noone) {
+	var _selected = obj_cursor_camp.get_formation_space();
+	if (_selected == noone) {
 		obj_cursor_camp.set_formation_space(id);
+	} else if (_selected == id) {
+		obj_cursor_camp.set_formation_space(noone); // Selected same one twice, do nothing
 	} else {
-		// NEXT: 
-		// swap indeces of combatant data with my 'name' and indeces of combatant data with obj_cursor_camp's formation space's 'name' on the global.data.party arrays.
-		// close and re-open the formation menu so the position change is visible
-		obj_cursor_camp.set_formation_space(noone);
+		var _other_space = _selected;
+
+		// Get combatants
+		var _my_combatant = global.data.party[row][pos];
+		var _other_combatant = global.data.party[_other_space.row][_other_space.pos];
+
+		// Swap combatants
+		array_insert(global.data.party[row], pos, _other_combatant); // Other combatant inserted in my combatant's index
+		array_delete(global.data.party[row], pos+1, 1); // My combatant deleted
+		array_insert(global.data.party[_other_space.row], _other_space.pos, _my_combatant); // My combatant inserted at other combatant's index
+		array_delete(global.data.party[_other_space.row], _other_space.pos+1, 1); // Other combatant deleted
+
+		// Deselect and refresh
+		obj_cursor_camp.set_formation_space(noone);	
+		obj_camp_planner.formation_menu_destroy();
+		obj_camp_planner.formation_menu_create();
 	}
 }
 
