@@ -37,6 +37,12 @@ state_idle = function(_event) {
 		case Event.step: 
 			break;
 		case Event.draw:  
+			image_blend = c_white;
+			if (obj_cursor_camp.get_formation_space() == id)
+				image_blend = c_red;
+
+			draw_self_ext();
+			draw_text_solid_color(x, y, name, image_blend);
 			break;
 	}
 }
@@ -46,6 +52,16 @@ state_hovered = function(_event) {
 		case Event.step: 
 			break;
 		case Event.draw: 
+			var _selected = obj_cursor_camp.get_formation_space()
+			if (_selected == id)
+				image_blend = c_red;
+			else if (_selected != noone)
+				image_blend = c_blue;
+			else 
+				image_blend = c_white;
+
+			draw_self_ext();
+			draw_text_solid_color(x, y, name, image_blend);
 			break;
 	}
 }
@@ -55,6 +71,12 @@ state_held = function(_event) {
 		case Event.step: 
 			break;
 		case Event.draw: 
+			image_blend = c_gray;
+			if (obj_cursor_camp.get_formation_space() == id)
+				image_blend = c_red;
+
+			draw_self_ext();
+			draw_text_solid_color(x, y, name, image_blend);
 			break;
 	}
 }
