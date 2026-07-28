@@ -1,16 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_map_node",
+  "%Name":"obj_camp_sleep",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_map_node",
+  "name":"obj_camp_sleep",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Map Editor/Objects.yy",
+    "name":"Camp",
+    "path":"folders/Camp.yy",
   },
   "parentObjectId":{
     "name":"par_touchable",
@@ -34,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_map_node",
-    "path":"sprites/spr_map_node/spr_map_node.yy",
+    "name":"spr_camp_sleep",
+    "path":"sprites/spr_camp_sleep/spr_camp_sleep.yy",
   },
   "spriteMaskId":null,
   "visible":true,

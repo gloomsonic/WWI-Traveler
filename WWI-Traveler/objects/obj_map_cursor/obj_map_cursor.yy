@@ -7,7 +7,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
-    "path":"folders/Map/Objects.yy",
+    "path":"folders/Map Editor/Objects.yy",
   },
   "parentObjectId":{
     "name":"par_mouse_cursor",

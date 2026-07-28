@@ -31,7 +31,7 @@ state_scene_waiting = function(_event) {
 			scroll_page();
 			increment_char_fades();
 		
-			// Exit state
+			// Exit state -- NOTE: should this somehow be a touchable callback?
 			if (mouse_check_button_pressed(mb_left)) {
 				var _wait = scene_get_next_wait(my_scene);
 				array_delete(my_scene.story, _wait, 1);

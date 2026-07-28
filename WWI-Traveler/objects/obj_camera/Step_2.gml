@@ -15,7 +15,7 @@ switch(room) {
 		
 		camera_set_view_pos(VIEW, obj_scene_text.x, _y);
 		break;
-	case rm_map:
+	case rm_map_editor:
 		// Pan the editor camera with the arrow keys or WASD, clamped inside the room.
 		var _pan_x = (keyboard_check(vk_right) || keyboard_check(ord("D"))) - (keyboard_check(vk_left) || keyboard_check(ord("A")));
 		var _pan_y = (keyboard_check(vk_down)  || keyboard_check(ord("S"))) - (keyboard_check(vk_up)   || keyboard_check(ord("W")));

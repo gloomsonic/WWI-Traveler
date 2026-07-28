@@ -6,7 +6,7 @@
   "name":"scr_map_editor_save_and_load",
   "parent":{
     "name":"Scripts",
-    "path":"folders/Map/Scripts.yy",
+    "path":"folders/Map Editor/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

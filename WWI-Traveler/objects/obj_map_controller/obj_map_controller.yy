@@ -12,7 +12,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
-    "path":"folders/Map/Objects.yy",
+    "path":"folders/Map Editor/Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

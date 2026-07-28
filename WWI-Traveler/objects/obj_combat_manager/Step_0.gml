@@ -16,6 +16,6 @@ if (turn_done) {
 	}
 }
 
-//
+// End combat
 if (get_team(Combatant_Team.enemy) == noone) 
-	room_goto(rm_map);
+	room_goto(rm_camp);

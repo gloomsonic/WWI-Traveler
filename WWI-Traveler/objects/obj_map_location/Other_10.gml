@@ -6,19 +6,16 @@ on_pressed = function() {
 	log("pressed");
 }
 on_released = function() {
-	room_goto(rm_combat);
+	room_goto(rm_scene);
 }
 
 // State functions
 state_idle = function(_event) {
 	switch(_event) {
 		case Event.step: 
-			log("idle"); 
 			break;
 		case Event.draw: 
-			draw_set(,,, fa_middle);
-			draw_circle(x - 128, y, 16, true);
-			draw_text(x, y, my_text);
+			draw_self_ext(,,,, 0.5, 0.5); 
 			break;
 	}
 }
@@ -28,9 +25,11 @@ state_hovered = function(_event) {
 		case Event.step: 
 			break;
 		case Event.draw: 
-			draw_set(,,, fa_middle);
-			draw_circle(x - 128, y, 16, false);
-			draw_text(x, y, my_text);
+			draw_self_ext(,,,, 0.9, 0.9); 
+			gpu_set_blendmode(bm_subtract);
+			draw_self_ext(,,,, 0.82, 0.82); 
+			gpu_set_blendmode(bm_normal);
+			draw_self_ext(,,,, 0.55, 0.55);
 			break;
 	}
 }
@@ -38,12 +37,9 @@ state_hovered = function(_event) {
 state_held = function(_event) {
 	switch(_event) {
 		case Event.step: 
-			log("held"); 
 			break;
 		case Event.draw: 
-			draw_set(,,, fa_middle);
-			draw_circle(x - 128, y, 16, false);
-			draw_text(x, y, my_text);
+			draw_self_ext(,,,, 0.4, 0.4);
 			break;
 	}
 }

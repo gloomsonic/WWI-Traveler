@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"Map Backgrounds",
-    "path":"folders/Map/Map Backgrounds.yy",
+    "path":"folders/Map Editor/Map Backgrounds.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

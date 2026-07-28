@@ -1,20 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_map_node",
+  "%Name":"obj_cursor_map",
   "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":11,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_map_node",
+  "name":"obj_cursor_map",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Map Editor/Objects.yy",
+    "name":"Map Static",
+    "path":"folders/Map Static.yy",
   },
   "parentObjectId":{
-    "name":"par_touchable",
-    "path":"objects/par_touchable/par_touchable.yy",
+    "name":"par_mouse_cursor",
+    "path":"objects/par_mouse_cursor/par_mouse_cursor.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_map_node",
-    "path":"sprites/spr_map_node/spr_map_node.yy",
+    "name":"spr_mouse_cursor",
+    "path":"sprites/spr_mouse_cursor/spr_mouse_cursor.yy",
   },
   "spriteMaskId":null,
   "visible":true,

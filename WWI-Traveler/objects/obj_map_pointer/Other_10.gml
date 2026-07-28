@@ -34,7 +34,7 @@ state_map_pointer_travel = function(_event) {
 		        if (!node_is_complete(current_node_id)) {
 			        mark_node_complete(current_node_id); // TODO: can I safely turn this struct into an array?
 			        global.pending_scene = pick_scene(biome_feature(target_node.feature));
-			        global.map_resume = true; // re-entering rm_map should res
+			        global.map_resume = true; // re-entering rm_map_editor should res
 			        room_goto(rm_scene);
 		        }
 				

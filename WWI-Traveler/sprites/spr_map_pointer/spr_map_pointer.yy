@@ -26,7 +26,7 @@
   "origin":7,
   "parent":{
     "name":"Sprites",
-    "path":"folders/Map/Sprites.yy",
+    "path":"folders/Map Editor/Sprites.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

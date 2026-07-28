@@ -58,6 +58,7 @@ enum State {
 	select_action, select_target, select_reposition,
 	story_choose,
 	camp_free, camp_formation,
+	map_select,
 	
 	// obj_scene_text
 	reading, waiting, choosing, 
