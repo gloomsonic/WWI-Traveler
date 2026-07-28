@@ -1,4 +1,6 @@
 global.data = {};
+
+// Array of arrays holding player's combatant party
 global.data.party = [];
 global.data.party[0] = [
 	new combatant_data(false, Combatant_Team.player, 10, 3, "Big Stooge"), 
@@ -11,3 +13,6 @@ global.data.party[1] = [
 	new combatant_data(false, Combatant_Team.player, 9, 2, "Vikram Mamar"),
 	noone,
 ];
+
+// Stores a 'key' referring to the player's current map location, as an [x,y] array
+global.data.map_location_key = noone;
