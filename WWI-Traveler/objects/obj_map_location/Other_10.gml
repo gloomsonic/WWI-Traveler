@@ -6,7 +6,8 @@ on_pressed = function() {
 	log("pressed");
 }
 on_released = function() {
-	global.data.map_location_key = my_location_key;
+	array_push(global.data.map_location_keys_visited, my_location_key);
+	//global.data.map_location_key = my_location_key;
 	room_goto(rm_scene);
 }
 

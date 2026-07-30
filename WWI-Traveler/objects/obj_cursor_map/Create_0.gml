@@ -9,7 +9,7 @@ on_room_start = function() {
 
 	// Push locations other than current one into an array
 	with (obj_map_location) {
-		if (location_key_is_current(my_location_key)) continue;
+		if (map_location_visited(my_location_key)) continue;
 		array_push(other.available_locations, id);
 	}
 }
