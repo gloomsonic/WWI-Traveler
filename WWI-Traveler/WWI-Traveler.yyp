@@ -143,7 +143,7 @@
     {"id":{"name":"signals","path":"scripts/signals/signals.yy",},},
     {"id":{"name":"sprite_is_on_frame","path":"scripts/sprite_is_on_frame/sprite_is_on_frame.yy",},},
     {"id":{"name":"state_template","path":"scripts/state_template/state_template.yy",},},
-    {"id":{"name":"swap_combatants","path":"scripts/swap_combatants/swap_combatants.yy",},},
+    {"id":{"name":"swap_combatant_datas","path":"scripts/swap_combatant_datas/swap_combatant_datas.yy",},},
     {"id":{"name":"use_controls","path":"scripts/use_controls/use_controls.yy",},},
     {"id":{"name":"use_states","path":"scripts/use_states/use_states.yy",},},
     {"id":{"name":"verb_axes_overrides","path":"scripts/verb_axes_overrides/verb_axes_overrides.yy",},},

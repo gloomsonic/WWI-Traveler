@@ -1,4 +1,4 @@
-function swap_combatants(_row1, _pos1, _row2, _pos2) {
+function swap_combatant_datas(_row1, _pos1, _row2, _pos2) {
 			
 	// Get combatants
 	var _cmb_data_1 = global.data.party[_row1][_pos1];
