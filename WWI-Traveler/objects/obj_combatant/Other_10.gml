@@ -58,7 +58,7 @@ state_hit = function(_event) {
 			image_alpha = 1;
 			ignore_cursor = false;
 			signal_ready();
-			if (hp <= 0)
+			if (my_data.hp <= 0)
 				signal_raise(Signal_Type.on_combatant_killed, id);
 			break;
 	}

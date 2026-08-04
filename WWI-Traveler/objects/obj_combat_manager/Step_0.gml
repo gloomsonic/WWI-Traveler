@@ -4,7 +4,7 @@ if (turn_done) {
 	array_push(turn_queue, _combatant);
 	turn_done = false;
 	
-	if (_combatant.cpu) { // CPU turn
+	if (_combatant.my_data.cpu) { // CPU turn
 		obj_cursor_combat.set_combatant(noone);
 		var _team_player = get_team(Combatant_Team.player);
 		var _target = array_shuffle(_team_player)[0];

@@ -1,17 +1,20 @@
 event_inherited();
 
-self[$ "my_space"] ??= noone;
+self[$ "my_space"] ??= noone; // id of combatant space on which standing
+self[$ "my_data"] ??= {}; // reference to global combatant data
 
 ready = true;
-flash_duration = 5;
+flash_count = 3;
+flash_duration = 4;
 flash_remaining = -1;
 states.define(State.hit, state_hit);
 states.define(State.attack, state_attack);
 
 start_hit = function(_damage) {
-	flash_remaining = flash_duration * 5 * 2; // 5 flashes * 2 parts per flash
+	flash_remaining = flash_duration * flash_count * 2; // 5 flashes * 2 parts per flash
 	//_damage -= block;
-	hp -= _damage;
+	// Need to know where I am on the global data so that I can update it directly
+	my_data.hp -= _damage;
 	states.queue(State.hit);
 }
 start_attack = function() {

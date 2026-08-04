@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"swap_combatants",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"swap_combatants",
+  "parent":{
+    "name":"Camp",
+    "path":"folders/Camp.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

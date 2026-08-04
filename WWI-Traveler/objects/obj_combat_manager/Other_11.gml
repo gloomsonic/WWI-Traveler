@@ -3,7 +3,7 @@
 // Start attack animations
 init_attack = function(_attacker, _target) {
 	_attacker.start_attack();
-	_target.start_hit(_attacker.damage);
+	_target.start_hit(_attacker.my_data.damage);
 	
 	_attacker.ready = false;
 	_target.ready = false;

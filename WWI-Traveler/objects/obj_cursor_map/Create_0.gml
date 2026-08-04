@@ -16,10 +16,4 @@ on_room_start = function() {
 		other.my_location = id;
 		break;
 	}
-	
-	//// Push locations other than current one into an array
-	//with (obj_map_location) {
-	//	if (map_location_visited(my_location_key)) continue;
-	//	array_push(other.available_locations, id);
-	//}
 }
