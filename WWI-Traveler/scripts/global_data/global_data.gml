@@ -16,3 +16,4 @@ global.data.party[1] = [
 
 // Stores 'keys' referring to the player's current map location and prior locations, as an [x,y] array
 global.data.map_location_keys_visited = [];
+global.data.map_location_keys_unvisited = [];
