@@ -5,22 +5,31 @@
 #macro JSON_SCENES global.json_scenes
 #macro SCENES global.scenes
 JSON_SCENES = json_load("scenes_english_string.txt");
-SCENES = {};
+//SCENES = {}
+SCENES = []
 
 // Add scenes to array
-var _ambulance = scene_add(JSON_SCENES.ambulance);
-var _keening = scene_add(JSON_SCENES.keening);
-var _crater = scene_add(JSON_SCENES.crater);
-var _grove = scene_add(JSON_SCENES.grove);
-var _egg = scene_add(JSON_SCENES.egg);
+scene_add(JSON_SCENES.ambulance);
+scene_add(JSON_SCENES.keening);
+scene_add(JSON_SCENES.crater);
+scene_add(JSON_SCENES.egg);
+scene_add(JSON_SCENES.grove);
 
-// Separate scenes into biomes
-#macro BIOMES global.scene_biomes
-BIOMES = {
-	plain:    [_ambulance],
-    city:     [_keening, _egg],
-    mountain: [],
-    swamp:    [],
-    forest:   [_grove],
-    river:    [_crater],
-}
+
+//// Add scenes to array
+//var _ambulance = scene_add(JSON_SCENES.ambulance);
+//var _keening = scene_add(JSON_SCENES.keening);
+//var _crater = scene_add(JSON_SCENES.crater);
+//var _grove = scene_add(JSON_SCENES.grove);
+//var _egg = scene_add(JSON_SCENES.egg);
+
+//// Separate scenes into biomes
+//#macro BIOMES global.scene_biomes
+//BIOMES = {
+//	plain:    [_ambulance],
+//    city:     [_keening, _egg],
+//    mountain: [],
+//    swamp:    [],
+//    forest:   [_grove],
+//    river:    [_crater],
+//}

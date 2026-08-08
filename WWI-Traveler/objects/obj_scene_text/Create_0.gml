@@ -8,7 +8,7 @@ states.define(State.choosing, state_scene_choosing);
 states.queue(State.reading);
 
 // Scene to play
-my_scene = (global.pending_scene != noone) ? global.pending_scene : SCENES.crater;
+my_scene = array_pop(SCENES); //(global.pending_scene != noone) ? global.pending_scene : SCENES.crater;
 
 // Prep text formatting
 draw_set();
