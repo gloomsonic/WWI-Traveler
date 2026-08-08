@@ -35,5 +35,5 @@
     "path":"sprites/spr_audio_listener/spr_audio_listener.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }
