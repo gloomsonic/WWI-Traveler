@@ -97,6 +97,7 @@
     {"id":{"name":"obj_sfx_test","path":"objects/obj_sfx_test/obj_sfx_test.yy",},},
     {"id":{"name":"obj_start","path":"objects/obj_start/obj_start.yy",},},
     {"id":{"name":"obj_story_choice","path":"objects/obj_story_choice/obj_story_choice.yy",},},
+    {"id":{"name":"obj_win","path":"objects/obj_win/obj_win.yy",},},
     {"id":{"name":"par_combat_menu","path":"objects/par_combat_menu/par_combat_menu.yy",},},
     {"id":{"name":"par_mouse_cursor","path":"objects/par_mouse_cursor/par_mouse_cursor.yy",},},
     {"id":{"name":"par_touchable","path":"objects/par_touchable/par_touchable.yy",},},
@@ -107,6 +108,7 @@
     {"id":{"name":"rm_map","path":"rooms/rm_map/rm_map.yy",},},
     {"id":{"name":"rm_scene","path":"rooms/rm_scene/rm_scene.yy",},},
     {"id":{"name":"rm_start","path":"rooms/rm_start/rm_start.yy",},},
+    {"id":{"name":"rm_win","path":"rooms/rm_win/rm_win.yy",},},
     {"id":{"name":"_negate_warnings","path":"scripts/_negate_warnings/_negate_warnings.yy",},},
     {"id":{"name":"animation_end","path":"scripts/animation_end/animation_end.yy",},},
     {"id":{"name":"approach","path":"scripts/approach/approach.yy",},},
@@ -185,6 +187,7 @@
     {"roomId":{"name":"rm_map_editor","path":"rooms/rm_map_editor/rm_map_editor.yy",},},
     {"roomId":{"name":"rm_camp","path":"rooms/rm_camp/rm_camp.yy",},},
     {"roomId":{"name":"rm_map","path":"rooms/rm_map/rm_map.yy",},},
+    {"roomId":{"name":"rm_win","path":"rooms/rm_win/rm_win.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

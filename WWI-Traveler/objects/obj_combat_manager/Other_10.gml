@@ -38,7 +38,7 @@ spawn_combatants = function() {
 			var _combatant = instance_create_layer(0, 0, "combatants", obj_combatant, {my_data : _data});
 			var _space = team_enemy_rows[r][p];
 			_combatant.set_space(_space);
-			_space.set_combatant(_combatant);
+			//_space.set_combatant(_combatant);
 			array_push(_combatants, _combatant);
 		}
 	}
@@ -54,7 +54,7 @@ spawn_combatants = function() {
 			var _combatant = instance_create_layer(0, 0, "combatants", obj_combatant, {my_data : _data});
 			var _space = team_player_rows[r][p];
 			_combatant.set_space(_space);
-			_space.set_combatant(_combatant);
+			//_space.set_combatant(_combatant);
 			array_push(_combatants, _combatant);
 		}
 	}
@@ -75,4 +75,3 @@ spawn_combat_menu = function(_combatant) {
 	_y += _lh;
 	instance_create_layer(0, _y, "menu", obj_combat_menu_pass);
 }
-
