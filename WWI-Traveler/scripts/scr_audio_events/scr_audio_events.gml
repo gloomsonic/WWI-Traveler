@@ -27,4 +27,5 @@
 #macro EV_DEBUG_AMBIENCE   "event:/Test Ambience"
 
 // MUSIC
+#macro EV_MUSIC "event:/Test Music"
 
