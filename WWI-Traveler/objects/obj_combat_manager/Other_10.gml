@@ -23,6 +23,22 @@ get_spaces = function(_team_index) {
 		return array_concat(team_enemy_rows[0], team_enemy_rows[1]);
 }
 
+// Find which row the supplied space is on and at what index
+get_row_pos_space = function(_space) {
+	var _row = 0;
+	var _pos = array_get_index(team_player_rows[0], _space);
+	if (_pos != -1) return {team: Combatant_Team.player, row: _row, pos: _pos};
+	_row = 1;
+	_pos = array_get_index(team_player_rows[1], _space);
+	if (_pos != -1) return {team: Combatant_Team.player, row: _row, pos: _pos};
+	_row = 0;
+	_pos = array_get_index(team_enemy_rows[0], _space);
+	if (_pos != -1) return {team: Combatant_Team.enemy, row: _row, pos: _pos};
+	_row = 1;
+	_pos = array_get_index(team_enemy_rows[1], _space);
+	if (_pos != -1) return {team: Combatant_Team.enemy, row: _row, pos: _pos};
+}
+
 // Spawn the combatant objects, NOTE: must be after spaces are spawned
 spawn_combatants = function() {
 	var _combatants = [];

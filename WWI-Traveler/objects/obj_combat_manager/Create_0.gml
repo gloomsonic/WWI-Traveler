@@ -46,15 +46,7 @@ combatants = spawn_combatants();
 
 // Placeholder default turn queue, will be determined by speed
 turn_done = true;
-var _player = get_team(Combatant_Team.player);
-var _enemy = get_team(Combatant_Team.enemy);
-turn_queue = [
-	_player[0],
-	_enemy[0],
-	_player[0],
-	_player[1],
-	_enemy[1],
-	_player[2],
-	_enemy[2],
-];
+turn_queue = [];
+array_copy(turn_queue, 0, combatants, 0, array_length(combatants));
+turn_queue = array_shuffle(turn_queue);
 

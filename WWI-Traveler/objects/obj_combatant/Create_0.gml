@@ -13,7 +13,6 @@ states.define(State.attack, state_attack);
 start_hit = function(_damage) {
 	flash_remaining = flash_duration * flash_count * 2; // 5 flashes * 2 parts per flash
 	//_damage -= block;
-	// Need to know where I am on the global data so that I can update it directly
 	my_data.hp -= _damage;
 	states.queue(State.hit);
 }

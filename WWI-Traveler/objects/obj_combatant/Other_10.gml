@@ -58,8 +58,14 @@ state_hit = function(_event) {
 			image_alpha = 1;
 			ignore_cursor = false;
 			signal_ready();
-			if (my_data.hp <= 0)
+			if (my_data.hp <= 0) {
 				signal_raise(Signal_Type.on_combatant_killed, id);
+				var _data = obj_combat_manager.get_row_pos_space(my_space);
+				
+				// If player died, remove from global array
+				if (_data.team == Combatant_Team.player)
+					global.data.party[_data.row][_data.pos] = noone;
+			}
 			break;
 	}
 }
