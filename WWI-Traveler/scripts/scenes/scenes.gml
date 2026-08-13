@@ -1,4 +1,4 @@
-#macro LINE_W 1920
+#macro LINE_W 1280
 #macro LINE_W_H (LINE_W/2)
 
 // NOTE: probably want to convert struct of structs into array of structs so we aren't using the name twice in the data file
@@ -14,6 +14,7 @@ scene_add(JSON_SCENES.keening);
 scene_add(JSON_SCENES.crater);
 scene_add(JSON_SCENES.egg);
 scene_add(JSON_SCENES.grove);
+scene_add(JSON_SCENES.horse);
 
 
 //// Add scenes to array

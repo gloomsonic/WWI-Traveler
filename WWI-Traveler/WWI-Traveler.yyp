@@ -63,6 +63,7 @@
   "resources":[
     {"id":{"name":"FMOD","path":"extensions/FMOD/FMOD.yy",},},
     {"id":{"name":"fnt_droid_serif_36","path":"fonts/fnt_droid_serif_36/fnt_droid_serif_36.yy",},},
+    {"id":{"name":"fnt_droid_serif_42","path":"fonts/fnt_droid_serif_42/fnt_droid_serif_42.yy",},},
     {"id":{"name":"fnt_droid_serif_48","path":"fonts/fnt_droid_serif_48/fnt_droid_serif_48.yy",},},
     {"id":{"name":"obj_amb_test","path":"objects/obj_amb_test/obj_amb_test.yy",},},
     {"id":{"name":"obj_audio_listener","path":"objects/obj_audio_listener/obj_audio_listener.yy",},},
