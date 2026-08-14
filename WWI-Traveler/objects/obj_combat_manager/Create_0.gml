@@ -6,13 +6,13 @@ event_user_all();
 enemy_datas = [];
 enemy_datas[0] = [
 	noone,
-	new combatant_data(true, Combatant_Team.enemy, 6, 3, "George Perdy"), 
-	new combatant_data(true, Combatant_Team.enemy, 7, 2, "Greene Lewell"), 
+	new combatant_data(true, Combatant_Team.enemy, 6, "George Perdy", new weapon(3, 0.80)), 
+	new combatant_data(true, Combatant_Team.enemy, 7, "Greene Lewell", new weapon(3, 0.80)), 
 	noone,
 ];
 enemy_datas[1] = [
 	noone,
-	new combatant_data(true, Combatant_Team.enemy, 7, 2, "Jean-Charles Deniau"), 
+	new combatant_data(true, Combatant_Team.enemy, 7, "Jean-Charles Deniau", new weapon(2, 0.80)), 
 	noone,
 ];
 

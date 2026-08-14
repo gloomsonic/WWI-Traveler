@@ -52,7 +52,7 @@ function use_states(_owner = other.id) constructor {
 
 enum State { 
 	idle, hovered, held,
-	attack, hit,
+	attack, hit, evaded,
 	
 	// Cursor states
 	select_action, select_target, select_reposition,

@@ -7,14 +7,20 @@ ready = true;
 flash_count = 3;
 flash_duration = 4;
 flash_remaining = -1;
+states.define(State.evaded, state_evaded);
 states.define(State.hit, state_hit);
 states.define(State.attack, state_attack);
 
-start_hit = function(_damage) {
-	flash_remaining = flash_duration * flash_count * 2; // 5 flashes * 2 parts per flash
-	//_damage -= block;
-	my_data.hp -= _damage;
-	states.queue(State.hit);
+start_hit = function(_damage, _accuracy) {
+	var _roll = random(1.0);
+	if (_roll > _accuracy) {
+		states.queue(State.evaded);
+	} else {
+		my_data.hp -= _damage;
+		flash_remaining = flash_duration * flash_count * 2; // flashes * 2 parts per flash
+		states.queue(State.hit);
+	}
+	
 }
 start_attack = function() {
 	states.queue(State.attack);
