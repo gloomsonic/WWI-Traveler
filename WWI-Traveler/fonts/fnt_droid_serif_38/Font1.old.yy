@@ -1,6 +1,6 @@
 {
   "$GMFont":"",
-  "%Name":"fnt_droid_serif_36",
+  "%Name":"Font1",
   "AntiAlias":1,
   "applyKerning":0,
   "ascender":44,
@@ -117,10 +117,10 @@
   "last":0,
   "lineHeight":56,
   "maintainGms1Font":false,
-  "name":"fnt_droid_serif_36",
+  "name":"Font1",
   "parent":{
     "name":"Fonts",
-    "path":"folders/__Core/Fonts.yy",
+    "path":"folders/Fonts.yy",
   },
   "pointRounding":0,
   "ranges":[
