@@ -1,6 +1,6 @@
 ///@desc methods Draw
 
-//
+// Draw the story
 draw_phrases = function() {
 	draw_set();
 	var _x = l_margin;

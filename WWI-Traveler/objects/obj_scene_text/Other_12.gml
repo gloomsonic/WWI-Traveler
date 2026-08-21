@@ -50,7 +50,7 @@ state_scene_waiting = function(_event) {
 state_scene_choosing = function(_event) {
 	switch(_event) {
 		case Event.enter:
-			scroll_y(y + choice_break);
+			//scroll_y(y + choice_break);
 			var _story_len = story_character_count + array_length(fade_values);
 			truncate_fades(characters_opaque_count, _story_len);
 			spawn_choices();
@@ -60,7 +60,6 @@ state_scene_choosing = function(_event) {
 			break;
 		case Event.draw:
 			draw_phrases();
-			//draw_choices(story_bot_y);
 			break;
 		case Event.final:
 			break;

@@ -6,13 +6,13 @@ event_user_all();
 enemy_datas = [];
 enemy_datas[0] = [
 	noone,
-	new combatant_data(true, Combatant_Team.enemy, 6, 3, "George Perdy"), 
-	new combatant_data(true, Combatant_Team.enemy, 7, 2, "Greene Lewell"), 
+	new combatant_data(true, Combatant_Team.enemy, 6, "George Perdy", new weapon(3, 0.80)), 
+	new combatant_data(true, Combatant_Team.enemy, 7, "Greene Lewell", new weapon(3, 0.80)), 
 	noone,
 ];
 enemy_datas[1] = [
 	noone,
-	new combatant_data(true, Combatant_Team.enemy, 7, 2, "Jean-Charles Deniau"), 
+	new combatant_data(true, Combatant_Team.enemy, 7, "Jean-Charles Deniau", new weapon(2, 0.80)), 
 	noone,
 ];
 
@@ -46,15 +46,7 @@ combatants = spawn_combatants();
 
 // Placeholder default turn queue, will be determined by speed
 turn_done = true;
-var _player = get_team(Combatant_Team.player);
-var _enemy = get_team(Combatant_Team.enemy);
-turn_queue = [
-	_player[0],
-	_enemy[0],
-	_player[0],
-	_player[1],
-	_enemy[1],
-	_player[2],
-	_enemy[2],
-];
+turn_queue = [];
+array_copy(turn_queue, 0, combatants, 0, array_length(combatants));
+turn_queue = array_shuffle(turn_queue);
 

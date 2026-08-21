@@ -7,8 +7,10 @@ on_pressed = function() {
 }
 on_released = function() {
 	array_push(global.data.map_location_keys_visited, my_location_key);
-	//global.data.map_location_key = my_location_key;
-	room_goto(rm_scene);
+	if (array_length(SCENES) > 0)
+		room_goto(rm_scene);
+	else
+		room_goto(rm_win);
 }
 
 // State functions

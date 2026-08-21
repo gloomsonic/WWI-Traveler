@@ -13,3 +13,15 @@ set_combatant = function(_combatant) {
 free = function() {
 	my_combatant = noone;
 }
+
+//get_team = function() {
+//	var _player_team = obj_combat_manager.get_spaces(Combatant_Team.player);
+//	if (array_get_index(_player_team, id) != -1)
+//		return Combatant_Team.player;
+//	return Combatant_Team.enemy;
+//}
+//get_row_pos = function() {
+//	var _team = get_team();
+//	obj_combat_manager.get_row_pos_space()
+//	// Check both team_player_rows
+//}

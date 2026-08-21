@@ -8,7 +8,7 @@ get_team = function(_team_index) {
 	var _team = [];
 	for (var i = 0; i < array_length(combatants); i++) {
 		var _combatant = combatants[i];
-		if (_combatant.team != _team_index) continue;
+		if (_combatant.my_data.team != _team_index) continue;
 		array_push(_team, _combatant);
 	}
 	
@@ -23,7 +23,23 @@ get_spaces = function(_team_index) {
 		return array_concat(team_enemy_rows[0], team_enemy_rows[1]);
 }
 
-// Spawn the combatant objects, must be after spaces are spawned
+// Find which row the supplied space is on and at what index
+get_row_pos_space = function(_space) {
+	var _row = 0;
+	var _pos = array_get_index(team_player_rows[0], _space);
+	if (_pos != -1) return {team: Combatant_Team.player, row: _row, pos: _pos};
+	_row = 1;
+	_pos = array_get_index(team_player_rows[1], _space);
+	if (_pos != -1) return {team: Combatant_Team.player, row: _row, pos: _pos};
+	_row = 0;
+	_pos = array_get_index(team_enemy_rows[0], _space);
+	if (_pos != -1) return {team: Combatant_Team.enemy, row: _row, pos: _pos};
+	_row = 1;
+	_pos = array_get_index(team_enemy_rows[1], _space);
+	if (_pos != -1) return {team: Combatant_Team.enemy, row: _row, pos: _pos};
+}
+
+// Spawn the combatant objects, NOTE: must be after spaces are spawned
 spawn_combatants = function() {
 	var _combatants = [];
 	
@@ -35,10 +51,10 @@ spawn_combatants = function() {
 			var _data = _row[p];
 			if (_data == noone) continue;
 			
-			var _combatant = instance_create_layer(0, 0, "combatants", obj_combatant, _data);
+			var _combatant = instance_create_layer(0, 0, "combatants", obj_combatant, {my_data : _data});
 			var _space = team_enemy_rows[r][p];
 			_combatant.set_space(_space);
-			_space.set_combatant(_combatant);
+			//_space.set_combatant(_combatant);
 			array_push(_combatants, _combatant);
 		}
 	}
@@ -51,10 +67,10 @@ spawn_combatants = function() {
 			var _data = _row[p];
 			if (_data == noone) continue;
 			
-			var _combatant = instance_create_layer(0, 0, "combatants", obj_combatant, _data);
+			var _combatant = instance_create_layer(0, 0, "combatants", obj_combatant, {my_data : _data});
 			var _space = team_player_rows[r][p];
 			_combatant.set_space(_space);
-			_space.set_combatant(_combatant);
+			//_space.set_combatant(_combatant);
 			array_push(_combatants, _combatant);
 		}
 	}
@@ -75,4 +91,3 @@ spawn_combat_menu = function(_combatant) {
 	_y += _lh;
 	instance_create_layer(0, _y, "menu", obj_combat_menu_pass);
 }
-

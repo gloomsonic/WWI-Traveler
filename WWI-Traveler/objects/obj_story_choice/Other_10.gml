@@ -16,9 +16,9 @@ state_idle = function(_event) {
 			log("idle"); 
 			break;
 		case Event.draw: 
-			draw_set(,,, fa_middle);
-			draw_circle(x - 128, y, 16, true);
-			draw_text(x, y, my_text);
+			draw_set(,,, fa_middle, image_alpha);
+			draw_circle(x, y, 16, true);
+			draw_text(x + list_margin, y, my_text);
 			break;
 	}
 }
@@ -28,9 +28,9 @@ state_hovered = function(_event) {
 		case Event.step: 
 			break;
 		case Event.draw: 
-			draw_set(,,, fa_middle);
-			draw_circle(x - 128, y, 16, false);
-			draw_text(x, y, my_text);
+			draw_set(,,, fa_middle, image_alpha);
+			draw_circle(x, y, 16, false);
+			draw_text(x + list_margin, y, my_text);
 			break;
 	}
 }
@@ -41,9 +41,9 @@ state_held = function(_event) {
 			log("held"); 
 			break;
 		case Event.draw: 
-			draw_set(,,, fa_middle);
-			draw_circle(x - 128, y, 16, false);
-			draw_text(x, y, my_text);
+			draw_set(,,, fa_middle, image_alpha);
+			draw_circle(x, y, 16, false);
+			draw_text(x + list_margin, y, my_text);
 			break;
 	}
 }

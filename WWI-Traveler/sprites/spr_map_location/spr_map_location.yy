@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Map Static",
-    "path":"folders/Map Static.yy",
+    "name":"Sprites",
+    "path":"folders/Map Static/Sprites.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

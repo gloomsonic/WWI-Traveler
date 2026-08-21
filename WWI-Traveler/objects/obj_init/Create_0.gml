@@ -3,6 +3,9 @@ display_reset(8, true);
 draw_enable_svg_aa(true);
 draw_set_svg_aa_level(8);
 
+// TEMP: random scene order
+SCENES = array_shuffle(SCENES);
+
 // Map playthrough state allows us to traverse back to the "current node" when exiting combat or scenes
 global.map_current_node = -1;   // node_id the player is standing on
 global.map_play_slot    = -1;   // which map slot the current playthrough is on

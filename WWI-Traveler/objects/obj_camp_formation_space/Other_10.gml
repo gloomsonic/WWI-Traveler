@@ -13,16 +13,7 @@ on_released = function() {
 		obj_cursor_camp.set_formation_space(noone); // Selected same one twice, do nothing
 	} else {
 		var _other_space = _selected;
-
-		// Get combatants
-		var _my_combatant = global.data.party[row][pos];
-		var _other_combatant = global.data.party[_other_space.row][_other_space.pos];
-
-		// Swap combatants
-		array_insert(global.data.party[row], pos, _other_combatant); // Other combatant inserted in my combatant's index
-		array_delete(global.data.party[row], pos+1, 1); // My combatant deleted
-		array_insert(global.data.party[_other_space.row], _other_space.pos, _my_combatant); // My combatant inserted at other combatant's index
-		array_delete(global.data.party[_other_space.row], _other_space.pos+1, 1); // Other combatant deleted
+		swap_combatant_datas(row, pos, _other_space.row, _other_space.pos);
 
 		// Deselect and refresh
 		obj_cursor_camp.set_formation_space(noone);	
