@@ -41,7 +41,7 @@ state_attack = function(_event) {
 			ignore_cursor = true;
 			sprite_index = spr_combatant_attack;
 			image_index = 0;
-			audio_oneshot_3d(EV_PUNCH_1, x, y);
+			audio_oneshot_3d(EV_PUNCH, x, y);
 			break;
 			
 		case Event.step: 

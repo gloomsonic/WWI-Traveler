@@ -22,10 +22,12 @@
 // ----------------- AUDIO EVENTS -----------------
 
 // SFX
-#macro EV_GUNSHOT_1   "event:/Test Gunshot"
-#macro EV_PUNCH_1   "event:/Test Punch"
-#macro EV_DEBUG_AMBIENCE   "event:/Test Ambience"
+#macro EV_GUNSHOT_1   "event:/SFX/Test Gunshot"
+#macro EV_PUNCH   "event:/SFX/Test Punch"
+#macro EV_MISS   "event:/SFX/Test Miss"
+#macro EV_TYPEWRITER "event:/SFX/Typewriter"
+#macro EV_AMBIENCE   "event:/Ambience/Amb_War/Amb_War"
 
 // MUSIC
-#macro EV_MUSIC "event:/Test Music"
+#macro EV_MUSIC "event:/Music/Music"
 
