@@ -22,7 +22,7 @@
 // ----------------- AUDIO EVENTS -----------------
 
 // SFX
-#macro EV_GUNSHOT_1   "event:/SFX/Test Gunshot"
+#macro EV_GUNSHOT   "event:/SFX/Test Gunshot"
 #macro EV_PUNCH   "event:/SFX/Test Punch"
 #macro EV_MISS   "event:/SFX/Test Miss"
 #macro EV_TYPEWRITER "event:/SFX/Typewriter"

@@ -11,5 +11,5 @@ if (dragging)
 
 if (keyboard_check_pressed(vk_space))
 {
-	audio_oneshot_3d(EV_GUNSHOT_1, x, y);
+	audio_oneshot_3d(EV_GUNSHOT, x, y);
 }
