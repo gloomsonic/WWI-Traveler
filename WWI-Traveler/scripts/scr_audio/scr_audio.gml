@@ -45,11 +45,10 @@ function audio_set_position(_name, _x, _y) {
 
 // --- FMOD BUS VOLUME ---
 
-// Bottom of the slider in dB. -60 is a common choice; -40 is gentler, -80 steeper.
-// (A #macro is global, so this can live here or be moved to scr_audio_events.)
+
 #macro AUDIO_MIN_DB -60
 
-// Resolve an FMOD bus from its path, caching the reference.
+
 function audio_bus(_path) {
     var _cache = obj_audio_manager.bus_cache;
     if (!variable_struct_exists(_cache, _path)) {
@@ -61,21 +60,21 @@ function audio_bus(_path) {
     return _cache[$ _path];
 }
 
-// 0..1 slider position -> linear gain that feels perceptually even.
+// 0..1 slider position
 function audio_slider_to_gain(_t) {
-    if (_t <= 0) return 0;   // true silence at the bottom
-    if (_t >= 1) return 1;   // unity at the top
+    if (_t <= 0) return 0;   
+    if (_t >= 1) return 1;  
     return power(10, (1 - _t) * AUDIO_MIN_DB / 20);
 }
 
-// Inverse: linear gain -> 0..1 slider position (for initializing a slider from a saved value).
+// linear gain -> 0..1 slider position
 function audio_gain_to_slider(_g) {
     if (_g <= 0) return 0;
     if (_g >= 1) return 1;
     return 1 - (20 * log10(_g)) / AUDIO_MIN_DB;
 }
 
-// Set a bus volume from a 0..1 slider position (perceptually linear).
+// Set a bus volume from a 0..1 slider position
 function audio_bus_set_volume(_path, _t) {
     if (!audio_ready()) return;
     fmod_studio_bus_set_volume(audio_bus(_path), audio_slider_to_gain(_t));
@@ -164,7 +163,7 @@ function audio_settings_load() {
                 global.audio_volumes[$ _k] = clamp(_data[$ _k], 0, 1);
         }
     } catch (_e) {
-        // Malformed file -> keep defaults.
+        // Malformed file? Then keep defaults.
     }
 }
 
