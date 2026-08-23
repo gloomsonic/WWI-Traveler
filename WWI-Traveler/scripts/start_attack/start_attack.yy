@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"start_attack",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"start_attack",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Combat/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

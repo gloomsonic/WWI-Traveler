@@ -1,5 +1,5 @@
-// needed to add this to keep the game from crashing when entering combat again form the map
-global.library = {};
+//// needed to add this to keep the game from crashing when entering combat again form the map
+//global.library = {};
 
 event_user_all();
 
