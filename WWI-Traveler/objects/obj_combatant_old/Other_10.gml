@@ -11,13 +11,7 @@ on_released = function() {
 state_idle = function(_event) {
 	switch(_event) {
 		case Event.draw: 
-			draw_set(,, fa_center);
 			draw_self_ext(); 
-			
-			if (my_data != noone) {
-				draw_text(SPR_X_C, SPR_T, my_data.name);
-				draw_text(SPR_X_C, SPR_T - font_height(), my_data.hp);	
-			}
 			break;
 	}
 }
@@ -25,13 +19,7 @@ state_idle = function(_event) {
 state_hovered = function(_event) {
 	switch(_event) {
 		case Event.draw: 
-			draw_set(,, fa_center);
 			draw_self_ext(,,,,,,, c_blue); 
-			
-			if (my_data != noone) {
-				draw_text(SPR_X_C, SPR_T, my_data.name);
-				draw_text(SPR_X_C, SPR_T - font_height(), my_data.hp);	
-			}	
 			break;
 	} 
 }
@@ -39,13 +27,7 @@ state_hovered = function(_event) {
 state_held = function(_event) {
 	switch(_event) {
 		case Event.draw: 
-			draw_set(,, fa_center);
 			draw_self_ext(,,,,,,, c_red); 
-			
-			if (my_data != noone) {
-				draw_text(SPR_X_C, SPR_T, my_data.name);
-				draw_text(SPR_X_C, SPR_T - font_height(), my_data.hp);	
-			}				
 			break;
 	}
 }

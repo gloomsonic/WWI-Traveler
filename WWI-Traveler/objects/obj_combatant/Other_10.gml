@@ -11,7 +11,13 @@ on_released = function() {
 state_idle = function(_event) {
 	switch(_event) {
 		case Event.draw: 
+			draw_set(,, fa_center);
 			draw_self_ext(); 
+			
+			if (my_data != noone) {
+				draw_text(SPR_X_C, SPR_T, my_data.name);
+				draw_text(SPR_X_C, SPR_T - font_height(), my_data.hp);	
+			}
 			break;
 	}
 }
@@ -19,7 +25,13 @@ state_idle = function(_event) {
 state_hovered = function(_event) {
 	switch(_event) {
 		case Event.draw: 
+			draw_set(,, fa_center);
 			draw_self_ext(,,,,,,, c_blue); 
+			
+			if (my_data != noone) {
+				draw_text(SPR_X_C, SPR_T, my_data.name);
+				draw_text(SPR_X_C, SPR_T - font_height(), my_data.hp);	
+			}	
 			break;
 	} 
 }
@@ -27,7 +39,13 @@ state_hovered = function(_event) {
 state_held = function(_event) {
 	switch(_event) {
 		case Event.draw: 
+			draw_set(,, fa_center);
 			draw_self_ext(,,,,,,, c_red); 
+			
+			if (my_data != noone) {
+				draw_text(SPR_X_C, SPR_T, my_data.name);
+				draw_text(SPR_X_C, SPR_T - font_height(), my_data.hp);	
+			}				
 			break;
 	}
 }
@@ -90,14 +108,7 @@ state_hit = function(_event) {
 			image_alpha = 1;
 			ignore_cursor = false;
 			signal_ready();
-			if (my_data.hp <= 0) {
-				signal_raise(Signal_Type.on_combatant_killed, id);
-				var _data = obj_combat_manager.get_row_pos_space(my_space);
-				
-				// If player died, remove from global array
-				if (_data.team == Combatant_Team.player)
-					global.data.party[_data.row][_data.pos] = noone;
-			}
+			check_dead();
 			break;
 	}
 }

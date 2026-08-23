@@ -6,7 +6,8 @@ on_pressed = function() {
 }
 on_released = function() {
 	obj_cursor_combat.states.queue(State.select_target);
-	destroy_combat_menu();
+	//states.queue(State.selected);
+	//destroy_combat_menu();
 }
 
 // State functions
@@ -39,3 +40,20 @@ state_held = function(_event) {
 			break;
 	}
 }
+
+//// Non-standard states
+//state_selected = function(_event) {
+//	switch(_event) {
+//		case Event.enter:
+//			ignore_cursor = true;
+//			break;
+//		case Event.step: 
+//			break;
+//		case Event.draw: 
+//			draw_self_ext(,,,,,,, c_blue); 
+//			break;
+//		case Event.final:
+//			ignore_cursor = false;
+//			break;
+//	}
+//}
