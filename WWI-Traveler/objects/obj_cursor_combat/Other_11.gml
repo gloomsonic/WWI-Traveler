@@ -14,10 +14,19 @@ state_cursor_select_target = function(_event) {
 		case Event.step: 
 			var _enemies = get_combatant_team(Combatant_Team.enemy);
 			var _data = touch_object(_enemies);
+			
+			// exit state
+			if (mouse_check_button_pressed(mb_right)) {
+				states.queue(State.select_action);
+			}
 			if (_data.released) {
 				start_attack(my_combatant, _data.inst);
 				states.queue(State.select_action);
 			}
+			break;
+			
+		case Event.final:
+			signal_raise(Signal_Type.on_combat_target_done);
 			break;
 	}
 }

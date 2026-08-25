@@ -18,7 +18,7 @@ instance_create_layer(ROOM_W*4/20,	0.32*ROOM_H, "spaces", obj_combatant, {my_dat
 instance_create_layer(ROOM_W*8/20,	0.32*ROOM_H, "spaces", obj_combatant, {my_data : ENEMY_PARTY[1][1]});
 instance_create_layer(ROOM_W*12/20, 0.32*ROOM_H, "spaces", obj_combatant, {my_data : ENEMY_PARTY[1][2]});
 
-// Spawn combat menu
+// Spawn combat menu -- TODO: functionize and do on player turn
 var _player = get_combatant_team(Combatant_Team.player); // DEBUG: starting combatant
 	
 var _lh = sprite_get_height(spr_combat_menu_attack);
@@ -31,3 +31,13 @@ _y += _lh;
 instance_create_layer(0, _y, "menu", obj_combat_menu_reposition);
 _y += _lh;
 instance_create_layer(0, _y, "menu", obj_combat_menu_pass);
+
+// Turn order
+/*	
+- randomize turn order.
+- 'pick' the first guy and send him to the cursor (step event?)
+- if it's a player, spawn the combat menu (step event)
+- if it's a CPU... pick a player and 'start_attack' between them (step event)
+*/
+var _combatants = object_get_instances(obj_combatant);
+turn_order = array_shuffle(_combatants);

@@ -6,7 +6,7 @@ on_pressed = function() {
 }
 on_released = function() {
 	obj_cursor_combat.states.queue(State.select_target);
-	//states.queue(State.selected);
+	states.queue(State.selected);
 	//destroy_combat_menu();
 }
 
@@ -41,19 +41,19 @@ state_held = function(_event) {
 	}
 }
 
-//// Non-standard states
-//state_selected = function(_event) {
-//	switch(_event) {
-//		case Event.enter:
-//			ignore_cursor = true;
-//			break;
-//		case Event.step: 
-//			break;
-//		case Event.draw: 
-//			draw_self_ext(,,,,,,, c_blue); 
-//			break;
-//		case Event.final:
-//			ignore_cursor = false;
-//			break;
-//	}
-//}
+// Non-standard states
+state_selected = function(_event) {
+	switch(_event) {
+		case Event.enter:
+			ignore_cursor = true;
+			break;
+		case Event.step: 
+			break;
+		case Event.draw: 
+			draw_self_ext(,,,,,,, c_blue); 
+			break;
+		case Event.final:
+			ignore_cursor = false;
+			break;
+	}
+}
