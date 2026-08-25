@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"combatants_team_get_ids",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"combatants_team_get_ids",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Combat/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

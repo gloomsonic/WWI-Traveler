@@ -32,7 +32,7 @@ check_dead = function() {
 		PARTY[_data.row][_data.col] = noone;
 	if (_data.team == Combatant_Team.enemy)
 		ENEMY_PARTY[_data.row][_data.col] = noone;
-		
+	
 	signal_raise(Signal_Type.on_combatant_killed, id);	
 }
 
@@ -45,7 +45,8 @@ refresh = function() {
 }
 
 // Set ready and send the signal -- should maybe find a way to not need the variable
-signal_ready = function() {
-	ready = true;
-	signal_raise(Signal_Type.on_combatant_ready);
+set_ready = function(_yes_no = true) {
+	ready = _yes_no;
+	//if (ready)
+	//	signal_raise(Signal_Type.on_combatant_ready);
 }

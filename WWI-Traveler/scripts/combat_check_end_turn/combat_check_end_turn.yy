@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"combat_check_end_turn",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"combat_check_end_turn",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Combat/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

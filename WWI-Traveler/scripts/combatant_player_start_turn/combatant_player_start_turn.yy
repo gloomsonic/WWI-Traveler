@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"destroy_combat_menu",
+  "%Name":"combatant_player_start_turn",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"destroy_combat_menu",
+  "name":"combatant_player_start_turn",
   "parent":{
     "name":"Scripts",
     "path":"folders/Combat/Scripts.yy",

@@ -76,7 +76,7 @@ state_attack = function(_event) {
 		case Event.final:
 			sprite_index = spr_combatant_idle;
 			ignore_cursor = false;
-			signal_ready();
+			set_ready(true);
 			break;
 	}	
 }
@@ -107,7 +107,7 @@ state_hit = function(_event) {
 		case Event.final:
 			image_alpha = 1;
 			ignore_cursor = false;
-			signal_ready();
+			set_ready(true);
 			check_dead();
 			break;
 	}
@@ -136,7 +136,7 @@ state_evaded = function(_event) {
 			
 		case Event.final:
 			ignore_cursor = false;
-			signal_ready();
+			set_ready(true);
 			break;
 	}	
 }
