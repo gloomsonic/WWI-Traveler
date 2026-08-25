@@ -12,7 +12,7 @@ state_cursor_select_action = function(_event) {
 state_cursor_select_target = function(_event) {
 	switch(_event) {
 		case Event.step: 
-			var _enemies = get_combatant_team(Combatant_Team.enemy);
+			var _enemies = combatants_team_get_ids(Combatant_Team.enemy);
 			var _data = touch_object(_enemies);
 			
 			// exit state

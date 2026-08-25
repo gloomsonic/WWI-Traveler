@@ -140,7 +140,6 @@
     {"id":{"name":"Fmod_Definitions","path":"scripts/Fmod_Definitions/Fmod_Definitions.yy",},},
     {"id":{"name":"Fmod_Functions","path":"scripts/Fmod_Functions/Fmod_Functions.yy",},},
     {"id":{"name":"font_height","path":"scripts/font_height/font_height.yy",},},
-    {"id":{"name":"get_enemy_combatants","path":"scripts/get_enemy_combatants/get_enemy_combatants.yy",},},
     {"id":{"name":"global_data","path":"scripts/global_data/global_data.yy",},},
     {"id":{"name":"input_types","path":"scripts/input_types/input_types.yy",},},
     {"id":{"name":"json_load","path":"scripts/json_load/json_load.yy",},},
