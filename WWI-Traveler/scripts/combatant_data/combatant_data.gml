@@ -1,7 +1,7 @@
 enum Combatant_Team {player, enemy}
 
 // Combatant data constructor to be given to obj_turn_manager
-function combatant_data(_cpu, _team, _hp, _name, _melee, _ranged = -1) constructor {
+function combatant_data_old(_cpu, _team, _hp, _name, _melee, _ranged = -1) constructor {
 	cpu = _cpu;
 	team = _team;
 	hp = _hp;
@@ -11,7 +11,7 @@ function combatant_data(_cpu, _team, _hp, _name, _melee, _ranged = -1) construct
 }
 
 // Combatant data constructor to be given to obj_turn_manager
-function combatant_data2(_cpu, _team, _hp, _name, _sprite, _melee, _ranged = -1) constructor {
+function combatant_data(_cpu, _team, _hp, _name, _sprite, _melee, _ranged = -1) constructor {
 	cpu = _cpu;
 	team = _team;
 	hp = _hp;
