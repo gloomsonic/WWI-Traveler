@@ -54,7 +54,7 @@ enum State {
 	idle, hovered, held,
 	selected,
 	
-	attack, hit, evaded,
+	attack, guard, hit, evaded,
 	
 	// Cursor states
 	select_action, select_target, select_reposition,

@@ -4,9 +4,5 @@ function combat_check_end_turn() {
 		if (ready) continue;
 		_end_turn = false;
 	}
-	
-	//if (_end_turn)
-	//	combat_menu_destroy();
-
 	return _end_turn;
 }

@@ -5,8 +5,7 @@ event_inherited();
 on_pressed = function() {
 }
 on_released = function() {
-	obj_combat_manager.end_turn();
-	destroy_combat_menu();
+	obj_cursor_combat.my_combatant.states.queue(State.guard);
 }
 
 // State functions

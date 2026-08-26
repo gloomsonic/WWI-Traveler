@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"state_combatant_evaded",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"state_combatant_evaded",
+  "parent":{
+    "name":"Combatants",
+    "path":"folders/Combat/Combatants.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
