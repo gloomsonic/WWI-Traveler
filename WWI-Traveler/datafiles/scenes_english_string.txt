@@ -90,4 +90,17 @@
 		
 		"name": "piobare",
 	},
+	
+	"Armor":
+	{
+		"story": "You first think the soldiers on the road are pieces of cloth, bed rolls fallen from a fleeing cart.<w><p>You realize from twenty paces that they’re men. For a split second, you think they’re lying down, resting, but of course they’re not.<w><p>You duck to the ground, waiting on your belly for shots to ring out.<w><p>But it’s silent, save for the wind ringing in your ears. So you edge forward.<w><p>The first man has been dead a long time. You push his foot with your hand, and his whole leg is stiff, jutting out like a tree branch. A quick glance around at the others assures you they’ve all lain here at least a day or two.<w><p>Their things are spread across the road: candy wrappers, old ration cards, handkerchiefs, and outdated maps. Other scavengers have already gone over the bodies. There’s not one scarf, can of peaches, cantine or pair of socks left.<w><p>You see a barn off in the distance. It’d be a long shot even if a sniper had you in their sights, so you decide to linger a moment longer. Maybe there’s a pack of cigarettes or a dented can of stew that was overlooked in the mad scrabble before these bodies were abandoned where they fell.<w><p>As you pat them down, you try not to look at their faces.<w><p>Still, as you move a man’s arm away from his pocket, you can’t help noticing his skin. The back of his hand was once a healthy tan, his palms once pink, now gray-ish white. There’s a break in the tan on his left ring finger. A band of white skin wraps the finger, starker and brighter than any gold wedding band. <w><p>You place his arm down again gently.<w><p>The body next to him is lying on its back, belly shielded in dull green-gray plate armor. A sneak up to the mess above his collar tells you it didn’t do him any good in the end, but the dents and dings across the chest might have killed him long before without it.<w><p>As if you don’t want to wake him up, you reach out a hand and quietly tap on the armor, testing it.<w>",
+		
+		"choices":
+		[
+			"Take the armor",
+			"Leave the armor",
+		],
+		
+		"name": "Armor",
+	},
 }
