@@ -16,6 +16,7 @@ scene_add(JSON_SCENES.egg);
 scene_add(JSON_SCENES.grove);
 scene_add(JSON_SCENES.horse);
 scene_add(JSON_SCENES.piobare);
+scene_add(JSON_SCENES.armor);
 
 
 //// Add scenes to array
