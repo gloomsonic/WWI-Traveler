@@ -1,19 +1,21 @@
 enum Combatant_Team {player, enemy}
 
-// Combatant data constructor to be given to obj_turn_manager
-function combatant_data_old(_cpu, _team, _hp, _name, _melee, _ranged = -1) constructor {
-	cpu = _cpu;
-	team = _team;
-	hp = _hp;
-	name = _name;
-	melee = _melee;
-	ranged = _ranged; // TODO: decide whether an array of weapons or melee vs. ranged, probably an array but also these
-}
+//// Combatant data constructor to be given to obj_turn_manager
+//function combatant_data_old(_cpu, _team, _hp, _name, _melee, _ranged = -1) constructor {
+//	cpu = _cpu;
+//	team = _team;
+//	hp = _hp;
+//	name = _name;
+//	melee = _melee;
+//	ranged = _ranged; // TODO: decide whether an array of weapons or melee vs. ranged, probably an array but also these
+//}
 
 // Combatant data constructor to be given to obj_turn_manager
-function combatant_data(_cpu, _team, _hp, _name, _sprite, _melee, _ranged = -1) constructor {
+function combatant_data(_cpu, _team, _row, _col, _hp, _name, _sprite, _melee, _ranged = -1) constructor {
 	cpu = _cpu;
 	team = _team;
+	row = _row;
+	col = _col;
 	hp = _hp;
 	name = _name;
 	sprite_index = _sprite;

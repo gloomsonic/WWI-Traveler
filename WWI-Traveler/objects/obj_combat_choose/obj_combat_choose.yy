@@ -1,20 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_cursor_combat",
+  "%Name":"obj_combat_choose",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":11,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_cursor_combat",
+  "name":"obj_combat_choose",
   "overriddenProperties":[],
   "parent":{
-    "name":"z_old",
-    "path":"folders/Combat/z_old.yy",
+    "name":"Combat",
+    "path":"folders/Combat.yy",
   },
   "parentObjectId":{
-    "name":"par_mouse_cursor",
-    "path":"objects/par_mouse_cursor/par_mouse_cursor.yy",
+    "name":"par_touchable",
+    "path":"objects/par_touchable/par_touchable.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_mouse_cursor",
-    "path":"sprites/spr_mouse_cursor/spr_mouse_cursor.yy",
+    "name":"spr_combat_choose",
+    "path":"sprites/spr_combat_choose/spr_combat_choose.yy",
   },
   "spriteMaskId":null,
   "visible":true,

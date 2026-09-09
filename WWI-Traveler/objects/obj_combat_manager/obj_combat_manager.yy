@@ -10,8 +10,8 @@
   "name":"obj_combat_manager",
   "overriddenProperties":[],
   "parent":{
-    "name":"Combat",
-    "path":"folders/Combat.yy",
+    "name":"z_old",
+    "path":"folders/Combat/z_old.yy",
   },
   "parentObjectId":null,
   "persistent":false,

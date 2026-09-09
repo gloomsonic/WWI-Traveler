@@ -24,8 +24,8 @@
   ],
   "name":"rm_combat_old",
   "parent":{
-    "name":"Combat",
-    "path":"folders/Combat.yy",
+    "name":"z_old",
+    "path":"folders/Combat/z_old.yy",
   },
   "parentRoom":null,
   "physicsSettings":{
