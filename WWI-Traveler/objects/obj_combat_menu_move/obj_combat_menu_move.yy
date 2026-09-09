@@ -1,20 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_combat_choose",
+  "%Name":"obj_combat_menu_move",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_combat_choose",
+  "name":"obj_combat_menu_move",
   "overriddenProperties":[],
   "parent":{
-    "name":"Combat",
-    "path":"folders/Combat.yy",
+    "name":"Combat Menu",
+    "path":"folders/Combat/Combat Menu.yy",
   },
   "parentObjectId":{
-    "name":"par_touchable",
-    "path":"objects/par_touchable/par_touchable.yy",
+    "name":"par_combat_menu",
+    "path":"objects/par_combat_menu/par_combat_menu.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

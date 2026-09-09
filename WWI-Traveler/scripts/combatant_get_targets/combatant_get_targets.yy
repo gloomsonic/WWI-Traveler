@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"combatant_get_targets",
   "parent":{
-    "name":"Combat",
-    "path":"folders/Combat.yy",
+    "name":"Scripts",
+    "path":"folders/Combat/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

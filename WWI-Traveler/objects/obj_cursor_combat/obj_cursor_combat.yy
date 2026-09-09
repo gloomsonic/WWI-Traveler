@@ -9,8 +9,8 @@
   "name":"obj_cursor_combat",
   "overriddenProperties":[],
   "parent":{
-    "name":"z_old",
-    "path":"folders/Combat/z_old.yy",
+    "name":"Combat",
+    "path":"folders/Combat.yy",
   },
   "parentObjectId":{
     "name":"par_mouse_cursor",

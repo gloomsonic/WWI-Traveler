@@ -1,20 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_combat_menu_guard",
+  "%Name":"obj_combat_menu_attack_old",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_combat_menu_guard",
+  "name":"obj_combat_menu_attack_old",
   "overriddenProperties":[],
   "parent":{
     "name":"Combat Menu",
-    "path":"folders/Combat/Combat Menu.yy",
+    "path":"folders/Combat/_old/Combat Menu.yy",
   },
   "parentObjectId":{
-    "name":"par_combat_menu",
-    "path":"objects/par_combat_menu/par_combat_menu.yy",
+    "name":"par_combat_menu_old",
+    "path":"objects/par_combat_menu_old/par_combat_menu_old.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_combat_menu_guard",
-    "path":"sprites/spr_combat_menu_guard/spr_combat_menu_guard.yy",
+    "name":"spr_combat_menu_attack",
+    "path":"sprites/spr_combat_menu_attack/spr_combat_menu_attack.yy",
   },
   "spriteMaskId":null,
   "visible":true,

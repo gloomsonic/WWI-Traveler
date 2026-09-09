@@ -1,8 +1,10 @@
 event_inherited();
 
 self[$ "my_combatant"] ??= noone;
-states.define(State.selected, state_selected);
+self[$ "callback"] ??= function(){};
+obj_cursor_combat.add_touchable(id);
 
-signal_add(new signal_listener(id, Signal_Type.on_combat_target_done, function() {
-	states.queue(State.idle);
-}))
+text = "Attack";
+draw_set();
+image_xscale = 512 / sprite_width;
+image_yscale = (font_height() * 1.4) / sprite_height;

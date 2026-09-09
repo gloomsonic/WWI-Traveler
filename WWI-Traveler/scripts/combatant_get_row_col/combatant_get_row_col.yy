@@ -6,7 +6,7 @@
   "name":"combatant_get_row_col",
   "parent":{
     "name":"Scripts",
-    "path":"folders/Combat/Scripts.yy",
+    "path":"folders/Combat/_old/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

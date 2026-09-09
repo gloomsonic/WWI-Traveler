@@ -6,7 +6,7 @@
   "name":"combatants_get_all",
   "parent":{
     "name":"Scripts",
-    "path":"folders/Combat/Scripts.yy",
+    "path":"folders/Combat/_old/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

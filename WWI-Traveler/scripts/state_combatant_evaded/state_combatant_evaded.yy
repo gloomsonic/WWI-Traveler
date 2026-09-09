@@ -6,7 +6,7 @@
   "name":"state_combatant_evaded",
   "parent":{
     "name":"Combatants",
-    "path":"folders/Combat/Combatants.yy",
+    "path":"folders/Combat/_old/Combatants.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

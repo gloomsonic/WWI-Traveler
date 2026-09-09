@@ -11,7 +11,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Combatants",
-    "path":"folders/Combat/Combatants.yy",
+    "path":"folders/Combat/_old/Combatants.yy",
   },
   "parentObjectId":{
     "name":"par_touchable",

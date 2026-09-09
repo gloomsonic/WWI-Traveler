@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Combat Menu",
-    "path":"folders/Combat/Combat Menu.yy",
+    "path":"folders/Combat/_old/Combat Menu.yy",
   },
   "parentObjectId":null,
   "persistent":false,
