@@ -6,17 +6,7 @@ on_pressed = function() {
 	log("pressed");
 }
 on_released = function() {
-	instance_destroy(par_combat_menu);
-	
-	// Spawn buttons to select enemy combatants
-	var _valid_targets = combatant_get_targets(my_combatant);
-	for (var i = 0; i < array_length(_valid_targets); i++) {
-		var _combatant = _valid_targets[i];
-		instance_create_depth(0, 0, depth, obj_combat_select_enemy, {
-			my_combatant: _combatant,
-			callback: callback,
-		});
-	}	
+	callback();
 }
 
 // State functions

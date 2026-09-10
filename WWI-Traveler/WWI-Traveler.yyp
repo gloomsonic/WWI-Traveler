@@ -86,6 +86,7 @@
     {"id":{"name":"obj_combat_menu_attack_old","path":"objects/obj_combat_menu_attack_old/obj_combat_menu_attack_old.yy",},},
     {"id":{"name":"obj_combat_menu_attack","path":"objects/obj_combat_menu_attack/obj_combat_menu_attack.yy",},},
     {"id":{"name":"obj_combat_menu_guard_old","path":"objects/obj_combat_menu_guard_old/obj_combat_menu_guard_old.yy",},},
+    {"id":{"name":"obj_combat_menu_label_old","path":"objects/obj_combat_menu_label_old/obj_combat_menu_label_old.yy",},},
     {"id":{"name":"obj_combat_menu_label","path":"objects/obj_combat_menu_label/obj_combat_menu_label.yy",},},
     {"id":{"name":"obj_combat_menu_move","path":"objects/obj_combat_menu_move/obj_combat_menu_move.yy",},},
     {"id":{"name":"obj_combat_menu_pass_old","path":"objects/obj_combat_menu_pass_old/obj_combat_menu_pass_old.yy",},},
