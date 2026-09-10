@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"combat_menu_destroy",
+  "%Name":"combat_menu_destroy_old",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"combat_menu_destroy",
+  "name":"combat_menu_destroy_old",
   "parent":{
     "name":"Scripts",
-    "path":"folders/Combat/Scripts.yy",
+    "path":"folders/Combat/_old/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

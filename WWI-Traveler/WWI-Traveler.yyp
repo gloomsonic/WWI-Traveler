@@ -140,6 +140,7 @@
     {"id":{"name":"collision_line_point","path":"scripts/collision_line_point/collision_line_point.yy",},},
     {"id":{"name":"combat_check_end_turn","path":"scripts/combat_check_end_turn/combat_check_end_turn.yy",},},
     {"id":{"name":"combat_menu_create_old","path":"scripts/combat_menu_create_old/combat_menu_create_old.yy",},},
+    {"id":{"name":"combat_menu_destroy_old","path":"scripts/combat_menu_destroy_old/combat_menu_destroy_old.yy",},},
     {"id":{"name":"combat_menu_destroy","path":"scripts/combat_menu_destroy/combat_menu_destroy.yy",},},
     {"id":{"name":"combatant_data","path":"scripts/combatant_data/combatant_data.yy",},},
     {"id":{"name":"combatant_get_at_position","path":"scripts/combatant_get_at_position/combatant_get_at_position.yy",},},
