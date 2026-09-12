@@ -1,93 +1,37 @@
-///@desc methods
+///@desc methods, Turn Phases
 
-end_turn = function() {
-	turn_done = true;
-}
-
-get_team = function(_team_index) {
-	var _team = [];
-	for (var i = 0; i < array_length(combatants); i++) {
-		var _combatant = combatants[i];
-		if (_combatant.my_data.team != _team_index) continue;
-		array_push(_team, _combatant);
-	}
+// Start the next combatant's turn
+turn_start = function() {
+	active_combatant = array_shift(turn_order);
+	array_push(turn_order, active_combatant);	
+	var _valid_targets = combatant_get_targets(active_combatant);
 	
-	if (array_length(_team) <= 0) return noone;
-	return _team;
-}
-
-get_spaces = function(_team_index) {
-	if (_team_index == Combatant_Team.player)
-		return array_concat(team_player_rows[0], team_player_rows[1]);
-	if (_team_index == Combatant_Team.enemy)
-		return array_concat(team_enemy_rows[0], team_enemy_rows[1]);
-}
-
-// Find which row the supplied space is on and at what index
-get_row_pos_space = function(_space) {
-	var _row = 0;
-	var _pos = array_get_index(team_player_rows[0], _space);
-	if (_pos != -1) return {team: Combatant_Team.player, row: _row, pos: _pos};
-	_row = 1;
-	_pos = array_get_index(team_player_rows[1], _space);
-	if (_pos != -1) return {team: Combatant_Team.player, row: _row, pos: _pos};
-	_row = 0;
-	_pos = array_get_index(team_enemy_rows[0], _space);
-	if (_pos != -1) return {team: Combatant_Team.enemy, row: _row, pos: _pos};
-	_row = 1;
-	_pos = array_get_index(team_enemy_rows[1], _space);
-	if (_pos != -1) return {team: Combatant_Team.enemy, row: _row, pos: _pos};
-}
-
-// Spawn the combatant objects, NOTE: must be after spaces are spawned
-spawn_combatants = function() {
-	var _combatants = [];
-	
-	// Spawn enemy combatants
-	for (var r = 0; r < array_length(enemy_datas); r++) {
-		var _row = enemy_datas[r];
-
-		for (var p = 0; p < array_length(_row); p++) {
-			var _data = _row[p];
-			if (_data == noone) continue;
-			
-			var _combatant = instance_create_layer(0, 0, "combatants", obj_combatant, {my_data : _data});
-			var _space = team_enemy_rows[r][p];
-			_combatant.set_space(_space);
-			//_space.set_combatant(_combatant);
-			array_push(_combatants, _combatant);
-		}
+	// CPU vs. player turn
+	if (active_combatant.team == Combatant_Team.enemy) {
+		var _target = array_pop(array_shuffle(_valid_targets));
+		attack(_target);
+	} else {
+		combat_menu_create();
 	}
-
-	// Spawn player combatants
-	for (var r = 0; r < array_length(global.data.party); r++) {
-		var _row = global.data.party[r];
-		
-		for (var p = 0; p < array_length(_row); p++) {
-			var _data = _row[p];
-			if (_data == noone) continue;
-			
-			var _combatant = instance_create_layer(0, 0, "combatants", obj_combatant, {my_data : _data});
-			var _space = team_player_rows[r][p];
-			_combatant.set_space(_space);
-			//_space.set_combatant(_combatant);
-			array_push(_combatants, _combatant);
-		}
-	}
-	
-	return _combatants;
 }
 
-// Create selectable combat options
-spawn_combat_menu = function(_combatant) {
-	var _lh = sprite_get_height(spr_combat_menu_attack);
-	var _y = ROOM_H - 500;
-	instance_create_layer(0, _y, "menu", obj_combat_menu_label, {my_combatant: _combatant});
-	instance_create_layer(0, _y, "menu", obj_combat_menu_attack);
-	_y += _lh;
-	instance_create_layer(0, _y, "menu", obj_combat_menu_guard);
-	_y += _lh;
-	instance_create_layer(0, _y, "menu", obj_combat_menu_reposition);
-	_y += _lh;
-	instance_create_layer(0, _y, "menu", obj_combat_menu_pass);
+// Check if combat end or next turn
+turn_end = function() {
+	var _check_dead = function(_val) {
+		return _val.hp > 0;
+	}	
+	turn_order = array_filter(turn_order, _check_dead);
+	PARTY = array_filter(PARTY, _check_dead);
+	ENEMY_PARTY = array_filter(ENEMY_PARTY, _check_dead);
+	
+	// Space for readability
+	array_push(combat_log, "--------------------   ");
+	
+	// Next turn?
+	if (array_length(PARTY) <= 0)
+		array_push(combat_log, "You Died");
+	else if (array_length(ENEMY_PARTY) <= 0)
+		array_push(combat_log, "You Won");
+	else
+		turn_start();
 }

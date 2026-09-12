@@ -3,39 +3,40 @@ event_inherited();
 
 // One-frame callbacks
 on_pressed = function() {
+	log("pressed");
 }
 on_released = function() {
-	obj_combat_manager.end_turn();
-	destroy_combat_menu();
+	instance_destroy(par_combat_menu);
+	callback();
 }
 
 // State functions
 state_idle = function(_event) {
 	switch(_event) {
-		case Event.step: 
-			break;
 		case Event.draw: 
 			draw_self_ext(); 
+			draw_set(c_gray,, fa_center, fa_middle);
+			draw_text(x, y, text);
 			break;
 	}
 }
 
 state_hovered = function(_event) {
 	switch(_event) {
-		case Event.step: 
-			break;
 		case Event.draw: 
-			draw_self_ext(,,,,,,, c_blue); 
+			draw_self_ext(); 
+			draw_set(c_black,, fa_center, fa_middle);
+			draw_text(x, y, text);
 			break;
 	}
 }
 
 state_held = function(_event) {
 	switch(_event) {
-		case Event.step: 
-			break;
 		case Event.draw: 
-			draw_self_ext(,,,,,,, c_red); 
+			draw_self_ext(); 
+			draw_set(c_ltgray,, fa_center, fa_middle);
+			draw_text(x, y, text);
 			break;
 	}
 }

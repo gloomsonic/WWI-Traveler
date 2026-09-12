@@ -1,7 +1,7 @@
 if (keyboard_check_pressed(vk_space))
 	room_goto(rm_map);
 if (keyboard_check_pressed(ord("F")))
-	room_goto(rm_combat);
+	room_goto(rm_combat_new);
 if (keyboard_check_pressed(ord("S")))
 	room_goto(rm_scene);
 if (keyboard_check_pressed(ord("C")))

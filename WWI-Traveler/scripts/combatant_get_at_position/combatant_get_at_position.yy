@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"combatant_get_at_position",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"combatant_get_at_position",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Combat/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

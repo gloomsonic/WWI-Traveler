@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"combatant_get_row_col",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"combatant_get_row_col",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Combat/_old/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

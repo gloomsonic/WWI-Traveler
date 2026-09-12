@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"obj_combat_menu_reposition",
+  "%Name":"obj_combat_menu_move",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_combat_menu_reposition",
+  "name":"obj_combat_menu_move",
   "overriddenProperties":[],
   "parent":{
     "name":"Combat Menu",
@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_combat_menu_reposition",
-    "path":"sprites/spr_combat_menu_reposition/spr_combat_menu_reposition.yy",
+    "name":"spr_combat_choose",
+    "path":"sprites/spr_combat_choose/spr_combat_choose.yy",
   },
   "spriteMaskId":null,
   "visible":true,

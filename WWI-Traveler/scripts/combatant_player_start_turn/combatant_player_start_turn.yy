@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"combatant_player_start_turn",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"combatant_player_start_turn",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Combat/_old/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
