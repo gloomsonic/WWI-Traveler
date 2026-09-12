@@ -7,10 +7,12 @@ state_scene_reading = function(_event) {
 			scroll_page();
 			increment_char_fades();
 			
+			// Add new characters
 			for (var i = char_spd-1; i >= 0; i--) {
 				var _off = i * (fade_spd / char_spd);
 				array_push(fade_values, _off);
 			}
+			//audio_oneshot_3d(EV_TYPEWRITER, x, y);
 			
 			// Exit state
 			check_choosing();

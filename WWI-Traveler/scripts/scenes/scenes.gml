@@ -1,11 +1,9 @@
 #macro LINE_W 1080
 #macro LINE_W_H (LINE_W/2)
 
-// NOTE: probably want to convert struct of structs into array of structs so we aren't using the name twice in the data file
 #macro JSON_SCENES global.json_scenes
 #macro SCENES global.scenes
 JSON_SCENES = json_load("scenes_english_string.txt");
-//SCENES = {}
 SCENES = []
 
 // Add scenes to array
