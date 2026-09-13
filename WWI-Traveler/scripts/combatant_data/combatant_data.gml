@@ -17,4 +17,5 @@ function weapon(_damage_melee, _accuracy_melee, _damage_ranged, _accuracy_ranged
 	accuracy_melee = _accuracy_melee;
 	damage_ranged = _damage_ranged;
 	accuracy_ranged = _accuracy_ranged;
+	ammo_max = 1;
 }
