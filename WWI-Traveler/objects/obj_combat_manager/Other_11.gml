@@ -6,11 +6,18 @@ combat_menu_create = function() {
 		my_combatant: active_combatant,
 	});
 	
-	// Attack button
+	// Melee attack button
 	_y += _ypad;
-	instance_create_depth(256, _y, depth, obj_combat_menu_attack, {
+	instance_create_depth(256, _y, depth, obj_combat_menu_attack_melee, {
 		my_combatant: active_combatant,
-		callback: on_attack_selected,
+		callback: on_attack_melee_selected,
+	});
+	
+	// Ranged attack button
+	_y += _ypad;
+	instance_create_depth(256, _y, depth, obj_combat_menu_attack_ranged, {
+		my_combatant: active_combatant,
+		callback: on_attack_ranged_selected,
 	});
 	
 	// Move button

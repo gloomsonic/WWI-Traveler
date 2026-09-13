@@ -9,7 +9,7 @@ turn_start = function() {
 	// CPU vs. player turn
 	if (active_combatant.team == Combatant_Team.enemy) {
 		var _target = array_pop(array_shuffle(_valid_targets));
-		attack(_target);
+		attack_melee(_target);
 	} else {
 		combat_menu_create();
 	}
