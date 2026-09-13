@@ -1,0 +1,1 @@
+draw_text(ROOM_W_H, ROOM_H_H, "Game Over")

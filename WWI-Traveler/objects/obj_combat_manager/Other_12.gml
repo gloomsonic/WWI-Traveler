@@ -27,11 +27,11 @@ attack_melee = function(_target) {
 		_accuracy *= 0.5;
 	var _roll = irandom(100);
 	
-	// Execute hit
+	// Execute and log hit
 	if (_roll <= _accuracy) {
 		var _damage = _weapon.damage_melee; //irandom_range(1, 3);
 		_target.hp -= _damage;
-		array_push(combat_log, $"{_target.name} received {_damage} damage");
+		array_push(combat_log, $"{_target.name} took {_damage} damage");
 	} else
 		array_push(combat_log, $"{active_combatant.name} missed");
 
@@ -66,11 +66,11 @@ attack_ranged = function(_target) {
 	var _accuracy = _weapon.accuracy_ranged;
 	var _roll = irandom(100);
 	
-	// Execute hit
+	// Execute and log hit
 	if (_roll <= _accuracy) {
 		var _damage = _weapon.damage_ranged; //irandom_range(1, 3);
 		_target.hp -= _damage;
-		array_push(combat_log, $"{_target.name} received {_damage} damage");
+		array_push(combat_log, $"{_target.name} took {_damage} damage");
 	} else
 		array_push(combat_log, $"{active_combatant.name} missed");
 

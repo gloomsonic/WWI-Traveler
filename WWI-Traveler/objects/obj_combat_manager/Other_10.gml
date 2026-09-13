@@ -27,11 +27,13 @@ turn_end = function() {
 	// Space for readability
 	array_push(combat_log, "--------------------   ");
 	
-	// Next turn?
-	if (array_length(PARTY) <= 0)
+	// Next turn or end combat
+	if (array_length(PARTY) <= 0) {
 		array_push(combat_log, "You Died");
-	else if (array_length(ENEMY_PARTY) <= 0)
+		room_goto(rm_game_over);
+	} else if (array_length(ENEMY_PARTY) <= 0) {
 		array_push(combat_log, "You Won");
-	else
+		room_goto(rm_camp);
+	} else
 		turn_start();
 }

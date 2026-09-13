@@ -20,8 +20,8 @@ choice_spacing = 2.0;
 choice_break = font_height() * 4.0
 
 // Text rendering
-char_spd = 6;
+char_spd = 3; //6;
 scroll_spd = font_height() * line_spacing;
-fade_spd = 0.04;
+fade_spd = 0.05;
 fade_values = [];
 characters_opaque_count = 0;

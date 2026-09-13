@@ -2,6 +2,7 @@
 state_scene_reading = function(_event) {
 	switch(_event) {
 		case Event.enter:
+			audio_play_tracked("typewriter", EV_TYPEWRITER);
 			break;
 		case Event.step: 
 			scroll_page();
@@ -12,7 +13,6 @@ state_scene_reading = function(_event) {
 				var _off = i * (fade_spd / char_spd);
 				array_push(fade_values, _off);
 			}
-			//audio_oneshot_3d(EV_TYPEWRITER, x, y);
 			
 			// Exit state
 			check_choosing();
@@ -28,6 +28,7 @@ state_scene_reading = function(_event) {
 state_scene_waiting = function(_event) {
 	switch(_event) {
 		case Event.enter:
+			audio_stop_tracked("typewriter");
 			break;
 		case Event.step: 
 			scroll_page();
@@ -38,7 +39,9 @@ state_scene_waiting = function(_event) {
 				var _wait = scene_get_next_wait(my_scene);
 				array_delete(my_scene.story, _wait, 1);
 				next_wait_jump_to();
+				
 				states.queue(State.reading);
+				check_choosing();
 			}
 			break;
 		case Event.draw:
@@ -52,7 +55,7 @@ state_scene_waiting = function(_event) {
 state_scene_choosing = function(_event) {
 	switch(_event) {
 		case Event.enter:
-			//scroll_y(y + choice_break);
+			audio_stop_tracked("typewriter");
 			var _story_len = story_character_count + array_length(fade_values);
 			truncate_fades(characters_opaque_count, _story_len);
 			spawn_choices();
