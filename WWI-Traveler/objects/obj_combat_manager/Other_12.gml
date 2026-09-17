@@ -7,7 +7,7 @@ on_attack_melee_selected = function() {
 	var _valid_targets = combatant_get_targets(active_combatant);
 	for (var i = 0; i < array_length(_valid_targets); i++) {
 		var _combatant = _valid_targets[i];
-		instance_create_depth(0, 0, depth, obj_combat_select_enemy, {
+		instance_create_depth(0, 0, depth, obj_combat_select_enemy, { // TODO: Create on top of enemy names/sprite, doesn't need name
 			my_combatant: _combatant,
 			callback: attack_melee,
 		});
@@ -17,6 +17,8 @@ on_attack_melee_selected = function() {
 // Record attacked target and subtract damage from its hp
 attack_melee = function(_target) {
 	array_push(combat_log, $"{active_combatant.name} attacked {_target.name}");
+	
+	obj_combat_animation_manager.add_action(new cutscene_attack(active_combatant, _target));
 	
 	// Roll to hit
 	var _weapon = active_combatant.my_weapon;
@@ -32,6 +34,8 @@ attack_melee = function(_target) {
 		var _damage = _weapon.damage_melee; //irandom_range(1, 3);
 		_target.hp -= _damage;
 		array_push(combat_log, $"{_target.name} took {_damage} damage");
+		
+		obj_combat_animation_manager.add_action(new cutscene_hit(_target, _damage));	
 	} else
 		array_push(combat_log, $"{active_combatant.name} missed");
 
@@ -39,8 +43,9 @@ attack_melee = function(_target) {
 	if (_target.hp <= 0)
 		array_push(combat_log, $"{_target.name} died");
 
-	// Proceed -- In theory, this is where we'd queue the animation?
-	turn_end();
+	// Proceed
+	//turn_end();
+	obj_combat_animation_manager.on_done = turn_end;
 }
 
 // Spawn buttons to select enemy combatants
@@ -112,7 +117,7 @@ move = function(_row, _col) {
 	if (_other_combatant != noone) {
 		_other_combatant.row = _row_prev;
 		_other_combatant.col = _col_prev;
-		array_push(combat_log, $"{_other_combatant.name} moved to row:{_row_prev}, col:{_col_prev}");	
+		array_push(combat_log, $"{_other_combatant.name} moved to row:{_row_prev}, col:{_col_prev}");
 	}
 	turn_end();	
 }

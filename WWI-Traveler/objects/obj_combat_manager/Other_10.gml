@@ -19,7 +19,7 @@ turn_start = function() {
 turn_end = function() {
 	var _check_dead = function(_val) {
 		return _val.hp > 0;
-	}	
+	}
 	turn_order = array_filter(turn_order, _check_dead);
 	PARTY = array_filter(PARTY, _check_dead);
 	ENEMY_PARTY = array_filter(ENEMY_PARTY, _check_dead);

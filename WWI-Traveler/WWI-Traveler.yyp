@@ -80,6 +80,8 @@
     {"id":{"name":"obj_camp_formation_space","path":"objects/obj_camp_formation_space/obj_camp_formation_space.yy",},},
     {"id":{"name":"obj_camp_planner","path":"objects/obj_camp_planner/obj_camp_planner.yy",},},
     {"id":{"name":"obj_camp_sleep","path":"objects/obj_camp_sleep/obj_camp_sleep.yy",},},
+    {"id":{"name":"obj_combat_animation_manager","path":"objects/obj_combat_animation_manager/obj_combat_animation_manager.yy",},},
+    {"id":{"name":"obj_combat_animation","path":"objects/obj_combat_animation/obj_combat_animation.yy",},},
     {"id":{"name":"obj_combat_manager_old_new","path":"objects/obj_combat_manager_old_new/obj_combat_manager_old_new.yy",},},
     {"id":{"name":"obj_combat_manager","path":"objects/obj_combat_manager/obj_combat_manager.yy",},},
     {"id":{"name":"obj_combat_menu_attack_melee","path":"objects/obj_combat_menu_attack_melee/obj_combat_menu_attack_melee.yy",},},
