@@ -11,7 +11,4 @@ function scene_add(_json_scene) {
 	var _choices =_json_scene.choices;
 	var _name = _json_scene.name;
 	array_push(SCENES, new scene(_story, _choices, _name));
-	
-	//struct_set(SCENES, _name, new scene(_story, _choices));
-	//return SCENES[$ _name];
 }

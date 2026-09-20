@@ -8,7 +8,8 @@ states.define(State.choosing, state_scene_choosing);
 states.queue(State.reading);
 
 // Scene to play
-my_scene = array_pop(SCENES); //(global.pending_scene != noone) ? global.pending_scene : SCENES.crater;
+var _scene = SCENES[0];
+my_scene = variable_clone(_scene);
 
 // Prep text formatting
 draw_set();
