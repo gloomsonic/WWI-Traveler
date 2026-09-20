@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"combat_animation_data",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"combat_animation_data",
+  "parent":{
+    "name":"Combat",
+    "path":"folders/Combat.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

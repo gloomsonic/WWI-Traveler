@@ -1,10 +1,12 @@
-if (on_done == undefined)
+if (callback == undefined)
 	exit;
 
 // 
 var _active_lanes = [];
 for (var i = 0; i < array_length(cutscene_actions); i++) {
 	var _action = cutscene_actions[i];
+	
+	// Does this action conflict with an existing lane?
 	var _intersection = array_intersection(_action.lanes, _active_lanes);
 	if (array_length(_intersection) > 0) 
 		continue;
@@ -18,6 +20,6 @@ for (var i = 0; i < array_length(cutscene_actions); i++) {
 
 // Callback
 if (array_length(cutscene_actions) <= 0) {
-	on_done();
-	on_done = undefined;
+	callback();
+	callback = undefined;
 }

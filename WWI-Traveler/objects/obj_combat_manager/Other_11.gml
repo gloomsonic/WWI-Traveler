@@ -1,5 +1,5 @@
 ///@desc methods, Combat Menu
-combat_menu_create = function() {
+function combat_menu_create() {
 	var _y = 100;
 	var _ypad = 100;
 	instance_create_depth(256, _y, depth, obj_combat_menu_label, {

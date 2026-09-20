@@ -24,14 +24,14 @@ attack_melee = function(_target) {
 	var _weapon = active_combatant.my_weapon;
 	var _accuracy = _weapon.accuracy_melee;
 	
-	// Back row -- TODO: turn this into a 'status' effect that we can dot into
+	// Back row
 	if (_target.row == 1)
 		_accuracy *= 0.5;
 	var _roll = irandom(100);
 	
 	// Execute and log hit
 	if (_roll <= _accuracy) {
-		var _damage = _weapon.damage_melee; //irandom_range(1, 3);
+		var _damage = _weapon.damage_melee;
 		_target.hp -= _damage;
 		array_push(combat_log, $"{_target.name} took {_damage} damage");
 		
@@ -43,9 +43,8 @@ attack_melee = function(_target) {
 	if (_target.hp <= 0)
 		array_push(combat_log, $"{_target.name} died");
 
-	// Proceed
-	//turn_end();
-	obj_combat_animation_manager.on_done = turn_end;
+	// Ask combat manager to tell us when it's done
+	obj_combat_animation_manager.set_callback(turn_end);
 }
 
 // Spawn buttons to select enemy combatants
@@ -73,7 +72,7 @@ attack_ranged = function(_target) {
 	
 	// Execute and log hit
 	if (_roll <= _accuracy) {
-		var _damage = _weapon.damage_ranged; //irandom_range(1, 3);
+		var _damage = _weapon.damage_ranged;
 		_target.hp -= _damage;
 		array_push(combat_log, $"{_target.name} took {_damage} damage");
 	} else

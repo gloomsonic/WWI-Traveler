@@ -35,5 +35,5 @@ turn_end = function() {
 		array_push(combat_log, "You Won");
 		room_goto(rm_camp);
 	} else
-		turn_start();
+		call_next_frame(turn_start) //turn_start();
 }
