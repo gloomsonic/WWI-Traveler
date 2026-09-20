@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"combatant_create_actor",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"combatant_create_actor",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Combat/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

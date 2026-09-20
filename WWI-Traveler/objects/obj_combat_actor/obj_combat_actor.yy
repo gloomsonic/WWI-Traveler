@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_combatant_idle_old",
-    "path":"sprites/spr_combatant_idle_old/spr_combatant_idle_old.yy",
+    "name":"spr_combatant_idle",
+    "path":"sprites/spr_combatant_idle/spr_combatant_idle.yy",
   },
   "spriteMaskId":null,
   "visible":true,
