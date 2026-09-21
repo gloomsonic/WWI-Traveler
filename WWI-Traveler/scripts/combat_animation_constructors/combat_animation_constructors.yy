@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"combat_animation_data",
+  "%Name":"combat_animation_constructors",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"combat_animation_data",
+  "name":"combat_animation_constructors",
   "parent":{
     "name":"Combat",
     "path":"folders/Combat.yy",

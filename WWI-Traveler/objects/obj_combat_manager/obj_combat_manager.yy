@@ -13,8 +13,8 @@
   "name":"obj_combat_manager",
   "overriddenProperties":[],
   "parent":{
-    "name":"Combat",
-    "path":"folders/Combat.yy",
+    "name":"Combat Manager",
+    "path":"folders/Combat/Combat Manager.yy",
   },
   "parentObjectId":null,
   "persistent":false,
