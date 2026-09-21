@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_combatant_space",
-    "path":"sprites/spr_combatant_space/spr_combatant_space.yy",
+    "name":"spr_combatant_actor_position",
+    "path":"sprites/spr_combatant_actor_position/spr_combatant_actor_position.yy",
   },
   "spriteMaskId":null,
   "visible":true,

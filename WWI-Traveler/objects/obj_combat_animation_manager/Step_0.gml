@@ -12,7 +12,7 @@ for (var i = 0; i < array_length(cutscene_actions); i++) {
 		continue;
 	
 	_active_lanes = array_concat(_active_lanes, _action.lanes);
-	if (_action.update()) {
+	if (_action.update()) { // Spawn and update
 		array_delete(cutscene_actions, i, 1);
 		i--;		
 	}
