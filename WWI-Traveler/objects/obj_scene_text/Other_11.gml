@@ -33,6 +33,8 @@ draw_phrases = function() {
 			_y += font_height() * line_spacing;
 			continue;
 		}
+		
+		// TODO: If it's a '<d>' play the typewriter ding? Or do like '<sEV_TYPEWRITER>
 	
 		// Draw last phrase(s) character-by-character
 		if (_char_count_plus >= characters_opaque_count) {

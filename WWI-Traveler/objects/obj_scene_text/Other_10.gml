@@ -45,7 +45,7 @@ next_wait_jump_to = function() {
 	scroll_y(_text_bot - ROOM_H_H);
 }
 
-//
+// Stop grabbing new characters to fade past '_end'
 truncate_fades = function(_count, _end) {
 	if (_end < _count) return;
 	var _dif = _end - _count;
