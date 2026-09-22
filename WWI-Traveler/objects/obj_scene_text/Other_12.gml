@@ -56,6 +56,7 @@ state_scene_choosing = function(_event) {
 	switch(_event) {
 		case Event.enter:
 			audio_stop_tracked("typewriter");
+			//audio_oneshot(EV_TYPEWRITER_END);
 			var _story_len = story_character_count + array_length(fade_values);
 			truncate_fades(characters_opaque_count, _story_len);
 			spawn_choices();
