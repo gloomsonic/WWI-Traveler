@@ -26,6 +26,7 @@
 #macro EV_PUNCH   "event:/SFX/Test Punch"
 #macro EV_MISS   "event:/SFX/Test Miss"
 #macro EV_TYPEWRITER "event:/SFX/Typewriter"
+#macro EV_TYPEWRITER_END "event:/SFX/Typewriter_End"
 #macro EV_AMBIENCE   "event:/Ambience/Amb_War/Amb_War"
 
 // MUSIC
