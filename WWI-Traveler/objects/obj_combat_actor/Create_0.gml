@@ -2,8 +2,8 @@ self [$ "my_combatant"] ??= noone;
 
 // Set scaling to imply perspective
 if (my_combatant.team == Combatant_Team.player) {
-	image_xscale = 1.5;
-	image_yscale = 1.5;
+	image_xscale = 1.55;
+	image_yscale = 1.55;
 	if (my_combatant.row == 0) {
 		image_xscale = 1.2;
 		image_yscale = 1.2;
@@ -28,4 +28,8 @@ update = function() {
 reset = function() {
 	sprite_index = spr_combatant_idle;
 	timer = 0
+}
+
+die = function() {
+	instance_destroy();
 }

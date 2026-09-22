@@ -15,7 +15,6 @@ on_attack_melee_selected = function() {
 // Record attacked target and subtract damage from its hp
 attack_melee = function(_target) {
 	array_push(combat_log, $"{active_combatant.name} attacked {_target.name}");
-	
 	obj_combat_animation_manager.add_action(new cutscene_attack(active_combatant, _target));
 	
 	// Roll to hit
@@ -32,14 +31,15 @@ attack_melee = function(_target) {
 		var _damage = _weapon.damage_melee;
 		_target.hp -= _damage;
 		array_push(combat_log, $"{_target.name} took {_damage} damage");
-		
 		obj_combat_animation_manager.add_action(new cutscene_hit(_target, _damage));	
 	} else
 		array_push(combat_log, $"{active_combatant.name} missed");
 
 	// Check dead
-	if (_target.hp <= 0)
+	if (_target.hp <= 0) {
 		array_push(combat_log, $"{_target.name} died");
+		obj_combat_animation_manager.add_action(new cutscene_die(_target));
+	}
 
 	// Ask combat manager to tell us when it's done
 	obj_combat_animation_manager.set_callback(turn_end);
@@ -77,11 +77,13 @@ attack_ranged = function(_target) {
 		array_push(combat_log, $"{active_combatant.name} missed");
 
 	// Check dead
-	if (_target.hp <= 0)
+	if (_target.hp <= 0) {
 		array_push(combat_log, $"{_target.name} died");
-
-	// Proceed -- In theory, this is where we'd queue the animation?
-	turn_end();
+		obj_combat_animation_manager.add_action(new cutscene_die(_target));
+	}
+	
+	// Ask combat manager to tell us when it's done
+	obj_combat_animation_manager.set_callback(turn_end);
 }
 
 // Spawn buttons to select a position to move to
