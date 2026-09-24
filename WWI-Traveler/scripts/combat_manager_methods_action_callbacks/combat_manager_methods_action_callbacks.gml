@@ -5,17 +5,16 @@ on_attack_melee_selected = function() {
 	var _valid_targets = combatant_get_targets(active_combatant);
 	for (var i = 0; i < array_length(_valid_targets); i++) {
 		var _combatant = _valid_targets[i];
-		var _button = instance_create_depth(0, 0, depth, obj_combat_select_enemy, { // TODO: Create on top of enemy names/sprite, doesn't need name
+		var _actor = combatant_get_actor(_combatant);
+		
+		// Spawn on actor
+		instance_create_depth(_actor.x, _actor.y, depth, obj_combat_select_enemy, {
 			my_combatant: _combatant,
 			attacker: active_combatant,
 			callback: attack_melee,
 			attack_type: Attack_Type.melee,
 		});
-		
-		// Position on actor
-		var _actor = combatant_get_actor(_combatant);
-		_button.x = _actor.x;
-		_button.y = _actor.y;
+		instance_create_depth(0, 0, depth, obj_combat_select_back);
 	}	
 }
 
@@ -55,17 +54,16 @@ on_attack_ranged_selected = function() {
 	var _valid_targets = combatant_get_targets(active_combatant);
 	for (var i = 0; i < array_length(_valid_targets); i++) {
 		var _combatant = _valid_targets[i];
-		var _button = instance_create_depth(0, 0, depth, obj_combat_select_enemy, {
+		var _actor = combatant_get_actor(_combatant);
+		
+		// Spawn on actor
+		instance_create_depth(_actor.x, _actor.y, depth, obj_combat_select_enemy, {
 			my_combatant: _combatant,
 			attacker: active_combatant,
-			callback: attack_ranged,
+			callback: attack_melee,
 			attack_type: Attack_Type.ranged,
 		});
-		
-		// Position on actor
-		var _actor = combatant_get_actor(_combatant);
-		_button.x = _actor.x;
-		_button.y = _actor.y;		
+		instance_create_depth(0, 0, depth, obj_combat_select_back);	
 	}	
 }
 
@@ -110,6 +108,7 @@ on_move_selected = function() {
 			});
 		}
 	}	
+	instance_create_depth(0, 0, depth, obj_combat_select_back);
 }
 
 // Swap positions with another combatant, or move to an empty space

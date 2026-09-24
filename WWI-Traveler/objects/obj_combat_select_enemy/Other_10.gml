@@ -13,9 +13,8 @@ on_released = function() {
 state_idle = function(_event) {
 	switch(_event) {
 		case Event.draw: 
-			draw_self_ext(); 
+			draw_self_ext(, 0); 
 			draw_set(c_gray,, fa_center, fa_middle);
-			draw_text(x, y, $"{my_combatant.name}: {my_combatant.hp}");
 			break;
 	}
 }
@@ -23,9 +22,8 @@ state_idle = function(_event) {
 state_hovered = function(_event) {
 	switch(_event) {
 		case Event.draw: 
-			draw_self_ext(); 
+			draw_self_ext(, 1); 
 			draw_set(c_black,, fa_center, fa_middle);
-			draw_text(x, y, $"{my_combatant.name}: {my_combatant.hp}");
 			
 			// Draw accuracy
 			draw_set(,, fa_left, fa_middle);
@@ -33,7 +31,7 @@ state_hovered = function(_event) {
 			if (attack_type == Attack_Type.ranged)
 				_accuracy = attacker.my_weapon.accuracy_ranged;
 				
-			draw_text(bbox_right + 16, y, $"{_accuracy}");
+			draw_text(BBOX_R + 16, BBOX_Y_C, $"{_accuracy}%");
 			break;
 	}
 }
@@ -41,16 +39,15 @@ state_hovered = function(_event) {
 state_held = function(_event) {
 	switch(_event) {
 		case Event.draw: 
-			draw_self_ext(); 
+			draw_self_ext(, 1); 
 			draw_set(c_ltgray,, fa_center, fa_middle);
-			draw_text(x, y, $"{my_combatant.name}: {my_combatant.hp}");
 			
 			// Draw accuracy
 			draw_set(,, fa_left, fa_middle);
 			var _accuracy = attack_melee_get_accuracy(attacker.my_weapon, my_combatant.row);
 			if (attack_type == Attack_Type.ranged)
 				_accuracy = attacker.my_weapon.accuracy_ranged;
-			draw_text(bbox_right + 16, y, $"{_accuracy}");			
+			draw_text(BBOX_R + 16, BBOX_Y_C, $"{_accuracy}%");			
 			break;
 	}
 }
