@@ -18,3 +18,13 @@ function combatant_create_actor(_combatant) {
 		my_combatant: _combatant,
 	});
 }
+
+//
+function combatant_get_actor(_combatant) {
+	var _actor = noone;
+	with (obj_combat_actor) {
+		if (my_combatant != _combatant) continue;
+		_actor = id;
+	}
+	return _actor;
+}
