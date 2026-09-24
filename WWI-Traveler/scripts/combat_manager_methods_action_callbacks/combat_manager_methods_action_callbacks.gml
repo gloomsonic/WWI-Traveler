@@ -55,12 +55,17 @@ on_attack_ranged_selected = function() {
 	var _valid_targets = combatant_get_targets(active_combatant);
 	for (var i = 0; i < array_length(_valid_targets); i++) {
 		var _combatant = _valid_targets[i];
-		instance_create_depth(0, 0, depth, obj_combat_select_enemy, {
+		var _button = instance_create_depth(0, 0, depth, obj_combat_select_enemy, {
 			my_combatant: _combatant,
 			attacker: active_combatant,
 			callback: attack_ranged,
 			attack_type: Attack_Type.ranged,
 		});
+		
+		// Position on actor
+		var _actor = combatant_get_actor(_combatant);
+		_button.x = _actor.x;
+		_button.y = _actor.y;		
 	}	
 }
 
