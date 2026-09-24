@@ -26,6 +26,14 @@ state_hovered = function(_event) {
 			draw_self_ext(); 
 			draw_set(c_black,, fa_center, fa_middle);
 			draw_text(x, y, $"{my_combatant.name}: {my_combatant.hp}");
+			
+			// Draw accuracy
+			draw_set(,, fa_left, fa_middle);
+			var _accuracy = attack_melee_get_accuracy(attacker.my_weapon, my_combatant.row);
+			if (attack_type == Attack_Type.ranged)
+				_accuracy = attacker.my_weapon.accuracy_ranged;
+				
+			draw_text(bbox_right + 16, y, $"{_accuracy}");
 			break;
 	}
 }
@@ -36,6 +44,13 @@ state_held = function(_event) {
 			draw_self_ext(); 
 			draw_set(c_ltgray,, fa_center, fa_middle);
 			draw_text(x, y, $"{my_combatant.name}: {my_combatant.hp}");
+			
+			// Draw accuracy
+			draw_set(,, fa_left, fa_middle);
+			var _accuracy = attack_melee_get_accuracy(attacker.my_weapon, my_combatant.row);
+			if (attack_type == Attack_Type.ranged)
+				_accuracy = attacker.my_weapon.accuracy_ranged;
+			draw_text(bbox_right + 16, y, $"{_accuracy}");			
 			break;
 	}
 }

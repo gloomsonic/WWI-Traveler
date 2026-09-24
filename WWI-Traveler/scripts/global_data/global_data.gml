@@ -9,13 +9,17 @@ PARTY = [
 	new combatant_data(false, Combatant_Team.player, 0, 0, 10, "Big Stooge", spr_combatant_idle, GUN),
 	new combatant_data(false, Combatant_Team.player, 0, 1, 10, "William Hardy", spr_combatant_idle, GUN),
 	new combatant_data(false, Combatant_Team.player, 0, 2, 9, "John-o Reardon", spr_combatant_idle, GUN),
+		new combatant_data(false, Combatant_Team.player, 1, 0, 9, "Vikram Mamar", spr_combatant_idle, GUN),
 	new combatant_data(false, Combatant_Team.player, 1, 1, 9, "Vikram Mamar", spr_combatant_idle, GUN),
+		new combatant_data(false, Combatant_Team.player, 1, 2, 9, "Vikram Mamar", spr_combatant_idle, GUN),
 ];
 
 #macro ENEMY_PARTY global.data.enemy_party
 ENEMY_PARTY = [
 	new combatant_data(true, Combatant_Team.enemy, 0, 0, 6, "George Perdy", spr_combatant_idle,	GUN), 
 	new combatant_data(true, Combatant_Team.enemy, 0, 1, 7, "Greene Lewell", spr_combatant_idle, GUN),
+		new combatant_data(true, Combatant_Team.enemy, 0, 2, 7, "Whomst Whatsit", spr_combatant_idle, GUN), 
+		new combatant_data(true, Combatant_Team.enemy, 1, 0, 7, "Whomst Whatsit", spr_combatant_idle, GUN), 
 	new combatant_data(true, Combatant_Team.enemy, 1, 1, 7, "Jean-Charles Deniau", spr_combatant_idle, GUN), 
 	new combatant_data(true, Combatant_Team.enemy, 1, 2, 7, "Whomst Whatsit", spr_combatant_idle, GUN), 
 ];

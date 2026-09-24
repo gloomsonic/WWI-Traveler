@@ -12,6 +12,8 @@ function combatant_data(_cpu, _team, _row, _col, _hp, _name, _sprite, _weapon) c
 	my_weapon = _weapon;
 }
 
+enum Attack_Type {melee, ranged}
+
 function weapon(_damage_melee, _accuracy_melee, _damage_ranged, _accuracy_ranged) constructor {
 	damage_melee = _damage_melee;
 	accuracy_melee = _accuracy_melee;

@@ -7,7 +7,9 @@ on_attack_melee_selected = function() {
 		var _combatant = _valid_targets[i];
 		instance_create_depth(0, 0, depth, obj_combat_select_enemy, { // TODO: Create on top of enemy names/sprite, doesn't need name
 			my_combatant: _combatant,
+			attacker: active_combatant,
 			callback: attack_melee,
+			attack_type: Attack_Type.melee,
 		});
 	}	
 }
@@ -19,11 +21,7 @@ attack_melee = function(_target) {
 	
 	// Roll to hit
 	var _weapon = active_combatant.my_weapon;
-	var _accuracy = _weapon.accuracy_melee;
-	
-	// Back row
-	if (_target.row == 1)
-		_accuracy *= 0.5;
+	var _accuracy = attack_melee_get_accuracy(_weapon, _target.row);
 	var _roll = irandom(100);
 	
 	// Execute and log hit
@@ -54,7 +52,9 @@ on_attack_ranged_selected = function() {
 		var _combatant = _valid_targets[i];
 		instance_create_depth(0, 0, depth, obj_combat_select_enemy, {
 			my_combatant: _combatant,
+			attacker: active_combatant,
 			callback: attack_ranged,
+			attack_type: Attack_Type.ranged,
 		});
 	}	
 }

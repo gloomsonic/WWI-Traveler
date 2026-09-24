@@ -123,6 +123,7 @@
     {"id":{"name":"animation_end","path":"scripts/animation_end/animation_end.yy",},},
     {"id":{"name":"approach","path":"scripts/approach/approach.yy",},},
     {"id":{"name":"array_find_struct_with","path":"scripts/array_find_struct_with/array_find_struct_with.yy",},},
+    {"id":{"name":"attack_get_accuracy","path":"scripts/attack_get_accuracy/attack_get_accuracy.yy",},},
     {"id":{"name":"call_later_frames","path":"scripts/call_later_frames/call_later_frames.yy",},},
     {"id":{"name":"call_next_frame","path":"scripts/call_next_frame/call_next_frame.yy",},},
     {"id":{"name":"collision_line_point","path":"scripts/collision_line_point/collision_line_point.yy",},},
