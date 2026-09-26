@@ -8,7 +8,7 @@ states.define(State.choosing, state_scene_choosing);
 states.queue(State.reading);
 
 // Scene to play
-var _scene = SCENES[0];
+var _scene = SCENES[8];
 my_scene = variable_clone(_scene);
 
 // Prep text formatting

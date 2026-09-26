@@ -15,10 +15,11 @@ scene_add(JSON_SCENES.grove);
 scene_add(JSON_SCENES.horse);
 scene_add(JSON_SCENES.piobare);
 scene_add(JSON_SCENES.armor);
+scene_add(JSON_SCENES.forest_trench);
 
-#macro SCENES_UNREAD global.scenes_unread
-SCENES_UNREAD = [];
-array_copy(SCENES_UNREAD, 0, SCENES, 0, array_length(SCENES));
+//#macro SCENES_UNREAD global.scenes_unread
+//SCENES_UNREAD = [];
+//array_copy(SCENES_UNREAD, 0, SCENES, 0, array_length(SCENES));
 
 
 //// Add scenes to array

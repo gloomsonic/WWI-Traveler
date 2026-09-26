@@ -101,6 +101,19 @@
 			"Leave the armor",
 		],
 		
-		"name": "Armor",
+		"name": "armor",
 	},
+	
+	"forest_trench":
+	{
+		"story": "Walking downhill is slow going, but it's nice to be in the forest again - at least, what remains of it. The leaves on the trees are still green, but half the trunks are bald, creating a strange illusion of fall.<w><p>The natural slope downwards is cut up, terraced by abandoned fortifications. There's no walking around the half-buried trenches; you have to ease yourself down into each one, then climb up the other side to keep descending the hill.<p><w>At least they're small, dug just wide enough for two men to walk abreast of each other, and slowly shrinking as the forest reclaims them.<w><p>You recall hours spent with numb hands and wrinkling feet in cold water, pumping it out of the trench, and then shoveling the miserable, sloughing mud. Any idle moment, the sergeant made sure you were back to emptying the sea with a teaspoon - there was always mud, and always soldiers fighting it.<w><p>Just before you scramble down the side of the next one, you catch a whiff of smoke-<w><p>You freeze. This trench isn't abandoned.<w><p>Six men in olive green fatigues are sprawled about a cook fire. They glance up at you in dull shock, registering the blue of your uniform.<w><p>For a moment, all you hear is the wind whistle before everyone's hands go to their rifles.<w>",
+		
+		"choices":
+		[
+			"Attack",
+			"Offer something",
+		],
+		
+		"name": "forest trench",
+	}
 }
