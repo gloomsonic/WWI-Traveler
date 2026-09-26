@@ -1,4 +1,5 @@
 enum Combatant_Team {player, enemy}
+enum Combatant_Row {front, back}
 
 // Combatant data constructor to be given to obj_turn_manager
 function combatant_data(_cpu, _team, _row, _col, _hp, _name, _sprite, _weapon) constructor {
@@ -20,5 +21,6 @@ function weapon(_damage_melee, _accuracy_melee, _damage_ranged, _accuracy_ranged
 	damage_ranged = _damage_ranged;
 	accuracy_ranged = _accuracy_ranged;
 	ammo_max = 1;
+	ammo_remaining = 1;
 }
 

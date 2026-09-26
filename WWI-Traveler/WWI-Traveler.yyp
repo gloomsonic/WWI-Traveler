@@ -179,6 +179,7 @@
     {"id":{"name":"spr_camp_formation_menu","path":"sprites/spr_camp_formation_menu/spr_camp_formation_menu.yy",},},
     {"id":{"name":"spr_camp_formation_space","path":"sprites/spr_camp_formation_space/spr_camp_formation_space.yy",},},
     {"id":{"name":"spr_camp_sleep","path":"sprites/spr_camp_sleep/spr_camp_sleep.yy",},},
+    {"id":{"name":"spr_combat_active_highlight","path":"sprites/spr_combat_active_highlight/spr_combat_active_highlight.yy",},},
     {"id":{"name":"spr_combat_choose","path":"sprites/spr_combat_choose/spr_combat_choose.yy",},},
     {"id":{"name":"spr_combat_select_enemy","path":"sprites/spr_combat_select_enemy/spr_combat_select_enemy.yy",},},
     {"id":{"name":"spr_combatant_actor_position","path":"sprites/spr_combatant_actor_position/spr_combatant_actor_position.yy",},},

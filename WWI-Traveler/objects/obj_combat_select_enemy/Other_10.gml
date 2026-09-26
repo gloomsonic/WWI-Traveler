@@ -27,9 +27,10 @@ state_hovered = function(_event) {
 			
 			// Draw accuracy
 			draw_set(,, fa_left, fa_middle);
-			var _accuracy = attack_melee_get_accuracy(attacker.my_weapon, my_combatant.row);
-			if (attack_type == Attack_Type.ranged)
-				_accuracy = attacker.my_weapon.accuracy_ranged;
+			if (attack_type == Attack_Type.melee)
+				var _accuracy = attack_melee_get_accuracy(attacker.my_weapon, attacker.row, my_combatant.row);
+			else// if (attack_type == Attack_Type.ranged)
+				var _accuracy = attack_ranged_get_accuracy(attacker.my_weapon, attacker.row, my_combatant.row);
 				
 			draw_text(BBOX_R + 16, BBOX_Y_C, $"{_accuracy}%");
 			break;
@@ -44,9 +45,10 @@ state_held = function(_event) {
 			
 			// Draw accuracy
 			draw_set(,, fa_left, fa_middle);
-			var _accuracy = attack_melee_get_accuracy(attacker.my_weapon, my_combatant.row);
-			if (attack_type == Attack_Type.ranged)
-				_accuracy = attacker.my_weapon.accuracy_ranged;
+			if (attack_type == Attack_Type.melee)
+				var _accuracy = attack_melee_get_accuracy(attacker.my_weapon, attacker.row, my_combatant.row);
+			else// if (attack_type == Attack_Type.ranged)
+				var _accuracy = attack_ranged_get_accuracy(attacker.my_weapon, attacker.row, my_combatant.row);
 			draw_text(BBOX_R + 16, BBOX_Y_C, $"{_accuracy}%");			
 			break;
 	}

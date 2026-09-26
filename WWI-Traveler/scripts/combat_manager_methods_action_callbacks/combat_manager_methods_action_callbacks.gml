@@ -1,21 +1,17 @@
 // Spawn buttons to select enemy combatants
 on_attack_melee_selected = function() {	
 	combat_menu_destroy();
-	
 	var _valid_targets = combatant_get_targets(active_combatant);
 	for (var i = 0; i < array_length(_valid_targets); i++) {
 		var _combatant = _valid_targets[i];
-		var _actor = combatant_get_actor(_combatant);
-		
-		// Spawn on actor
-		instance_create_depth(_actor.x, _actor.y, depth, obj_combat_select_enemy, {
+		instance_create_depth(0, 0, depth, obj_combat_select_enemy, {
 			my_combatant: _combatant,
 			attacker: active_combatant,
 			callback: attack_melee,
 			attack_type: Attack_Type.melee,
 		});
-		instance_create_depth(0, 0, depth, obj_combat_select_back);
 	}	
+	instance_create_depth(0, 0, depth, obj_combat_select_back);
 }
 
 // Record attacked target and subtract damage from its hp
@@ -25,7 +21,7 @@ attack_melee = function(_target) {
 	
 	// Roll to hit
 	var _weapon = active_combatant.my_weapon;
-	var _accuracy = attack_melee_get_accuracy(_weapon, _target.row);
+	var _accuracy = attack_melee_get_accuracy(_weapon, active_combatant.row, _target.row);
 	var _roll = irandom(100);
 	
 	// Execute and log hit
@@ -50,21 +46,17 @@ attack_melee = function(_target) {
 // Spawn buttons to select enemy combatants
 on_attack_ranged_selected = function() {	
 	combat_menu_destroy();
-	
 	var _valid_targets = combatant_get_targets(active_combatant);
 	for (var i = 0; i < array_length(_valid_targets); i++) {
 		var _combatant = _valid_targets[i];
-		var _actor = combatant_get_actor(_combatant);
-		
-		// Spawn on actor
-		instance_create_depth(_actor.x, _actor.y, depth, obj_combat_select_enemy, {
+		instance_create_depth(0, 0, depth, obj_combat_select_enemy, {
 			my_combatant: _combatant,
 			attacker: active_combatant,
-			callback: attack_melee,
+			callback: attack_ranged,
 			attack_type: Attack_Type.ranged,
 		});
-		instance_create_depth(0, 0, depth, obj_combat_select_back);	
-	}	
+	}
+	instance_create_depth(0, 0, depth, obj_combat_select_back);	
 }
 
 // Record attacked target and subtract damage from its hp
@@ -73,8 +65,9 @@ attack_ranged = function(_target) {
 	
 	// Roll to hit
 	var _weapon = active_combatant.my_weapon;
-	var _accuracy = _weapon.accuracy_ranged;
+	var _accuracy = attack_ranged_get_accuracy(_weapon, active_combatant.row, _target.row); //_weapon.accuracy_ranged;
 	var _roll = irandom(100);
+	_weapon.ammo_remaining -= 1;
 	
 	// Execute and log hit
 	if (_roll <= _accuracy) {
