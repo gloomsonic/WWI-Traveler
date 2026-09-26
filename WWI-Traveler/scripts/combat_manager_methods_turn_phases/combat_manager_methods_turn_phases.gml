@@ -53,10 +53,17 @@ combat_menu_create = function() {
 	
 	// Ranged attack button
 	_y += _ypad;
-	instance_create_depth(256, _y, depth, obj_combat_menu_attack_ranged, {
-		my_combatant: active_combatant,
-		callback: on_attack_ranged_selected,
-	});
+	if (active_combatant.my_weapon.ammo_remaining > 0) {
+		instance_create_depth(256, _y, depth, obj_combat_menu_attack_ranged, {
+			my_combatant: active_combatant,
+			callback: on_attack_ranged_selected,
+		});
+	} else {
+		instance_create_depth(256, _y, depth, obj_combat_menu_reload, {
+			my_combatant: active_combatant,
+			callback: reload,
+		});		
+	}
 	
 	// Move button
 	_y += _ypad;

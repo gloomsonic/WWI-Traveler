@@ -86,6 +86,7 @@
     {"id":{"name":"obj_combat_menu_label","path":"objects/obj_combat_menu_label/obj_combat_menu_label.yy",},},
     {"id":{"name":"obj_combat_menu_move","path":"objects/obj_combat_menu_move/obj_combat_menu_move.yy",},},
     {"id":{"name":"obj_combat_menu_pass","path":"objects/obj_combat_menu_pass/obj_combat_menu_pass.yy",},},
+    {"id":{"name":"obj_combat_menu_reload","path":"objects/obj_combat_menu_reload/obj_combat_menu_reload.yy",},},
     {"id":{"name":"obj_combat_select_back","path":"objects/obj_combat_select_back/obj_combat_select_back.yy",},},
     {"id":{"name":"obj_combat_select_enemy","path":"objects/obj_combat_select_enemy/obj_combat_select_enemy.yy",},},
     {"id":{"name":"obj_combat_select_move","path":"objects/obj_combat_select_move/obj_combat_select_move.yy",},},

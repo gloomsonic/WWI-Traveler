@@ -22,5 +22,9 @@ function weapon(_damage_melee, _accuracy_melee, _damage_ranged, _accuracy_ranged
 	accuracy_ranged = _accuracy_ranged;
 	ammo_max = 1;
 	ammo_remaining = 1;
+	
+	reload = function() {
+		ammo_remaining = ammo_max;		
+	}
 }
 

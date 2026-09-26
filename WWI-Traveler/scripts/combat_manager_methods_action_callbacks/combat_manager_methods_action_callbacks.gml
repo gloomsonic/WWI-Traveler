@@ -123,6 +123,14 @@ move = function(_row, _col) {
 	turn_end();	
 }
 
+// Set ammo back to maximum
+reload = function() {
+	combat_menu_destroy();
+	array_push(combat_log, $"{active_combatant.name} reloaded");
+	active_combatant.my_weapon.reload();
+	turn_end();
+}
+
 // Skip active combatant's turn
 pass = function() {
 	combat_menu_destroy();
