@@ -1,2 +1,3 @@
+// Menu 'layers' to tell the cursor about
 top = [obj_camp_planner, obj_camp_sleep];
-planner = [obj_camp_formation_space]
+planner = [obj_camp_formation_space];
