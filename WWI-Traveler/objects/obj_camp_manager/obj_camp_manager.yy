@@ -1,21 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"obj_camp_sleep",
+  "%Name":"obj_camp_manager",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_camp_sleep",
+  "name":"obj_camp_manager",
   "overriddenProperties":[],
   "parent":{
     "name":"Camp",
     "path":"folders/Camp.yy",
   },
-  "parentObjectId":{
-    "name":"par_touchable",
-    "path":"objects/par_touchable/par_touchable.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -33,10 +29,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_camp_sleep",
-    "path":"sprites/spr_camp_sleep/spr_camp_sleep.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

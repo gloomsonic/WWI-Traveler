@@ -59,7 +59,7 @@ enum State {
 	// Cursor states
 	select_action, select_target, select_reposition,
 	story_choose,
-	camp_free, camp_formation,
+	camp, camp_free, camp_formation,
 	map_select,
 	
 	// obj_scene_text

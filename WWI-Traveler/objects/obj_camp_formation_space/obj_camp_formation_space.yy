@@ -2,7 +2,6 @@
   "$GMObject":"",
   "%Name":"obj_camp_formation_space",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
@@ -10,8 +9,8 @@
   "name":"obj_camp_formation_space",
   "overriddenProperties":[],
   "parent":{
-    "name":"Camp",
-    "path":"folders/Camp.yy",
+    "name":"Camp Formation",
+    "path":"folders/Camp/Camp Formation.yy",
   },
   "parentObjectId":{
     "name":"par_touchable",

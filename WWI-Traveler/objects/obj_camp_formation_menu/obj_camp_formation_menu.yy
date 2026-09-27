@@ -9,8 +9,8 @@
   "name":"obj_camp_formation_menu",
   "overriddenProperties":[],
   "parent":{
-    "name":"Camp",
-    "path":"folders/Camp.yy",
+    "name":"Camp Formation",
+    "path":"folders/Camp/Camp Formation.yy",
   },
   "parentObjectId":null,
   "persistent":false,

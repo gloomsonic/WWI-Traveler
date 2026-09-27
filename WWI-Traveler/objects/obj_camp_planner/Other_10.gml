@@ -6,7 +6,9 @@ on_pressed = function() {
 	log("pressed");
 }
 on_released = function() {
-	formation_menu_create();
+	instance_create_depth(ROOM_W_H, ROOM_H_H, depth, obj_camp_formation_menu);
+	obj_cursor_camp.delete_touchable(id);
+	//formation_menu_create();
 }
 
 // State functions

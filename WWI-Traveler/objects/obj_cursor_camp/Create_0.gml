@@ -1,14 +1,14 @@
 event_inherited();
 
-states.define(State.camp_free, state_cursor_camp_free);
-states.define(State.camp_formation, state_cursor_camp_formation);
-states.queue(State.camp_free);
+states.define(State.camp, state_cursor_camp);
+states.queue(State.camp);
 
-// Methods: state_cursor_camp_formation
-my_formation_space = noone;
-set_formation_space = function(_space) {
-	my_formation_space = _space;
+touch_these = [];
+add_touchable = function(_inst) {
+	array_push(touch_these, _inst);
 }
-get_formation_space = function() {
-	return my_formation_space;
+delete_touchable = function(_inst) {
+	var _index = array_get_index(touch_these, _inst);
+	if (_index == -1) return;
+	array_delete(touch_these, _index, 1);
 }

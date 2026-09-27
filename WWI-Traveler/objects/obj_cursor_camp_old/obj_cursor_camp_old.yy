@@ -1,21 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_camp_formation_combatant",
+  "%Name":"obj_cursor_camp_old",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":11,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_camp_formation_combatant",
+  "name":"obj_cursor_camp_old",
   "overriddenProperties":[],
   "parent":{
     "name":"Camp",
     "path":"folders/Camp.yy",
   },
   "parentObjectId":{
-    "name":"par_touchable",
-    "path":"objects/par_touchable/par_touchable.yy",
+    "name":"par_mouse_cursor",
+    "path":"objects/par_mouse_cursor/par_mouse_cursor.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -35,12 +34,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_camp_formation_combatant",
-    "path":"sprites/spr_camp_formation_combatant/spr_camp_formation_combatant.yy",
+    "name":"spr_mouse_cursor",
+    "path":"sprites/spr_mouse_cursor/spr_mouse_cursor.yy",
   },
-  "spriteMaskId":{
-    "name":"spr_camp_formation_combatant",
-    "path":"sprites/spr_camp_formation_combatant/spr_camp_formation_combatant.yy",
-  },
+  "spriteMaskId":null,
   "visible":true,
 }
