@@ -1,0 +1,12 @@
+{
+  "$GMShader":"",
+  "%Name":"shd_invert",
+  "name":"shd_invert",
+  "parent":{
+    "name":"WWI-Traveler",
+    "path":"WWI-Traveler.yyp",
+  },
+  "resourceType":"GMShader",
+  "resourceVersion":"2.0",
+  "type":1,
+}

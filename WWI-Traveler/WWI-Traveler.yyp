@@ -175,6 +175,7 @@
     {"id":{"name":"verb_axes","path":"scripts/verb_axes/verb_axes.yy",},},
     {"id":{"name":"verb_button_overrides","path":"scripts/verb_button_overrides/verb_button_overrides.yy",},},
     {"id":{"name":"verb_button","path":"scripts/verb_button/verb_button.yy",},},
+    {"id":{"name":"shd_invert","path":"shaders/shd_invert/shd_invert.yy",},},
     {"id":{"name":"msk_story_choice","path":"sprites/msk_story_choice/msk_story_choice.yy",},},
     {"id":{"name":"spr_amb_test","path":"sprites/spr_amb_test/spr_amb_test.yy",},},
     {"id":{"name":"spr_audio_listener","path":"sprites/spr_audio_listener/spr_audio_listener.yy",},},
