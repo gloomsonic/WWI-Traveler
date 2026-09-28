@@ -1,6 +1,6 @@
 ///@desc methods Draw
 
-// Draw the story
+// Draw the story text
 draw_phrases = function() {
 	draw_set();
 	var _x = l_margin;
@@ -34,6 +34,14 @@ draw_phrases = function() {
 			continue;
 		}
 		
+		// Advance image
+		if (_phrase == "<img>") {
+			obj_scene_image.next_image();
+			array_delete(my_scene.story, p, 1);
+			p--;
+			continue;
+		}
+		
 		// TODO: If it's a '<d>' play the typewriter ding? Or do like '<sEV_TYPEWRITER>
 	
 		// Draw last phrase(s) character-by-character
@@ -58,7 +66,7 @@ draw_phrases = function() {
 			continue;	
 		}
 	
-		// Draw phrase normally
+		// DRAW PHRASE TEXT
 		_char_count = _char_count_plus;
 		draw_text(_x, _y, _phrase);
 		if (_char_count >= _char_count_end) break;

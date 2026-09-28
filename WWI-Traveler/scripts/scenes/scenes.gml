@@ -17,10 +17,14 @@ scene_add(JSON_SCENES.piobare);
 scene_add(JSON_SCENES.armor);
 scene_add(JSON_SCENES.forest_trench);
 
-//#macro SCENES_UNREAD global.scenes_unread
-//SCENES_UNREAD = [];
-//array_copy(SCENES_UNREAD, 0, SCENES, 0, array_length(SCENES));
-
+// Get the scene struct with the supplied name
+function scene_get(_name) {
+	for (var i = 0; i < array_length(SCENES); i++) {
+		var _scene = SCENES[i];
+		if (_scene.name != _name) continue;
+		return _scene;
+	}
+}
 
 //// Add scenes to array
 //var _ambulance = scene_add(JSON_SCENES.ambulance);
