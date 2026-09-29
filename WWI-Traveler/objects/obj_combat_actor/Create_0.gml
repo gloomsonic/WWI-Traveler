@@ -1,45 +1,6 @@
 self [$ "my_combatant"] ??= noone;
-
-// Set scaling to imply perspective
-if (my_combatant.team == Combatant_Team.player) {
-	image_xscale = 1.55;
-	image_yscale = 1.55;
-	if (my_combatant.row == 0) {
-		image_xscale = 1.2;
-		image_yscale = 1.2;
-	}
-} else {
-	image_xscale = 0.9;
-	image_yscale = 0.9;
-	if (my_combatant.row == 1) {
-		image_xscale = 0.65;
-		image_yscale = 0.65;
-	}
-}
+combat_actor_methods();
+update_scale();
 
 timer = 0;
 duration = 30;
-
-update = function() {
-	timer++;
-	return timer >= duration;
-}
-
-update_move = function(_space) {
-	timer++;
-	if (timer >= duration) {
-		x = _space.x;
-		y = _space.y;
-		return true;
-	}
-	return false;
-}
-
-reset = function() {
-	sprite_index = spr_combatant_idle;
-	timer = 0
-}
-
-die = function() {
-	instance_destroy();
-}

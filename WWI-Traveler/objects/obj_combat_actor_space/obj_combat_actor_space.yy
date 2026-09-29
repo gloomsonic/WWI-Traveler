@@ -9,8 +9,8 @@
   "name":"obj_combat_actor_space",
   "overriddenProperties":[],
   "parent":{
-    "name":"Combat",
-    "path":"folders/Combat.yy",
+    "name":"Combat Actor",
+    "path":"folders/Combat/Combat Actor.yy",
   },
   "parentObjectId":null,
   "persistent":false,

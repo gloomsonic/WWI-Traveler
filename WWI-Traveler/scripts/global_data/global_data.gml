@@ -26,3 +26,9 @@ ENEMY_PARTY = [
 
 // Weapons
 #macro GUN new weapon(2, 90, 6, 50)
+
+// 
+#macro PARTY_SCALE_R1 1.55
+#macro PARTY_SCALE_R0 1.20
+#macro ENEMY_SCALE_R0 0.90
+#macro ENEMY_SCALE_R1 0.65
