@@ -28,7 +28,7 @@ function cutscene_hit(_target, _damage) constructor {
 	lanes = [_target];
 	inst = noone;
 	
-	// Find actor at supplied target's position
+	// Find actor at supplied hit combatant's position
 	with (obj_combat_actor) {
 		if (my_combatant != other.target) continue;
 		other.inst = id;
@@ -50,7 +50,7 @@ function cutscene_die(_combatant) constructor {
 	lanes = [_combatant];
 	inst = noone;
 	
-	// Find actor at supplied target's position
+	// Find actor at supplied dying combatant's position
 	with (obj_combat_actor) {
 		if (my_combatant != other.combatant) continue;
 		other.inst = id;
@@ -61,6 +61,28 @@ function cutscene_die(_combatant) constructor {
 	update = function() {
 		var _done = inst.update();
 		if (_done) inst.die();
+		return _done;
+	}
+}
+
+//
+function cutscene_move(_combatant, _space) constructor {
+	combatant = _combatant;
+	lanes = [_combatant];
+	inst = noone;
+	space = _space;
+	
+	// Find actor at supplied mover's position
+	with (obj_combat_actor) {
+		if (my_combatant != other.combatant) continue;
+		other.inst = id;
+		break;
+	}
+	
+	// Increment or destroy animation object
+	update = function() {
+		var _done = inst.update_move(space);
+		if (_done) inst.reset();
 		return _done;
 	}
 }

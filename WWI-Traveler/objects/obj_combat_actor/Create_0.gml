@@ -25,6 +25,16 @@ update = function() {
 	return timer >= duration;
 }
 
+update_move = function(_space) {
+	timer++;
+	if (timer >= duration) {
+		x = _space.x;
+		y = _space.y;
+		return true;
+	}
+	return false;
+}
+
 reset = function() {
 	sprite_index = spr_combatant_idle;
 	timer = 0

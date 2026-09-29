@@ -3,7 +3,7 @@ function combatant_create_actor(_combatant) {
 	var _team = _combatant.team;
 	var _col = _combatant.col;
 	var _row = _combatant.row;
-	with (obj_combat_actor_position) {
+	with (obj_combat_actor_space) {
 		if (team != _team) continue;
 		if (col != _col) continue;
 		if (row != _row) continue;
