@@ -21,7 +21,7 @@ attack_melee = function(_target) {
 	
 	// Roll to hit
 	var _weapon = active_combatant.my_weapon;
-	var _accuracy = attack_melee_get_accuracy(_weapon, active_combatant.row, _target.row);
+	var _accuracy = attack_melee_get_accuracy(_weapon, active_combatant, _target);
 	var _roll = irandom(100);
 	
 	// Execute and log hit
@@ -65,7 +65,7 @@ attack_ranged = function(_target) {
 	
 	// Roll to hit
 	var _weapon = active_combatant.my_weapon;
-	var _accuracy = attack_ranged_get_accuracy(_weapon, active_combatant.row, _target.row); //_weapon.accuracy_ranged;
+	var _accuracy = attack_ranged_get_accuracy(_weapon, active_combatant, _target);
 	var _roll = irandom(100);
 	_weapon.ammo_remaining -= 1;
 	

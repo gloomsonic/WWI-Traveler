@@ -1,3 +1,4 @@
+// TODO: differentiate by party
 function combatant_get_at_position(_row, _col) {
 	for (var i = 0; i < array_length(PARTY); i++) {
 		var _combatant = PARTY[i];
