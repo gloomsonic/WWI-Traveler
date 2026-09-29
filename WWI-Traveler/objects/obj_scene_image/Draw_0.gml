@@ -5,8 +5,8 @@ if (image_index != image_next)
 //shader_reset();
 
 draw_set(c_black,,,, 0.65);
-var _x1 = VIEW_X + (VIEW_W*0.65);
+var _x1 = VIEW_X + (VIEW_W*0.67);
 var _y1 = VIEW_Y;
-var _x2 = VIEW_X + (VIEW_W*0.95);
+var _x2 = VIEW_X + (VIEW_W*1.00);
 var _y2 = VIEW_Y + VIEW_H;
 draw_rectangle(_x1, _y1, _x2, _y2, false);
