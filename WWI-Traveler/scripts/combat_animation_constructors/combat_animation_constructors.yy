@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"combat_animation_constructors",
   "parent":{
-    "name":"Combat",
-    "path":"folders/Combat.yy",
+    "name":"Combat Actor",
+    "path":"folders/Combat/Combat Actor.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

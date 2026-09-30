@@ -11,7 +11,7 @@ function cutscene_attack(_attacker, _target) constructor {
 		other.inst = id;
 		break;
 	}
-	inst.sprite_index = spr_combatant_attack;
+	inst.sprite_index = inst.my_combatant.my_sprites.attack; //spr_combatant_attack;
 	
 	// Increment animation object
 	update = function() {
@@ -34,7 +34,7 @@ function cutscene_hit(_target, _damage) constructor {
 		other.inst = id;
 		break;
 	}
-	inst.sprite_index = spr_combatant_guard;	
+	inst.sprite_index = inst.my_combatant.my_sprites.hit; //spr_combatant_guard;	
 	
 	// Increment or destroy animation object
 	update = function() {

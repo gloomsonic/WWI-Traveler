@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_combatant_idle",
-    "path":"sprites/spr_combatant_idle/spr_combatant_idle.yy",
+    "name":"spr_combatant_player_idle",
+    "path":"sprites/spr_combatant_player_idle/spr_combatant_player_idle.yy",
   },
   "spriteMaskId":null,
   "visible":true,

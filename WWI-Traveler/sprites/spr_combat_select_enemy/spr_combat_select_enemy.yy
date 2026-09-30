@@ -46,7 +46,7 @@
   "origin":7,
   "parent":{
     "name":"Sprites",
-    "path":"folders/Combat/Sprites.yy",
+    "path":"folders/Combat/Combat Menu/Sprites.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
