@@ -29,7 +29,7 @@ ENEMY_PARTY = [
 
 // Scales to set combat actors to based on their row
 #macro PARTY_SCALE_R1 1.60
-#macro PARTY_SCALE_R0 1.25
+#macro PARTY_SCALE_R0 1.30
 #macro ENEMY_SCALE_R0 0.90
 #macro ENEMY_SCALE_R1 0.65
 
