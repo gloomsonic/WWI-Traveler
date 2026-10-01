@@ -13,9 +13,8 @@ on_released = function() {
 state_idle = function(_event) {
 	switch(_event) {
 		case Event.draw: 
-			draw_self_ext(); 
-			draw_set(c_gray,, fa_center, fa_middle);
-			draw_text(x, y, text);
+			draw_set(, fnt_droid_serif_48, fa_center, fa_middle);
+			draw_text_solid_color(x, y, text, c_gray);			
 			break;
 	}
 }
@@ -23,9 +22,8 @@ state_idle = function(_event) {
 state_hovered = function(_event) {
 	switch(_event) {
 		case Event.draw: 
-			draw_self_ext(); 
-			draw_set(c_black,, fa_center, fa_middle);
-			draw_text(x, y, text);
+			draw_set(, fnt_droid_serif_48, fa_center, fa_middle);
+			draw_text_solid_color(x, y, text, c_white);			
 			break;
 	}
 }
@@ -33,9 +31,8 @@ state_hovered = function(_event) {
 state_held = function(_event) {
 	switch(_event) {
 		case Event.draw: 
-			draw_self_ext(); 
-			draw_set(c_ltgray,, fa_center, fa_middle);
-			draw_text(x, y, text);
+			draw_set(, fnt_droid_serif_48, fa_center, fa_middle);
+			draw_text_solid_color(x, y, text, c_ltgray);
 			break;
 	}
 }

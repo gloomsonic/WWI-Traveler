@@ -12,6 +12,7 @@ function combat_actor_methods() {
 		if (timer >= duration) {
 			x = _space.x;
 			y = _space.y;
+			layer = _space.layer;
 			update_scale();
 			return true;
 		}
@@ -20,7 +21,7 @@ function combat_actor_methods() {
 
 	// Reset timer/sprite for cutscene actions
 	reset = function() {
-		sprite_index = my_combatant.my_sprites.idle; //spr_combatant_idle;
+		sprite_index = my_combatant.my_sprites.idle;
 		timer = 0
 	}
 

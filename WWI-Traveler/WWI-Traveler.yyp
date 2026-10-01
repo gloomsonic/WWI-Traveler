@@ -144,6 +144,7 @@
     {"id":{"name":"combatant_get_at_position","path":"scripts/combatant_get_at_position/combatant_get_at_position.yy",},},
     {"id":{"name":"combatant_get_targets","path":"scripts/combatant_get_targets/combatant_get_targets.yy",},},
     {"id":{"name":"combatant_team_get_row","path":"scripts/combatant_team_get_row/combatant_team_get_row.yy",},},
+    {"id":{"name":"draw_line_solid_color","path":"scripts/draw_line_solid_color/draw_line_solid_color.yy",},},
     {"id":{"name":"draw_self_ext","path":"scripts/draw_self_ext/draw_self_ext.yy",},},
     {"id":{"name":"draw_set","path":"scripts/draw_set/draw_set.yy",},},
     {"id":{"name":"draw_text_solid_color","path":"scripts/draw_text_solid_color/draw_text_solid_color.yy",},},

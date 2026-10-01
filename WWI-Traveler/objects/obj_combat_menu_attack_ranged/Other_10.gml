@@ -6,7 +6,6 @@ on_pressed = function() {
 	log("pressed");
 }
 on_released = function() {
-	if (!can_shoot) return;
 	callback();
 }
 
@@ -14,14 +13,8 @@ on_released = function() {
 state_idle = function(_event) {
 	switch(_event) {
 		case Event.draw: 
-			image_blend = c_white;
-			draw_set(c_gray,, fa_center, fa_middle);
-			if (!can_shoot) {
-				image_blend = c_ltgray;
-				draw_set(c_gray,, fa_center, fa_middle)
-			}
-			draw_self_ext(); 
-			draw_text(x, y, $"{text}: {my_combatant.my_weapon.ammo_remaining}");
+			draw_set(, fnt_droid_serif_48, fa_center, fa_middle);
+			draw_text_solid_color(x, y, $"{text}: {my_combatant.my_weapon.ammo_remaining}", c_gray);			
 			break;
 	}
 }
@@ -29,14 +22,8 @@ state_idle = function(_event) {
 state_hovered = function(_event) {
 	switch(_event) {
 		case Event.draw: 
-			image_blend = c_white;
-			draw_set(c_black,, fa_center, fa_middle);
-			if (!can_shoot) {
-				image_blend = c_ltgray;
-				draw_set(c_gray,, fa_center, fa_middle)
-			}		
-			draw_self_ext(); 
-			draw_text(x, y, $"{text}: {my_combatant.my_weapon.ammo_remaining}");
+			draw_set(, fnt_droid_serif_48, fa_center, fa_middle);
+			draw_text_solid_color(x, y, $"{text}: {my_combatant.my_weapon.ammo_remaining}", c_white);				
 			break;
 	}
 }
@@ -44,14 +31,8 @@ state_hovered = function(_event) {
 state_held = function(_event) {
 	switch(_event) {
 		case Event.draw: 
-			image_blend = c_white;
-			draw_set(c_black,, fa_center, fa_middle);
-			if (!can_shoot) {
-				image_blend = c_ltgray;
-				draw_set(c_gray,, fa_center, fa_middle)
-			}		
-			draw_self_ext(); 
-			draw_text(x, y, $"{text}: {my_combatant.my_weapon.ammo_remaining}");
+			draw_set(, fnt_droid_serif_48, fa_center, fa_middle);
+			draw_text_solid_color(x, y, $"{text}: {my_combatant.my_weapon.ammo_remaining}", c_ltgray);				
 			break;
 	}
 }

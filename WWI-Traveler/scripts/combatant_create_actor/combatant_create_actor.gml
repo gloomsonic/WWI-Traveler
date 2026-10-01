@@ -11,7 +11,7 @@ function combatant_create_actor(_combatant) {
 		break;
 	}
 
-	instance_create_depth(0, 0, depth, obj_combat_actor, {
+	instance_create_layer(0, 0, _pos.layer, obj_combat_actor, {
 		x: _pos.x,
 		y: _pos.y,
 		sprite_index: _combatant.my_sprites.idle,
