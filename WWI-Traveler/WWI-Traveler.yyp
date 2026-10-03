@@ -12,12 +12,12 @@
   "Folders":[
     {"$GMFolder":"","%Name":"__Core","folderPath":"folders/__Core.yy","name":"__Core","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Fonts","folderPath":"folders/__Core/Fonts.yy","name":"Fonts","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"Shaders","folderPath":"folders/__Core/Shaders.yy","name":"Shaders","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Helpful Functions","folderPath":"folders/__Core/Helpful Functions.yy","name":"Helpful Functions","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Hooks","folderPath":"folders/__Core/Hooks.yy","name":"Hooks","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"neo_use_controls","folderPath":"folders/__Core/Hooks/neo_use_controls.yy","name":"neo_use_controls","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"use_states","folderPath":"folders/__Core/Hooks/use_states.yy","name":"use_states","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Macros","folderPath":"folders/__Core/Macros.yy","name":"Macros","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Shaders","folderPath":"folders/__Core/Shaders.yy","name":"Shaders","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"_Audio","folderPath":"folders/_Audio.yy","name":"_Audio","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Fmod","folderPath":"folders/_Audio/Fmod.yy","name":"Fmod","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Extensions","folderPath":"folders/_Audio/Fmod/Extensions.yy","name":"Extensions","resourceType":"GMFolder","resourceVersion":"2.0",},

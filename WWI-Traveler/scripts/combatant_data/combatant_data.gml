@@ -1,13 +1,15 @@
 enum Combatant_Team {player, enemy}
 enum Combatant_Row {front, back}
+enum Combatant_Col {left, center, right}
 
 // Combatant data constructor to be given to obj_turn_manager
-function combatant_data(_cpu, _team, _row, _col, _hp, _name, _sprites, _weapon) constructor {
+function combatant_data(_cpu, _team, _row, _col, _hp, _spd, _name, _sprites, _weapon) constructor {
 	cpu = _cpu;
 	team = _team;
 	row = _row;
 	col = _col;
 	hp = _hp;
+	spd = _spd;
 	name = _name;
 	my_sprites = _sprites;
 	my_weapon = _weapon;

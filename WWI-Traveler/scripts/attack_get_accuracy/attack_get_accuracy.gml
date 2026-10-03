@@ -18,7 +18,7 @@ function attack_melee_get_accuracy(_weapon, _attacker, _target) {
 			_accuracy *= 1.0;
 			break;
 		case Combatant_Row.back:
-			_accuracy *= 0.6;
+			_accuracy *= 0.8;
 			break;
 	}
 	switch (_target_row) {

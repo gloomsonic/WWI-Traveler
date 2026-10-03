@@ -16,5 +16,5 @@ function weapon(_damage_melee, _accuracy_melee, _damage_ranged, _accuracy_ranged
 }
 
 // Weapons
-#macro GUN new weapon(2, 90, 6, 50, "Gun")
-#macro FIST new weapon(1, 85, -1, -1, "Fist") // TODO: if '-1' ranged damage, then no shoot button
+#macro GUN new weapon(2, 90, 6, 60, "Gun")
+#macro FIST new weapon(1, 90, -1, -1, "Fist") 
