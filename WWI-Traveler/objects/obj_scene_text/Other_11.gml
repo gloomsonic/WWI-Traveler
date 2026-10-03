@@ -39,6 +39,7 @@ draw_phrases = function() {
 			obj_scene_image.next_image();
 			array_delete(my_scene.story, p, 1);
 			p--;
+			audio_oneshot(EV_GROVE_BUSHES);
 			continue;
 		}
 		

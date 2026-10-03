@@ -23,11 +23,16 @@
 // ----------------- AUDIO EVENTS -----------------
 
 // SFX
-#macro EV_GUNSHOT				"event:/SFX/Test Gunshot"
-#macro EV_PUNCH					"event:/SFX/Test Punch"
-#macro EV_MISS					"event:/SFX/Test Miss"
-#macro EV_TYPEWRITER			"event:/SFX/Typewriter"
-#macro EV_TYPEWRITER_END		"event:/SFX/Typewriter_End"
+#macro EV_GUNSHOT				"event:/SFX/Combat/Test Gunshot"
+#macro EV_PUNCH					"event:/SFX/Combat/Test Punch"
+#macro EV_MISS					"event:/SFX/Combat/Test Miss"
+#macro EV_TYPEWRITER			"event:/SFX/Scene/General/Typewriter"
+#macro EV_TYPEWRITER_END		"event:/SFX/Scene/General/Typewriter_End"
+
+// Grove
+#macro EV_GROVE_BUSHES			"event:/SFX/Scene/Grove/snd_grove_bushes"
+
+// Ambience
 #macro EV_AMBIENCE				"event:/Ambience/Ambience"
 
 // MUSIC
