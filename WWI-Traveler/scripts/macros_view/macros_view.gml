@@ -17,3 +17,6 @@
 #macro ROOM_W_H (ROOM_W / 2)
 #macro ROOM_H room_height
 #macro ROOM_H_H (ROOM_H / 2)
+
+#macro GUI_W display_get_gui_width()
+#macro GUI_H display_get_gui_height()

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"combat_menu_button_create",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"combat_menu_button_create",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Combat/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

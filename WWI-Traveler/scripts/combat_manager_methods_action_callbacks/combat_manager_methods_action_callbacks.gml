@@ -135,6 +135,7 @@ function combat_manager_methods_turn_phases() {
 	reload = function() {
 		combat_menu_destroy();
 		array_push(combat_log, $"{active_combatant.name} reloaded");
+		active_combatant.inventory.bullets -= 1; // NOTE: reloading variable number of bullets?
 		active_combatant.my_weapon.reload();
 		turn_end();
 	}

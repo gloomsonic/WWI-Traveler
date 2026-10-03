@@ -10,8 +10,11 @@ function combatant_data(_cpu, _team, _row, _col, _hp, _name, _sprites, _weapon) 
 	hp = _hp;
 	name = _name;
 	my_sprites = _sprites;
-	//sprite_index = _sprite;
 	my_weapon = _weapon;
+	
+	inventory = {
+		bullets: 1,
+	}
 }
 
 function combatant_sprites(_idle, _attack, _hit) constructor {

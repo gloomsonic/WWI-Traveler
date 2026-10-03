@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"swap_combatant_datas",
+  "%Name":"draw_solid_color",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"swap_combatant_datas",
+  "name":"draw_solid_color",
   "parent":{
-    "name":"Camp",
-    "path":"folders/Camp.yy",
+    "name":"Helpful Functions",
+    "path":"folders/__Core/Helpful Functions.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

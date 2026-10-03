@@ -40,72 +40,43 @@ function combat_manager_methods_action_callbacks() {
 
 	// Create the player combat options menu
 	combat_menu_create = function() {
-		var _ypad = 0;
 		var _y = ROOM_H * 0.93;
-
-		// Name
-		instance_create_depth(ROOM_W * 0.1, _y - _ypad, depth, obj_combat_menu_label, {
-			my_combatant: active_combatant,
-		});
-	
-		// Top left and spacing for action buttons
+		var _combatant = active_combatant;
+		var _buttons = [];
 		var _font = fnt_droid_serif_48;
 		var _w = 512;
-		var _h = font_height(_font) * 1.5;
-		var _xpad = _w;
-		var _l = ROOM_W_H - ((_xpad * 4) / 2);
-		var _x = _l + (_xpad / 2); // Centered origin offset
+		var _h = font_height(_font) * 1.5;		
 		
-		// Melee attack button
-		instance_create_depth(_x, _y, depth, obj_combat_menu_attack_melee, {
-			my_combatant: active_combatant,
-			callback: on_attack_melee_selected,
-			font: _font,
-			w: _w,
-			h: _h,
-		});
-	
-		// Ranged attack button
-		_x += _xpad;
-		_y += _ypad;
-		if (active_combatant.my_weapon.ammo_remaining > 0) {
-			instance_create_depth(_x, _y, depth, obj_combat_menu_attack_ranged, {
-				my_combatant: active_combatant,
-				callback: on_attack_ranged_selected,
-				font: _font,
-				w: _w,
-				h: _h,
-			});
-		} else {
-			instance_create_depth(_x, _y, depth, obj_combat_menu_reload, {
-				my_combatant: active_combatant,
-				callback: reload,
-				font: _font,
-				w: _w,
-				h: _h,
-			});		
+		// Combatant name
+		instance_create_depth(ROOM_W * 0.05, _y, depth, obj_combat_menu_label, {
+			my_combatant: _combatant,
+		});		
+		
+		// Create buttons for the array
+		var _new = combat_menu_button_create(_combatant, obj_combat_menu_attack_melee, _w, _h, _font, on_attack_melee_selected);
+		array_push(_buttons, _new);
+		if (active_combatant.my_weapon.damage_ranged != -1) {
+			if (active_combatant.my_weapon.ammo_remaining > 0)
+				_new = combat_menu_button_create(_combatant, obj_combat_menu_attack_ranged, _w, _h, _font, on_attack_ranged_selected);
+			else
+				_new = combat_menu_button_create(_combatant, obj_combat_menu_reload, _w, _h, _font, reload);
+			array_push(_buttons, _new);
 		}
-	
-		// Move button
-		_x += _xpad;
-		_y += _ypad;
-		instance_create_depth(_x, _y, depth, obj_combat_menu_move, {
-			my_combatant: active_combatant,
-			callback: on_move_selected,
-			font: _font,
-			w: _w,
-			h: _h,
-		});
-	
-		// Pass button
-		_x += _xpad;
-		_y += _ypad;
-		instance_create_depth(_x, _y, depth, obj_combat_menu_pass, {
-			my_combatant: active_combatant,
-			callback: pass,
-			font: _font,
-			w: _w,
-			h: _h,
-		});
+		_new = combat_menu_button_create(_combatant, obj_combat_menu_move, _w, _h, _font, on_move_selected);
+		array_push(_buttons, _new);
+		_new = combat_menu_button_create(_combatant, obj_combat_menu_pass, _w, _h, _font, pass);
+		array_push(_buttons, _new);
+		
+		// Position buttons on the array
+		var _size = array_length(_buttons);
+		var _l = ROOM_W_H - ((_w * _size) / 2);
+		var _x = _l + (_w / 2); // Centered origin offset
+
+		for (var i = 0; i < array_length(_buttons); i++) {
+			var _button = _buttons[i];
+			_button.x = _x;
+			_button.y = _y;
+			_x += _w;
+		}
 	}
 }

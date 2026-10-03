@@ -6,7 +6,9 @@ on_pressed = function() {
 	log("pressed");
 }
 on_released = function() {
-	room_goto(rm_map);
+	instance_destroy(obj_cursor_camp);
+	room_transition_start(rm_map);
+	//room_goto(rm_map);
 }
 
 // State functions

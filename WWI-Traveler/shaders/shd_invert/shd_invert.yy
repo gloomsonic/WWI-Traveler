@@ -3,8 +3,8 @@
   "%Name":"shd_invert",
   "name":"shd_invert",
   "parent":{
-    "name":"WWI-Traveler",
-    "path":"WWI-Traveler.yyp",
+    "name":"Shaders",
+    "path":"folders/__Core/Shaders.yy",
   },
   "resourceType":"GMShader",
   "resourceVersion":"2.0",

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"room_transition_start",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"room_transition_start",
+  "parent":{
+    "name":"WWI-Traveler",
+    "path":"WWI-Traveler.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

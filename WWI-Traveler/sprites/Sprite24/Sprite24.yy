@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"WWI-Traveler",
-    "path":"WWI-Traveler.yyp",
+    "name":"Sprites",
+    "path":"folders/_Audio/Sprites.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
