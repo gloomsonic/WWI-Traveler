@@ -18,6 +18,7 @@
 // ----------------- PARAMETERS -----------------
 // Parameter Tester
 #macro PITCH_TEST_PARAMETER		"PITCH_TEST_PARAMETER"
+#macro SCENE_AUDIO				"Scene Audio"
 
 // ----------------- AUDIO EVENTS -----------------
 
@@ -27,7 +28,7 @@
 #macro EV_MISS					"event:/SFX/Test Miss"
 #macro EV_TYPEWRITER			"event:/SFX/Typewriter"
 #macro EV_TYPEWRITER_END		"event:/SFX/Typewriter_End"
-#macro EV_AMBIENCE				"event:/Ambience/Amb_War/Amb_War"
+#macro EV_AMBIENCE				"event:/Ambience/Ambience"
 
 // MUSIC
 #macro EV_MUSIC					"event:/Music/Music"

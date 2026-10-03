@@ -7,10 +7,11 @@ on_pressed = function() {
 }
 on_released = function() {
 	array_push(global.data.map_location_keys_visited, my_location_key);
-	if (array_length(SCENES) > 0)
-		room_goto(rm_scene);
-	else
-		room_goto(rm_win);
+	if (array_length(SCENES) > 0){
+		global.pending_scene = scene_get("grove");
+		room_goto(rm_scene);}
+	else{
+		room_goto(rm_win);}
 }
 
 // State functions

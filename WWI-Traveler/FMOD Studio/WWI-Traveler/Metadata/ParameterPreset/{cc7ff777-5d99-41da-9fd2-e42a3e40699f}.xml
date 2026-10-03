@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{cc7ff777-5d99-41da-9fd2-e42a3e40699f}">
+		<property name="name">
+			<value>Scene Audio</value>
+		</property>
+		<relationship name="folder">
+			<destination>{85acb5ea-837a-41a5-a3a0-898eb5fc5d82}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{27d5c753-6b0c-4829-8cf3-0fbd89b81db3}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{27d5c753-6b0c-4829-8cf3-0fbd89b81db3}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>4</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Menu</value>
+			<value>Grove</value>
+			<value>Combat</value>
+			<value>Camp</value>
+		</property>
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>
