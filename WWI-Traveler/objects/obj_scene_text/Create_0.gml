@@ -7,16 +7,18 @@ states.define(State.waiting, state_scene_waiting);
 states.define(State.choosing, state_scene_choosing);
 states.queue(State.reading);
 
-// Scene to play
-var _scene = scene_get("grove"); //SCENES[8];
+// Load the scene to play
+var _scene = scene_get("grove"); // TODO: don't just call the same story forever lmao
+my_scene = variable_clone(_scene);
 instance_create_depth(0, 0, depth+1, obj_scene_image, {
-	sprite_index: spr_scene_grove,
+	sprite_index: my_scene.sprite,
 	image_index: 0,
 })
-my_scene = variable_clone(_scene);
+sprite_prefetch(my_scene.sprite);
 
 // Prep text formatting
-draw_set();
+font = fnt_droid_serif_38;
+draw_set(font);
 line_spacing = 1.4;
 l_margin = ROOM_W*0.70;
 story_bot_y = 0;

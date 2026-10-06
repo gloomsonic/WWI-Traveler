@@ -2,6 +2,7 @@ randomize();
 display_reset(8, true);
 draw_enable_svg_aa(true);
 draw_set_svg_aa_level(8);
+gml_pragma("MarkTagAsUsed", "used")
 
 //// TEMP: random scene order
 //SCENES = array_shuffle(SCENES);

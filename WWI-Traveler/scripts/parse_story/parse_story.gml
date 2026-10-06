@@ -1,4 +1,5 @@
 function parse_story(_story) {
+	draw_set();
 	var _words = parse_words(_story);
 	var _phrases = parse_phrases(_words);
 	return _phrases;
@@ -21,8 +22,9 @@ function parse_words(_story) {
 			// Special character
 			case "<":
 				if (_word != "")
-					array_push(_words, _word);
-			
+					array_push(_words, _word); // Previous word
+				
+				// Push the special segment as a word
 				var _spec_end = string_pos_ext(">", _story, c);
 				var _spec_dif = _spec_end - c;
 				var _spec_char = string_copy(_story, c, _spec_dif+1);
@@ -63,6 +65,8 @@ function parse_phrases(_words) {
 			_phrase = "";
 			continue;
 		}
+		
+		// TODO: If we get an <i> or </> tag we should change fonts just to be safe on spacing
 	
 		// Too long, end phrase
 		var _phrase_w_plus = string_width(_phrase) + string_width(_word);

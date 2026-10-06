@@ -27,8 +27,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Scenes",
-    "path":"folders/Scenes.yy",
+    "name":"Scene Sprites",
+    "path":"folders/Scenes/Scene Sprites.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
@@ -88,6 +88,9 @@
   },
   "swatchColours":null,
   "swfPrecision":0.5,
+  "tags":[
+    "used",
+  ],
   "textureGroupId":{
     "name":"scene_grove",
     "path":"texturegroups/scene_grove",

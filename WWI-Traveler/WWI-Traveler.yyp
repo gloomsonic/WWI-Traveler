@@ -48,6 +48,7 @@
     {"$GMFolder":"","%Name":"Map Static","folderPath":"folders/Map Static.yy","name":"Map Static","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sprites","folderPath":"folders/Map Static/Sprites.yy","name":"Sprites","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Scenes","folderPath":"folders/Scenes.yy","name":"Scenes","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Scene Sprites","folderPath":"folders/Scenes/Scene Sprites.yy","name":"Scene Sprites","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "ForcedPrefabProjectReferences":[
     {"link":"io.gamemaker.sdfshaders-1.0.0","name":"io.gamemaker.sdfshaders-1.0.0","path":"io.gamemaker.sdfshaders-1.0.0.yyp",},
@@ -68,6 +69,7 @@
     {"id":{"name":"FMOD","path":"extensions/FMOD/FMOD.yy",},},
     {"id":{"name":"fnt_droid_serif_30","path":"fonts/fnt_droid_serif_30/fnt_droid_serif_30.yy",},},
     {"id":{"name":"fnt_droid_serif_36","path":"fonts/fnt_droid_serif_36/fnt_droid_serif_36.yy",},},
+    {"id":{"name":"fnt_droid_serif_38_italic","path":"fonts/fnt_droid_serif_38_italic/fnt_droid_serif_38_italic.yy",},},
     {"id":{"name":"fnt_droid_serif_38","path":"fonts/fnt_droid_serif_38/fnt_droid_serif_38.yy",},},
     {"id":{"name":"fnt_droid_serif_42","path":"fonts/fnt_droid_serif_42/fnt_droid_serif_42.yy",},},
     {"id":{"name":"fnt_droid_serif_48","path":"fonts/fnt_droid_serif_48/fnt_droid_serif_48.yy",},},
@@ -206,6 +208,7 @@
     {"id":{"name":"spr_map_pointer","path":"sprites/spr_map_pointer/spr_map_pointer.yy",},},
     {"id":{"name":"spr_mouse_cursor","path":"sprites/spr_mouse_cursor/spr_mouse_cursor.yy",},},
     {"id":{"name":"spr_planner","path":"sprites/spr_planner/spr_planner.yy",},},
+    {"id":{"name":"spr_scene_blank","path":"sprites/spr_scene_blank/spr_scene_blank.yy",},},
     {"id":{"name":"spr_scene_grove","path":"sprites/spr_scene_grove/spr_scene_grove.yy",},},
     {"id":{"name":"spr_sfx_test","path":"sprites/spr_sfx_test/spr_sfx_test.yy",},},
     {"id":{"name":"spr_touchable","path":"sprites/spr_touchable/spr_touchable.yy",},},
@@ -229,5 +232,6 @@
   "TextureGroups":[
     {"$GMTextureGroup":"","%Name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"name":"Default","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
     {"$GMTextureGroup":"","%Name":"scene_grove","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"name":"scene_grove","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMTextureGroup":"","%Name":"scene_blank","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"name":"scene_blank","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
   ],
 }
