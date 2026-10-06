@@ -1,3 +1,6 @@
+#macro SCENE_FONT fnt_libron_38
+#macro SCENE_FONT_ITALIC fnt_libron_38_italic
+
 #macro LINE_W 1080
 #macro LINE_W_H (LINE_W/2)
 

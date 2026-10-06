@@ -1,5 +1,5 @@
 function parse_story(_story) {
-	draw_set();
+	draw_set(SCENE_FONT);
 	var _words = parse_words(_story);
 	var _phrases = parse_phrases(_words);
 	return _phrases;

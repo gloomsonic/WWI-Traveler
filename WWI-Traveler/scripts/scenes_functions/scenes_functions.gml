@@ -23,7 +23,7 @@ function scene_get_line_count(_scene, _cutoff = noone) {
 		if (_phrase == "<n>") _line_count += 1;
 		if (_phrase == "<p>") _line_count += 2;
 	}
-	return _line_count
+	return _line_count;
 }
 
 //

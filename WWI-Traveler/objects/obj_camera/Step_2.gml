@@ -11,9 +11,12 @@ switch(room) {
 		
 		if (abs(_ydif) >= 0.5)
 			var _y = lerp(VIEW_Y, _ygoal, scene_lerp_spd);
-		else var _y = _ygoal;
+		else var _y = _ygoal; // Snap-to
 		
 		camera_set_view_pos(VIEW, obj_scene_text.x, _y);
+		break;
+	case rm_map:
+		camera_set_view_pos(VIEW, 0, 0);
 		break;
 	case rm_map_editor:
 		// Pan the editor camera with the arrow keys or WASD, clamped inside the room.

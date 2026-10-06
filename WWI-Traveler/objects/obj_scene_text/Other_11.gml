@@ -17,8 +17,8 @@ draw_phrases = function() {
 		// TODO: functionize these 
 		// Paragraph break
 		if (_phrase == "<p>") {
-			_y += font_height() * line_spacing;
-			_y += font_height() * line_spacing;
+			_y += font_height(font) * line_spacing;
+			_y += font_height(font) * line_spacing;
 			continue;
 		}
 	
@@ -37,13 +37,13 @@ draw_phrases = function() {
 		
 		// Switch to italic
 		if (_phrase == "<i>") {
-			font = fnt_droid_serif_38_italic;
+			font = SCENE_FONT_ITALIC;
 			continue;
 		}
 		
 		// Switch to plain font
 		if (_phrase == "</>") {
-			font = fnt_droid_serif_38;
+			font = SCENE_FONT;
 			continue;
 		}
 		

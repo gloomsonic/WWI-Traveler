@@ -35,13 +35,13 @@ char_get_fade = function(_count, _end) {
 	return _alpha;
 }
 
-// Automatically jump to next 'wait'
+// Automatically scroll ahead to the next 'wait' phrase
 next_wait_jump_to = function() {
 	var _next = scene_get_next_wait(my_scene);
 	
-	draw_set();
+	draw_set(font);
 	var _line_count = scene_get_line_count(my_scene, _next); // NOTE: it's ok if '_next' is 'noone'
-	var _text_bot = _line_count * font_height() * line_spacing;
+	var _text_bot = _line_count * font_height(font) * line_spacing;
 	scroll_y(_text_bot - ROOM_H_H);
 }
 
@@ -68,6 +68,6 @@ spawn_choices = function() {
 		instance_create_depth(_x, _y, depth, obj_story_choice, {
 			my_text: my_scene.choices[c],
 		});
-		_y += font_height() * choice_spacing;
+		_y += font_height(font) * choice_spacing;
 	}
 }

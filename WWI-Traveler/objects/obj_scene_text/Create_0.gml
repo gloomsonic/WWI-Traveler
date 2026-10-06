@@ -17,7 +17,7 @@ instance_create_depth(0, 0, depth+1, obj_scene_image, {
 sprite_prefetch(my_scene.sprite);
 
 // Prep text formatting
-font = fnt_droid_serif_38;
+font = SCENE_FONT;
 draw_set(font);
 line_spacing = 1.4;
 l_margin = ROOM_W*0.70;
