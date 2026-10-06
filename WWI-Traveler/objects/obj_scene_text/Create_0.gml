@@ -32,3 +32,6 @@ scroll_spd = font_height() * line_spacing;
 fade_spd = 0.05;
 fade_values = [];
 characters_opaque_count = 0;
+
+//
+sounds = {};

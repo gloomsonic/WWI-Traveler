@@ -57,10 +57,26 @@ draw_phrases = function() {
 		
 		// Play a sound
 		if (string_starts_with(_phrase, "<snd ")) {
-			var _sound = string_copy(_phrase, 6, string_length(_phrase) - 6); // Brackets indicate the portion of the string that will be copied "<snd {...}>"
-			audio_oneshot(_sound);
+			var _name = string_copy(_phrase, 6, string_length(_phrase) - 6); // Brackets indicate the portion of the string that will be copied "<snd {...}>"
+			var _event = audio_event_get(_name);
+			sounds[$ _name] = audio_oneshot(_event); // NOTE: a second instance of the same sound will have the same name and thus overwrite the reference to the first
 			array_delete(my_scene.story, p, 1);
 			p--;
+		}
+		
+		// Adjust volume of a sound
+		if (string_starts_with(_phrase, "<vol ")) {
+			var _split = string_split(_phrase, " ");
+			var _volume = _split[1];
+			_volume = real(_volume) * 0.1;
+			
+			// Get the id
+			var _name = _split[2];
+			_name = string_delete(_name, string_last_pos(">", _name), 1);
+			var _sound = sounds[$ _name]; 
+			
+			fmod_studio_event_instance_set_volume(_sound, _volume);
+			array_delete(my_scene.story, p, 1);
 		}
 	
 		// Draw last phrase(s) character-by-character

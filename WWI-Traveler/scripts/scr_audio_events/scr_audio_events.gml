@@ -38,3 +38,29 @@
 // MUSIC
 #macro EV_MUSIC					"event:/Music/Music"
 
+
+// Returns the event string aligned with the given name
+// NOTE: This was set up so we could have something 'like' macros that could be used in JSON text
+function audio_event_get(_name) {
+	switch(_name) {
+		case "grove_bushes":
+			return "event:/SFX/Scene/Grove/snd_grove_bushes";
+			break;
+		case "banjo":
+			return "event:/SFX/Scene/Grove/snd_grove_banjo";
+			break;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
