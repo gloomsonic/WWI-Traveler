@@ -27,6 +27,9 @@ ENEMY_PARTY = [
 	new combatant_data(true, Combatant_Team.enemy, Combatant_Row.back, Combatant_Col.right, 7, 2, "Whomst Whatsit", ENEMY_COMBAT_SPRITES, GUN), 
 ];
 
+// TODO: make an enemy party of 'wolves' that require different strategy to not die (taking wounded to back or using an item?)
+var _wolf_test = new combatant_data(false, Combatant_Team.player, Combatant_Row.front, Combatant_Col.right, 5, 10, "Wolf", ENEMY_COMBAT_SPRITES, WOLF_CLAW),
+
 // Scales to set combat actors to based on their team/row
 #macro PARTY_SCALE_R1 1.60
 #macro PARTY_BLEND_R1 make_colour_rgb(255, 255, 255)

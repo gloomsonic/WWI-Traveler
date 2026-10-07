@@ -10,8 +10,8 @@
   "name":"obj_ambience",
   "overriddenProperties":[],
   "parent":{
-    "name":"Audio",
-    "path":"folders/_Audio/Objects/Audio.yy",
+    "name":"_Managers",
+    "path":"folders/_Managers.yy",
   },
   "parentObjectId":null,
   "persistent":true,
@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_amb_test",
-    "path":"sprites/spr_amb_test/spr_amb_test.yy",
+    "name":"spr_ambience",
+    "path":"sprites/spr_ambience/spr_ambience.yy",
   },
   "spriteMaskId":null,
   "visible":false,

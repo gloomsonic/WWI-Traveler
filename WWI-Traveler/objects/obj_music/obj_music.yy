@@ -10,8 +10,8 @@
   "name":"obj_music",
   "overriddenProperties":[],
   "parent":{
-    "name":"Audio",
-    "path":"folders/_Audio/Objects/Audio.yy",
+    "name":"_Managers",
+    "path":"folders/_Managers.yy",
   },
   "parentObjectId":null,
   "persistent":true,
@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite24",
-    "path":"sprites/Sprite24/Sprite24.yy",
+    "name":"spr_music",
+    "path":"sprites/spr_music/spr_music.yy",
   },
   "spriteMaskId":null,
   "visible":false,

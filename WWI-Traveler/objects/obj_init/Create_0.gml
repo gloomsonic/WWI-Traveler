@@ -14,10 +14,13 @@ global.map_resume       = false;// true when re-entering rm_map_editor should re
 global.completed_nodes = {};
 global.pending_scene = noone;   // scene queued by the map for rm_scene to play
 
+// Create managers
 instance_create_depth(0, 0, 0, obj_room_start);
 instance_create_depth(0, 0, 0, obj_camera);
 instance_create_depth(0, 0, 0, obj_debug);
 instance_create_depth(0, 0, 0, obj_audio_manager);
 instance_create_depth(ROOM_W_H, ROOM_H_H, 0, obj_audio_listener);
+instance_create_depth(0, 0, 0, obj_music);
+instance_create_depth(0, 0, 0, obj_ambience);
 
 room_goto(rm_start);
