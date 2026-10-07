@@ -1,0 +1,19 @@
+{
+  "$GMPath":"",
+  "%Name":"path_2_4_1",
+  "closed":false,
+  "kind":1,
+  "name":"path_2_4_1",
+  "parent":{
+    "name":"Map Static",
+    "path":"folders/Map Static.yy",
+  },
+  "points":[
+    {"speed":100.0,"x":1344.0,"y":640.0,},
+    {"speed":100.0,"x":1984.0,"y":512.0,},
+    {"speed":100.0,"x":2368.0,"y":768.0,},
+  ],
+  "precision":4,
+  "resourceType":"GMPath",
+  "resourceVersion":"2.0",
+}

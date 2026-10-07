@@ -1,12 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"obj_map_location",
+  "%Name":"obj_path_tracer",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_map_location",
+  "name":"obj_path_tracer",
   "overriddenProperties":[],
   "parent":{
     "name":"Map Static",
@@ -30,10 +30,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_map_location",
-    "path":"sprites/spr_map_location/spr_map_location.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

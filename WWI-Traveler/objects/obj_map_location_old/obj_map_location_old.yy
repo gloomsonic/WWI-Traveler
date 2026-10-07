@@ -1,18 +1,21 @@
 {
   "$GMObject":"",
-  "%Name":"obj_map_location",
+  "%Name":"obj_map_location_old",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_map_location",
+  "name":"obj_map_location_old",
   "overriddenProperties":[],
   "parent":{
-    "name":"Map Static",
-    "path":"folders/Map Static.yy",
+    "name":"_old",
+    "path":"folders/Map Static/_old.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"par_touchable",
+    "path":"objects/par_touchable/par_touchable.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

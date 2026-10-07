@@ -1,14 +1,11 @@
-event_inherited();
+open_paths = [];
+var _paths = asset_get_ids(asset_path);
 
-self [$ "available_locations"] = noone; // obj_map_locations to which the player can traverse from this one
-
-// Big mask
-image_xscale = 2;
-image_yscale = 2;
-
-// Is my key on the visited list?
-my_location_key = string(xstart) + string(ystart);
-on_room_start = function() {
-	if (!map_location_visited(my_location_key)) return;
-	image_blend = c_red;
+// Store the paths that *start* on top of me
+for (var i = 0; i < array_length(_paths); i++) {
+	var _path = _paths[i];
+	var _x = path_get_x(_path, 0);
+	var _y = path_get_y(_path, 0);
+	if (!position_meeting(_x, _y, id)) continue;
+	array_push(open_paths, _path);
 }

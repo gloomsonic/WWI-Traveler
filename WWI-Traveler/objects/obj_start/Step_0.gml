@@ -7,4 +7,5 @@ if (keyboard_check_pressed(ord("S")))
 if (keyboard_check_pressed(ord("C")))
 	room_goto(rm_camp);
 if (keyboard_check_pressed(ord("M")))
-	room_goto(rm_map_editor);
+	room_goto(rm_map);
+	//room_goto(rm_map_editor);

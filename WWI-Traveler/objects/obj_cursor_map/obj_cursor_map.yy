@@ -9,8 +9,8 @@
   "name":"obj_cursor_map",
   "overriddenProperties":[],
   "parent":{
-    "name":"Map Static",
-    "path":"folders/Map Static.yy",
+    "name":"_old",
+    "path":"folders/Map Static/_old.yy",
   },
   "parentObjectId":{
     "name":"par_mouse_cursor",

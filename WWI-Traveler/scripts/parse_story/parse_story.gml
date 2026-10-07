@@ -61,12 +61,13 @@ function parse_phrases(_words) {
 			if (_phrase != "")
 				array_push(_phrases, string_trim(_phrase));
 			
-			array_push(_phrases, _word);
+			array_push(_phrases, _word); // Push the special character 'word' as its own phrase
+			// TODO: If we get an <i> or </> tag we should change fonts just to be safe on spacing
 			_phrase = "";
 			continue;
 		}
 		
-		// TODO: If we get an <i> or </> tag we should change fonts just to be safe on spacing
+		
 	
 		// Too long, end phrase
 		var _phrase_w_plus = string_width(_phrase) + string_width(_word);
