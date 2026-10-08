@@ -1,0 +1,24 @@
+{
+  "$GMPath":"",
+  "%Name":"path_3_5_1",
+  "closed":false,
+  "kind":1,
+  "name":"path_3_5_1",
+  "parent":{
+    "name":"Map Static",
+    "path":"folders/Map Static.yy",
+  },
+  "points":[
+    {"speed":100.0,"x":1728.0,"y":1344.0,},
+    {"speed":100.0,"x":2016.0,"y":1376.0,},
+    {"speed":100.0,"x":2400.0,"y":1312.0,},
+    {"speed":100.0,"x":2592.0,"y":1472.0,},
+    {"speed":100.0,"x":2688.0,"y":1760.0,},
+    {"speed":100.0,"x":2624.0,"y":1888.0,},
+    {"speed":100.0,"x":2368.0,"y":1856.0,},
+    {"speed":100.0,"x":2240.0,"y":1920.0,},
+  ],
+  "precision":4,
+  "resourceType":"GMPath",
+  "resourceVersion":"2.0",
+}
