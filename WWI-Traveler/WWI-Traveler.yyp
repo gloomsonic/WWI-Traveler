@@ -111,6 +111,7 @@
     {"id":{"name":"obj_map_location_old","path":"objects/obj_map_location_old/obj_map_location_old.yy",},},
     {"id":{"name":"obj_map_location","path":"objects/obj_map_location/obj_map_location.yy",},},
     {"id":{"name":"obj_map_node","path":"objects/obj_map_node/obj_map_node.yy",},},
+    {"id":{"name":"obj_map_path","path":"objects/obj_map_path/obj_map_path.yy",},},
     {"id":{"name":"obj_map_pointer","path":"objects/obj_map_pointer/obj_map_pointer.yy",},},
     {"id":{"name":"obj_music","path":"objects/obj_music/obj_music.yy",},},
     {"id":{"name":"obj_path_tracer","path":"objects/obj_path_tracer/obj_path_tracer.yy",},},
