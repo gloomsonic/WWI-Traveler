@@ -31,7 +31,7 @@ draw_phrases = function() {
 	
 		// Line break
 		if (_phrase == "<n>") {
-			_y += font_height() * line_spacing;
+			_y += font_height(font) * line_spacing;
 			continue;
 		}
 		
@@ -62,6 +62,7 @@ draw_phrases = function() {
 			sounds[$ _name] = audio_oneshot(_event); // NOTE: a second instance of the same sound will have the same name and thus overwrite the reference to the first
 			array_delete(my_scene.story, p, 1);
 			p--;
+			continue;
 		}
 		
 		// Adjust volume of a sound
@@ -78,6 +79,10 @@ draw_phrases = function() {
 			fmod_studio_event_instance_set_volume(_sound, _volume);
 			array_delete(my_scene.story, p, 1);
 		}
+		
+		//// BUGGED: Don't draw above camera
+		//if (_y < VIEW_Y)
+		//	continue;
 	
 		// Draw last phrase(s) character-by-character
 		draw_set(c_white, font);

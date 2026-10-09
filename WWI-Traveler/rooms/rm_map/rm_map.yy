@@ -33,8 +33,8 @@
   ],
   "name":"rm_map",
   "parent":{
-    "name":"Map Static",
-    "path":"folders/Map Static.yy",
+    "name":"Map",
+    "path":"folders/Map.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

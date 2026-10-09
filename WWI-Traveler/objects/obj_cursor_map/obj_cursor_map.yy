@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"_old",
-    "path":"folders/Map Static/_old.yy",
+    "path":"folders/Map/_old.yy",
   },
   "parentObjectId":{
     "name":"par_mouse_cursor",

@@ -9,8 +9,8 @@
   "name":"obj_path_tracer",
   "overriddenProperties":[],
   "parent":{
-    "name":"Map Static",
-    "path":"folders/Map Static.yy",
+    "name":"Map",
+    "path":"folders/Map.yy",
   },
   "parentObjectId":null,
   "persistent":false,

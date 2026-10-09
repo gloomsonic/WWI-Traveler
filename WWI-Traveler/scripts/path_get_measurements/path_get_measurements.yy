@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"map_location_visited",
+  "%Name":"path_get_measurements",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"map_location_visited",
+  "name":"path_get_measurements",
   "parent":{
-    "name":"Map",
-    "path":"folders/Map.yy",
+    "name":"WWI-Traveler",
+    "path":"WWI-Traveler.yyp",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

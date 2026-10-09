@@ -5,8 +5,8 @@
   "kind":1,
   "name":"path_1_2_2",
   "parent":{
-    "name":"Map Static",
-    "path":"folders/Map Static.yy",
+    "name":"Map",
+    "path":"folders/Map.yy",
   },
   "points":[
     {"speed":100.0,"x":192.0,"y":896.0,},

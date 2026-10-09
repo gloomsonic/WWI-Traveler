@@ -32,7 +32,7 @@
   "name":"rm_map_old",
   "parent":{
     "name":"_old",
-    "path":"folders/Map Static/_old.yy",
+    "path":"folders/Map/_old.yy",
   },
   "parentRoom":null,
   "physicsSettings":{
