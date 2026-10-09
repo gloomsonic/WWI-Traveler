@@ -1,19 +1,14 @@
-// Inherit the parent event
 event_inherited();
 
-states.define(State.map_select, state_cursor_map_select);
-states.queue(State.map_select);
+states.define(State.camp, state_cursor_camp);
+states.queue(State.camp);
 
-my_location = noone;
-
-//available_locations = [];
-on_room_start = function() {
-	var _last_key = array_last(global.data.map_location_keys_visited);
-	
-	// Get map location with last key
-	with (obj_map_location) {
-		if (my_location_key != _last_key) continue;
-		other.my_location = id;
-		break;
-	}
+touch_these = [];
+add_touchable = function(_inst) {
+	array_push(touch_these, _inst);
+}
+delete_touchable = function(_inst) {
+	var _index = array_get_index(touch_these, _inst);
+	if (_index == -1) return;
+	array_delete(touch_these, _index, 1);
 }

@@ -38,6 +38,9 @@
     "name":"spr_mouse_cursor",
     "path":"sprites/spr_mouse_cursor/spr_mouse_cursor.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"msk_mouse_cursor_4",
+    "path":"sprites/msk_mouse_cursor_4/msk_mouse_cursor_4.yy",
+  },
   "visible":true,
 }

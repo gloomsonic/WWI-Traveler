@@ -9,7 +9,8 @@ touch_object = function(_obj) {
 		pressed: false,
 		released: false,
 	}
-	_data.inst = instance_position(mouse_x, mouse_y, _obj);
+	//_data.inst = instance_position(mouse_x, mouse_y, _obj);
+	_data.inst = instance_place(mouse_x, mouse_y, _obj);
 	
 	// No object, idle prior
 	if (_data.inst == noone) {

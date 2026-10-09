@@ -1,9 +1,10 @@
+///@desc states
 event_inherited();
 
-state_cursor_map_select = function(_event) {
+state_cursor_camp = function(_event) {
 	switch(_event) {
 		case Event.step:
-			touch_object(my_location.available_locations);
+			touch_object(touch_these);
 			break;
 	}
 }
