@@ -8,7 +8,7 @@ function scene_text_methods_draw() {
 		var _char_count = 0;
 		var _char_count_end = characters_opaque_count + array_length(fade_values);
 
-		// Draw phrases
+		// One phrase at a time
 		for (var p = 0; p < array_length(my_scene.story); p++) {
 			var _phrase = my_scene.story[p];
 			var _phrase_len = string_length(_phrase);
@@ -75,19 +75,18 @@ function scene_text_methods_draw() {
 			
 			// Draw entire phrase at once
 			if (_char_count_plus < characters_opaque_count) {
-				draw_set(c_white, font);
 				var _t = VIEW_Y - font_height(font);
 				var _b = VIEW_Y + VIEW_H;
 				if (_y >= _t) and (_y <= _b)
 					draw_text(_x, _y, _phrase);
-
-				_x = l_margin;
+					
 				_char_count = _char_count_plus;	
 				if (_char_count >= _char_count_end) break;
+				_x = l_margin;
 				continue;
 			}
 			
-			// Draw each character with fade
+			// Draw each character of phrase with fade
 			for (var c = 1; c <= _phrase_len; c++) {
 				var _char = string_char_at(_phrase, c);
 				draw_set_alpha(char_get_fade(_char_count, _char_count_end));
@@ -100,8 +99,8 @@ function scene_text_methods_draw() {
 			}
 			
 			// Carriage return
-			_x = l_margin;
 			if (_char_count >= _char_count_end) break;
+			_x = l_margin;
 		}
 		story_bot_y = _y;
 	}
