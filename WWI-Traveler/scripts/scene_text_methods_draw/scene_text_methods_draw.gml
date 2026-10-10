@@ -14,7 +14,7 @@ function scene_text_methods_draw() {
 			var _phrase_len = string_length(_phrase);
 			var _char_count_plus = _char_count + _phrase_len;
 			if (_char_count >= _char_count_end) 
-				break;
+				break; // Don't go past chars we've added
 			
 			// Handle special phrases, instructions
 			if (string_starts_with(_phrase, "<")) {
@@ -45,8 +45,11 @@ function scene_text_methods_draw() {
 				
 				// Play a sound
 				if (string_starts_with(_phrase, "<snd ")) {
-					var _name = string_copy(_phrase, 6, string_length(_phrase) - 6); // Brackets indicate the portion of the string that will be copied "<snd {...}>"
+					var _split = string_split(_phrase, " ");
+					var _name = _split[1];
+					_name = string_delete(_name, string_last_pos(">", _name), 1);
 					var _event = audio_event_get(_name);
+
 					sounds[$ _name] = audio_oneshot(_event); // NOTE: a second instance of the same sound will have the same name and thus overwrite the reference to the first
 					array_delete(my_scene.story, p, 1);
 					p--;
@@ -55,22 +58,26 @@ function scene_text_methods_draw() {
 				// Adjust volume of a sound
 				if (string_starts_with(_phrase, "<vol ")) {
 					var _split = string_split(_phrase, " ");
-					var _volume = _split[1];
-					_volume = real(_volume) * 0.1;
-			
-					// Get the id
-					var _name = _split[2];
+					var _name = _split[3];
 					_name = string_delete(_name, string_last_pos(">", _name), 1);
+					
 					var _sound = sounds[$ _name]; 
-			
-					fmod_studio_event_instance_set_volume(_sound, _volume);
+					var _volume_current = fmod_studio_event_instance_get_volume(_sound).final_volume;
+					var _volume_target = real(_split[1]);
+					var _fade_duration = real(_split[2]);
+					instance_create_depth(0, 0, 0, obj_audio_transition, {
+						volume_start: _volume_current,
+						volume_target: _volume_target,
+						fade_duration: _fade_duration,
+						my_sound: _sound,
+					})
 					array_delete(my_scene.story, p, 1);
 					p--; 
 				}
 				continue;
 			}
 			
-			// -- Draw the phrase -- //
+			// *--* Draw the phrase *--* //
 			draw_set(c_white, font);
 			
 			// Draw entire phrase at once
@@ -86,7 +93,7 @@ function scene_text_methods_draw() {
 				continue;
 			}
 			
-			// Draw each character of phrase with fade
+			// Draw each character of fading phrase, one-by-one
 			for (var c = 1; c <= _phrase_len; c++) {
 				var _char = string_char_at(_phrase, c);
 				draw_set_alpha(char_get_fade(_char_count, _char_count_end));

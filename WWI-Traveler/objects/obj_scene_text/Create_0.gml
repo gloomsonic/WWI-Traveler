@@ -36,4 +36,4 @@ fade_values = [];
 characters_opaque_count = 0;
 
 //
-sounds = {};
+sounds = {}; // Keys sound name strings, Values sound path ref strings

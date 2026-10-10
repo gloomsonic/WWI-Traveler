@@ -56,7 +56,7 @@ function parse_phrases(_words) {
 	for (var w = 0; w < array_length(_words); w++) {
 		var _word = _words[w];
 	
-		// Special character, end phrase
+		// Special character, end phrase -- NOTE: this means they can't safely be used in the middle of a paragraph
 		if (string_char_at(_word, 1) == "<") {
 			if (_phrase != "")
 				array_push(_phrases, string_trim(_phrase));

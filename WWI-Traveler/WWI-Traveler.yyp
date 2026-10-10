@@ -84,6 +84,7 @@
     {"id":{"name":"obj_ambience","path":"objects/obj_ambience/obj_ambience.yy",},},
     {"id":{"name":"obj_audio_listener","path":"objects/obj_audio_listener/obj_audio_listener.yy",},},
     {"id":{"name":"obj_audio_manager","path":"objects/obj_audio_manager/obj_audio_manager.yy",},},
+    {"id":{"name":"obj_audio_transition","path":"objects/obj_audio_transition/obj_audio_transition.yy",},},
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
     {"id":{"name":"obj_camp_formation_menu","path":"objects/obj_camp_formation_menu/obj_camp_formation_menu.yy",},},
     {"id":{"name":"obj_camp_formation_space","path":"objects/obj_camp_formation_space/obj_camp_formation_space.yy",},},
