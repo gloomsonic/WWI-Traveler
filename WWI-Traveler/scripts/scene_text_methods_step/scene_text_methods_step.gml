@@ -27,7 +27,7 @@ function scene_text_methods_step() {
 		}
 	}
 
-	// 
+	// Fade value determined by distance from the end
 	char_get_fade = function(_count, _end) {
 		if (_count < characters_opaque_count) 
 			return 1.0;
