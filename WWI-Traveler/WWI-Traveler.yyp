@@ -51,8 +51,8 @@
     {"$GMFolder":"","%Name":"Sprites","folderPath":"folders/Map/Sprites.yy","name":"Sprites","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Parent Cursor","folderPath":"folders/Parent Cursor.yy","name":"Parent Cursor","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Scenes","folderPath":"folders/Scenes.yy","name":"Scenes","resourceType":"GMFolder","resourceVersion":"2.0",},
-    {"$GMFolder":"","%Name":"Scene Text","folderPath":"folders/Scenes/Scene Text.yy","name":"Scene Text","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Scene Sprites","folderPath":"folders/Scenes/Scene Sprites.yy","name":"Scene Sprites","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Scene Text","folderPath":"folders/Scenes/Scene Text.yy","name":"Scene Text","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "ForcedPrefabProjectReferences":[
     {"link":"io.gamemaker.sdfshaders-1.0.0","name":"io.gamemaker.sdfshaders-1.0.0","path":"io.gamemaker.sdfshaders-1.0.0.yyp",},

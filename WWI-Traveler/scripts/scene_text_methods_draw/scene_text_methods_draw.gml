@@ -14,7 +14,6 @@ function scene_text_methods_draw() {
 			var _phrase_len = string_length(_phrase);
 			var _char_count_plus = _char_count + _phrase_len;
 	
-			// TODO: functionize these 
 			// Paragraph break
 			if (_phrase == "<p>") {
 				_y += font_height(font) * line_spacing;
@@ -81,11 +80,11 @@ function scene_text_methods_draw() {
 				p--; 
 				continue;
 			}
-	
-			// Draw last phrase(s) character-by-character
+			
+			// -- DRAW THE PHRASE -- //
+			draw_set(c_white, font);
 			if (_char_count_plus >= characters_opaque_count) {
-				draw_set(c_white, font);
-
+				
 				// Draw each character with fade
 				for (var c = 1; c <= _phrase_len; c++) {
 					var _char = string_char_at(_phrase, c);
@@ -96,22 +95,25 @@ function scene_text_methods_draw() {
 					
 					// Don't pass the end
 					if (_char_count >= _char_count_end) break;
-				}
-				_x = l_margin; // Carriage return
-				continue;
-			}
+				}				
+			} else {
 				
-			// Draw entire phrase at once
-			draw_set(c_white, font);
-			var _t = VIEW_Y - font_height(font);
-			var _b = VIEW_Y + VIEW_H;
-			if (_y >= _t) and (_y <= _b)
-				draw_text(_x, _y, _phrase);
-			_char_count = _char_count_plus;	
-			if (_char_count >= _char_count_end) break;
+				// Draw entire phrase at once
+				draw_set(c_white, font);
+				var _t = VIEW_Y - font_height(font);
+				var _b = VIEW_Y + VIEW_H;
+				if (_y >= _t) and (_y <= _b)
+					draw_text(_x, _y, _phrase);
+
+				_char_count = _char_count_plus;	
+			}
+			
+			// Don't go past the characters we've added
+			if (_char_count >= _char_count_end) 
+				break;
 			
 			// Carriage return
-			_x = l_margin;			
+			_x = l_margin;
 		}
 		story_bot_y = _y;
 	}
