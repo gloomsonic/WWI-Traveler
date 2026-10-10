@@ -14,8 +14,8 @@
   "name":"obj_scene_text",
   "overriddenProperties":[],
   "parent":{
-    "name":"Scenes",
-    "path":"folders/Scenes.yy",
+    "name":"Scene Text",
+    "path":"folders/Scenes/Scene Text.yy",
   },
   "parentObjectId":null,
   "persistent":false,

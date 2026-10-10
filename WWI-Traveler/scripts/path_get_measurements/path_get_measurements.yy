@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"path_get_measurements",
   "parent":{
-    "name":"WWI-Traveler",
-    "path":"WWI-Traveler.yyp",
+    "name":"Helpful Functions",
+    "path":"folders/__Core/Helpful Functions.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

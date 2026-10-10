@@ -1,4 +1,6 @@
 event_user_all();
+scene_text_methods_step();
+scene_text_methods_draw();
 
 // Commit states
 states = new use_states();

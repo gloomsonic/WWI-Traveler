@@ -12,7 +12,7 @@ function combat_manager_methods_turn_phases() {
 				attack_type: Attack_Type.melee,
 			});
 		}	
-		instance_create_depth(0, 0, depth, obj_combat_select_back);
+		instance_create_depth(0, 0, depth, obj_combat_select_back); // 
 	}
 
 	// Record attacked target and subtract damage from its hp
@@ -41,6 +41,7 @@ function combat_manager_methods_turn_phases() {
 		}
 
 		// Ask combat manager to tell us when it's done
+		instance_destroy(obj_combat_select_back);
 		obj_combat_animation_manager.set_callback(turn_end);
 	}
 
@@ -85,6 +86,7 @@ function combat_manager_methods_turn_phases() {
 		}
 	
 		// Ask combat manager to tell us when it's done
+		instance_destroy(obj_combat_select_back);
 		obj_combat_animation_manager.set_callback(turn_end);
 	}
 
@@ -127,7 +129,9 @@ function combat_manager_methods_turn_phases() {
 			var _space = combat_space_get_at_position(active_combatant.team, _row_prev, _col_prev);
 			obj_combat_animation_manager.add_action(new cutscene_move(_other_combatant, _space));
 		}
-		//turn_end();
+		
+		// Ask combat manager to tell us when it's done
+		instance_destroy(obj_combat_select_back);
 		obj_combat_animation_manager.set_callback(turn_end);
 	}
 

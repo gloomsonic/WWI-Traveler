@@ -35,7 +35,7 @@ function combat_manager_methods_action_callbacks() {
 			array_push(combat_log, "You Won");
 			room_goto(rm_camp);
 		} else
-			call_next_frame(turn_start) //turn_start();
+			call_next_frame(turn_start);
 	}
 
 	// Create the player combat options menu

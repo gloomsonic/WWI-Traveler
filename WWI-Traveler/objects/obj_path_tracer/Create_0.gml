@@ -1,6 +1,6 @@
 path_sample_precision = 0.05;
 paths = asset_get_ids(asset_path);
-path_sprites = array_create(array_length(paths));
+path_sprites = [];
 
 path_width = 3;
 //mask_width = 100;

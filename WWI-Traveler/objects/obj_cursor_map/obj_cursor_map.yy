@@ -38,8 +38,8 @@
     "path":"sprites/spr_mouse_cursor/spr_mouse_cursor.yy",
   },
   "spriteMaskId":{
-    "name":"msk_mouse_cursor_64",
-    "path":"sprites/msk_mouse_cursor_64/msk_mouse_cursor_64.yy",
+    "name":"msk_mouse_cursor_128_circle",
+    "path":"sprites/msk_mouse_cursor_128_circle/msk_mouse_cursor_128_circle.yy",
   },
   "visible":true,
 }

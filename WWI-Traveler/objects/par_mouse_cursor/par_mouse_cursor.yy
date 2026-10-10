@@ -13,8 +13,8 @@
   "name":"par_mouse_cursor",
   "overriddenProperties":[],
   "parent":{
-    "name":"WWI-Traveler",
-    "path":"WWI-Traveler.yyp",
+    "name":"Parent Cursor",
+    "path":"folders/Parent Cursor.yy",
   },
   "parentObjectId":null,
   "persistent":false,
