@@ -27,16 +27,6 @@ function scene_text_methods_step() {
 		}
 	}
 
-	// Fade value determined by distance from the end
-	char_get_fade = function(_count, _end) {
-		if (_count < characters_opaque_count) 
-			return 1.0;
-		
-		var _dif = _end - _count;
-		var _alpha = fade_values[array_length(fade_values) - _dif];
-		return _alpha;
-	}
-
 	// Automatically scroll ahead to the next 'wait' phrase
 	next_wait_jump_to = function() {
 		var _next = scene_get_next_wait(my_scene);
