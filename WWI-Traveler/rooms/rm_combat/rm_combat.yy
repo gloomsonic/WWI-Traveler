@@ -8,7 +8,6 @@
   "instanceCreationOrder":[
     {"name":"inst_3254F2E5","path":"rooms/rm_combat/rm_combat.yy",},
     {"name":"inst_17798C7B","path":"rooms/rm_combat/rm_combat.yy",},
-    {"name":"inst_3162964D","path":"rooms/rm_combat/rm_combat.yy",},
     {"name":"inst_104CFAAD","path":"rooms/rm_combat/rm_combat.yy",},
     {"name":"inst_6E3FF85E","path":"rooms/rm_combat/rm_combat.yy",},
     {"name":"inst_7CC0E113","path":"rooms/rm_combat/rm_combat.yy",},
@@ -22,14 +21,15 @@
     {"name":"inst_539F6EDE","path":"rooms/rm_combat/rm_combat.yy",},
     {"name":"inst_55613FDE","path":"rooms/rm_combat/rm_combat.yy",},
     {"name":"inst_178A07CF","path":"rooms/rm_combat/rm_combat.yy",},
+    {"name":"inst_733F6FAD","path":"rooms/rm_combat/rm_combat.yy",},
   ],
   "isDnd":false,
   "layers":[
     {"$GMRInstanceLayer":"","%Name":"Managers","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v4","%Name":"inst_3254F2E5","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3254F2E5","objectId":{"name":"obj_combat_manager","path":"objects/obj_combat_manager/obj_combat_manager.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":32.0,"y":0.0,},
         {"$GMRInstance":"v4","%Name":"inst_17798C7B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_17798C7B","objectId":{"name":"obj_combat_animation_manager","path":"objects/obj_combat_animation_manager/obj_combat_animation_manager.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":64.0,"y":0.0,},
-        {"$GMRInstance":"v4","%Name":"inst_3162964D","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3162964D","objectId":{"name":"obj_cursor_combat","path":"objects/obj_cursor_combat/obj_cursor_combat.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":0.0,},
         {"$GMRInstance":"v4","%Name":"inst_104CFAAD","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_104CFAAD","objectId":{"name":"obj_audio_listener","path":"objects/obj_audio_listener/obj_audio_listener.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1888.0,"y":1024.0,},
+        {"$GMRInstance":"v4","%Name":"inst_733F6FAD","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_733F6FAD","objectId":{"name":"par_mouse_cursor","path":"objects/par_mouse_cursor/par_mouse_cursor.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":0.0,},
       ],"layers":[],"name":"Managers","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Combatant_Player_Back","depth":100,"effectEnabled":true,"effectType":null,"gridX":48,"gridY":48,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v4","%Name":"inst_6E3FF85E","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6E3FF85E","objectId":{"name":"obj_combat_actor_space","path":"objects/obj_combat_actor_space/obj_combat_actor_space.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":768.0,"y":1920.0,},

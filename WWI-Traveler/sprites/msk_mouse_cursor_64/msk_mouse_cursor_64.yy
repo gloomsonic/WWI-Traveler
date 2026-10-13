@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"Parent Cursor",
-    "path":"folders/Parent Cursor.yy",
+    "path":"folders/_Managers/Parent Cursor.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

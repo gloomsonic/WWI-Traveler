@@ -2,6 +2,7 @@ event_inherited();
 self[$ "my_text"] ??= "!!NO TEXT GIVEN!!";
 
 list_margin = 128;
+par_mouse_cursor.add_touchable(id);
 
 // Stretch mask to choice
 draw_set();

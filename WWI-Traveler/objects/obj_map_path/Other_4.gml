@@ -1,3 +1,5 @@
+par_mouse_cursor.add_touchable(id);
+
 // NOTE: Important stuff in Creation Code, so can't use create event. Should we use Variable Defintions?
 
 ///@desc Make path sprite

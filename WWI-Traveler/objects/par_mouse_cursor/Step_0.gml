@@ -1,1 +1,2 @@
-states.execute(Event.step);
+//states.execute(Event.step);
+touch_object(touch_these);

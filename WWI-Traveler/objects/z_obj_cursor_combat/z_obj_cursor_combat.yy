@@ -1,16 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"obj_cursor_scene",
+  "%Name":"z_obj_cursor_combat",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":11,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_cursor_scene",
+  "name":"z_obj_cursor_combat",
   "overriddenProperties":[],
   "parent":{
-    "name":"Scenes",
-    "path":"folders/Scenes.yy",
+    "name":"Combat",
+    "path":"folders/Combat.yy",
   },
   "parentObjectId":{
     "name":"par_mouse_cursor",

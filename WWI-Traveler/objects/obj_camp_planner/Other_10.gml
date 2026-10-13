@@ -7,16 +7,12 @@ on_pressed = function() {
 }
 on_released = function() {
 	instance_create_depth(ROOM_W_H, ROOM_H_H, depth, obj_camp_formation_menu);
-	obj_cursor_camp.delete_touchable(id);
-	//formation_menu_create();
+	par_mouse_cursor.delete_touchable(id);
 }
 
 // State functions
 state_idle = function(_event) {
 	switch(_event) {
-		case Event.step: 
-			//log("idle"); 
-			break;
 		case Event.draw: 
 			draw_self_ext(); 
 			break;
@@ -25,22 +21,16 @@ state_idle = function(_event) {
 
 state_hovered = function(_event) {
 	switch(_event) {
-		case Event.step: 
-			//log("hovered"); 
-			break;
 		case Event.draw: 
-			draw_self_ext(); 
+			draw_self_ext(,,,,,,, c_blue); 
 			break;
 	}
 }
 
 state_held = function(_event) {
 	switch(_event) {
-		case Event.step: 
-			//log("held"); 
-			break;
 		case Event.draw: 
-			draw_self_ext(); 
+			draw_self_ext(,,,,,,, c_red); 
 			break;
 	}
 }

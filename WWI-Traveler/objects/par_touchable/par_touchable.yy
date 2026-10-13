@@ -13,7 +13,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Parent Cursor",
-    "path":"folders/Parent Cursor.yy",
+    "path":"folders/_Managers/Parent Cursor.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -1,0 +1,1 @@
+mask_index = msk_mouse_cursor_128_circle

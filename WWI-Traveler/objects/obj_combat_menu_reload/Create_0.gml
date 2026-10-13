@@ -13,4 +13,4 @@ image_yscale = h / sprite_height;
 // Not touchable if no bullets
 can_reload = my_combatant.inventory.bullets > 0;
 if (can_reload)
-	obj_cursor_combat.add_touchable(id);
+	par_mouse_cursor.add_touchable(id);

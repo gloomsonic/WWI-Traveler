@@ -5,4 +5,4 @@ self [$ "pos"] ??= -1;
 self [$ "my_combatant"] ??= noone;
 states.update();
 
-obj_cursor_camp.add_touchable(id);
+par_mouse_cursor.add_touchable(id);

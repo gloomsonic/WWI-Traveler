@@ -1,6 +1,6 @@
 event_inherited();
 
-obj_cursor_combat.add_touchable(id);
+par_mouse_cursor.add_touchable(id);
 
 back = function() {
 	instance_destroy(obj_combat_select_enemy);

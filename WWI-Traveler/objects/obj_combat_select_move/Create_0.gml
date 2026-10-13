@@ -4,7 +4,7 @@ self[$ "row"] ??= -1;
 self[$ "col"] ??= -1;
 self[$ "my_combatant"] ??= noone;
 
-obj_cursor_combat.add_touchable(id);
+par_mouse_cursor.add_touchable(id);
 
 x = 500 + (col * 800);
 y = 100 + (row * 100);

@@ -1,16 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"obj_cursor_map",
+  "%Name":"z_obj_cursor_camp",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":11,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_cursor_map",
+  "name":"z_obj_cursor_camp",
   "overriddenProperties":[],
   "parent":{
-    "name":"Map",
-    "path":"folders/Map.yy",
+    "name":"Camp",
+    "path":"folders/Camp.yy",
   },
   "parentObjectId":{
     "name":"par_mouse_cursor",
@@ -37,9 +37,6 @@
     "name":"spr_mouse_cursor",
     "path":"sprites/spr_mouse_cursor/spr_mouse_cursor.yy",
   },
-  "spriteMaskId":{
-    "name":"msk_mouse_cursor_128_circle",
-    "path":"sprites/msk_mouse_cursor_128_circle/msk_mouse_cursor_128_circle.yy",
-  },
+  "spriteMaskId":null,
   "visible":true,
 }

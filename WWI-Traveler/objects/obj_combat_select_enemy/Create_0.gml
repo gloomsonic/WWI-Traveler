@@ -1,7 +1,7 @@
 event_inherited();
 
 self[$ "my_combatant"] ??= noone;
-obj_cursor_combat.add_touchable(id);
+par_mouse_cursor.add_touchable(id);
 
 draw_set(c_black,, fa_center, fa_middle);
 image_xscale = 700 / sprite_width;
