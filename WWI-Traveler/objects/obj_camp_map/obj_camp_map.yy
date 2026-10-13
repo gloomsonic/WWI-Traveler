@@ -1,18 +1,21 @@
 {
   "$GMObject":"",
-  "%Name":"obj_path_tracer",
+  "%Name":"obj_camp_map",
   "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":10,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":12,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_path_tracer",
+  "name":"obj_camp_map",
   "overriddenProperties":[],
   "parent":{
-    "name":"Map",
-    "path":"folders/Map.yy",
+    "name":"Camp",
+    "path":"folders/Camp.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"par_touchable",
+    "path":"objects/par_touchable/par_touchable.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,7 +33,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_camp_map",
+    "path":"sprites/spr_camp_map/spr_camp_map.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

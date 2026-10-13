@@ -1,3 +1,5 @@
+// NOTE: Important stuff in Creation Code, so can't use create event. Should we use Variable Defintions?
+
 ///@desc Make path sprite
 var _path = asset_get_index(my_path);
 
@@ -38,3 +40,12 @@ surface_reset_target();
 // Move to top left of path position, accounting for sprite margin
 x = _l - _margin_h;
 y = _t - _margin_h; 
+
+// Note starting and ending map locations
+var _path = asset_get_index(my_path);
+var _xs = path_get_x(_path, 0);
+var _ys = path_get_y(_path, 0);
+location_start = instance_position(_xs, _ys, obj_map_location);
+var _xe = path_get_x(_path, 1);
+var _ye = path_get_y(_path, 1);
+location_end = instance_position(_xe, _ye, obj_map_location);

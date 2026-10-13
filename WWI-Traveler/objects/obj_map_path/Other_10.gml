@@ -7,14 +7,17 @@ on_pressed = function() {
 }
 on_released = function() {
 	ENCOUNTER_QUEUE = variable_clone(my_encounters);
+	MAP_PATH_SELECTED = my_path;
 }
 
 // State functions
 state_idle = function(_event) {
 	switch(_event) {
 		case Event.draw: 
-			image_blend = c_white;
-			draw_self_ext(); 	
+			if (MAP_PATH_SELECTED == my_path)
+				draw_self_ext(,,,,,,, c_yellow); 
+			else
+				draw_self_ext(); 	
 			break;
 	}
 }
@@ -22,8 +25,7 @@ state_idle = function(_event) {
 state_hovered = function(_event) {
 	switch(_event) {
 		case Event.draw: 
-			image_blend = c_blue;
-			draw_self_ext(); 
+			draw_self_ext(,,,,,,, c_blue); 
 			break;
 	}
 }
@@ -31,8 +33,7 @@ state_hovered = function(_event) {
 state_held = function(_event) {
 	switch(_event) {
 		case Event.draw: 
-			image_blend = c_red;
-			draw_self_ext(); 
+			draw_self_ext(,,,,,,, c_red); 
 			break;
 	}
 }
