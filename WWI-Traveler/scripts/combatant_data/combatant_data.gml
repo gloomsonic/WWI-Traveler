@@ -24,3 +24,14 @@ function combatant_sprites(_idle, _attack, _hit) constructor {
 	attack = _attack;
 	hit = _hit;
 }
+
+// Scales to set combat actors to based on their team/row
+#macro PARTY_SCALE_R1 1.60
+#macro PARTY_BLEND_R1 make_colour_rgb(255, 255, 255)
+#macro PARTY_SCALE_R0 1.30
+#macro PARTY_BLEND_R0 make_colour_rgb(235, 235, 235)
+#macro ENEMY_SCALE_R0 0.90
+#macro ENEMY_BLEND_R0 make_colour_rgb(215, 215, 215)
+#macro ENEMY_SCALE_R1 0.65
+#macro ENEMY_BLEND_R1 make_colour_rgb(195, 195, 195)
+

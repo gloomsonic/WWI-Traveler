@@ -233,6 +233,7 @@
     {"id":{"name":"spr_combatant_player_idle","path":"sprites/spr_combatant_player_idle/spr_combatant_player_idle.yy",},},
     {"id":{"name":"spr_map_location","path":"sprites/spr_map_location/spr_map_location.yy",},},
     {"id":{"name":"spr_map_node","path":"sprites/spr_map_node/spr_map_node.yy",},},
+    {"id":{"name":"spr_map_path","path":"sprites/spr_map_path/spr_map_path.yy",},},
     {"id":{"name":"spr_map_pointer","path":"sprites/spr_map_pointer/spr_map_pointer.yy",},},
     {"id":{"name":"spr_mouse_cursor","path":"sprites/spr_mouse_cursor/spr_mouse_cursor.yy",},},
     {"id":{"name":"spr_music","path":"sprites/spr_music/spr_music.yy",},},

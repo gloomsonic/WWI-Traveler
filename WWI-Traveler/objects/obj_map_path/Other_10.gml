@@ -6,7 +6,7 @@ on_pressed = function() {
 	log("pressed");
 }
 on_released = function() {
-	log("released");
+	ENCOUNTER_QUEUE = variable_clone(my_encounters);
 }
 
 // State functions

@@ -1,1 +1,0 @@
-log(instance_number(obj_combat_select_back))//obj_combat_menu_attack_melee))
