@@ -47,6 +47,8 @@ ENEMY_PARTIES = {
 // Map stuff
 #macro MAP_PATH_SELECTED global.data.map_path_selected
 MAP_PATH_SELECTED = noone;
+#macro LOCATION_CURRENT global.data.location_current
+LOCATION_CURRENT = location_1;
 
 // Stores 'keys' referring to the player's current map location and prior locations, as an [x,y] array
 global.data.map_location_keys_visited = [];
