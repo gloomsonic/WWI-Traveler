@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"next_encounter_check_start",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"next_encounter_check_start",
+  "parent":{
+    "name":"Camp",
+    "path":"folders/Camp.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -7,14 +7,14 @@ on_pressed = function() {
 }
 on_released = function() {
 	ENCOUNTER_QUEUE = variable_clone(my_encounters);
-	MAP_PATH_SELECTED = my_path;
+	MAP_PATH_SELECTED = path_asset;
 }
 
 // State functions
 state_idle = function(_event) {
 	switch(_event) {
 		case Event.draw: 
-			if (MAP_PATH_SELECTED == my_path)
+			if (MAP_PATH_SELECTED == path_asset)
 				draw_self_ext(,,,,,,, c_lime); 
 			else
 				draw_self_ext(); 	
@@ -25,7 +25,7 @@ state_idle = function(_event) {
 state_hovered = function(_event) {
 	switch(_event) {
 		case Event.draw: 
-			if (MAP_PATH_SELECTED == my_path)
+			if (MAP_PATH_SELECTED == path_asset)
 				draw_self_ext(,,,,,,, c_lime); 
 			else
 				draw_self_ext(,,,,,,, c_blue); 
@@ -36,7 +36,7 @@ state_hovered = function(_event) {
 state_held = function(_event) {
 	switch(_event) {
 		case Event.draw: 
-			if (MAP_PATH_SELECTED == my_path)
+			if (MAP_PATH_SELECTED == path_asset)
 				draw_self_ext(,,,,,,, c_lime); 
 			else
 				draw_self_ext(,,,,,,, c_red); 

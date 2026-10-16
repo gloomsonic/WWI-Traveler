@@ -3,6 +3,11 @@ global.data = {};
 #macro ENCOUNTER_QUEUE global.data.encounter_queue
 ENCOUNTER_QUEUE = [];
 
+// -- Scene stuff -- //
+#macro NEXT_SCENE global.data.next_scene
+NEXT_SCENE = noone;
+
+// -- Combat stuff -- //
 // Default groups of combatant sprites
 #macro PLAYER_COMBAT_SPRITES global.data.player_combatant_sprites
 PLAYER_COMBAT_SPRITES = new combatant_sprites(spr_combatant_player_idle, spr_combatant_attack, spr_combatant_guard);
@@ -44,11 +49,11 @@ ENEMY_PARTIES = {
 	],
 }
 
-// Map stuff
+// -- Map stuff -- //
 #macro MAP_PATH_SELECTED global.data.map_path_selected
 MAP_PATH_SELECTED = noone;
 #macro LOCATION_CURRENT global.data.location_current
 LOCATION_CURRENT = location_1;
 
-// Stores 'keys' referring to the player's current map location and prior locations, as an [x,y] array
-global.data.map_location_keys_visited = [];
+//// Stores 'keys' referring to the player's current map location and prior locations, as an [x,y] array
+//global.data.map_location_keys_visited = [];

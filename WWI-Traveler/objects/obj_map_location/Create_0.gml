@@ -12,3 +12,12 @@ for (var i = 0; i < array_length(_paths); i++) {
 	if (!position_meeting(_x, _y, id)) continue;
 	array_push(open_paths, _path);
 }
+
+// Make current location's open paths touchable
+on_room_start = function() {
+	if (LOCATION_CURRENT != id) exit;
+	with (obj_map_path) {
+		if (array_get_index(other.open_paths, path_asset) == -1) continue;
+		par_mouse_cursor.add_touchable(id);
+	}
+}

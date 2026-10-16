@@ -189,6 +189,7 @@
     {"id":{"name":"map_location_visited","path":"scripts/map_location_visited/map_location_visited.yy",},},
     {"id":{"name":"mod2","path":"scripts/mod2/mod2.yy",},},
     {"id":{"name":"mouse_cursor_methods","path":"scripts/mouse_cursor_methods/mouse_cursor_methods.yy",},},
+    {"id":{"name":"next_encounter_check_start","path":"scripts/next_encounter_check_start/next_encounter_check_start.yy",},},
     {"id":{"name":"object_get_instances","path":"scripts/object_get_instances/object_get_instances.yy",},},
     {"id":{"name":"parse_story","path":"scripts/parse_story/parse_story.yy",},},
     {"id":{"name":"path_get_measurements","path":"scripts/path_get_measurements/path_get_measurements.yy",},},

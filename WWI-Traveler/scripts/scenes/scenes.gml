@@ -20,6 +20,24 @@ scene_add(JSON_SCENES.piobare);
 scene_add(JSON_SCENES.armor);
 scene_add(JSON_SCENES.forest_trench);
 
+// Scene constructor
+function scene(_story, _choices, _name, _sprite) constructor {
+	story = _story;
+	choices = _choices;
+	name = _name;
+	sprite = _sprite;
+}
+
+// Parse a json_scene into a real scene on the global struct and return its value
+function scene_add(_json_scene) {
+	draw_set();
+	var _story = parse_story(_json_scene.story);
+	var _choices =_json_scene.choices;
+	var _name = _json_scene.name;
+	var _sprite = asset_get_index(_json_scene.sprite);
+	array_push(SCENES, new scene(_story, _choices, _name, _sprite));
+}
+
 // Get the scene struct with the supplied name
 function scene_get(_name) {
 	for (var i = 0; i < array_length(SCENES); i++) {
@@ -28,21 +46,3 @@ function scene_get(_name) {
 		return _scene;
 	}
 }
-
-//// Add scenes to array
-//var _ambulance = scene_add(JSON_SCENES.ambulance);
-//var _keening = scene_add(JSON_SCENES.keening);
-//var _crater = scene_add(JSON_SCENES.crater);
-//var _grove = scene_add(JSON_SCENES.grove);
-//var _egg = scene_add(JSON_SCENES.egg);
-
-//// Separate scenes into biomes
-//#macro BIOMES global.scene_biomes
-//BIOMES = {
-//	plain:    [_ambulance],
-//    city:     [_keening, _egg],
-//    mountain: [],
-//    swamp:    [],
-//    forest:   [_grove],
-//    river:    [_crater],
-//}

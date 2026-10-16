@@ -10,8 +10,8 @@ switch (room) {
         break;
 
     case rm_scene:
-        if (!is_struct(global.pending_scene)) break;
-        switch (global.pending_scene.name) {
+		if (NEXT_SCENE == noone) break;
+		switch (NEXT_SCENE.name) {
             case "grove":
                 fmod_studio_system_set_parameter_by_name_with_label(SCENE_AUDIO, "Grove");
                 break;

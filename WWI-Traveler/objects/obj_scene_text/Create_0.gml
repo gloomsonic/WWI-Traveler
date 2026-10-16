@@ -10,7 +10,7 @@ states.define(State.choosing, state_scene_choosing);
 states.queue(State.reading);
 
 // Load the scene to play
-var _scene = scene_get("grove"); // TODO: don't just call the same story forever lmao
+var _scene = NEXT_SCENE; //var _scene = scene_get("grove"); // TODO: What if we want to hardcode one for when we didn't pick a path?
 my_scene = variable_clone(_scene);
 instance_create_depth(0, 0, depth+1, obj_scene_image, {
 	sprite_index: my_scene.sprite,
@@ -35,5 +35,4 @@ fade_spd = 0.05;
 fade_values = [];
 characters_opaque_count = 0;
 
-//
 sounds = {}; // Keys sound name strings, Values sound path ref strings
