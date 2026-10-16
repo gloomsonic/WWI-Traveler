@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"next_encounter_check_start",
   "parent":{
-    "name":"Camp",
-    "path":"folders/Camp.yy",
+    "name":"WWI-Traveler",
+    "path":"WWI-Traveler.yyp",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

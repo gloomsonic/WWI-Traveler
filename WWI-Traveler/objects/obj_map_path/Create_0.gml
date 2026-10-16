@@ -5,7 +5,7 @@ self [$ "my_path"] ??= noone;
 path_sample_precision = 0.05;
 path_width = 3;
 
-// Make path sprite
+// Make path sprite, and note start/end location
 on_room_start = function() {
 	path_asset = asset_get_index(my_path); // NOTE: Important stuff in Room Creation Code, so can't use create event. Should we use Variable Defintions?
 

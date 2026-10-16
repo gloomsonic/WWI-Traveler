@@ -8,6 +8,7 @@ on_pressed = function() {
 on_released = function() {
 	ENCOUNTER_QUEUE = variable_clone(my_encounters);
 	MAP_PATH_SELECTED = path_asset;
+	LOCATION_NEXT = location_end;
 }
 
 // State functions

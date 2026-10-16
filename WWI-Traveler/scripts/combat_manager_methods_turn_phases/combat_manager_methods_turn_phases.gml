@@ -33,7 +33,8 @@ function combat_manager_methods_action_callbacks() {
 			room_goto(rm_game_over);
 		} else if (array_length(ENEMY_PARTY) <= 0) {
 			array_push(combat_log, "You Won");
-			room_goto(rm_camp);
+			next_encounter_check_start();
+			//room_goto(rm_camp);
 		} else
 			call_next_frame(turn_start);
 	}
