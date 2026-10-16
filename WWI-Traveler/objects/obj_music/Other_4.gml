@@ -1,8 +1,9 @@
 switch (room) {
     case rm_camp:
+	case rm_map: // NOTE: map is inside of camp, not sure if this is the correct way to tell it 'keep playing whatever was playing during camp'
 		fmod_studio_system_set_parameter_by_name_with_label(SCENE_AUDIO, "Camp");
         break;
-    case rm_map:
+    case rm_start:
         fmod_studio_system_set_parameter_by_name_with_label(SCENE_AUDIO, "Menu");
         break;
 	case rm_combat:

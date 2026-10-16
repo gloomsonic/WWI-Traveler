@@ -6,6 +6,7 @@ on_pressed = function() {
 	log("pressed");
 }
 on_released = function() {
+	if (MAP_PATH_SELECTED == noone) return;
 	next_encounter_check_start();
 }
 

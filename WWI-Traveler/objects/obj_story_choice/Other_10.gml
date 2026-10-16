@@ -6,7 +6,7 @@ on_pressed = function() {
 	log("pressed");
 }
 on_released = function() {
-	room_goto(rm_combat);
+	next_encounter_check_start();
 }
 
 // State functions
