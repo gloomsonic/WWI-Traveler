@@ -18,9 +18,16 @@ state_idle = function(_event) {
 	switch(_event) {
 		case Event.step: 
 			break;
-		case Event.draw:  
-			draw_set();
-			draw_self_ext();
+		case Event.draw: 
+		
+			// Choose color
+			var _c = c_white;
+			if (obj_camp_formation_menu.get_active_space() == id)
+				_c = c_lime;
+				
+			// Draw combatant space/name	
+			draw_set(_c);
+			draw_self_ext(,,,,,,, _c);
 			if (my_combatant != noone)
 				draw_text(x, y, my_combatant.name);
 			else
@@ -34,6 +41,19 @@ state_hovered = function(_event) {
 		case Event.step: 
 			break;
 		case Event.draw: 
+		
+			// Choose color
+			var _c = c_blue;
+			if (obj_camp_formation_menu.get_active_space() == id)
+				_c = c_lime;
+			draw_set(_c);
+			
+			// Draw combatant space/name
+			draw_self_ext(,,,,,,, _c);
+			if (my_combatant != noone)
+				draw_text(x, y, my_combatant.name);
+			else
+				draw_text(x, y, "noone");		
 			break;
 	}
 }
@@ -43,6 +63,19 @@ state_held = function(_event) {
 		case Event.step: 
 			break;
 		case Event.draw: 
+		
+			// Choose color
+			var _c = c_red;
+			if (obj_camp_formation_menu.get_active_space() == id)
+				_c = c_lime;
+	
+			// Draw combatant space/name
+			draw_set(_c);
+			draw_self_ext(,,,,,,, _c);
+			if (my_combatant != noone)
+				draw_text(x, y, my_combatant.name);
+			else
+				draw_text(x, y, "noone");		
 			break;
 	}
 }

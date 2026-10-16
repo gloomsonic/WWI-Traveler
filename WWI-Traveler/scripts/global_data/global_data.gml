@@ -58,7 +58,7 @@ MAP_PATH_SELECTED = noone;
 #macro LOCATION_CURRENT global.data.location_current
 LOCATION_CURRENT = location_1;
 #macro LOCATION_NEXT global.data.location_next
-LOCATION_NEXT = noone;
+LOCATION_NEXT = location_1;
 
 //// Stores 'keys' referring to the player's current map location and prior locations, as an [x,y] array
 //global.data.map_location_keys_visited = [];
