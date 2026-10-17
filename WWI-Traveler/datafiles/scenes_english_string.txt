@@ -123,6 +123,6 @@
 		],
 		
 		"name": "forest trench",
-		"sprite": "spr_scene_blank",
+		"sprite": "spr_scene_forest_trench",
 	}
 }

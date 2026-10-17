@@ -195,7 +195,6 @@
     {"id":{"name":"path_get_measurements","path":"scripts/path_get_measurements/path_get_measurements.yy",},},
     {"id":{"name":"room_transition_start","path":"scripts/room_transition_start/room_transition_start.yy",},},
     {"id":{"name":"round_n","path":"scripts/round_n/round_n.yy",},},
-    {"id":{"name":"scene_constructor","path":"scripts/scene_constructor/scene_constructor.yy",},},
     {"id":{"name":"scene_text_methods_draw","path":"scripts/scene_text_methods_draw/scene_text_methods_draw.yy",},},
     {"id":{"name":"scene_text_methods_step","path":"scripts/scene_text_methods_step/scene_text_methods_step.yy",},},
     {"id":{"name":"scenes_functions","path":"scripts/scenes_functions/scenes_functions.yy",},},
@@ -244,6 +243,7 @@
     {"id":{"name":"spr_music","path":"sprites/spr_music/spr_music.yy",},},
     {"id":{"name":"spr_planner","path":"sprites/spr_planner/spr_planner.yy",},},
     {"id":{"name":"spr_scene_blank","path":"sprites/spr_scene_blank/spr_scene_blank.yy",},},
+    {"id":{"name":"spr_scene_forest_trench","path":"sprites/spr_scene_forest_trench/spr_scene_forest_trench.yy",},},
     {"id":{"name":"spr_scene_grove","path":"sprites/spr_scene_grove/spr_scene_grove.yy",},},
     {"id":{"name":"spr_sfx_test","path":"sprites/spr_sfx_test/spr_sfx_test.yy",},},
     {"id":{"name":"spr_touchable","path":"sprites/spr_touchable/spr_touchable.yy",},},
@@ -268,5 +268,6 @@
     {"$GMTextureGroup":"","%Name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"name":"Default","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
     {"$GMTextureGroup":"","%Name":"scene_grove","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"name":"scene_grove","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
     {"$GMTextureGroup":"","%Name":"scene_blank","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"name":"scene_blank","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
+    {"$GMTextureGroup":"","%Name":"scene_forest_trench","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"name":"scene_forest_trench","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
   ],
 }
