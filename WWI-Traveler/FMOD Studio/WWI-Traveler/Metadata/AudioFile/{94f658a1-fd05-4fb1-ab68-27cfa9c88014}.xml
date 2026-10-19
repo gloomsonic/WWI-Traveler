@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{94f658a1-fd05-4fb1-ab68-27cfa9c88014}">
+		<property name="assetPath">
+			<value>snd_bullet_miss-003.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.63808333333333334</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{29797969-63b7-4dc9-b797-f6935470f7dd}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -24,6 +24,8 @@
 
 // SFX
 #macro EV_GUNSHOT				"event:/SFX/Combat/Test Gunshot"
+#macro EV_BULLET_HIT			"event:/SFX/Combat/Bullet_Hit"
+#macro EV_BULLET_MISS			"event:/SFX/Combat/Bullet_Miss"
 #macro EV_PUNCH					"event:/SFX/Combat/Test Punch"
 #macro EV_MISS					"event:/SFX/Combat/Test Miss"
 #macro EV_TYPEWRITER			"event:/SFX/Scene/General/Typewriter"
