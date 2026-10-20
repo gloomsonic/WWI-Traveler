@@ -243,6 +243,7 @@
     {"id":{"name":"spr_music","path":"sprites/spr_music/spr_music.yy",},},
     {"id":{"name":"spr_planner","path":"sprites/spr_planner/spr_planner.yy",},},
     {"id":{"name":"spr_scene_blank","path":"sprites/spr_scene_blank/spr_scene_blank.yy",},},
+    {"id":{"name":"spr_scene_crater","path":"sprites/spr_scene_crater/spr_scene_crater.yy",},},
     {"id":{"name":"spr_scene_forest_trench","path":"sprites/spr_scene_forest_trench/spr_scene_forest_trench.yy",},},
     {"id":{"name":"spr_scene_grove","path":"sprites/spr_scene_grove/spr_scene_grove.yy",},},
     {"id":{"name":"spr_sfx_test","path":"sprites/spr_sfx_test/spr_sfx_test.yy",},},

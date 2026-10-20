@@ -38,7 +38,7 @@
 		],
 		
 		"name": "crater",
-		"sprite": "spr_scene_blank",
+		"sprite": "spr_scene_crater",
 	},
 	
 	"grove":
