@@ -1,1 +1,0 @@
-par_mouse_cursor.add_touchable(id);

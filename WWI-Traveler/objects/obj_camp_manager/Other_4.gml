@@ -1,0 +1,1 @@
+camp_state_set(Camp_State.top);

@@ -7,7 +7,7 @@ on_pressed = function() {
 }
 on_released = function() {
 	instance_create_depth(ROOM_W_H, ROOM_H_H, depth, obj_camp_formation_menu);
-	par_mouse_cursor.delete_touchable(id);
+	camp_state_set(Camp_State.planner);
 }
 
 // State functions

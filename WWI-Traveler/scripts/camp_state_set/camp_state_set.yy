@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"camp_state_set",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"camp_state_set",
+  "parent":{
+    "name":"Camp",
+    "path":"folders/Camp.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

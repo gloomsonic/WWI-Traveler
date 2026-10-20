@@ -58,4 +58,9 @@ function mouse_cursor_methods() {
 		if (_index == -1) return;
 		array_delete(touch_these, _index, 1);
 	}
+	
+	// Reset touchable array to nothing
+	clear_touchables = function() {
+		touch_these = [];
+	}
 }
