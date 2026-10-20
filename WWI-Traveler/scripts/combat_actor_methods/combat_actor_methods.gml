@@ -1,23 +1,4 @@
 function combat_actor_methods() {
-	
-	// Default update method for 'cutscene' actions
-	update = function() {
-		timer++;
-		return timer >= duration;
-	}
-
-	// Update method for cutscene_move action
-	update_move = function(_space) {
-		timer++;
-		if (timer >= duration) {
-			x = _space.x;
-			y = _space.y;
-			layer = _space.layer;
-			update_scale();
-			return true;
-		}
-		return false;
-	}
 
 	// Reset timer/sprite for cutscene actions
 	reset = function() {

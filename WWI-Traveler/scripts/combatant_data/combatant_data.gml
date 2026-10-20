@@ -19,9 +19,9 @@ function combatant_data(_cpu, _team, _row, _col, _hp, _spd, _name, _sprites, _we
 	}
 }
 
-function combatant_sprites(_idle, _attack, _hit, _attack_ranged) constructor {
+function combatant_sprites(_idle, _attack_melee, _hit, _attack_ranged) constructor {
 	idle = _idle;
-	attack = _attack;
+	attack_melee = _attack_melee;
 	hit = _hit;
 	attack_ranged = _attack_ranged;
 }
@@ -35,4 +35,3 @@ function combatant_sprites(_idle, _attack, _hit, _attack_ranged) constructor {
 #macro ENEMY_BLEND_R0 make_colour_rgb(215, 215, 215)
 #macro ENEMY_SCALE_R1 0.65
 #macro ENEMY_BLEND_R1 make_colour_rgb(195, 195, 195)
-

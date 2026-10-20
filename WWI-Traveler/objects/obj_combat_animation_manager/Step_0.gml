@@ -1,7 +1,7 @@
 if (callback == undefined)
 	exit;
 
-// 
+// Update first action in each lane
 var _active_lanes = [];
 for (var i = 0; i < array_length(cutscene_actions); i++) {
 	var _action = cutscene_actions[i];
