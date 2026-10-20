@@ -1,4 +1,5 @@
 function combat_manager_methods_turn_phases() {
+	
 	// Spawn buttons to select enemy combatants
 	on_attack_melee_selected = function() {	
 		combat_menu_destroy();
@@ -12,7 +13,7 @@ function combat_manager_methods_turn_phases() {
 				attack_type: Attack_Type.melee,
 			});
 		}	
-		instance_create_depth(0, 0, depth, obj_combat_select_back); // 
+		instance_create_depth(0, 0, depth, obj_combat_select_back);
 	}
 
 	// Record attacked target and subtract damage from its hp
@@ -24,20 +25,25 @@ function combat_manager_methods_turn_phases() {
 		var _weapon = active_combatant.my_weapon;
 		var _accuracy = attack_melee_get_accuracy(_weapon, active_combatant, _target);
 		var _roll = irandom(100);
+		var _target_actor = combatant_get_actor(_target);
 	
 		// Execute and log hit
 		if (_roll <= _accuracy) {
 			var _damage = _weapon.damage_melee;
 			_target.hp -= _damage;
+			
+			obj_combat_animation_manager.add_action(new cutscene_hit(_target, _damage));
 			array_push(combat_log, $"{_target.name} took {_damage} damage");
-			obj_combat_animation_manager.add_action(new cutscene_hit(_target, _damage));	
-		} else
+			audio_oneshot_3d(EV_PUNCH, _target_actor.x, _target_actor.y);	
+		} else {
 			array_push(combat_log, $"{active_combatant.name} missed");
+			audio_oneshot_3d(EV_MISS, _target_actor.x, _target_actor.y);
+		}
 
 		// Check dead
 		if (_target.hp <= 0) {
-			array_push(combat_log, $"{_target.name} died");
 			obj_combat_animation_manager.add_action(new cutscene_die(_target));
+			array_push(combat_log, $"{_target.name} died");
 		}
 
 		// Ask combat manager to tell us when it's done
@@ -64,25 +70,34 @@ function combat_manager_methods_turn_phases() {
 	// Record attacked target and subtract damage from its hp
 	attack_ranged = function(_target) {
 		array_push(combat_log, $"{active_combatant.name} shot {_target.name}");
+		obj_combat_animation_manager.add_action(new cutscene_attack_ranged(active_combatant, _target));
+		var _active_actor = combatant_get_actor(active_combatant);
+		audio_oneshot_3d(EV_GUNSHOT, _active_actor.x, _active_actor.y);
 	
 		// Roll to hit
 		var _weapon = active_combatant.my_weapon;
 		var _accuracy = attack_ranged_get_accuracy(_weapon, active_combatant, _target);
 		var _roll = irandom(100);
 		_weapon.ammo_remaining -= 1;
+		var _target_actor = combatant_get_actor(_target);
 	
 		// Execute and log hit
 		if (_roll <= _accuracy) {
 			var _damage = _weapon.damage_ranged;
 			_target.hp -= _damage;
+			
+			obj_combat_animation_manager.add_action(new cutscene_hit(_target, _damage));
 			array_push(combat_log, $"{_target.name} took {_damage} damage");
-		} else
+			audio_oneshot_3d(EV_BULLET_HIT, _target_actor.x, _target_actor.y);
+		} else {
 			array_push(combat_log, $"{active_combatant.name} missed");
+			audio_oneshot_3d(EV_BULLET_MISS, _target_actor.x, _target_actor.y);
+		}
 
 		// Check dead
 		if (_target.hp <= 0) {
-			array_push(combat_log, $"{_target.name} died");
 			obj_combat_animation_manager.add_action(new cutscene_die(_target));
+			array_push(combat_log, $"{_target.name} died");
 		}
 	
 		// Ask combat manager to tell us when it's done

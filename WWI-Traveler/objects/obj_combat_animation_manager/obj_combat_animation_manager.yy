@@ -9,8 +9,8 @@
   "name":"obj_combat_animation_manager",
   "overriddenProperties":[],
   "parent":{
-    "name":"Combat Actor",
-    "path":"folders/Combat/Combat Actor.yy",
+    "name":"Combat Animation",
+    "path":"folders/Combat/Combat Animation.yy",
   },
   "parentObjectId":null,
   "persistent":false,
