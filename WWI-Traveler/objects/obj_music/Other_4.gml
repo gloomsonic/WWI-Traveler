@@ -11,8 +11,8 @@ switch (room) {
         break;
 
     case rm_scene:
-		if (NEXT_SCENE == noone) break;
-		switch (NEXT_SCENE.name) {
+		if (SCENE_NEXT == noone) break;
+		switch (SCENE_NEXT.name) {
             case "grove":
                 fmod_studio_system_set_parameter_by_name_with_label(SCENE_AUDIO, "Grove");
                 break;

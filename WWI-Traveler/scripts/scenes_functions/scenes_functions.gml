@@ -1,4 +1,4 @@
-// Returns the index of the next 'wait' phrase
+// Returns the index of the earliest 'wait' phrase
 function scene_get_next_wait(_scene) {
 	var _story = _scene.story;
 	

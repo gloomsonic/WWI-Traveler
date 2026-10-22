@@ -10,8 +10,8 @@
   "name":"obj_scene_image",
   "overriddenProperties":[],
   "parent":{
-    "name":"Scenes",
-    "path":"folders/Scenes.yy",
+    "name":"Scene Image",
+    "path":"folders/Scenes/Scene Image.yy",
   },
   "parentObjectId":null,
   "persistent":false,

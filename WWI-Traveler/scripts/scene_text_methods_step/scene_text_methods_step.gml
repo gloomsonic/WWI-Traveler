@@ -13,7 +13,7 @@ function scene_text_methods_step() {
 		scroll_y(_yto);
 	}
 
-	//
+	// Nudge fades closer to 1, then delete them and increment 'characters_opaque_count'
 	increment_char_fades = function() {
 		for (var f = 0; f < array_length(fade_values); f++) {
 			fade_values[f] += fade_spd;
@@ -37,7 +37,7 @@ function scene_text_methods_step() {
 		scroll_y(_text_bot - ROOM_H_H);
 	}
 
-	// Stop grabbing new characters to fade past '_end'
+	// Delete any fades past '_end'
 	truncate_fades = function(_count, _end) {
 		if (_end < _count) return;
 		var _dif = _end - _count;

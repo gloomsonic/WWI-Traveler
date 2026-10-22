@@ -1,73 +1,73 @@
-///@desc states
-state_scene_reading = function(_event) {
-	switch(_event) {
-		case Event.enter:
-			audio_play_tracked("typewriter", EV_TYPEWRITER);
-			break;
-		case Event.step: 
-			scroll_page();
-			increment_char_fades();
+/////@desc states
+//state_scene_reading = function(_event) {
+//	switch(_event) {
+//		case Event.enter:
+//			audio_play_tracked("typewriter", EV_TYPEWRITER);
+//			break;
+//		case Event.step: 
+//			scroll_page();
+//			increment_char_fades();
 			
-			// Add new characters
-			for (var i = char_spd-1; i >= 0; i--) {
-				var _off = i * (fade_spd / char_spd);
-				array_push(fade_values, _off);
-			}
+//			// Add new characters
+//			for (var i = char_spd-1; i >= 0; i--) {
+//				var _off = i * (fade_spd / char_spd);
+//				array_push(fade_values, _off);
+//			}
 			
-			// Exit state
-			check_choosing();
-			break;
-		case Event.draw:
-			draw_phrases();
-			break;
-		case Event.final:
-			break;
-	}
-}
+//			// Exit state
+//			check_choosing();
+//			break;
+//		case Event.draw:
+//			draw_phrases();
+//			break;
+//		case Event.final:
+//			break;
+//	}
+//}
 
-state_scene_waiting = function(_event) {
-	switch(_event) {
-		case Event.enter:
-			audio_stop_tracked("typewriter");
-			break;
-		case Event.step: 
-			scroll_page();
-			increment_char_fades();
+//state_scene_waiting = function(_event) {
+//	switch(_event) {
+//		case Event.enter:
+//			audio_stop_tracked("typewriter");
+//			break;
+//		case Event.step: 
+//			scroll_page();
+//			increment_char_fades();
 		
-			// Exit state -- NOTE: should this somehow be a touchable callback?
-			if (mouse_check_button_pressed(mb_left)) {
-				var _wait = scene_get_next_wait(my_scene);
-				array_delete(my_scene.story, _wait, 1);
-				next_wait_jump_to();
+//			// Exit state -- NOTE: should this somehow be a touchable callback?
+//			if (mouse_check_button_pressed(mb_left)) {
+//				var _wait = scene_get_next_wait(my_scene);
+//				array_delete(my_scene.story, _wait, 1);
+//				next_wait_jump_to();
 				
-				states.queue(State.reading);
-				check_choosing();
-			}
-			break;
-		case Event.draw:
-			draw_phrases();
-			break;
-		case Event.final:
-			break;
-	}
-}
+//				states.queue(State.reading);
+//				check_choosing();
+//			}
+//			break;
+//		case Event.draw:
+//			draw_phrases();
+//			break;
+//		case Event.final:
+//			break;
+//	}
+//}
 
-state_scene_choosing = function(_event) {
-	switch(_event) {
-		case Event.enter:
-			audio_stop_tracked("typewriter");
-			audio_oneshot(EV_TYPEWRITER_END);
-			var _story_len = story_character_count + array_length(fade_values);
-			truncate_fades(characters_opaque_count, _story_len);
-			spawn_choices();
-			break;
-		case Event.step: 
-			scroll_page();
-			break;
-		case Event.draw:
-			draw_phrases();
-			break;
-		case Event.final:
-			break;
-	}
-}
+//state_scene_choosing = function(_event) {
+//	switch(_event) {
+//		case Event.enter:
+//			audio_stop_tracked("typewriter");
+//			audio_oneshot(EV_TYPEWRITER_END);
+//			var _story_len = story_character_count + array_length(fade_values);
+//			truncate_fades(characters_opaque_count, _story_len);
+//			spawn_choices();
+//			break;
+//		case Event.step: 
+//			scroll_page();
+//			break;
+//		case Event.draw:
+//			draw_phrases();
+//			break;
+//		case Event.final:
+//			break;
+//	}
+//}

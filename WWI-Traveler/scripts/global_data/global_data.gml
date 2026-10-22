@@ -4,8 +4,8 @@ global.data = {};
 ENCOUNTER_QUEUE = [];
 
 // -- Scene stuff -- //
-#macro NEXT_SCENE global.data.next_scene
-NEXT_SCENE = noone;
+#macro SCENE_NEXT global.data.scene_next
+SCENE_NEXT = noone;
 
 // -- Combat stuff -- //
 // Default groups of combatant sprites

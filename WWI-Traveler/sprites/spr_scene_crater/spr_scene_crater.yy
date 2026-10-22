@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Scene Sprites",
-    "path":"folders/Scenes/Scene Sprites.yy",
+    "name":"Scene Image",
+    "path":"folders/Scenes/Scene Image.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

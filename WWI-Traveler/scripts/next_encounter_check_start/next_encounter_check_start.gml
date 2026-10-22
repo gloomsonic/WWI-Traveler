@@ -5,7 +5,7 @@ function next_encounter_check_start() {
 		LOCATION_CURRENT = LOCATION_NEXT;
 		LOCATION_NEXT = noone;
 		MAP_PATH_SELECTED = noone;
-		
+
 		room_goto(rm_camp);
 		return false;
 	}
@@ -17,7 +17,7 @@ function next_encounter_check_start() {
 	// Start encounter
 	if (_is_scene) {
 		room_transition_start(rm_scene);
-		NEXT_SCENE = _encounter;
+		SCENE_NEXT = _encounter;
 	} else {
 		room_transition_start(rm_combat);
 		ENEMY_PARTY = _encounter;

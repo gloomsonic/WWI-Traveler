@@ -1,4 +1,4 @@
-event_user_all();
+//event_user_all();
 scene_text_methods_step();
 scene_text_methods_draw();
 
@@ -10,7 +10,7 @@ states.define(State.choosing, state_scene_choosing);
 states.queue(State.reading);
 
 // Load the scene to play
-var _scene = NEXT_SCENE; //var _scene = scene_get("grove"); // TODO: What if we want to hardcode one for when we didn't pick a path?
+var _scene = SCENE_NEXT; //var _scene = scene_get("grove"); // TODO: What if we want to hardcode one for when we didn't pick a path?
 my_scene = variable_clone(_scene);
 instance_create_depth(0, 0, depth+1, obj_scene_image, {
 	sprite_index: my_scene.sprite,
