@@ -1,6 +1,5 @@
 self [$ "my_combatant"] ??= noone;
 combat_actor_methods();
-combat_actor_methods_update_cutscene();
 
 states = new use_states();
 states.define(State.combat_idle, state_actor_idle);
@@ -12,5 +11,3 @@ states.define(State.combat_die, state_actor_die);
 states.queue(State.combat_idle);
 
 update_scale();
-timer = 0;
-duration = 30; // TODO: defined per action, eventually

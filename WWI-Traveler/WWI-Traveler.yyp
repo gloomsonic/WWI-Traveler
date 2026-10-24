@@ -158,7 +158,6 @@
     {"id":{"name":"camp_formation_methods","path":"scripts/camp_formation_methods/camp_formation_methods.yy",},},
     {"id":{"name":"camp_state_set","path":"scripts/camp_state_set/camp_state_set.yy",},},
     {"id":{"name":"collision_line_point","path":"scripts/collision_line_point/collision_line_point.yy",},},
-    {"id":{"name":"combat_actor_methods_update_cutscene","path":"scripts/combat_actor_methods_update_cutscene/combat_actor_methods_update_cutscene.yy",},},
     {"id":{"name":"combat_actor_methods","path":"scripts/combat_actor_methods/combat_actor_methods.yy",},},
     {"id":{"name":"combat_actor_states","path":"scripts/combat_actor_states/combat_actor_states.yy",},},
     {"id":{"name":"combat_animation_constructors","path":"scripts/combat_animation_constructors/combat_animation_constructors.yy",},},
