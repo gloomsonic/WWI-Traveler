@@ -1,5 +1,5 @@
 // Melee attack animation
-function cutscene_attack(_attacker, _target) constructor {
+function cutscene_attack_melee(_attacker, _target) constructor {
 	attacker = _attacker;
 	target = _target;
 	lanes = [_attacker, _target];

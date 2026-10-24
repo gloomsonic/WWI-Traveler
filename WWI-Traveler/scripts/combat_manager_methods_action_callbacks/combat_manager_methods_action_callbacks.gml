@@ -19,7 +19,7 @@ function combat_manager_methods_turn_phases() {
 	// Record attacked target and subtract damage from its hp
 	attack_melee = function(_target) {
 		array_push(combat_log, $"{active_combatant.name} attacked {_target.name}");
-		obj_combat_animation_manager.add_action(new cutscene_attack(active_combatant, _target));
+		obj_combat_animation_manager.add_action(new cutscene_attack_melee(active_combatant, _target));
 	
 		// Roll to hit
 		var _weapon = active_combatant.my_weapon;

@@ -1,3 +1,4 @@
+//// TODO: ready to delete
 //function combat_actor_methods_update_cutscene() {
 
 //	// Update method for cutscene_attack action
