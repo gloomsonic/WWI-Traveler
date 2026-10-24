@@ -3,8 +3,6 @@ function state_actor_idle(_event) {
 		case Event.enter:
 			sprite_index = my_combatant.my_sprites.idle;
 			break;
-		case Event.step:
-			break;
 	}
 }
 
@@ -79,11 +77,12 @@ function state_actor_die(_event) {
 			sprite_index = my_combatant.my_sprites.idle;
 			break;
 		case Event.step:
-			if (states.timer > 30)
+			if (states.timer > 10)
 				states.queue(State.combat_idle);
 			break;
 		case Event.final:
 			signal_raise(Signal_Type.on_combat_action_done, id);
+			die();
 			break;
 	}
 }
