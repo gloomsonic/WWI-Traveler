@@ -6,6 +6,7 @@ function state_actor_idle(_event) {
 	}
 }
 
+// Melee attack combat action animation
 function state_actor_attack_melee(_event) {
 	switch(_event) {
 		case Event.enter:
@@ -16,11 +17,12 @@ function state_actor_attack_melee(_event) {
 				states.queue(State.combat_idle);
 			break;
 		case Event.final:
-			signal_raise(Signal_Type.on_combat_action_done, id);
+			signal_raise(Signal_Type.on_combat_action_done, cutscene_action);
 			break;
 	}
 }
 
+// Ranged attack combat action animation
 function state_actor_attack_ranged(_event) {
 	switch(_event) {
 		case Event.enter:
@@ -31,26 +33,33 @@ function state_actor_attack_ranged(_event) {
 				states.queue(State.combat_idle);
 			break;
 		case Event.final:
-			signal_raise(Signal_Type.on_combat_action_done, id);
+			signal_raise(Signal_Type.on_combat_action_done, cutscene_action);
 			break;
 	}
 }
 
+// Move combat action animation
 function state_actor_move(_event) {
 	switch(_event) {
 		case Event.enter:
 			sprite_index = my_combatant.my_sprites.idle;
+			x = cutscene_action.space.x;
+			y = cutscene_action.space.y;
+			layer = cutscene_action.space.layer;
+			update_scale();
 			break;
 		case Event.step:
 			if (states.timer > 30)
 				states.queue(State.combat_idle);
 			break;
 		case Event.final:
-			signal_raise(Signal_Type.on_combat_action_done, id);
+			signal_raise(Signal_Type.on_combat_action_done, cutscene_action);
+			cutscene_action = noone;
 			break;
 	}
 }
 
+// Hit combat action animation
 function state_actor_hit(_event) {
 	switch(_event) {
 		case Event.enter:
@@ -61,16 +70,17 @@ function state_actor_hit(_event) {
 				image_alpha = !image_alpha;
 		
 			// Exit state
-			if (states.timer > 30)
+			if (states.timer >= 40)
 				states.queue(State.combat_idle);
 			break;
 		case Event.final:
-			signal_raise(Signal_Type.on_combat_action_done, id);
+			signal_raise(Signal_Type.on_combat_action_done, cutscene_action);
 			image_alpha = 1;
 			break;
 	}
 }
 
+// Die combat action animation
 function state_actor_die(_event) {
 	switch(_event) {
 		case Event.enter:
@@ -81,7 +91,7 @@ function state_actor_die(_event) {
 				states.queue(State.combat_idle);
 			break;
 		case Event.final:
-			signal_raise(Signal_Type.on_combat_action_done, id);
+			signal_raise(Signal_Type.on_combat_action_done, cutscene_action);
 			die();
 			break;
 	}

@@ -10,7 +10,8 @@ for (var i = 0; i < array_length(actions_queue); i++) {
 	
 	// Action's desired lanes are open: occupy, start action, and swap array
 	occupied_lanes = array_concat(occupied_lanes, _action.lanes);
-	_action.actor.try_state(_action.state); // Start actor action -- NOTE: state will send a signal when it's done with its lanes
+	_action.actor.start_action(_action);
+	//_action.actor.try_state(_action.state); // Start actor action -- NOTE: state will send a signal when it's done with its lanes
 	array_push(actions_ongoing, _action);
 	array_delete(actions_queue, i, 1);
 	i--;
