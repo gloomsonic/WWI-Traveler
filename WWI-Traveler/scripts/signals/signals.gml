@@ -3,6 +3,7 @@ enum Signal_Type {
 	on_combatant_ready,
 	on_combatant_killed,
 	on_combat_target_done,
+	on_combat_action_done,
 }
 
 function signal_add(_listener) {

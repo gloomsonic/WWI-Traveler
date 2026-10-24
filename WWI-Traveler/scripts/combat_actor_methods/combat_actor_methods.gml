@@ -1,5 +1,10 @@
 function combat_actor_methods() {
 
+	// Exposed interface if other objects want to queue my state
+	try_state = function(_state) {
+		states.queue(_state);
+	}
+
 	// Reset timer/sprite for cutscene actions
 	reset = function() {
 		sprite_index = my_combatant.my_sprites.idle;
