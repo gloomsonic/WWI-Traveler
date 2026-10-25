@@ -54,7 +54,7 @@ enum State {
 	idle, hovered, held,
 	selected,
 	
-	combat_idle, combat_attack_melee, combat_attack_ranged, combat_move, combat_hit, combat_die,
+	combat_idle, combat_attack_melee, combat_attack_ranged, combat_move, combat_hit, combat_evade, combat_die,
 	
 	attack, guard, hit, evaded,
 	

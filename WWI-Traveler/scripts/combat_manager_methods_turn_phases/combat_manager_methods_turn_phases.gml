@@ -3,7 +3,6 @@ function combat_manager_methods_action_callbacks() {
 	// Start the next combatant's turn
 	turn_start = function() {
 		active_combatant = array_shift(turn_order);
-		//array_push(turn_order, active_combatant);	
 		var _valid_targets = combatant_get_targets(active_combatant);
 	
 		// CPU vs. player turn
@@ -20,20 +19,14 @@ function combat_manager_methods_action_callbacks() {
 		if (array_length(turn_order) > 0) {
 			call_next_frame(turn_start);
 		} else {
-			//obj_combat_animation_manager.set_callback(round_end);
 			obj_combat_animation_manager.actions_start(round_end);
+			active_combatant = noone;
 		}
 	}
 
 	// Check if combat end or next turn
 	round_end = function() {
 		turn_order_refresh();
-		//var _check_dead = function(_val) {
-		//	return _val.hp > 0;
-		//}
-		//turn_order = array_filter(turn_order, _check_dead);
-		//PARTY = array_filter(PARTY, _check_dead);
-		//ENEMY_PARTY = array_filter(ENEMY_PARTY, _check_dead);
 	
 		// Space for readability
 		array_push(combat_log, "--------------------   ");
@@ -66,7 +59,7 @@ function combat_manager_methods_action_callbacks() {
 		// Create buttons for the array
 		var _new = combat_menu_button_create(_combatant, obj_combat_menu_attack_melee, _w, _h, _font, on_attack_melee_selected);
 		array_push(_buttons, _new);
-		if (active_combatant.my_weapon.damage_ranged != -1) {
+		if (active_combatant.my_weapon.damage_ranged != -1) { // Shoot vs. Reload button
 			if (active_combatant.my_weapon.ammo_remaining > 0)
 				_new = combat_menu_button_create(_combatant, obj_combat_menu_attack_ranged, _w, _h, _font, on_attack_ranged_selected);
 			else

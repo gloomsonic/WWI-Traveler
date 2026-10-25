@@ -10,9 +10,9 @@ SCENE_NEXT = noone;
 // -- Combat stuff -- //
 // Default groups of combatant sprites
 #macro PLAYER_COMBAT_SPRITES global.data.player_combatant_sprites
-PLAYER_COMBAT_SPRITES = new combatant_sprites(spr_combatant_player_idle, spr_combatant_attack, spr_combatant_guard, spr_combatant_attack_ranged);
+PLAYER_COMBAT_SPRITES = new combatant_sprites(spr_combatant_player_idle, spr_combatant_attack, spr_combatant_attack_ranged, spr_combatant_guard, spr_combatant_evade);
 #macro ENEMY_COMBAT_SPRITES global.data.enemy_combatant_sprites
-ENEMY_COMBAT_SPRITES = new combatant_sprites(spr_combatant_idle, spr_combatant_attack, spr_combatant_guard, spr_combatant_attack_ranged);
+ENEMY_COMBAT_SPRITES = new combatant_sprites(spr_combatant_idle, spr_combatant_attack, spr_combatant_attack_ranged, spr_combatant_guard, spr_combatant_evade);
 
 #macro PARTY global.data.party
 PARTY = [

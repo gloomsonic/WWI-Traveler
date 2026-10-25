@@ -237,6 +237,7 @@
     {"id":{"name":"spr_combatant_actor_position","path":"sprites/spr_combatant_actor_position/spr_combatant_actor_position.yy",},},
     {"id":{"name":"spr_combatant_attack_ranged","path":"sprites/spr_combatant_attack_ranged/spr_combatant_attack_ranged.yy",},},
     {"id":{"name":"spr_combatant_attack","path":"sprites/spr_combatant_attack/spr_combatant_attack.yy",},},
+    {"id":{"name":"spr_combatant_evade","path":"sprites/spr_combatant_evade/spr_combatant_evade.yy",},},
     {"id":{"name":"spr_combatant_guard","path":"sprites/spr_combatant_guard/spr_combatant_guard.yy",},},
     {"id":{"name":"spr_combatant_idle","path":"sprites/spr_combatant_idle/spr_combatant_idle.yy",},},
     {"id":{"name":"spr_combatant_player_idle","path":"sprites/spr_combatant_player_idle/spr_combatant_player_idle.yy",},},

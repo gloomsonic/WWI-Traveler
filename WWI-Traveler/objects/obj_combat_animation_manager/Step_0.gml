@@ -13,6 +13,9 @@ for (var i = 0; i < array_length(actions_queue); i++) {
 		occupied_lanes = array_concat(occupied_lanes, _action.lanes);
 		_action.actor.start_action(_action);
 		array_push(actions_ongoing, _action);
+		
+		if (_action.sfx != noone)
+			audio_oneshot(_action.sfx);//, _action.actor.x, _action.actor.y);
 	}
 	array_delete(actions_queue, i, 1);
 	i--;

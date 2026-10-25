@@ -19,11 +19,12 @@ function combatant_data(_cpu, _team, _row, _col, _hp, _spd, _name, _sprites, _we
 	}
 }
 
-function combatant_sprites(_idle, _attack_melee, _hit, _attack_ranged) constructor {
+function combatant_sprites(_idle, _attack_melee, _attack_ranged, _hit, _evade) constructor {
 	idle = _idle;
 	attack_melee = _attack_melee;
 	attack_ranged = _attack_ranged;
 	hit = _hit;
+	evade = _evade;
 }
 
 // Scales to set combat actors to based on their team/row
