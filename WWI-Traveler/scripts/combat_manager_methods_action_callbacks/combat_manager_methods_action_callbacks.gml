@@ -36,6 +36,7 @@ function combat_manager_methods_turn_phases() {
 			array_push(combat_log, $"{_target.name} took {_damage} damage");
 			audio_oneshot_3d(EV_PUNCH, _target_actor.x, _target_actor.y);	
 		} else {
+			// TODO: 'miss' needs to be an action so we can send a sound with it
 			array_push(combat_log, $"{active_combatant.name} missed");
 			audio_oneshot_3d(EV_MISS, _target_actor.x, _target_actor.y);
 		}
@@ -48,7 +49,8 @@ function combat_manager_methods_turn_phases() {
 
 		// Ask combat manager to tell us when it's done
 		instance_destroy(obj_combat_select_back);
-		obj_combat_animation_manager.set_callback(turn_end);
+		turn_end();
+		//obj_combat_animation_manager.set_callback(turn_end);
 	}
 
 	// Spawn buttons to select enemy combatants
@@ -102,7 +104,8 @@ function combat_manager_methods_turn_phases() {
 	
 		// Ask combat manager to tell us when it's done
 		instance_destroy(obj_combat_select_back);
-		obj_combat_animation_manager.set_callback(turn_end);
+		turn_end();
+		//obj_combat_animation_manager.set_callback(turn_end);
 	}
 
 	// Spawn buttons to select a position to move to
@@ -147,7 +150,8 @@ function combat_manager_methods_turn_phases() {
 		
 		// Ask combat manager to tell us when it's done
 		instance_destroy(obj_combat_select_back);
-		obj_combat_animation_manager.set_callback(turn_end);
+		turn_end();
+		//obj_combat_animation_manager.set_callback(turn_end);
 	}
 
 	// Set ammo back to maximum

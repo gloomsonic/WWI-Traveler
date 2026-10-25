@@ -3,7 +3,7 @@ function combat_manager_methods_action_callbacks() {
 	// Start the next combatant's turn
 	turn_start = function() {
 		active_combatant = array_shift(turn_order);
-		array_push(turn_order, active_combatant);	
+		//array_push(turn_order, active_combatant);	
 		var _valid_targets = combatant_get_targets(active_combatant);
 	
 		// CPU vs. player turn
@@ -14,15 +14,26 @@ function combat_manager_methods_action_callbacks() {
 			combat_menu_create();
 		}
 	}
+	
+	// Next turn or start resolving turn
+	turn_end = function() {
+		if (array_length(turn_order) > 0) {
+			call_next_frame(turn_start);
+		} else {
+			//obj_combat_animation_manager.set_callback(round_end);
+			obj_combat_animation_manager.actions_start(round_end);
+		}
+	}
 
 	// Check if combat end or next turn
-	turn_end = function() {
-		var _check_dead = function(_val) {
-			return _val.hp > 0;
-		}
-		turn_order = array_filter(turn_order, _check_dead);
-		PARTY = array_filter(PARTY, _check_dead);
-		ENEMY_PARTY = array_filter(ENEMY_PARTY, _check_dead);
+	round_end = function() {
+		turn_order_refresh();
+		//var _check_dead = function(_val) {
+		//	return _val.hp > 0;
+		//}
+		//turn_order = array_filter(turn_order, _check_dead);
+		//PARTY = array_filter(PARTY, _check_dead);
+		//ENEMY_PARTY = array_filter(ENEMY_PARTY, _check_dead);
 	
 		// Space for readability
 		array_push(combat_log, "--------------------   ");

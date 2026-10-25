@@ -7,4 +7,8 @@ function combat_animation_methods() {
 	set_callback = function(_callback) {
 		callback = _callback;
 	}
+	
+	actions_start = function(_callback) {
+		callback = _callback;
+	}
 }
