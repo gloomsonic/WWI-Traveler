@@ -13,11 +13,16 @@ function state_actor_attack_melee(_event) {
 			sprite_index = my_combatant.my_sprites.attack_melee;
 			break;
 		case Event.step:
+			if (states.timer >= 15) and (cutscene_action != noone) { // Hit reaction in the middle of attack
+				signal_raise(Signal_Type.on_combat_action_done, cutscene_action);
+				cutscene_action = noone;
+			}
+			
+			// Exit state
 			if (states.timer >= 30)
 				states.queue(State.combat_idle);
 			break;
 		case Event.final:
-			signal_raise(Signal_Type.on_combat_action_done, cutscene_action);
 			break;
 	}
 }
@@ -29,16 +34,23 @@ function state_actor_attack_ranged(_event) {
 			sprite_index = my_combatant.my_sprites.attack_ranged;
 			break;
 		case Event.step:
+			if (states.timer >= 15) and (cutscene_action != noone) { // Hit reaction in the middle of attack
+				signal_raise(Signal_Type.on_combat_action_done, cutscene_action);
+				cutscene_action = noone;
+			}
+			
+			// Exit state
 			if (states.timer >= 30)
 				states.queue(State.combat_idle);
 			break;
 		case Event.final:
-			signal_raise(Signal_Type.on_combat_action_done, cutscene_action);
 			break;
 	}
 }
 
 // Move combat action animation
+// NOTE: it won't look like it, but movement will have already happened when attacked, if faster than attacker; 
+// TODO: test this by allowing enemies to move
 function state_actor_move(_event) {
 	switch(_event) {
 		case Event.enter:
@@ -76,6 +88,7 @@ function state_actor_hit(_event) {
 		case Event.final:
 			signal_raise(Signal_Type.on_combat_action_done, cutscene_action);
 			hp_display -= cutscene_action.damage;
+			cutscene_action = noone;
 			image_alpha = 1;
 			break;
 	}
@@ -93,6 +106,7 @@ function state_actor_evade(_event) {
 			break;
 		case Event.final:
 			signal_raise(Signal_Type.on_combat_action_done, cutscene_action);
+			cutscene_action = noone;
 			break;
 	}
 }
@@ -109,6 +123,7 @@ function state_actor_die(_event) {
 			break;
 		case Event.final:
 			signal_raise(Signal_Type.on_combat_action_done, cutscene_action);
+			cutscene_action = noone;
 			die();
 			break;
 	}
