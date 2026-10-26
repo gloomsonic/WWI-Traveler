@@ -79,10 +79,10 @@ function combat_manager_methods_turn_phases() {
 		if (_roll <= _accuracy) {
 			var _damage = _weapon.damage_ranged;
 			_target.hp -= _damage;
-			obj_combat_animation_manager.add_action(new cutscene_hit(_target, _damage, EV_BULLET_MISS));
+			obj_combat_animation_manager.add_action(new cutscene_hit(_target, _damage, EV_BULLET_HIT));
 			array_push(combat_log, $"{_target.name} took {_damage} damage");
 		} else {
-			obj_combat_animation_manager.add_action(new cutscene_evade(_target), EV_BULLET_HIT);
+			obj_combat_animation_manager.add_action(new cutscene_evade(_target, EV_BULLET_MISS));
 			array_push(combat_log, $"{active_combatant.name} missed");
 		}
 
