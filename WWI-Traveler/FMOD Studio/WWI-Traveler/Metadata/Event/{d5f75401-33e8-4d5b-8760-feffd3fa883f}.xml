@@ -5,7 +5,7 @@
 			<value>Test Miss</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>0</value>
 		</property>
 		<relationship name="folder">
 			<destination>{e2d2e895-13d9-4ad7-aa55-3e5c0d5556dd}</destination>
@@ -149,7 +149,6 @@
 	<object class="MixerBusEffectChain" id="{fe258bef-a158-4093-9881-cbf119d3d87e}">
 		<relationship name="effects">
 			<destination>{f9c43166-740a-4590-8ac1-1d39a6abf0cd}</destination>
-			<destination>{15e24274-bfce-4c9f-9d4e-0e601f0dd9f6}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{d02289bf-79e3-4fda-94c5-ec6f423b38a8}" />
@@ -174,5 +173,4 @@
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{f9c43166-740a-4590-8ac1-1d39a6abf0cd}" />
-	<object class="SpatialiserEffect" id="{15e24274-bfce-4c9f-9d4e-0e601f0dd9f6}" />
 </objects>
