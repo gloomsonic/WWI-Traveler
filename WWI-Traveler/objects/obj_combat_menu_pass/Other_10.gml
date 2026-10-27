@@ -7,8 +7,8 @@ on_pressed = function() {
 }
 on_released = function() {
 	instance_destroy(par_combat_menu);
-	combat_manager_queue_action(callback, my_combatant);	
-	//callback();
+	combat_manager_queue_action_callback(callback, active_combatant);
+	combat_menu_destroy();
 }
 
 // State functions

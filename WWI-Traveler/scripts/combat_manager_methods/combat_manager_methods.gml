@@ -29,7 +29,7 @@ function combat_manager_methods() {
 		
 		// Combatant name
 		instance_create_depth(ROOM_W * 0.05, _y, depth, obj_combat_menu_label, {
-			my_combatant: _combatant,
+			active_combatant: _combatant,
 		});		
 		
 		// Create buttons for the array

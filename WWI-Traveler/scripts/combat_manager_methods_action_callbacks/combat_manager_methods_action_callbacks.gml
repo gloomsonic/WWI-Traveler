@@ -1,54 +1,4 @@
 function combat_manager_methods_action_callbacks() {
-	
-	// Spawn buttons to select enemy combatants
-	on_attack_melee_selected = function() {	
-		combat_menu_destroy();
-		var _valid_targets = combatant_get_targets(active_combatant);
-		for (var i = 0; i < array_length(_valid_targets); i++) {
-			var _combatant = _valid_targets[i];
-			instance_create_depth(0, 0, depth, obj_combat_select_enemy, {
-				my_combatant: _combatant,
-				attacker: active_combatant,
-				callback: attack_melee, // The callback is here, 
-				attack_type: Attack_Type.melee,
-			});
-		}	
-		instance_create_depth(0, 0, depth, obj_combat_select_back);
-	}
-	
-	// Spawn buttons to select enemy combatants
-	on_attack_ranged_selected = function() {	
-		combat_menu_destroy();
-		var _valid_targets = combatant_get_targets(active_combatant);
-		for (var i = 0; i < array_length(_valid_targets); i++) {
-			var _combatant = _valid_targets[i];
-			instance_create_depth(0, 0, depth, obj_combat_select_enemy, {
-				my_combatant: _combatant,
-				attacker: active_combatant,
-				callback: attack_ranged,
-				attack_type: Attack_Type.ranged,
-			});
-		}
-		instance_create_depth(0, 0, depth, obj_combat_select_back);	
-	}
-	
-	// Spawn buttons to select a position to move to
-	on_move_selected = function() {
-		combat_menu_destroy();
-	
-		for (var r = 0; r < 2; r++) {
-			for (var c = 0; c < 3; c++) {
-				instance_create_depth(0, 0, depth, obj_combat_select_move, {
-					row: r,
-					col: c,
-					my_combatant: combatant_get_at_position(r, c),
-					active_combatant: active_combatant,
-					callback: move,
-				});
-			}
-		}	
-		instance_create_depth(0, 0, depth, obj_combat_select_back);
-	}	
 
 	// Record attacked target and subtract damage from its hp
 	attack_melee = function(_active_combatant, _target) {
@@ -79,7 +29,6 @@ function combat_manager_methods_action_callbacks() {
 
 		// Ask combat manager to tell us when it's done
 		instance_destroy(obj_combat_select_back);
-		//turn_end();
 	}
 
 	// Record attacked target and subtract damage from its hp
@@ -112,7 +61,6 @@ function combat_manager_methods_action_callbacks() {
 	
 		// Ask combat manager to tell us when it's done
 		instance_destroy(obj_combat_select_back);
-		//turn_end();
 	}
 
 	// Swap positions with another combatant, or move to an empty space
@@ -140,22 +88,18 @@ function combat_manager_methods_action_callbacks() {
 		
 		// Ask combat manager to tell us when it's done
 		instance_destroy(obj_combat_select_back);
-		//turn_end();
 	}
 
 	// Set ammo back to maximum
+	// TODO: make this a queueable action
 	reload = function(_active_combatant) {
-		combat_menu_destroy();
 		array_push(combat_log, $"{_active_combatant.name} reloaded");
-		active_combatant.inventory.bullets -= 1; // NOTE: reloading variable number of bullets?
-		active_combatant.my_weapon.reload();
-		//turn_end();
+		_active_combatant.inventory.bullets -= 1; // NOTE: reloading variable number of bullets?
+		_active_combatant.my_weapon.reload();
 	}
 
 	// Skip active combatant's turn
 	pass = function(_active_combatant) {
-		combat_menu_destroy();
 		array_push(combat_log, $"{_active_combatant.name} passed");	
-		//turn_end();
 	}
 }

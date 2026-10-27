@@ -6,9 +6,9 @@ on_pressed = function() {
 	log("pressed");
 }
 on_released = function() {
-	if (my_combatant.inventory.bullets <= 0) return;
-	combat_manager_queue_action(callback, active_combatant);
-	//callback();
+	if (active_combatant.inventory.bullets <= 0) return;
+	combat_manager_queue_action_callback(callback, active_combatant);
+	combat_menu_destroy();
 }
 
 // State functions

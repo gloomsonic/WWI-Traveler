@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"combat_manager_queue_action",
+  "%Name":"combat_manager_queue_action_callback",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"combat_manager_queue_action",
+  "name":"combat_manager_queue_action_callback",
   "parent":{
     "name":"Combat Manager",
     "path":"folders/Combat/Combat Manager.yy",

@@ -6,8 +6,7 @@ on_pressed = function() {
 }
 on_released = function() {
 	instance_destroy(obj_combat_select_enemy);
-	combat_manager_queue_action(callback, attacker, [my_combatant]);
-	//callback(my_combatant);
+	combat_manager_queue_action_callback(callback, active_combatant, [my_combatant]);
 }
 
 // State functions
@@ -29,9 +28,9 @@ state_hovered = function(_event) {
 			// Draw accuracy
 			draw_set(,, fa_left, fa_middle);
 			if (attack_type == Attack_Type.melee)
-				var _accuracy = attack_melee_get_accuracy(attacker.my_weapon, attacker, my_combatant);
+				var _accuracy = attack_melee_get_accuracy(active_combatant.my_weapon, active_combatant, my_combatant);
 			else// if (attack_type == Attack_Type.ranged)
-				var _accuracy = attack_ranged_get_accuracy(attacker.my_weapon, attacker, my_combatant);
+				var _accuracy = attack_ranged_get_accuracy(active_combatant.my_weapon, active_combatant, my_combatant);
 				
 			draw_text(BBOX_R + 16, BBOX_Y_C, $"{_accuracy}%");
 			break;
@@ -47,9 +46,9 @@ state_held = function(_event) {
 			// Draw accuracy
 			draw_set(,, fa_left, fa_middle);
 			if (attack_type == Attack_Type.melee)
-				var _accuracy = attack_melee_get_accuracy(attacker.my_weapon, attacker, my_combatant);
+				var _accuracy = attack_melee_get_accuracy(active_combatant.my_weapon, active_combatant, my_combatant);
 			else// if (attack_type == Attack_Type.ranged)
-				var _accuracy = attack_ranged_get_accuracy(attacker.my_weapon, attacker, my_combatant);
+				var _accuracy = attack_ranged_get_accuracy(active_combatant.my_weapon, active_combatant, my_combatant);
 			draw_text(BBOX_R + 16, BBOX_Y_C, $"{_accuracy}%");			
 			break;
 	}

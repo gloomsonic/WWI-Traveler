@@ -1,6 +1,6 @@
 event_inherited();
 
-self[$ "my_combatant"] ??= noone;
+self[$ "active_combatant"] ??= noone;
 self[$ "callback"] ??= function(){};
 self[$ "font"] ??= fnt_droid_serif_48;
 par_mouse_cursor.add_touchable(id);

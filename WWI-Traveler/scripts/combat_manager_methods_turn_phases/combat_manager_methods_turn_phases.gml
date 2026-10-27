@@ -9,8 +9,7 @@ function combat_manager_methods_turn_phases() {
 		// CPU vs. player turn
 		if (active_combatant.team == Combatant_Team.enemy) {
 			var _target = array_pop(array_shuffle(_valid_targets));
-			combat_manager_queue_action(attack_melee, active_combatant, [_target]);
-			//attack_melee(_target);
+			combat_manager_queue_action_callback(attack_melee, active_combatant, [_target]);
 		} else {
 			combat_menu_create();
 		}
@@ -19,10 +18,9 @@ function combat_manager_methods_turn_phases() {
 	// Next turn or start resolving turn
 	turn_end = function() {
 		if (array_length(turn_order) > 0) {
-			//call_next_frame(turn_start);
-			turn_start();
+			call_next_frame(turn_start); // NOTE: must be next frame, else something like reload will destroy the new combat menu it creates
 		} else {
-			// play the queue here
+			// TODO: extract this into its own function, "combat_callbacks_play()" or something
 			for (var i = 0; i < array_length(combat_callbacks_queue); i++) {
 				var _data = combat_callbacks_queue[i]
 				if (_data.active_combatant.hp <= 0)

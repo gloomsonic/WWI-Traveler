@@ -1,5 +1,6 @@
 event_inherited();
 
+self[$ "active_combatant"] ??= noone;
 self[$ "my_combatant"] ??= noone;
 par_mouse_cursor.add_touchable(id);
 

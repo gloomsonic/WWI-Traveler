@@ -14,7 +14,7 @@ state_idle = function(_event) {
 	switch(_event) {
 		case Event.draw: 
 			draw_set(, fnt_droid_serif_48, fa_center, fa_middle);
-			draw_text_solid_color(x, y, $"{text}: {my_combatant.my_weapon.ammo_remaining}", c_gray);			
+			draw_text_solid_color(x, y, $"{text}: {active_combatant.my_weapon.ammo_remaining}", c_gray);			
 			break;
 	}
 }
@@ -23,7 +23,7 @@ state_hovered = function(_event) {
 	switch(_event) {
 		case Event.draw: 
 			draw_set(, fnt_droid_serif_48, fa_center, fa_middle);
-			draw_text_solid_color(x, y, $"{text}: {my_combatant.my_weapon.ammo_remaining}", c_white);				
+			draw_text_solid_color(x, y, $"{text}: {active_combatant.my_weapon.ammo_remaining}", c_white);				
 			break;
 	}
 }
@@ -32,7 +32,7 @@ state_held = function(_event) {
 	switch(_event) {
 		case Event.draw: 
 			draw_set(, fnt_droid_serif_48, fa_center, fa_middle);
-			draw_text_solid_color(x, y, $"{text}: {my_combatant.my_weapon.ammo_remaining}", c_ltgray);				
+			draw_text_solid_color(x, y, $"{text}: {active_combatant.my_weapon.ammo_remaining}", c_ltgray);				
 			break;
 	}
 }
