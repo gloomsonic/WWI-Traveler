@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"combat_action_callbacks",
   "parent":{
-    "name":"Combat Manager",
-    "path":"folders/Combat/Combat Manager.yy",
+    "name":"Combat",
+    "path":"folders/Combat.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
