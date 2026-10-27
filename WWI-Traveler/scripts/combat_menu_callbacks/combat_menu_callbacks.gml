@@ -10,7 +10,9 @@ function combat_callback_on_attack_melee_selected(_active_combatant) {
 			attack_type: Attack_Type.melee,
 		});
 	}	
-	instance_create_depth(0, 0, depth, obj_combat_select_back);	
+	instance_create_depth(0, 0, depth, obj_combat_select_back, {
+		active_combatant: _active_combatant,
+	});	
 }
 
 function combat_callback_on_attack_ranged_selected(_active_combatant) {
@@ -25,13 +27,15 @@ function combat_callback_on_attack_ranged_selected(_active_combatant) {
 			attack_type: Attack_Type.ranged,
 		});
 	}
-	instance_create_depth(0, 0, depth, obj_combat_select_back);	
+	instance_create_depth(0, 0, depth, obj_combat_select_back, {
+		active_combatant: _active_combatant,
+	});	
 }
 
 function combat_callback_on_move_selected(_active_combatant) {
 	combat_menu_destroy();
-	for (var r = 0; r < 2; r++) {
-		for (var c = 0; c < 3; c++) {
+	for (var r = 0; r < 2; r++) { // Front -> Back
+		for (var c = 0; c < 3; c++) { // Left -> Center -> Right
 			instance_create_depth(0, 0, depth, obj_combat_select_move, {
 				row: r,
 				col: c,
@@ -41,5 +45,7 @@ function combat_callback_on_move_selected(_active_combatant) {
 			});
 		}
 	}	
-	instance_create_depth(0, 0, depth, obj_combat_select_back);	
+	instance_create_depth(0, 0, depth, obj_combat_select_back, {
+		active_combatant: _active_combatant,
+	});		
 }

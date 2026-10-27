@@ -168,6 +168,7 @@
     {"id":{"name":"combat_manager_queue_action_callback","path":"scripts/combat_manager_queue_action_callback/combat_manager_queue_action_callback.yy",},},
     {"id":{"name":"combat_menu_button_create","path":"scripts/combat_menu_button_create/combat_menu_button_create.yy",},},
     {"id":{"name":"combat_menu_callbacks","path":"scripts/combat_menu_callbacks/combat_menu_callbacks.yy",},},
+    {"id":{"name":"combat_menu_create","path":"scripts/combat_menu_create/combat_menu_create.yy",},},
     {"id":{"name":"combat_menu_destroy","path":"scripts/combat_menu_destroy/combat_menu_destroy.yy",},},
     {"id":{"name":"combat_space_get_at_position","path":"scripts/combat_space_get_at_position/combat_space_get_at_position.yy",},},
     {"id":{"name":"combatant_create_actor","path":"scripts/combatant_create_actor/combatant_create_actor.yy",},},

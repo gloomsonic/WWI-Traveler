@@ -1,5 +1,5 @@
 function combat_callback_attack_melee(_active_combatant, _target) {
-	array_push(combat_log, $"{_active_combatant.name} attacked {_target.name}");
+	array_push(obj_combat_manager.combat_log, $"{_active_combatant.name} attacked {_target.name}");
 	obj_combat_animation_manager.add_action(new cutscene_attack_melee(_active_combatant, _target));
 	
 	// Roll to hit
@@ -12,16 +12,16 @@ function combat_callback_attack_melee(_active_combatant, _target) {
 		var _damage = _weapon.damage_melee;
 		_target.hp -= _damage;
 		obj_combat_animation_manager.add_action(new cutscene_hit(_target, _damage, EV_PUNCH));
-		array_push(combat_log, $"{_target.name} took {_damage} damage");
+		array_push(obj_combat_manager.combat_log, $"{_target.name} took {_damage} damage");
 	} else {
 		obj_combat_animation_manager.add_action(new cutscene_evade(_target, EV_MISS));
-		array_push(combat_log, $"{_active_combatant.name} missed");
+		array_push(obj_combat_manager.combat_log, $"{_active_combatant.name} missed");
 	}
 
 	// Check dead
 	if (_target.hp <= 0) {
 		obj_combat_animation_manager.add_action(new cutscene_die(_target));
-		array_push(combat_log, $"{_target.name} died");
+		array_push(obj_combat_manager.combat_log, $"{_target.name} died");
 	}
 
 	// Ask combat manager to tell us when it's done
@@ -29,7 +29,7 @@ function combat_callback_attack_melee(_active_combatant, _target) {
 }
 
 function combat_callback_attack_ranged(_active_combatant, _target) {
-	array_push(combat_log, $"{_active_combatant.name} shot {_target.name}");
+	array_push(obj_combat_manager.combat_log, $"{_active_combatant.name} shot {_target.name}");
 	obj_combat_animation_manager.add_action(new cutscene_attack_ranged(_active_combatant, _target, EV_GUNSHOT));
 	
 	// Roll to hit
@@ -43,16 +43,16 @@ function combat_callback_attack_ranged(_active_combatant, _target) {
 		var _damage = _weapon.damage_ranged;
 		_target.hp -= _damage;
 		obj_combat_animation_manager.add_action(new cutscene_hit(_target, _damage, EV_BULLET_HIT));
-		array_push(combat_log, $"{_target.name} took {_damage} damage");
+		array_push(obj_combat_manager.combat_log, $"{_target.name} took {_damage} damage");
 	} else {
 		obj_combat_animation_manager.add_action(new cutscene_evade(_target, EV_BULLET_MISS));
-		array_push(combat_log, $"{_active_combatant.name} missed");
+		array_push(obj_combat_manager.combat_log, $"{_active_combatant.name} missed");
 	}
 
 	// Check dead
 	if (_target.hp <= 0) {
 		obj_combat_animation_manager.add_action(new cutscene_die(_target));
-		array_push(combat_log, $"{_target.name} died");
+		array_push(obj_combat_manager.combat_log, $"{_target.name} died");
 	}
 	
 	// Ask combat manager to tell us when it's done
@@ -68,7 +68,7 @@ function combat_callback_move(_active_combatant, _row, _col) {
 	// Move active combatant
 	_active_combatant.row = _row;
 	_active_combatant.col = _col;
-	array_push(combat_log, $"{_active_combatant.name} moved to row:{_row}, col:{_col}");	
+	array_push(obj_combat_manager.combat_log, $"{_active_combatant.name} moved to row:{_row}, col:{_col}");	
 	var _space = combat_space_get_at_position(_active_combatant.team, _row, _col); // NOTE: `_other_combatant` can be `noone,` so using '_active_combatant' to check team
 	obj_combat_animation_manager.add_action(new cutscene_move(_active_combatant, _space));
 	
@@ -76,7 +76,7 @@ function combat_callback_move(_active_combatant, _row, _col) {
 	if (_other_combatant != noone) {
 		_other_combatant.row = _row_prev;
 		_other_combatant.col = _col_prev;
-		array_push(combat_log, $"{_other_combatant.name} moved to row:{_row_prev}, col:{_col_prev}");
+		array_push(obj_combat_manager.combat_log, $"{_other_combatant.name} moved to row:{_row_prev}, col:{_col_prev}");
 		var _space = combat_space_get_at_position(_active_combatant.team, _row_prev, _col_prev);
 		obj_combat_animation_manager.add_action(new cutscene_move(_other_combatant, _space));
 	}
@@ -86,11 +86,11 @@ function combat_callback_move(_active_combatant, _row, _col) {
 }
 
 function combat_callback_reload(_active_combatant) {
-	array_push(combat_log, $"{_active_combatant.name} reloaded");
+	array_push(obj_combat_manager.combat_log, $"{_active_combatant.name} reloaded");
 	_active_combatant.inventory.bullets -= 1; // TODO: reloading variable number of bullets?
 	_active_combatant.my_weapon.reload();
 }
 
 function combat_callback_pass(_active_combatant) {
-	array_push(combat_log, $"{_active_combatant.name} passed");	
+	array_push(obj_combat_manager.combat_log, $"{_active_combatant.name} passed");	
 }

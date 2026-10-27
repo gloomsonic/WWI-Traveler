@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"combat_menu_button_create",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Combat/Scripts.yy",
+    "name":"Combat Menu",
+    "path":"folders/Combat/Combat Menu.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

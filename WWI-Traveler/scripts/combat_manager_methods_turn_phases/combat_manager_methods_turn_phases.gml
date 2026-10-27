@@ -11,7 +11,7 @@ function combat_manager_methods_turn_phases() {
 			var _target = array_pop(array_shuffle(_valid_targets));
 			combat_manager_queue_action_callback(combat_callback_attack_melee, active_combatant, [_target]);
 		} else {
-			combat_menu_create();
+			combat_menu_create(active_combatant);
 		}
 	}
 	
@@ -20,19 +20,21 @@ function combat_manager_methods_turn_phases() {
 		if (array_length(turn_order) > 0) {
 			call_next_frame(turn_start); // NOTE: must be next frame, else something like reload will destroy the new combat menu it creates
 		} else {
-			// TODO: extract this into its own function, "combat_callbacks_play()" or something
-			for (var i = 0; i < array_length(combat_callbacks_queue); i++) {
-				var _data = combat_callbacks_queue[i]
-				if (_data.active_combatant.hp <= 0)
-					continue; // Skip if dead
-					
-				array_insert(_data.args, 0, _data.active_combatant);
-				method_call(_data.callback, _data.args);
-			}
-			combat_callbacks_queue = [];
-			combat_callbacks_queue_args = [];
+			combat_callbacks_queue_resolve();
 			obj_combat_animation_manager.actions_start(round_end);
 			active_combatant = noone;
+		}
+	}
+	
+	// Loop the combat callbacks queue
+	combat_callbacks_queue_resolve = function() {
+		while (array_length(combat_callbacks_queue) > 0) {
+			var _data = array_shift(combat_callbacks_queue);
+			if (_data.active_combatant.hp <= 0)
+				continue; // Skip if dead
+					
+			array_insert(_data.args, 0, _data.active_combatant); // First argument is always 'active_combatant'
+			script_execute_ext(_data.callback, _data.args);
 		}
 	}
 
