@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"combat_manager_methods_action_callbacks",
+  "%Name":"combat_menu_callbacks",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"combat_manager_methods_action_callbacks",
+  "name":"combat_menu_callbacks",
   "parent":{
     "name":"Combat Manager",
     "path":"folders/Combat/Combat Manager.yy",

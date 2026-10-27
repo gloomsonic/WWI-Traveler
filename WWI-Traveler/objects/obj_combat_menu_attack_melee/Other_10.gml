@@ -6,7 +6,7 @@ on_pressed = function() {
 	log("pressed");
 }
 on_released = function() {
-	callback();
+	callback(active_combatant)
 }
 
 // State functions

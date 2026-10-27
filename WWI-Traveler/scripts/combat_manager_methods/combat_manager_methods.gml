@@ -33,18 +33,18 @@ function combat_manager_methods() {
 		});		
 		
 		// Create buttons for the array
-		var _new = combat_menu_button_create(_combatant, obj_combat_menu_attack_melee, _w, _h, _font, on_attack_melee_selected);
+		var _new = combat_menu_button_create(_combatant, obj_combat_menu_attack_melee, _w, _h, _font, combat_callback_on_attack_melee_selected);
 		array_push(_buttons, _new);
 		if (active_combatant.my_weapon.damage_ranged != -1) { // Shoot vs. Reload button
 			if (active_combatant.my_weapon.ammo_remaining > 0)
-				_new = combat_menu_button_create(_combatant, obj_combat_menu_attack_ranged, _w, _h, _font, on_attack_ranged_selected);
+				_new = combat_menu_button_create(_combatant, obj_combat_menu_attack_ranged, _w, _h, _font, combat_callback_on_attack_ranged_selected);
 			else
-				_new = combat_menu_button_create(_combatant, obj_combat_menu_reload, _w, _h, _font, reload);
+				_new = combat_menu_button_create(_combatant, obj_combat_menu_reload, _w, _h, _font, combat_callback_reload);
 			array_push(_buttons, _new);
 		}
-		_new = combat_menu_button_create(_combatant, obj_combat_menu_move, _w, _h, _font, on_move_selected);
+		_new = combat_menu_button_create(_combatant, obj_combat_menu_move, _w, _h, _font, combat_callback_on_move_selected);
 		array_push(_buttons, _new);
-		_new = combat_menu_button_create(_combatant, obj_combat_menu_pass, _w, _h, _font, pass);
+		_new = combat_menu_button_create(_combatant, obj_combat_menu_pass, _w, _h, _font, combat_callback_pass);
 		array_push(_buttons, _new);
 		
 		// Position buttons on the array

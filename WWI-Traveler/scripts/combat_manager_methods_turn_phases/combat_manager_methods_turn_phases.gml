@@ -9,7 +9,7 @@ function combat_manager_methods_turn_phases() {
 		// CPU vs. player turn
 		if (active_combatant.team == Combatant_Team.enemy) {
 			var _target = array_pop(array_shuffle(_valid_targets));
-			combat_manager_queue_action_callback(attack_melee, active_combatant, [_target]);
+			combat_manager_queue_action_callback(combat_callback_attack_melee, active_combatant, [_target]);
 		} else {
 			combat_menu_create();
 		}
