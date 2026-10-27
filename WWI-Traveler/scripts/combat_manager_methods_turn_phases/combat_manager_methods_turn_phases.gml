@@ -1,14 +1,16 @@
-function combat_manager_methods_action_callbacks() {
+function combat_manager_methods_turn_phases() {
 
 	// Start the next combatant's turn
 	turn_start = function() {
 		active_combatant = array_shift(turn_order);
+		log(array_length(turn_order));
 		var _valid_targets = combatant_get_targets(active_combatant);
 	
 		// CPU vs. player turn
 		if (active_combatant.team == Combatant_Team.enemy) {
 			var _target = array_pop(array_shuffle(_valid_targets));
-			attack_melee(_target);
+			combat_manager_queue_action(attack_melee, active_combatant, [_target]);
+			//attack_melee(_target);
 		} else {
 			combat_menu_create();
 		}
@@ -17,8 +19,20 @@ function combat_manager_methods_action_callbacks() {
 	// Next turn or start resolving turn
 	turn_end = function() {
 		if (array_length(turn_order) > 0) {
-			call_next_frame(turn_start);
+			//call_next_frame(turn_start);
+			turn_start();
 		} else {
+			// play the queue here
+			for (var i = 0; i < array_length(combat_callbacks_queue); i++) {
+				var _data = combat_callbacks_queue[i]
+				if (_data.active_combatant.hp <= 0)
+					continue; // Skip if dead
+					
+				array_insert(_data.args, 0, _data.active_combatant);
+				method_call(_data.callback, _data.args);
+			}
+			combat_callbacks_queue = [];
+			combat_callbacks_queue_args = [];
 			obj_combat_animation_manager.actions_start(round_end);
 			active_combatant = noone;
 		}
@@ -42,45 +56,5 @@ function combat_manager_methods_action_callbacks() {
 			call_next_frame(turn_start);
 	}
 
-	// Create the player combat options menu
-	combat_menu_create = function() {
-		var _y = ROOM_H * 0.93;
-		var _combatant = active_combatant;
-		var _buttons = [];
-		var _font = fnt_droid_serif_48;
-		var _w = 512;
-		var _h = font_height(_font) * 1.5;		
-		
-		// Combatant name
-		instance_create_depth(ROOM_W * 0.05, _y, depth, obj_combat_menu_label, {
-			my_combatant: _combatant,
-		});		
-		
-		// Create buttons for the array
-		var _new = combat_menu_button_create(_combatant, obj_combat_menu_attack_melee, _w, _h, _font, on_attack_melee_selected);
-		array_push(_buttons, _new);
-		if (active_combatant.my_weapon.damage_ranged != -1) { // Shoot vs. Reload button
-			if (active_combatant.my_weapon.ammo_remaining > 0)
-				_new = combat_menu_button_create(_combatant, obj_combat_menu_attack_ranged, _w, _h, _font, on_attack_ranged_selected);
-			else
-				_new = combat_menu_button_create(_combatant, obj_combat_menu_reload, _w, _h, _font, reload);
-			array_push(_buttons, _new);
-		}
-		_new = combat_menu_button_create(_combatant, obj_combat_menu_move, _w, _h, _font, on_move_selected);
-		array_push(_buttons, _new);
-		_new = combat_menu_button_create(_combatant, obj_combat_menu_pass, _w, _h, _font, pass);
-		array_push(_buttons, _new);
-		
-		// Position buttons on the array
-		var _size = array_length(_buttons);
-		var _l = ROOM_W_H - ((_w * _size) / 2);
-		var _x = _l + (_w / 2); // Centered origin offset
-
-		for (var i = 0; i < array_length(_buttons); i++) {
-			var _button = _buttons[i];
-			_button.x = _x;
-			_button.y = _y;
-			_x += _w;
-		}
-	}
+	
 }

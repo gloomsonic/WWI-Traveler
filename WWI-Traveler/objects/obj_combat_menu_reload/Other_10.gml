@@ -7,7 +7,8 @@ on_pressed = function() {
 }
 on_released = function() {
 	if (my_combatant.inventory.bullets <= 0) return;
-	callback();
+	combat_manager_queue_action(callback, active_combatant);
+	//callback();
 }
 
 // State functions

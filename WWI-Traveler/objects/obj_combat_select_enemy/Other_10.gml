@@ -6,7 +6,8 @@ on_pressed = function() {
 }
 on_released = function() {
 	instance_destroy(obj_combat_select_enemy);
-	callback(my_combatant);
+	combat_manager_queue_action(callback, attacker, [my_combatant]);
+	//callback(my_combatant);
 }
 
 // State functions

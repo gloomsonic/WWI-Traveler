@@ -165,6 +165,7 @@
     {"id":{"name":"combat_manager_methods_action_callbacks","path":"scripts/combat_manager_methods_action_callbacks/combat_manager_methods_action_callbacks.yy",},},
     {"id":{"name":"combat_manager_methods_turn_phases","path":"scripts/combat_manager_methods_turn_phases/combat_manager_methods_turn_phases.yy",},},
     {"id":{"name":"combat_manager_methods","path":"scripts/combat_manager_methods/combat_manager_methods.yy",},},
+    {"id":{"name":"combat_manager_queue_action","path":"scripts/combat_manager_queue_action/combat_manager_queue_action.yy",},},
     {"id":{"name":"combat_menu_button_create","path":"scripts/combat_menu_button_create/combat_menu_button_create.yy",},},
     {"id":{"name":"combat_menu_destroy","path":"scripts/combat_menu_destroy/combat_menu_destroy.yy",},},
     {"id":{"name":"combat_space_get_at_position","path":"scripts/combat_space_get_at_position/combat_space_get_at_position.yy",},},
