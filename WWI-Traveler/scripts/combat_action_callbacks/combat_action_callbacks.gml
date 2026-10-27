@@ -1,4 +1,4 @@
-// Melee attack combat action
+// Melee attack combat action, TODO: extract 'obj_combat_animation_manager.add_action()' into 'combat_animation_queue_action()'
 function combat_callback_attack_melee(_active_combatant, _target) {
 	array_push(obj_combat_manager.combat_log, $"{_active_combatant.name} attacked {_target.name}");
 	obj_combat_animation_manager.add_action(new cutscene_attack_melee(_active_combatant, _target));
@@ -88,14 +88,14 @@ function combat_callback_move(_active_combatant, _row, _col) {
 	instance_destroy(obj_combat_select_back);
 }
 
-// Reload combat action
+// Reload combat action, TODO: make this an animated combat action
 function combat_callback_reload(_active_combatant) {
 	array_push(obj_combat_manager.combat_log, $"{_active_combatant.name} reloaded");
 	_active_combatant.inventory.bullets -= 1; // TODO: reloading variable number of bullets?
 	_active_combatant.my_weapon.reload();
 }
 
-// Pass combat action
+// Pass combat action, TODO: make this an animated combat action, even if it's just idle sprite
 function combat_callback_pass(_active_combatant) {
 	array_push(obj_combat_manager.combat_log, $"{_active_combatant.name} passed");	
 }

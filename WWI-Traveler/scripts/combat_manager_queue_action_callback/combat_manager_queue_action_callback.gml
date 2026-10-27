@@ -1,9 +1,9 @@
 // Queue a combat 
-function combat_manager_queue_action_callback(_action_callback, _active_combatant, _args = []) {
+function combat_manager_queue_action_callback(_action_callback, _active_combatant, _additional_args = []) {
 	var _data = {
 		callback: _action_callback,
 		active_combatant: _active_combatant,
-		args: _args,
+		args: _additional_args,
 	}
 	
 	with (obj_combat_manager) {
