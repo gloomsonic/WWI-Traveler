@@ -5,8 +5,14 @@
 		
 		"choices": 
 		[
-			"hello I am choice one!",
-			"yooooo this is choice two, babyyyyyyy",
+			{
+				"str": "hello I am choice one!",
+				"story_result": "I am the result of choice one.<w><p>I have two distinct paragraphs."
+			},
+			{
+				"str": "yooooo this is choice two, babyyyyyyy",
+				"story_result": "I am the result of choice two!.<w><p>I have not two but:<w><p>THREE distinct paragraphs! Look upon my works ye mighty and despair!"
+			},
 		],
 		
 		"name": "ambulance",
@@ -19,8 +25,14 @@
 		
 		"choices": 
 		[
-			"Choice 1!",
-			"Choice 2!",
+			{
+				"str": "Choice 1!",
+				"story_result": "I am the result of choice one.<w><p>I have two distinct paragraphs."
+			},
+			{
+				"str": "Choice 2!",
+				"story_result": "I am the result of choice two!.<w><p>I have not two but:<w><p>THREE distinct paragraphs! Look upon my works ye mighty and despair!"
+			},
 		],
 		
 		"name": "keening",
@@ -33,8 +45,14 @@
 		
 		"choices":
 		[
-			"go around",
-			"go across",
+			{
+				"str": "go around",
+				"story_result": "Indicate that an additional scene was aded to the path and/or that some sort of 'energy' resource depletes? It could just be HP, but we'd need a name that makes it clear their combined.<w><p>Maybe have an endurance stat. Idk."
+			},
+			{
+				"str": "go across",
+				"story_result": "Roll a die to see if someone gets hurt. Roll a die to see if you lost some gear."
+			},
 		],
 		
 		"name": "crater",
@@ -47,8 +65,14 @@
 
 		"choices":
 		[
-			"Coax him to come with you",
-			"Leave him in the field",
+			{
+				"str": "Coax him to come with you",
+				"story_result": "Dude joins the party with a good amount of gear. Has some sort of oddity that makes him volatile. Haven't decided how to handle that yet.<w><p>Maybe it's a status effect, maybe we're doing a standard sanity meter. Not sure."
+			},
+			{
+				"str": "Leave him in the field",
+				"story_result": "Gotta do something more interesting than 'ignore.' Not sure what yet."
+			},
 		],
 		
 		"name": "grove",
@@ -60,9 +84,15 @@
 		"story": "A couple of your companions have run off to scavenge a nearby village. Stone pasture walls border a gravel road. The ditch you're sheltering in feels too much like being in the trench, but the trees nearest you are scored with bullets, so you crouch and shiver.<w><p>Still, it's incredible that there's grass growing in this ditch. Nothing grows in trenches.<w><p>A grasshopper, as small as your pinky nail, hops from blade to blade by your foot. For the briefest of seconds, it comes to rest on the laces of your shoe, only to flit away again.<w><p>Does this grasshopper hear the artillery shells at night? Or does it only feel them, like an earthquake, and continue with its business? It has no cities to destroy or rebuild, just the grass, still lush in the lee of this wall, despite the tank treads just a few feet away.<w><p>You see the others jogging up the road, kits bouncing and jangling against their chests, breaths puffing in the air. One's favoring his pockets.<w><p>\"Three houses, two hen coops, and four other outbuildings. All abandoned,\" he says, crouching beside you in the shadow of the pasture wall.<w><p>\"No animals, either, except a few chickens who gave us the slip, and there wasn't two oats to rub together in the whole place. But looky here-\"<w><p>He shoves his hands into his pockets, smiling so hard he's nearly giggling, and you half expect him to pull out one of the crown jewels. Instead, he pulls out five brown hens eggs, two in one hand, three in the other.<w><p>You start to laugh, not caring for a split second about a sniper's sights. Something inside you had completely forgotten the world of grass and eggs existed.<w><p>\"What do you say we cook these up right here, have something hot for once?\"<w><p>He's practically giddy, and for a moment, so are you.<w>",
 
 		"choices":
-		[
-			"Use some water to cook the eggs.",
-			"Try to take the eggs with you.",
+		[	
+			{
+				"str": "Use some water to cook the eggs.",
+				"story_result": "Roll a die. Either: eat eggs, get a morale boost and whatever positive effect eating food gives, or eat eggs then get attacked."
+			},
+			{
+				"str": "Try to take the eggs with you.",
+				"story_result": "Eggs added to inventory. Roll a die at camp to decide how many eggs broke vs survived."
+			},
 		],
 
 		"name": "egg",
@@ -75,9 +105,18 @@
 
 		"choices":
 		[
-			"Take the rope and try to pull the horse out",
-			"Pull him out",
-			"Walk on",
+			{
+				"str": "Take the rope and try to pull the horse out",
+				"story_result": "Lose some gear, rather than having rope in story. Does this guy get added to the party? Only if we can think of a cool way to implement horse."
+			},
+			{
+				"str": "Pull him out",
+				"story_result": "Dude gets really mad at you, roll a die for whether he even survives.<w><p>He refuses to leave the horses side and is going to watch it drown in the mud."
+			},
+			{
+				"str": "Walk on",
+				"story_result": "Dude shouts at you as you leave.<w><p>Meaningful morale hit as the squad feels really weird about just leaving a man to die.<w><p>Is there some kind of explicit time resource that this saves? Or do we separate 'hp' and 'endurance' so this could also hurt endurance? Would have to think about knock-on effects with food and such."
+			},
 		],
 		
 		"name": "horse",
@@ -90,8 +129,14 @@
 		
 		"choices":
 		[
-			"Call Piobaire over",
-			"Decline",
+			{
+				"str": "Call Piobaire over",
+				"story_result": "You get a dog. That rules.<w><p>The dog tries to hunt/scavenge for you at night, but also costs food. So it's up in the air whether it's a benefit, but we probably don't want it to be completely random?"
+			},
+			{
+				"str": "Decline",
+				"story_result": "This is another one that feels like 'the boring option.' Ideally think of a more interesting wrinkle."
+			},
 		],
 		
 		"name": "piobare",
@@ -104,8 +149,14 @@
 		
 		"choices":
 		[
-			"Take the armor",
-			"Leave the armor",
+			{
+				"str": "Take the armor",
+				"story_result": "You get the item... hmm, that's not particularly interesting. Maybe some sort of supernatural twist?"
+			},
+			{
+				"str": "Leave the armor",
+				"story_result": "You don't get the item... not super interesting either. Maybe some sort of supernatural twist?"
+			}
 		],
 		
 		"name": "armor",
@@ -118,8 +169,14 @@
 		
 		"choices":
 		[
-			"Attack",
-			"Offer something",
+			{
+				"str": "Attack",
+				"story_result": "Starts combat, obviously."
+			},
+			{
+				"str": "Offer something",
+				"story_result": "If you have enough sundries or gear, they'll accept; otherwise they attack, and you get sucker-punched or something so there's a downside.<w><p>Game doesn't tell you beforehand how much will be enough, probably."
+			},
 		],
 		
 		"name": "forest trench",

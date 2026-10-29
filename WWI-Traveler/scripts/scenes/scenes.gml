@@ -28,13 +28,27 @@ function scene(_story, _choices, _name, _sprite) constructor {
 	sprite = _sprite;
 }
 
+// Scene story choice constructor
+function scene_choice(_str, _story_result) constructor {
+	str = _str;
+	story_result = _story_result;
+}
+
 // Parse a json_scene into a real scene on the global struct and return its value
 function scene_add(_json_scene) {
 	draw_set();
 	var _story = parse_story(_json_scene.story);
-	var _choices =_json_scene.choices;
 	var _name = _json_scene.name;
 	var _sprite = asset_get_index(_json_scene.sprite);
+	var _json_choices = _json_scene.choices;
+
+	// Parse choice struct stories into pharses
+	var _choices = [];
+	for (var c = 0; c < array_length(_json_choices); c++) {
+		var _str = _json_choices[c].str;
+		var _story_result = parse_story(_json_choices[c].story_result);
+		array_push(_choices, new scene_choice(_str, _story_result));
+	}
 	array_push(SCENES, new scene(_story, _choices, _name, _sprite));
 }
 
