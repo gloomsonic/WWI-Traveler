@@ -1,5 +1,14 @@
 global.data = {};
 
+// Basic resource quantities
+#macro SUNDRIES global.data.sundries
+SUNDRIES = 0;
+#macro RATIONS global.data.rations
+RATIONS = 0;
+#macro GEAR global.data.gear
+GEAR = 0;
+
+// Encounters to play before next camp
 #macro ENCOUNTER_QUEUE global.data.encounter_queue
 ENCOUNTER_QUEUE = [];
 
@@ -17,10 +26,8 @@ ENEMY_COMBAT_SPRITES = new combatant_sprites(spr_combatant_idle, spr_combatant_a
 #macro PARTY global.data.party
 PARTY = [
 	new combatant_data(false, Combatant_Team.player, Combatant_Row.front, Combatant_Col.left, 10, 0, "Big Stooge", PLAYER_COMBAT_SPRITES, GUN),
-	//new combatant_data(false, Combatant_Team.player, Combatant_Row.front, 1, 10, "William Hardy", PLAYER_COMBAT_SPRITES, GUN),
-	//new combatant_data(false, Combatant_Team.player, Combatant_Row.front, 2, 9, "John-o Reardon", PLAYER_COMBAT_SPRITES, GUN),
-	new combatant_data(false, Combatant_Team.player, Combatant_Row.back, Combatant_Col.left, 9, 2, "Vikram Mamar", PLAYER_COMBAT_SPRITES, FIST),
-	new combatant_data(false, Combatant_Team.player, Combatant_Row.back, Combatant_Col.center, 9, 5, "Vikram Mamar", PLAYER_COMBAT_SPRITES, GUN),
+	new combatant_data(false, Combatant_Team.player, Combatant_Row.back, Combatant_Col.left, 9, 2, "William Hardy", PLAYER_COMBAT_SPRITES, FIST),
+	new combatant_data(false, Combatant_Team.player, Combatant_Row.back, Combatant_Col.center, 9, 5, "John-o Reardon", PLAYER_COMBAT_SPRITES, GUN),
 	new combatant_data(false, Combatant_Team.player, Combatant_Row.back, Combatant_Col.right, 9, 4, "Vikram Mamar", PLAYER_COMBAT_SPRITES, GUN),
 ];
 
@@ -59,6 +66,3 @@ MAP_PATH_SELECTED = noone;
 LOCATION_CURRENT = location_1;
 #macro LOCATION_NEXT global.data.location_next
 LOCATION_NEXT = location_1;
-
-//// Stores 'keys' referring to the player's current map location and prior locations, as an [x,y] array
-//global.data.map_location_keys_visited = [];
