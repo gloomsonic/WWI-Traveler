@@ -1,5 +1,5 @@
 event_inherited();
-self[$ "my_text"] ??= "!!NO TEXT GIVEN!!";
+self[$ "my_choice"] ??= new scene_choice("!!NO TEXT GIVEN!!", "!!NO STORY RESULT GIVEN!!")
 
 list_margin = 128;
 par_mouse_cursor.add_touchable(id);

@@ -7,11 +7,11 @@
 		[
 			{
 				"str": "hello I am choice one!",
-				"story_result": "I am the result of choice one.<w><p>I have two distinct paragraphs."
+				"story_result": "<p>I am the result of choice one.<w><p>I have two distinct paragraphs."
 			},
 			{
 				"str": "yooooo this is choice two, babyyyyyyy",
-				"story_result": "I am the result of choice two!.<w><p>I have not two but:<w><p>THREE distinct paragraphs! Look upon my works ye mighty and despair!"
+				"story_result": "<p>I am the result of choice two!.<w><p>I have not two but:<w><p>THREE distinct paragraphs! Look upon my works ye mighty and despair!"
 			},
 		],
 		
@@ -27,11 +27,11 @@
 		[
 			{
 				"str": "Choice 1!",
-				"story_result": "I am the result of choice one.<w><p>I have two distinct paragraphs."
+				"story_result": "<p>I am the result of choice one.<w><p>I have two distinct paragraphs."
 			},
 			{
 				"str": "Choice 2!",
-				"story_result": "I am the result of choice two!.<w><p>I have not two but:<w><p>THREE distinct paragraphs! Look upon my works ye mighty and despair!"
+				"story_result": "<p>I am the result of choice two!.<w><p>I have not two but:<w><p>THREE distinct paragraphs! Look upon my works ye mighty and despair!"
 			},
 		],
 		
@@ -47,11 +47,11 @@
 		[
 			{
 				"str": "go around",
-				"story_result": "Indicate that an additional scene was aded to the path and/or that some sort of 'energy' resource depletes? It could just be HP, but we'd need a name that makes it clear their combined.<w><p>Maybe have an endurance stat. Idk."
+				"story_result": "<p>Indicate that an additional scene was aded to the path and/or that some sort of 'energy' resource depletes? It could just be HP, but we'd need a name that makes it clear their combined.<w><p>Maybe have an endurance stat. Idk."
 			},
 			{
 				"str": "go across",
-				"story_result": "Roll a die to see if someone gets hurt. Roll a die to see if you lost some gear."
+				"story_result": "<p>Roll a die to see if someone gets hurt. Roll a die to see if you lost some gear."
 			},
 		],
 		
@@ -67,11 +67,11 @@
 		[
 			{
 				"str": "Coax him to come with you",
-				"story_result": "Dude joins the party with a good amount of gear. Has some sort of oddity that makes him volatile. Haven't decided how to handle that yet.<w><p>Maybe it's a status effect, maybe we're doing a standard sanity meter. Not sure."
+				"story_result": "<p>Dude joins the party with a good amount of gear. Has some sort of oddity that makes him volatile. Haven't decided how to handle that yet.<w><p>Maybe it's a status effect, maybe we're doing a standard sanity meter. Not sure."
 			},
 			{
 				"str": "Leave him in the field",
-				"story_result": "Gotta do something more interesting than 'ignore.' Not sure what yet."
+				"story_result": "<p>Gotta do something more interesting than 'ignore.' Not sure what yet."
 			},
 		],
 		
@@ -87,11 +87,11 @@
 		[	
 			{
 				"str": "Use some water to cook the eggs.",
-				"story_result": "Roll a die. Either: eat eggs, get a morale boost and whatever positive effect eating food gives, or eat eggs then get attacked."
+				"story_result": "<p>Roll a die. Either: eat eggs, get a morale boost and whatever positive effect eating food gives, or eat eggs then get attacked."
 			},
 			{
 				"str": "Try to take the eggs with you.",
-				"story_result": "Eggs added to inventory. Roll a die at camp to decide how many eggs broke vs survived."
+				"story_result": "<p>Eggs added to inventory. Roll a die at camp to decide how many eggs broke vs survived."
 			},
 		],
 
@@ -107,15 +107,15 @@
 		[
 			{
 				"str": "Take the rope and try to pull the horse out",
-				"story_result": "Lose some gear, rather than having rope in story. Does this guy get added to the party? Only if we can think of a cool way to implement horse."
+				"story_result": "<p>Lose some gear, rather than having rope in story. Does this guy get added to the party? Only if we can think of a cool way to implement horse."
 			},
 			{
 				"str": "Pull him out",
-				"story_result": "Dude gets really mad at you, roll a die for whether he even survives.<w><p>He refuses to leave the horses side and is going to watch it drown in the mud."
+				"story_result": "<p>Dude gets really mad at you, roll a die for whether he even survives.<w><p>He refuses to leave the horses side and is going to watch it drown in the mud."
 			},
 			{
 				"str": "Walk on",
-				"story_result": "Dude shouts at you as you leave.<w><p>Meaningful morale hit as the squad feels really weird about just leaving a man to die.<w><p>Is there some kind of explicit time resource that this saves? Or do we separate 'hp' and 'endurance' so this could also hurt endurance? Would have to think about knock-on effects with food and such."
+				"story_result": "<p>Dude shouts at you as you leave.<w><p>Meaningful morale hit as the squad feels really weird about just leaving a man to die.<w><p>Is there some kind of explicit time resource that this saves? Or do we separate 'hp' and 'endurance' so this could also hurt endurance? Would have to think about knock-on effects with food and such."
 			},
 		],
 		
@@ -131,11 +131,11 @@
 		[
 			{
 				"str": "Call Piobaire over",
-				"story_result": "You get a dog. That rules.<w><p>The dog tries to hunt/scavenge for you at night, but also costs food. So it's up in the air whether it's a benefit, but we probably don't want it to be completely random?"
+				"story_result": "<p>You get a dog. That rules.<w><p>The dog tries to hunt/scavenge for you at night, but also costs food. So it's up in the air whether it's a benefit, but we probably don't want it to be completely random?"
 			},
 			{
 				"str": "Decline",
-				"story_result": "This is another one that feels like 'the boring option.' Ideally think of a more interesting wrinkle."
+				"story_result": "<p>This is another one that feels like 'the boring option.' Ideally think of a more interesting wrinkle."
 			},
 		],
 		
@@ -151,11 +151,11 @@
 		[
 			{
 				"str": "Take the armor",
-				"story_result": "You get the item... hmm, that's not particularly interesting. Maybe some sort of supernatural twist?"
+				"story_result": "<p>You get the item... hmm, that's not particularly interesting. Maybe some sort of supernatural twist?"
 			},
 			{
 				"str": "Leave the armor",
-				"story_result": "You don't get the item... not super interesting either. Maybe some sort of supernatural twist?"
+				"story_result": "<p>You don't get the item... not super interesting either. Maybe some sort of supernatural twist?"
 			}
 		],
 		
@@ -171,11 +171,11 @@
 		[
 			{
 				"str": "Attack",
-				"story_result": "Starts combat, obviously."
+				"story_result": "<p>Starts combat, obviously."
 			},
 			{
 				"str": "Offer something",
-				"story_result": "If you have enough sundries or gear, they'll accept; otherwise they attack, and you get sucker-punched or something so there's a downside.<w><p>Game doesn't tell you beforehand how much will be enough, probably."
+				"story_result": "<p>If you have enough sundries or gear, they'll accept; otherwise they attack, and you get sucker-punched or something so there's a downside.<w><p>Game doesn't tell you beforehand how much will be enough, probably."
 			},
 		],
 		

@@ -58,7 +58,7 @@ function scene_text_methods_step() {
 	
 		for (var c = 0; c < array_length(my_scene.choices); c++) {
 			instance_create_depth(_x, _y, depth, obj_story_choice, {
-				my_text: my_scene.choices[c],
+				my_choice: my_scene.choices[c],
 			});
 			_y += font_height(font) * choice_spacing;
 		}

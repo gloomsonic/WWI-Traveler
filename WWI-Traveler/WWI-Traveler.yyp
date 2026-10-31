@@ -201,6 +201,7 @@
     {"id":{"name":"path_get_measurements","path":"scripts/path_get_measurements/path_get_measurements.yy",},},
     {"id":{"name":"room_transition_start","path":"scripts/room_transition_start/room_transition_start.yy",},},
     {"id":{"name":"round_n","path":"scripts/round_n/round_n.yy",},},
+    {"id":{"name":"scene_text_add_phrases","path":"scripts/scene_text_add_phrases/scene_text_add_phrases.yy",},},
     {"id":{"name":"scene_text_methods_draw","path":"scripts/scene_text_methods_draw/scene_text_methods_draw.yy",},},
     {"id":{"name":"scene_text_methods_step","path":"scripts/scene_text_methods_step/scene_text_methods_step.yy",},},
     {"id":{"name":"scene_text_states","path":"scripts/scene_text_states/scene_text_states.yy",},},

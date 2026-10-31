@@ -1,4 +1,3 @@
-//event_user_all();
 scene_text_methods_step();
 scene_text_methods_draw();
 
@@ -10,7 +9,7 @@ states.define(State.choosing, state_scene_choosing);
 states.queue(State.reading);
 
 // Load the scene to play
-var _scene = SCENE_NEXT; //var _scene = scene_get("grove"); // TODO: What if we want to hardcode one for when we didn't pick a path?
+var _scene = SCENE_NEXT;
 my_scene = variable_clone(_scene);
 instance_create_depth(0, 0, depth+1, obj_scene_image, {
 	sprite_index: my_scene.sprite,
@@ -26,7 +25,7 @@ l_margin = ROOM_W*0.70;
 story_bot_y = 0;
 story_character_count = story_get_char_count(my_scene.story);
 choice_spacing = 2.0;
-choice_break = font_height() * 4.0
+choice_break = font_height() * 4.0;
 
 // Text rendering
 char_spd = 3; //6;
