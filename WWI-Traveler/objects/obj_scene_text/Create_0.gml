@@ -18,6 +18,7 @@ instance_create_depth(0, 0, depth+1, obj_scene_image, {
 sprite_prefetch(my_scene.sprite);
 
 // Prep text formatting
+text_color = c_white;
 font = SCENE_FONT;
 draw_set(font);
 line_spacing = 1.4;

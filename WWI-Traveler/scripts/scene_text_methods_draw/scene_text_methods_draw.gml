@@ -2,7 +2,7 @@ function scene_text_methods_draw() {
 	
 	// Draw the story text
 	draw_phrases = function() {
-		draw_set(c_white, font);
+		draw_set(text_color, font);
 		var _x = l_margin;
 		var _y = 0;
 		var _char_count = 0;
@@ -35,6 +35,15 @@ function scene_text_methods_draw() {
 						break;
 					case "</>":
 						font = SCENE_FONT;
+						break;
+					case "<c_white>":
+						text_color = c_white;
+						break;
+					case "<c_ltgray>":
+						text_color = c_ltgray;
+						break;
+					case "<c_gray>":
+						text_color = c_gray;
 						break;
 					case "<img>":
 						obj_scene_image.next_image();
@@ -70,7 +79,7 @@ function scene_text_methods_draw() {
 						volume_target: _volume_target,
 						fade_duration: _fade_duration,
 						my_sound: _sound,
-					})
+					});
 					array_delete(my_scene.story, p, 1);
 					p--; 
 				}
@@ -78,7 +87,7 @@ function scene_text_methods_draw() {
 			}
 			
 			// *--* Draw the phrase *--* //
-			draw_set(c_white, font);
+			draw_set(text_color, font);
 			
 			// Draw entire phrase at once
 			if (_char_count_plus < characters_opaque_count) {

@@ -56,7 +56,8 @@ function parse_phrases(_words) {
 	for (var w = 0; w < array_length(_words); w++) {
 		var _word = _words[w];
 	
-		// Special character, end phrase -- NOTE: this means they can't safely be used in the middle of a paragraph
+		// Special character, end phrase 
+		// NOTE: this means special characters can't currently be used in the middle of a paragraph (will always go to next line), but that's ok for now.
 		if (string_char_at(_word, 1) == "<") {
 			if (_phrase != "")
 				array_push(_phrases, string_trim(_phrase));
@@ -66,9 +67,7 @@ function parse_phrases(_words) {
 			_phrase = "";
 			continue;
 		}
-		
-		
-	
+
 		// Too long, end phrase
 		var _phrase_w_plus = string_width(_phrase) + string_width(_word);
 		if (_phrase_w_plus >= LINE_W) {

@@ -6,7 +6,7 @@ on_pressed = function() {
 	log("pressed");
 }
 on_released = function() {
-	scene_text_add_phrases(["<p>", my_choice.str]);
+	scene_text_add_phrases(["<p>", "<c_gray>", my_choice.str, "<c_white>"]);
 	scene_text_add_phrases(my_choice.story_result);
 	instance_destroy(obj_story_choice);
 	obj_scene_text.states.queue(State.reading);
