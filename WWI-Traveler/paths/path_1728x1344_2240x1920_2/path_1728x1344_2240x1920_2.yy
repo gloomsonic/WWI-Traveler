@@ -1,0 +1,23 @@
+{
+  "$GMPath":"",
+  "%Name":"path_1728x1344_2240x1920_2",
+  "closed":false,
+  "kind":1,
+  "name":"path_1728x1344_2240x1920_2",
+  "parent":{
+    "name":"Map",
+    "path":"folders/Map.yy",
+  },
+  "points":[
+    {"speed":100.0,"x":1728.0,"y":1344.0,},
+    {"speed":100.0,"x":1792.0,"y":1504.0,},
+    {"speed":100.0,"x":1760.0,"y":1664.0,},
+    {"speed":100.0,"x":1856.0,"y":1760.0,},
+    {"speed":100.0,"x":1824.0,"y":1920.0,},
+    {"speed":100.0,"x":2016.0,"y":1984.0,},
+    {"speed":100.0,"x":2240.0,"y":1920.0,},
+  ],
+  "precision":4,
+  "resourceType":"GMPath",
+  "resourceVersion":"2.0",
+}

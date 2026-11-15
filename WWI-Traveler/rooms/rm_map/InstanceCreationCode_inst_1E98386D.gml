@@ -1,1 +1,1 @@
-my_path = path_3_4_1;
+my_path = path_1728x1344_2368x768_1;

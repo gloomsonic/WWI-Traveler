@@ -1,4 +1,4 @@
-my_path = path_8_9_1;
+my_path = path_3392x640_3712x192_1;
 my_encounters = [
 	scene_get("crater"), 
 	//ENEMY_PARTIES.test_easy, 

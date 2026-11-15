@@ -1,0 +1,22 @@
+{
+  "$GMPath":"",
+  "%Name":"path_2944x1088_3392x640_1",
+  "closed":false,
+  "kind":1,
+  "name":"path_2944x1088_3392x640_1",
+  "parent":{
+    "name":"Map",
+    "path":"folders/Map.yy",
+  },
+  "points":[
+    {"speed":100.0,"x":2944.0,"y":1088.0,},
+    {"speed":100.0,"x":3168.0,"y":1056.0,},
+    {"speed":100.0,"x":3200.0,"y":896.0,},
+    {"speed":100.0,"x":3328.0,"y":864.0,},
+    {"speed":100.0,"x":3328.0,"y":736.0,},
+    {"speed":100.0,"x":3392.0,"y":640.0,},
+  ],
+  "precision":4,
+  "resourceType":"GMPath",
+  "resourceVersion":"2.0",
+}

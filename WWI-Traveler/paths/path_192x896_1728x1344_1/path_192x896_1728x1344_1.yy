@@ -1,0 +1,22 @@
+{
+  "$GMPath":"",
+  "%Name":"path_192x896_1728x1344_1",
+  "closed":false,
+  "kind":1,
+  "name":"path_192x896_1728x1344_1",
+  "parent":{
+    "name":"Map",
+    "path":"folders/Map.yy",
+  },
+  "points":[
+    {"speed":100.0,"x":192.0,"y":896.0,},
+    {"speed":100.0,"x":448.0,"y":1024.0,},
+    {"speed":100.0,"x":544.0,"y":1248.0,},
+    {"speed":100.0,"x":1088.0,"y":1152.0,},
+    {"speed":100.0,"x":1344.0,"y":1376.0,},
+    {"speed":100.0,"x":1728.0,"y":1344.0,},
+  ],
+  "precision":4,
+  "resourceType":"GMPath",
+  "resourceVersion":"2.0",
+}
