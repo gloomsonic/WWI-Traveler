@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"map_location_visited",
   "parent":{
-    "name":"Map",
-    "path":"folders/Map.yy",
+    "name":"_old",
+    "path":"folders/Map/_old.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

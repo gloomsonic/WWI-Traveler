@@ -1,0 +1,21 @@
+{
+  "$GMPath":"",
+  "%Name":"path_8_9_1",
+  "closed":false,
+  "kind":1,
+  "name":"path_8_9_1",
+  "parent":{
+    "name":"Map",
+    "path":"folders/Map.yy",
+  },
+  "points":[
+    {"speed":100.0,"x":3392.0,"y":640.0,},
+    {"speed":100.0,"x":3648.0,"y":672.0,},
+    {"speed":100.0,"x":3776.0,"y":416.0,},
+    {"speed":100.0,"x":3648.0,"y":288.0,},
+    {"speed":100.0,"x":3712.0,"y":192.0,},
+  ],
+  "precision":4,
+  "resourceType":"GMPath",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,21 @@
+{
+  "$GMPath":"",
+  "%Name":"path_5_11_1",
+  "closed":false,
+  "kind":1,
+  "name":"path_5_11_1",
+  "parent":{
+    "name":"Map",
+    "path":"folders/Map.yy",
+  },
+  "points":[
+    {"speed":100.0,"x":2240.0,"y":1920.0,},
+    {"speed":100.0,"x":2272.0,"y":2080.0,},
+    {"speed":100.0,"x":2752.0,"y":2144.0,},
+    {"speed":100.0,"x":2944.0,"y":1984.0,},
+    {"speed":100.0,"x":3200.0,"y":1920.0,},
+  ],
+  "precision":4,
+  "resourceType":"GMPath",
+  "resourceVersion":"2.0",
+}
