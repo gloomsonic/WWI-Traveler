@@ -185,19 +185,22 @@
 	
 	"test_sundries_for_rations_or_gear":
 	{
-		"story": "",
+		"story": "</><c_white>The merchant asks if you want to trade.<w>",
 		
 		"choices": 
 		[
 			{
 				"str": "Trade 'x' sundries for 'y' rations.",
-				"story_result": "",
+				"story_result": "<p>You exchanged sundries for rations.<w>",
 			},
 			{
 				"str": "Trade 'a' sundries for 'b' gear.",
-				"story_result": "",
+				"story_result": "<p>You exchanged sundries for gear.<w>",
 			},
 		],
+		
+		"name": "test sundries for rations or gear",
+		"sprite": "spr_scene_blank",
 	},
 	
 	

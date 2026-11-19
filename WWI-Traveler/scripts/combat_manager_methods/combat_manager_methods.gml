@@ -18,6 +18,7 @@ function combat_manager_methods() {
 		ENEMY_PARTY = array_filter(ENEMY_PARTY, _check_dead);		
 	}
 	
+	////TODO: delete
 	//// Create the player combat options menu
 	//combat_menu_create = function() {
 	//	var _y = ROOM_H * 0.93;

@@ -45,13 +45,20 @@ function scene_text_methods_step() {
 		array_delete(fade_values, _fades_count - _dif, _dif);
 	}
 
-	// When we've reached the end of the story, queue choosing state
-	check_choosing = function() {
-		if (characters_opaque_count < story_character_count) return;
-		states.queue(State.choosing);
+	//TODO: delete
+	//// When we've reached the end of the story, queue choosing state
+	//check_choosing = function() {
+	//	if (characters_opaque_count < story_character_count) return;
+	//	states.queue(State.choosing);
+	//}
+	
+	// Whether we've reached the end of the story
+	check_story_ended = function() {
+		if (characters_opaque_count < story_character_count) return false;
+		return true;
 	}
 
-	//
+	// Spawn the touchable choice objects
 	spawn_choices = function() {
 		var _x = l_margin;
 		var _y = story_bot_y + choice_break;
@@ -62,5 +69,6 @@ function scene_text_methods_step() {
 			});
 			_y += font_height(font) * choice_spacing;
 		}
+		my_scene.choices = [];
 	}
 }

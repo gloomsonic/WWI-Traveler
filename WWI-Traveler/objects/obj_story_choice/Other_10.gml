@@ -8,9 +8,9 @@ on_pressed = function() {
 on_released = function() {
 	scene_text_add_phrases(["<p>", "<c_gray>", my_choice.str, "<c_white>"]);
 	scene_text_add_phrases(my_choice.story_result);
+	my_choice.callback(); // 
 	instance_destroy(obj_story_choice);
-	obj_scene_text.states.queue(State.reading);
-	// TODO: Clear the choices array, check if it's empty before creating choices obj_scene_text, and 'next_encounter_check_start()' if it s
+	obj_scene_text.states.queue(State.reading);	// TODO: is it bad to queue their state from here
 }
 
 // State functions

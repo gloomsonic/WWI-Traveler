@@ -53,6 +53,7 @@
     {"$GMFolder":"","%Name":"Map Manager","folderPath":"folders/Map/Map Manager.yy","name":"Map Manager","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Sprites","folderPath":"folders/Map/Sprites.yy","name":"Sprites","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Scenes","folderPath":"folders/Scenes.yy","name":"Scenes","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Choice Callbacks","folderPath":"folders/Scenes/Choice Callbacks.yy","name":"Choice Callbacks","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Scene Image","folderPath":"folders/Scenes/Scene Image.yy","name":"Scene Image","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Scene Text","folderPath":"folders/Scenes/Scene Text.yy","name":"Scene Text","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
@@ -68,7 +69,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2026.0.0.16",
+    "IDEVersion":"2026.1.0.27",
   },
   "name":"WWI-Traveler",
   "resources":[
@@ -168,6 +169,8 @@
     {"id":{"name":"call_next_frame","path":"scripts/call_next_frame/call_next_frame.yy",},},
     {"id":{"name":"camp_formation_methods","path":"scripts/camp_formation_methods/camp_formation_methods.yy",},},
     {"id":{"name":"camp_state_set","path":"scripts/camp_state_set/camp_state_set.yy",},},
+    {"id":{"name":"choice_callback_ambulance","path":"scripts/choice_callback_ambulance/choice_callback_ambulance.yy",},},
+    {"id":{"name":"choice_callback_tests","path":"scripts/choice_callback_tests/choice_callback_tests.yy",},},
     {"id":{"name":"collision_line_point","path":"scripts/collision_line_point/collision_line_point.yy",},},
     {"id":{"name":"combat_action_callbacks","path":"scripts/combat_action_callbacks/combat_action_callbacks.yy",},},
     {"id":{"name":"combat_actor_methods","path":"scripts/combat_actor_methods/combat_actor_methods.yy",},},

@@ -9,16 +9,32 @@
 JSON_SCENES = json_load("scenes_english_string.txt");
 SCENES = []
 
-// Add scenes to array
-scene_add(JSON_SCENES.ambulance);
-scene_add(JSON_SCENES.keening);
-scene_add(JSON_SCENES.crater);
-scene_add(JSON_SCENES.egg);
-scene_add(JSON_SCENES.grove);
-scene_add(JSON_SCENES.horse);
-scene_add(JSON_SCENES.piobare);
-scene_add(JSON_SCENES.armor);
-scene_add(JSON_SCENES.forest_trench);
+//// Add scenes to array
+//scene_add(JSON_SCENES.ambulance);
+//scene_add(JSON_SCENES.keening);
+//scene_add(JSON_SCENES.crater);
+//scene_add(JSON_SCENES.egg);
+//scene_add(JSON_SCENES.grove);
+//scene_add(JSON_SCENES.horse);
+//scene_add(JSON_SCENES.piobare);
+//scene_add(JSON_SCENES.armor);
+//scene_add(JSON_SCENES.forest_trench);
+//scene_add(JSON_SCENES.test_sundries_for_rations_or_gear);
+
+
+//
+scene_add(
+	JSON_SCENES.ambulance,
+	"ambulance",
+	spr_scene_blank,
+	[choice_callback_ambulance_0, choice_callback_ambulance_1],
+);
+scene_add(
+	JSON_SCENES.test_sundries_for_rations_or_gear,
+	"test sundries for rations or gear",
+	spr_scene_blank,
+	[choice_callback_sundries_0, choice_callback_sundries_1],
+);
 
 // Scene constructor
 function scene(_story, _choices, _name, _sprite) constructor {
@@ -29,17 +45,18 @@ function scene(_story, _choices, _name, _sprite) constructor {
 }
 
 // Scene story choice constructor
-function scene_choice(_str, _story_result) constructor {
+function scene_choice(_str, _story_result, _callback) constructor {
 	str = _str;
 	story_result = _story_result;
+	callback = _callback;
 }
 
-// Parse a json_scene into a real scene on the global struct and return its value
-function scene_add(_json_scene) {
+// Parse a json_scene into a real scene on the global struct and push it to global array
+function scene_add(_json_scene, _name, _sprite, _callbacks) {
 	draw_set();
 	var _story = parse_story(_json_scene.story);
-	var _name = _json_scene.name;
-	var _sprite = asset_get_index(_json_scene.sprite);
+	//var _name = _json_scene.name;
+	//var _sprite = asset_get_index(_json_scene.sprite);
 	var _json_choices = _json_scene.choices;
 
 	// Parse choice struct stories into pharses
@@ -47,9 +64,11 @@ function scene_add(_json_scene) {
 	for (var c = 0; c < array_length(_json_choices); c++) {
 		var _str = _json_choices[c].str;
 		var _story_result = parse_story(_json_choices[c].story_result);
-		array_push(_choices, new scene_choice(_str, _story_result));
+		var _callback = _callbacks[c];
+		var _choice_data = new scene_choice(_str, _story_result, _callback);
+		array_push(_choices, _choice_data);
 	}
-	array_push(SCENES, new scene(_story, _choices, _name, _sprite));
+	array_push(SCENES, new scene(_story, _choices, _name, _sprite)); //, _callbacks));
 }
 
 // Get the scene struct with the supplied name

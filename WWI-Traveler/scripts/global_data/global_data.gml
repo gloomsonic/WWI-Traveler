@@ -2,7 +2,7 @@ global.data = {};
 
 // Basic resource quantities
 #macro SUNDRIES global.data.sundries
-SUNDRIES = 0;
+SUNDRIES = 5;
 #macro RATIONS global.data.rations
 RATIONS = 0;
 #macro GEAR global.data.gear
