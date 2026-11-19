@@ -9,6 +9,68 @@
 JSON_SCENES = json_load("scenes_english_string.txt");
 SCENES = []
 
+// Add scenes to array
+scene_add(
+	JSON_SCENES.ambulance,
+	"ambulance",
+	spr_scene_blank,
+	[choice_callback_ambulance_0, choice_callback_ambulance_1],
+);
+scene_add(
+	JSON_SCENES.keening,
+	"keening",
+	spr_scene_blank,
+	[choice_callback_blank, choice_callback_blank],
+);
+scene_add(
+	JSON_SCENES.crater,
+	"crater",
+	spr_scene_blank,
+	[choice_callback_blank, choice_callback_blank],
+);
+scene_add(
+	JSON_SCENES.egg,
+	"egg",
+	spr_scene_blank,
+	[choice_callback_blank, choice_callback_blank],
+);
+scene_add(
+	JSON_SCENES.grove,
+	"grove",
+	spr_scene_blank,
+	[choice_callback_blank, choice_callback_blank],
+);
+scene_add(
+	JSON_SCENES.horse,
+	"horse",
+	spr_scene_blank,
+	[choice_callback_blank, choice_callback_blank],
+);
+scene_add(
+	JSON_SCENES.piobare,
+	"piobare",
+	spr_scene_blank,
+	[choice_callback_blank, choice_callback_blank],
+);
+scene_add(
+	JSON_SCENES.armor,
+	"armor",
+	spr_scene_blank,
+	[choice_callback_blank, choice_callback_blank],
+);
+scene_add(
+	JSON_SCENES.forest_trench,
+	"forest trench",
+	spr_scene_blank,
+	[choice_callback_blank, choice_callback_blank],
+);
+scene_add(
+	JSON_SCENES.test_sundries_for_rations_or_gear,
+	"test sundries for rations or gear",
+	spr_scene_blank,
+	[choice_callback_sundries_0, choice_callback_sundries_1],
+);
+
 //// Add scenes to array
 //scene_add(JSON_SCENES.ambulance);
 //scene_add(JSON_SCENES.keening);
@@ -20,21 +82,6 @@ SCENES = []
 //scene_add(JSON_SCENES.armor);
 //scene_add(JSON_SCENES.forest_trench);
 //scene_add(JSON_SCENES.test_sundries_for_rations_or_gear);
-
-
-//
-scene_add(
-	JSON_SCENES.ambulance,
-	"ambulance",
-	spr_scene_blank,
-	[choice_callback_ambulance_0, choice_callback_ambulance_1],
-);
-scene_add(
-	JSON_SCENES.test_sundries_for_rations_or_gear,
-	"test sundries for rations or gear",
-	spr_scene_blank,
-	[choice_callback_sundries_0, choice_callback_sundries_1],
-);
 
 // Scene constructor
 function scene(_story, _choices, _name, _sprite) constructor {
@@ -55,8 +102,6 @@ function scene_choice(_str, _story_result, _callback) constructor {
 function scene_add(_json_scene, _name, _sprite, _callbacks) {
 	draw_set();
 	var _story = parse_story(_json_scene.story);
-	//var _name = _json_scene.name;
-	//var _sprite = asset_get_index(_json_scene.sprite);
 	var _json_choices = _json_scene.choices;
 
 	// Parse choice struct stories into pharses
@@ -68,7 +113,7 @@ function scene_add(_json_scene, _name, _sprite, _callbacks) {
 		var _choice_data = new scene_choice(_str, _story_result, _callback);
 		array_push(_choices, _choice_data);
 	}
-	array_push(SCENES, new scene(_story, _choices, _name, _sprite)); //, _callbacks));
+	array_push(SCENES, new scene(_story, _choices, _name, _sprite));
 }
 
 // Get the scene struct with the supplied name

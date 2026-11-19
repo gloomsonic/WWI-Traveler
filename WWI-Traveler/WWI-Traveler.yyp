@@ -170,6 +170,7 @@
     {"id":{"name":"camp_formation_methods","path":"scripts/camp_formation_methods/camp_formation_methods.yy",},},
     {"id":{"name":"camp_state_set","path":"scripts/camp_state_set/camp_state_set.yy",},},
     {"id":{"name":"choice_callback_ambulance","path":"scripts/choice_callback_ambulance/choice_callback_ambulance.yy",},},
+    {"id":{"name":"choice_callback_blank","path":"scripts/choice_callback_blank/choice_callback_blank.yy",},},
     {"id":{"name":"choice_callback_tests","path":"scripts/choice_callback_tests/choice_callback_tests.yy",},},
     {"id":{"name":"collision_line_point","path":"scripts/collision_line_point/collision_line_point.yy",},},
     {"id":{"name":"combat_action_callbacks","path":"scripts/combat_action_callbacks/combat_action_callbacks.yy",},},

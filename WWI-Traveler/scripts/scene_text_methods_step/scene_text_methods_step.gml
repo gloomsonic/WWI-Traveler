@@ -44,13 +44,6 @@ function scene_text_methods_step() {
 		var _fades_count = array_length(fade_values);
 		array_delete(fade_values, _fades_count - _dif, _dif);
 	}
-
-	//TODO: delete
-	//// When we've reached the end of the story, queue choosing state
-	//check_choosing = function() {
-	//	if (characters_opaque_count < story_character_count) return;
-	//	states.queue(State.choosing);
-	//}
 	
 	// Whether we've reached the end of the story
 	check_story_ended = function() {
